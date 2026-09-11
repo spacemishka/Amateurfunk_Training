@@ -1,0 +1,332 @@
+[
+  {
+    "id": "TD-101",
+    "kategorie": "Technik",
+    "topic_id": "top_technik_einheiten",
+    "frage_text": "Welche physikalische Einheit wird für die elektrische Kapazität verwendet?",
+    "antworten": [
+      "Henry (H)",
+      "Farad (F)",
+      "Ohm (Ω)",
+      "Siemens (S)"
+    ],
+    "richtige_antwort": 1,
+    "erklaerung": "Die elektrische Kapazität C eines Kondensators wird in der SI-Einheit Farad (F) angegeben. 1 Farad = 1 Coulomb pro Volt (C/V). Henry ist die Einheit der Induktivität.",
+    "bild_svg": null
+  },
+  {
+    "id": "TD-102",
+    "kategorie": "Technik",
+    "topic_id": "top_technik_ohmsches_gesetz",
+    "frage_text": "An einem Widerstand von 50 Ω liegt eine Spannung von 10 V an. Welcher Strom fließt durch den Widerstand?",
+    "antworten": [
+      "5 A",
+      "0,2 A",
+      "500 mA",
+      "0,05 A"
+    ],
+    "richtige_antwort": 1,
+    "erklaerung": "Nach dem Ohmschen Gesetz gilt I = U / R. Eingesetzt: I = 10 V / 50 Ω = 0,2 A (bzw. 200 mA).",
+    "bild_svg": null
+  },
+  {
+    "id": "TD-103",
+    "kategorie": "Technik",
+    "topic_id": "top_technik_leistung",
+    "frage_text": "Ein Sender gibt bei 50 Ω Lastwiderstand eine HF-Spannung von 50 V (Effektivwert) ab. Wie hoch ist die abgegebene Hochfrequenzleistung?",
+    "antworten": [
+      "25 W",
+      "50 W",
+      "100 W",
+      "2500 W"
+    ],
+    "richtige_antwort": 1,
+    "erklaerung": "Die elektrische Leistung berechnet sich über P = U² / R. Somit: P = (50 V)² / 50 Ω = 2500 / 50 = 50 W.",
+    "bild_svg": null
+  },
+  {
+    "id": "TD-104",
+    "kategorie": "Technik",
+    "topic_id": "top_technik_wellenlaenge_frequenz",
+    "frage_text": "Wie lautet der physikalische Zusammenhang zwischen der Wellenlänge λ und der Frequenz f einer elektromagnetischen Welle im Vakuum?",
+    "antworten": [
+      "λ = c · f",
+      "λ = c / f",
+      "λ = f / c",
+      "λ = c / f²"
+    ],
+    "richtige_antwort": 1,
+    "erklaerung": "Die Wellenlänge λ berechnet sich aus der Lichtgeschwindigkeit c geteilt durch die Frequenz f: λ = c / f. Eine höhere Frequenz bedeutet eine kürzere Wellenlänge.",
+    "bild_svg": null
+  },
+  {
+    "id": "TD-105",
+    "kategorie": "Technik",
+    "topic_id": "top_technik_wellenlaenge_frequenz",
+    "frage_text": "Welche Wellenlänge entspricht einer Frequenz von ca. 145 MHz (2-m-Amateurfunkband)?",
+    "antworten": [
+      "ca. 0,7 m",
+      "ca. 2,07 m",
+      "ca. 10 m",
+      "ca. 20 m"
+    ],
+    "richtige_antwort": 1,
+    "erklaerung": "Mit der Faustformel λ [m] ≈ 300 / f [MHz] ergibt sich: λ ≈ 300 / 145 ≈ 2,07 m. Daher stammt die Bezeichnung 2-Meter-Band.",
+    "bild_svg": null
+  },
+  {
+    "id": "TD-106",
+    "kategorie": "Technik",
+    "topic_id": "top_technik_widerstand_schaltung",
+    "frage_text": "Zwei Widerstände mit je 100 Ω sind parallel geschaltet. Wie groß ist der resultierende Gesamtwiderstand?",
+    "antworten": [
+      "200 Ω",
+      "100 Ω",
+      "50 Ω",
+      "25 Ω"
+    ],
+    "richtige_antwort": 2,
+    "erklaerung": "Bei zwei gleich großen parallel geschalteten Widerständen halbiert sich der Gesamtwiderstand: R_ges = R / 2 = 100 Ω / 2 = 50 Ω.",
+    "bild_svg": null
+  },
+  {
+    "id": "TD-107",
+    "kategorie": "Technik",
+    "topic_id": "top_technik_antennen",
+    "frage_text": "Wie lang ist ein unverkürzter Halbwellendipol für das 10-m-Band bei einer Mittenfrequenz von 28,5 MHz unter Berücksichtigung eines typischen Verkürzungsfaktors von 0,95?",
+    "antworten": [
+      "ca. 10,0 m",
+      "ca. 5,0 m",
+      "ca. 2,5 m",
+      "ca. 1,25 m"
+    ],
+    "richtige_antwort": 1,
+    "erklaerung": "Die Freiraum-Wellenlänge beträgt λ = 300 / 28,5 ≈ 10,52 m. Die Halbwellenlänge ist λ/2 ≈ 5,26 m. Mit Verkürzungsfaktor 0,95: L ≈ 5,26 m · 0,95 ≈ 5,00 m.",
+    "bild_svg": null
+  },
+  {
+    "id": "TD-108",
+    "kategorie": "Technik",
+    "topic_id": "top_technik_dezibel",
+    "frage_text": "Eine Sendeleistung wird um 3 dB erhöht. Was bedeutet das für die Ausgangsleistung?",
+    "antworten": [
+      "Sie verdreifacht sich.",
+      "Sie verdoppelt sich annähernd.",
+      "Sie verzehnfacht sich.",
+      "Sie steigt um genau 30 Prozent."
+    ],
+    "richtige_antwort": 1,
+    "erklaerung": "Ein Leistungspegel-Unterschied von +3 dB entspricht einer Verdopplung der Leistung (10 · lg(2) ≈ 3,01 dB). +10 dB entspricht einer Verzehnfachung.",
+    "bild_svg": null
+  },
+  {
+    "id": "TD-109",
+    "kategorie": "Technik",
+    "topic_id": "top_technik_modulation",
+    "frage_text": "Welche Modulationsart wird im VHF/UHF-Bereich üblicherweise für FM-Relaisfunkbetrieb verwendet?",
+    "antworten": [
+      "Amplitudenmodulation (AM)",
+      "Einseitenbandmodulation (SSB)",
+      "Frequenzmodulation (FM)",
+      "Morsetelegrafie (CW)"
+    ],
+    "richtige_antwort": 2,
+    "erklaerung": "Auf Relaisfunkstellen im 2-m- und 70-cm-Band wird standardmäßig Frequenzmodulation (FM bzw. Phasenmodulation) wegen ihrer Robustheit gegen Amplitudenstörungen genutzt.",
+    "bild_svg": null
+  },
+  {
+    "id": "TD-110",
+    "kategorie": "Technik",
+    "topic_id": "top_technik_swr",
+    "frage_text": "Was bedeutet ein Stehwellenverhältnis (SWR / VSWR) von 1:1 an einer Sendeantenne?",
+    "antworten": [
+      "Die gesamte Leistung wird an der Antenne reflektiert.",
+      "Antenne und Speiseleitung sind optimal angepasst; es tritt keine Reflexion auf.",
+      "Das Speisekabel hat einen Kurzschluss.",
+      "Die Antenne strahlt keine elektromagnetischen Wellen ab."
+    ],
+    "richtige_antwort": 1,
+    "erklaerung": "Ein SWR von 1:1 bedeutet ideale Anpassung zwischen Wellenwiderstand des Kabels und Fußpunktwiderstand der Antenne. Die reflektierte Leistung beträgt 0.",
+    "bild_svg": null
+  },
+  {
+    "id": "BD-101",
+    "kategorie": "Betrieb",
+    "topic_id": "top_betrieb_q_gruppen",
+    "frage_text": "Welche Bedeutung hat die Q-Gruppe „QTH“ im Amateurfunkbetrieb?",
+    "antworten": [
+      "Meine Sendefrequenz ist verändert.",
+      "Mein Standort ist ... / Wie ist Ihr Standort?",
+      "Ich habe Funkstille einzuhalten.",
+      "Meine Sendeleistung beträgt ..."
+    ],
+    "richtige_antwort": 1,
+    "erklaerung": "QTH steht im internationalen Q-Schlüssel für den Standort oder Wohnort der Funkstelle bzw. als Frage „Wie ist Ihr Standort?“ mit nachgestelltem Fragezeichen.",
+    "bild_svg": null
+  },
+  {
+    "id": "BD-102",
+    "kategorie": "Betrieb",
+    "topic_id": "top_betrieb_q_gruppen",
+    "frage_text": "Was bedeutet die Q-Gruppe „QRM“?",
+    "antworten": [
+      "Ich werde durch atmosphärische Störungen (Gewitter) beeinträchtigt.",
+      "Ich werde durch andere Stationen (künstliche Störungen) gestört.",
+      "Ich verringere meine Sendeleistung.",
+      "Bitte wiederholen Sie die Nachricht."
+    ],
+    "richtige_antwort": 1,
+    "erklaerung": "QRM bedeutet Störung durch fremde Aussendungen (Man-Made). Atmosphärisches Rauschen/Gewitter wird dagegen mit QRN bezeichnet.",
+    "bild_svg": null
+  },
+  {
+    "id": "BD-103",
+    "kategorie": "Betrieb",
+    "topic_id": "top_betrieb_buchstabieralphabet",
+    "frage_text": "Wie wird das Rufzeichen „DO1ABC“ nach dem offiziellen internationalen ICAO/ITU-Buchstabieralphabet korrekt buchstabiert?",
+    "antworten": [
+      "Delta Oscar One Alpha Bravo Charlie",
+      "David Otto One Anton Berta Caesar",
+      "Delta Ocean One America Boston Canada",
+      "Danmark Oslo One Amsterdam Berlin Cologne"
+    ],
+    "richtige_antwort": 0,
+    "erklaerung": "Im internationalen Funkverkehr ist ausschließlich das ITU-Buchstabieralphabet gültig: D=Delta, O=Oscar, 1=One, A=Alpha, B=Bravo, C=Charlie.",
+    "bild_svg": null
+  },
+  {
+    "id": "BD-104",
+    "kategorie": "Betrieb",
+    "topic_id": "top_betrieb_allgemeiner_anruf",
+    "frage_text": "Wie leitet man einen allgemeinen Anruf auf Kurzwelle oder UKW in Telefonie ein?",
+    "antworten": [
+      "SOS SOS SOS hier ist ...",
+      "CQ CQ CQ hier ruft [Rufzeichen]",
+      "MAYDAY MAYDAY von [Rufzeichen]",
+      "BREAK BREAK hier ist [Rufzeichen]"
+    ],
+    "richtige_antwort": 1,
+    "erklaerung": "Der allgemeine Anruf an jede empfangsbereite Station lautet „CQ“ (sprich: seek you), gefolgt vom eigenen Rufzeichen. SOS und MAYDAY sind strikt für Notfälle reserviert.",
+    "bild_svg": null
+  },
+  {
+    "id": "BD-105",
+    "kategorie": "Betrieb",
+    "topic_id": "top_betrieb_zeit",
+    "frage_text": "Welche Zeitangabe ist für Logbucheinträge im weltweiten Amateurfunkverkehr standardmäßig vorgeschrieben?",
+    "antworten": [
+      "Mitteleuropäische Zeit (MEZ)",
+      "Mitteleuropäische Sommerzeit (MESZ)",
+      "Koordinierte Weltzeit (UTC)",
+      "Ortszeit am Standort des Gesprächspartners"
+    ],
+    "richtige_antwort": 2,
+    "erklaerung": "Im Amateurfunk wird stets die koordinierte Weltzeit UTC (Universal Time Coordinated, früher GMT) verwendet, um Zeitzonenkonflikte bei weltweiten Kontakten zu vermeiden.",
+    "bild_svg": null
+  },
+  {
+    "id": "BD-106",
+    "kategorie": "Betrieb",
+    "topic_id": "top_betrieb_rst_system",
+    "frage_text": "Was bedeutet ein Signalbericht von „59“ (RST) bei einer Sprechfunkverbindung?",
+    "antworten": [
+      "Sehr schwer lesbar, aber maximale Lautstärke.",
+      "Perfekte Verständlichkeit (Readability 5) und hervorragende Signalstärke (Strength 9).",
+      "Verbindung mit 59 Sekunden Verzögerung.",
+      "Frequenzabweichung von 5,9 kHz."
+    ],
+    "richtige_antwort": 1,
+    "erklaerung": "Im RST-System steht R=5 für vollkommen verständlich (Skala 1 bis 5) und S=9 für extrem starkes Signal (Skala 1 bis 9). Bei Telegrafie (CW) kommt noch T (Ton 1 bis 9) hinzu.",
+    "bild_svg": null
+  },
+  {
+    "id": "VD-101",
+    "kategorie": "Vorschriften",
+    "topic_id": "top_recht_afug",
+    "frage_text": "Was ist der Amateurfunkdienst laut Amateurfunkgesetz (AFuG)?",
+    "antworten": [
+      "Ein privater Rundfunkdienst zur Unterhaltung der Bevölkerung.",
+      "Ein Funkdienst, der von Funkamateuren für persönliche Studien, technische Nachforschungen und Kommunikation ohne wirtschaftliches Interesse betrieben wird.",
+      "Ein kommerzieller Funkdienst für Taxizentralen und Sicherheitsdienste.",
+      "Ein offener Funkdienst wie Jedermannfunk (CB-Funk) ohne Genehmigungspflicht."
+    ],
+    "richtige_antwort": 1,
+    "erklaerung": "Laut § 2 AFuG ist der Amateurfunkdienst ein nichtgewerblicher, technisch-experimenteller Funkdienst von Funkamateuren für persönliche Studien, Weiterbildung und weltweite Verständigung.",
+    "bild_svg": null
+  },
+  {
+    "id": "VD-102",
+    "kategorie": "Vorschriften",
+    "topic_id": "top_recht_klassen",
+    "frage_text": "Welche Amateurfunk-Zeugnisklassen gibt es in Deutschland seit der BNetzA-Verordnungsreform 2024?",
+    "antworten": [
+      "Klassen 1, 2 und 3",
+      "Klassen N, E und A",
+      "Klassen Basic, Intermediate und Advanced",
+      "Klassen Bronze, Silber und Gold"
+    ],
+    "richtige_antwort": 1,
+    "erklaerung": "In Deutschland existieren drei Zeugnisklassen: Klasse N (Einsteigerlizenz mit eingeschränkten Bändern/Leistungen), Klasse E (Zugang zu VHF/UHF und ausgewählten Kurzwellenbändern) und Klasse A (volle Frequenz- und Leistungsrechte).",
+    "bild_svg": null
+  },
+  {
+    "id": "VD-103",
+    "kategorie": "Vorschriften",
+    "topic_id": "top_recht_leistung_klasse_e",
+    "frage_text": "Welche maximale Sendeausgangsleistung (Spitzenleistung PEP) ist Inhabern der Klasse E auf den Bändern 2 m (144–146 MHz) und 70 cm (430–440 MHz) maximal gestattet?",
+    "antworten": [
+      "10 W",
+      "75 W",
+      "100 W",
+      "750 W"
+    ],
+    "richtige_antwort": 1,
+    "erklaerung": "Für Inhaber der Zulassung zur Klasse E beträgt die maximal zulässige Sendeausgangsleistung (PEP) auf den VHF/UHF-Bändern (144-146 MHz und 430-440 MHz) 75 Watt.",
+    "bild_svg": null
+  },
+  {
+    "id": "VD-104",
+    "kategorie": "Vorschriften",
+    "topic_id": "top_recht_rufzeichen",
+    "frage_text": "Mit welchem Präfix beginnen personengebundene deutsche Amateurfunkrufzeichen der Klasse E typischerweise?",
+    "antworten": [
+      "DL",
+      "DO",
+      "DN",
+      "DA"
+    ],
+    "richtige_antwort": 1,
+    "erklaerung": "Rufzeichen mit dem Präfix 'DO' (z. B. DO1ABC) sind typischerweise Inhabern der Klasse E zugeordnet. 'DL/DJ/DK' gehört zur Klasse A, 'DN' dient für Ausbildungsrufzeichen.",
+    "bild_svg": null
+  },
+  {
+    "id": "VD-105",
+    "kategorie": "Vorschriften",
+    "topic_id": "top_recht_dritte",
+    "frage_text": "Dürfen Funkamateure in Deutschland Nachrichten für oder von Dritten übermitteln?",
+    "antworten": [
+      "Ja, jederzeit und ohne Einschränkung.",
+      "Grundsätzlich nein, es sei denn, es handelt sich um Not- und Katastrophenfunk oder es liegt ein zwischenstaatliches Abkommen vor.",
+      "Ja, solange dafür eine geringe Gebühr erhoben wird.",
+      "Nur sonntags zwischen 10:00 und 12:00 Uhr."
+    ],
+    "richtige_antwort": 1,
+    "erklaerung": "Die Weiterleitung von Nachrichten für Dritte (Dritte-Verkehr) ist im Amateurfunk grundsätzlich verboten. Ausnahmen gelten nur in Notfällen sowie im Rahmen von Notfunk-Übungen oder bilateralen Sonderabkommen.",
+    "bild_svg": null
+  },
+  {
+    "id": "VD-106",
+    "kategorie": "Vorschriften",
+    "topic_id": "top_recht_geheimhaltung",
+    "frage_text": "Ist die Verwendung von Geheimschriften oder unbefugt verschlüsselten Texten im Amateurfunk zulässig?",
+    "antworten": [
+      "Ja, zur Wahrung der Privatsphäre.",
+      "Nein, Aussendungen im Amateurfunkdienst müssen in offener Sprache bzw. mit allgemein bekannten Codes erfolgen.",
+      "Ja, wenn ein PGP-Schlüssel bei der Bundesnetzagentur hinterlegt wurde.",
+      "Nur auf den Kurzwellenbändern oberhalb von 20 MHz."
+    ],
+    "richtige_antwort": 1,
+    "erklaerung": "Aussendungen im Amateurfunk dürfen nicht verschlüsselt werden, um den Inhalt zu verschleiern (§ 16 AFuV). Alle Übertragungen müssen offen und für jeden abhörbar sein.",
+    "bild_svg": null
+  }
+]
