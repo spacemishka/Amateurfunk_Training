@@ -12,7 +12,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
@@ -91,7 +93,9 @@ fun PracticeScreen(
                 navigationIcon = {
                     IconButton(
                         onClick = onNavigateBack,
-                        modifier = Modifier.semantics { contentDescription = "Zurück zur Übersicht" }
+                        modifier = Modifier.semantics {
+                            contentDescription = "Zurück zur Übersicht"
+                        }
                     ) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
@@ -101,12 +105,13 @@ fun PracticeScreen(
                 },
                 actions = {
                     if (!state.isFinished && state.currentQuestion != null) {
+                        val bookmarkDesc = if (state.isBookmarked) "Lesezeichen entfernen" else "Lesezeichen setzen"
                         IconButton(
                             onClick = { viewModel.toggleBookmark() }
                         ) {
                             Icon(
                                 imageVector = if (state.isBookmarked) Icons.Filled.Bookmark else Icons.Outlined.BookmarkBorder,
-                                contentDescription = if (state.isBookmarked) "Lesezeichen entfernen" else "Lesezeichen setzen",
+                                contentDescription = bookmarkDesc,
                                 tint = if (state.isBookmarked) Color(0xFFF59E0B) else MaterialTheme.colorScheme.onSurfaceVariant
                             )
                         }
@@ -133,7 +138,10 @@ fun PracticeScreen(
                             enabled = state.isAnswerConfirmed,
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .height(52.dp),
+                                .height(52.dp)
+                                .semantics {
+                                    contentDescription = if (state.currentIndex + 1 >= state.totalCount) "Übung abschließen" else "Nächste Frage"
+                                },
                             shape = RoundedCornerShape(12.dp),
                             colors = ButtonDefaults.buttonColors(
                                 containerColor = RadioBlue

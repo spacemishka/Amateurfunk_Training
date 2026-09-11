@@ -97,10 +97,10 @@ fun AnswerOptionItem(
                 shape = shape
             )
             .background(animatedContainerColor)
-            .clickable(enabled = enabled, onClick = onClick)
-            .semantics {
+            .semantics(mergeDescendants = true) {
                 contentDescription = "Option $optionLetter"
             }
+            .clickable(enabled = enabled, onClick = onClick)
             .padding(14.dp)
     ) {
         Row(
