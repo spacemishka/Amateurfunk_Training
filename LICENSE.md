@@ -1,4 +1,4 @@
-﻿# LICENSE
+# LICENSE
 
 ## Amateurfunk Training – Klasse E  
 ### Non-Commercial Open Source License (NC-OSL) v1.0
@@ -118,10 +118,16 @@ Beendigung in Kraft.
 
 ---
 
-## 7. Anwendbares Recht
+## 7. Jurisdiction & Governing Law
 
-Diese Lizenz unterliegt dem Recht der Bundesrepublik Deutschland.
-Ausschließlicher Gerichtsstand ist, soweit gesetzlich zulässig, Deutschland.
+This License is intended to be enforceable internationally and shall be
+interpreted in accordance with the laws applicable in the jurisdiction of
+the copyright holder, without regard to conflict-of-law principles.
+
+If any provision of this License is held to be unenforceable under the
+applicable law of a particular jurisdiction, such provision shall be
+modified to the minimum extent necessary to make it enforceable, and all
+remaining provisions shall continue in full force and effect.
 
 ---
 
