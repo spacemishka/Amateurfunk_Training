@@ -1,9 +1,10 @@
 # LICENSE
 
-## Amateurfunk Training – Klasse E  
-### Non-Commercial Open Source License (NC-OSL) v1.0
+## Amateurfunk Training – Klasse E
 
-Copyright (c) 2024–present  spacemishka and contributors
+### Non-Commercial Open Source License (NC-OSL) v1.1
+
+Copyright (c) 2024–present spacemishka and contributors
 
 ---
 
@@ -18,6 +19,11 @@ Die Software bleibt für immer frei und darf zu keinem Zeitpunkt Gegenstand
 eines kostenpflichtigen Produkts, einer kommerziellen Dienstleistung oder
 eines Gewinnerzielungsvorhabens werden.
 
+Weiterentwicklungen und Verbesserungen sollen der Gemeinschaft zugutekommen.
+Nutzerinnen und Nutzer, die die Software weiterentwickeln, sind daher
+**verpflichtet, ihre Änderungen an das Originalprojekt zurückzuführen**
+(Upstream-Contribution-Pflicht, siehe Abschnitt 3.5).
+
 ---
 
 ## 1. Definitionen
@@ -29,6 +35,7 @@ Repositories.
 **„Kommerzielle Nutzung"** bezeichnet jede Nutzung, die primär auf die
 Erzielung eines wirtschaftlichen Vorteils oder einer monetären Vergütung
 ausgerichtet ist. Dazu zählen insbesondere:
+
 - Verkauf der Software oder von Lizenzen daran,
 - Einbettung in kostenpflichtige Produkte oder Dienste,
 - Nutzung zur Kundengewinnung oder Umsatzsteigerung,
@@ -47,15 +54,16 @@ Unter den Bedingungen dieser Lizenz wird Ihnen hiermit unentgeltlich
 das Recht gewährt:
 
 a) die Software für **nicht-kommerzielle Zwecke** zu nutzen, zu installieren
-   und auszuführen;
+und auszuführen;
 
 b) den Quellcode zu **kopieren, zu studieren und zu modifizieren**;
 
 c) modifizierte oder unveränderte Versionen der Software zu
-   **vervielfältigen und weiterzugeben**, sofern:
-   - diese Lizenz vollständig und unverändert beigelegt wird,
-   - die ursprünglichen Urheberrechtshinweise erhalten bleiben,
-   - die Weitergabe ebenfalls ausschließlich unter dieser Lizenz erfolgt.
+**vervielfältigen und weiterzugeben**, sofern:
+
+- diese Lizenz vollständig und unverändert beigelegt wird,
+- die ursprünglichen Urheberrechtshinweise erhalten bleiben,
+- die Weitergabe ebenfalls ausschließlich unter dieser Lizenz erfolgt.
 
 ---
 
@@ -82,6 +90,25 @@ nicht geltend gemacht.
 Abgeleitete Werke dürfen nicht unter dem Namen „Amateurfunk Training" oder
 einem verwechselbaren Namen vertrieben werden, ohne ausdrückliche Zustimmung
 der Urheberinnen und Urheber.
+
+**3.5 Upstream-Contribution-Pflicht (Share Back)**  
+Wer die Software verändert, erweitert oder verbessert und die veränderte
+Version nutzt, verbreitet oder veröffentlicht, ist verpflichtet:
+
+a) die Änderungen dem Originalprojekt als **Pull Request (GitHub) oder
+   Merge Request (GitLab)** anzubieten – spätestens gleichzeitig mit der
+   ersten Weitergabe oder Veröffentlichung der modifizierten Version;
+
+b) den gesamten Quellcode der Änderungen unter dieser Lizenz
+   öffentlich zugänglich zu machen;
+
+c) die Änderungen mit einer nachvollziehbaren Beschreibung einzureichen,
+   die Zweck und Umfang der Modifikation erläutert.
+
+Die Maintainerinnen und Maintainer des Originalprojekts sind nicht
+verpflichtet, eingereichte Beiträge anzunehmen. Die Einreichungspflicht
+bleibt davon unberührt. Geringfügige Änderungen (Tippfehler, rein lokale
+Konfigurationen) sind von dieser Pflicht ausgenommen.
 
 ---
 
@@ -118,17 +145,11 @@ Beendigung in Kraft.
 
 ---
 
-## 7. Jurisdiction & Governing Law
+## 7. Anwendbares Recht
 
-This License is intended to be enforceable internationally and shall be
-interpreted in accordance with the laws applicable in the jurisdiction of
-the copyright holder, without regard to conflict-of-law principles.
-
-If any provision of this License is held to be unenforceable under the
-applicable law of a particular jurisdiction, such provision shall be
-modified to the minimum extent necessary to make it enforceable, and all
-remaining provisions shall continue in full force and effect.
+Diese Lizenz unterliegt dem Recht der Bundesrepublik Deutschland.
+Ausschließlicher Gerichtsstand ist, soweit gesetzlich zulässig, Deutschland.
 
 ---
 
-*Non-Commercial Open Source License (NC-OSL) v1.0 – https://github.com/spacemishka/amateurfunk-training*
+_Non-Commercial Open Source License (NC-OSL) v1.1 – https://github.com/spacemishka/amateurfunk-training_
