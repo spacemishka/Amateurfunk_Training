@@ -13,3 +13,14 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Projektdokumentation (nicht versioniert)
+Documentation/
+
+# Screenshots & UI-Automator-Dumps (Test-Artefakte)
+*.png
+window_dump*.xml
+scratch_dump.xml
+
+# Leere CI-Verzeichnisse
+.gitlab-ci/
