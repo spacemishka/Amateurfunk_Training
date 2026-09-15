@@ -1,0 +1,1065 @@
+[
+  {
+    "topic_id": "top_technik_ea1",
+    "kategorie": "Technik",
+    "titel": "Größen, Einheiten & Zehnerpotenzen",
+    "kernaussage": "Physikalische Größen im Funkbetrieb umfassen enorme Spannen von Piko (10⁻¹²) bis Giga (10⁹), die mit SI-Vorsätzen skaliert werden.",
+    "erklaerung": "Elektrische Grundgrößen wie Spannung (Volt), Stromstärke (Ampere), Widerstand (Ohm) und Frequenz (Hertz) werden mit SI-Präfixen angegeben. Häufig genutzte Vorsätze sind Pico (10⁻¹²), Nano (10⁻⁹), Mikro (10⁻⁶), Milli (10⁻³), Kilo (10³), Mega (10⁶) und Giga (10⁹). Beim Rechnen müssen alle Werte stets vorab in ihre SI-Basiseinheit umgerechnet werden.",
+    "formel": "1 MHz = 1.000 kHz = 1.000.000 Hz; 1 nF = 0,001 µF = 1.000 pF",
+    "merksatz": "Großbuchstaben für Große (M = Mega, G = Giga), Kleinbuchstaben für Kleine (m = Milli, µ = Mikro, n = Nano, p = Piko)!",
+    "verwandte_themen": [
+      "top_technik_ea2",
+      "top_technik_eb3",
+      "top_technik_ec1"
+    ]
+  },
+  {
+    "topic_id": "top_technik_ea2",
+    "kategorie": "Technik",
+    "titel": "Binäres Zahlensystem & Digitaltechnik",
+    "kernaussage": "Digitale Schaltungen verarbeiten Informationen ausschließlich im Dualsystem mit den logischen Zuständen 0 und 1.",
+    "erklaerung": "Ein Bit repräsentiert die kleinste Informationseinheit (0 oder 1). 8 Bits bilden ein Byte. Im Binärsystem hat jede Stelle eine Wertigkeit als Zweierpotenz (1, 2, 4, 8, 16, 32, 64, 128). Hexadezimale Zahlen fassen jeweils 4 Bits zu einem Zeichen von 0–9 und A–F zusammen, was Adressen und Datenworte übersichtlich macht.",
+    "formel": "Dezimal = b₀·2⁰ + b₁·2¹ + b₂·2² + ...; 1 Byte = 256 Zustände (0 bis 255)",
+    "merksatz": "Es gibt 10 Arten von Menschen: Diejenigen, die Binärcode verstehen, und diejenigen, die es nicht tun!",
+    "verwandte_themen": [
+      "top_technik_ea1",
+      "top_technik_ee4",
+      "top_technik_ef6"
+    ]
+  },
+  {
+    "topic_id": "top_technik_eb1",
+    "kategorie": "Technik",
+    "titel": "Elektrisches Feld",
+    "kernaussage": "Zwischen getrennten elektrischen Ladungen bzw. Spannungen existiert ein elektrisches Feld, das Kräfte auf Ladungsträger ausübt.",
+    "erklaerung": "Das elektrische Feld (Feldstärke E in V/m) entsteht durch ruhende oder bewegte Ladungen zwischen zwei Potentialen. Die Feldlinien verlaufen definitionsgemäß immer von der positiven zur negativen Ladung. Isolatoren (Dielektrika) schwächen das Feld im Inneren durch Polarisation ab und vergrößern dadurch die Kapazität von Kondensatoren.",
+    "formel": "E = U / d  [V/m]",
+    "merksatz": "Feldlinien gehen vom Pluspol aus und enden am Minuspol!",
+    "verwandte_themen": [
+      "top_technik_eb2",
+      "top_technik_eb3",
+      "top_technik_ec2"
+    ]
+  },
+  {
+    "topic_id": "top_technik_eb2",
+    "kategorie": "Technik",
+    "titel": "Magnetisches Feld",
+    "kernaussage": "Jeder elektrische Stromfluss ist zwingend von einem geschlossenen magnetischen Wirbelfeld umgeben.",
+    "erklaerung": "Bewegte Ladungen erzeugen ein Magnetfeld (magnetische Flussdichte B in Tesla, magnetische Feldstärke H in A/m). Die Richtung der ringförmigen Feldlinien um einen Leiter ergibt sich mit der Rechte-Hand-Regel (Daumen in technischer Stromrichtung, Finger zeigen die Feldlinien). In einer Spule überlagern sich die Einzelfelder zu einem kräftigen Feld im Inneren.",
+    "formel": "H = (I · N) / l; B = µ · H",
+    "merksatz": "Rechte Hand: Daumen zeigt technischen Strom (+ nach -), gekrümmte Finger das Magnetfeld!",
+    "verwandte_themen": [
+      "top_technik_eb1",
+      "top_technik_eb3",
+      "top_technik_ec3"
+    ]
+  },
+  {
+    "topic_id": "top_technik_eb3",
+    "kategorie": "Technik",
+    "titel": "Elektromagnetisches Feld & Wellenausbreitung",
+    "kernaussage": "Ein elektromagnetisches Wechselfeld breitet sich als Welle mit Lichtgeschwindigkeit im Raum aus.",
+    "erklaerung": "Ein zeitlich veränderliches elektrisches Feld erzeugt ein magnetisches Wirbelfeld und umgekehrt. Diese gegenseitige Anregung löst sich als Transversalwelle von der Antenne ab. Im Fernfeld stehen elektrisches und magnetisches Feld senkrecht aufeinander sowie senkrecht zur Ausbreitungsrichtung. Wellenlänge und Frequenz sind über die Lichtgeschwindigkeit fest verknüpft.",
+    "formel": "c = λ · f  =>  λ [m] ≈ 300 / f [MHz]",
+    "merksatz": "Hohe Frequenz = kurze Welle (kleine Antenne); tiefe Frequenz = lange Welle (große Antenne)!",
+    "verwandte_themen": [
+      "top_technik_eb4",
+      "top_technik_eg1",
+      "top_technik_eh1"
+    ]
+  },
+  {
+    "topic_id": "top_technik_eb4",
+    "kategorie": "Technik",
+    "titel": "Sinusförmige Signale & Wechselgrößen",
+    "kernaussage": "Bei sinusförmigen Wechselgrößen entspricht der Effektivwert der thermischen Gleichstromwirkung.",
+    "erklaerung": "Eine Sinusschwingung wird durch Amplitude (Scheitelwert Uss / Up), Periodendauer T und Frequenz f beschrieben. Für rein sinusförmige Größen ist der Effektivwert Ueff gleich dem Spitzenwert geteilt durch Wurzel(2). Leistungsmessungen und Nennspannungen (wie 230 V Netzspannung) beziehen sich standardmäßig immer auf den Effektivwert.",
+    "formel": "U_eff = U_s / √2 ≈ 0,707 · U_s;  T = 1 / f",
+    "merksatz": "Effektivwert = Scheitelwert mal 0,707 (bzw. Scheitelwert = Effektivwert mal 1,414)!",
+    "verwandte_themen": [
+      "top_technik_eb3",
+      "top_technik_eb5",
+      "top_technik_ed2"
+    ]
+  },
+  {
+    "topic_id": "top_technik_eb5",
+    "kategorie": "Technik",
+    "titel": "Elektrische Leistung & Ohmsches Gesetz",
+    "kernaussage": "Elektrische Leistung ist das Produkt aus Spannung und Stromstärke, am ohmschen Widerstand vollständig in Wärme gewandelt.",
+    "erklaerung": "Das ohmsche Gesetz verknüpft Spannung U, Strom I und Widerstand R. Die Wirkleistung P in Watt gibt an, wie viel Energie pro Sekunde umgesetzt wird. Bei doppelter Spannung an einem konstanten Widerstand vervierfacht sich die Leistung! In HF-Systemen unterscheidet man zwischen Dauerleistung und Spitzenleistung (PEP).",
+    "formel": "U = R · I;  P = U · I = I² · R = U² / R",
+    "merksatz": "U = R · I (Uri) und P = U · I (Pui) – das fundamentale Fundament jeder Schaltung!",
+    "verwandte_themen": [
+      "top_technik_ec1",
+      "top_technik_ed1",
+      "top_technik_ef4"
+    ]
+  },
+  {
+    "topic_id": "top_technik_ec1",
+    "kategorie": "Technik",
+    "titel": "Ohmsche Widerstände & Farbcode",
+    "kernaussage": "Widerstände begrenzen den elektrischen Stromfluss und dienen als Spannungsteiler.",
+    "erklaerung": "Reale Widerstände weisen neben ihrem Nennwert eine Toleranz und eine maximale Verlustleistung (Belastbarkeit in Watt) auf. Der Nennwert wird häufig über Farbring-Codes nach DIN IEC 62 gekennzeichnet (z. B. Schwarz=0, Braun=1, Rot=2, Orange=3, Gelb=4, Grün=5, Blau=6, Violett=7, Grau=8, Weiß=9). Bei Hochfrequenz sind drahtgewickelte Widerstände wegen ihrer Parasitär-Induktivität ungeeignet.",
+    "formel": "R = ρ · l / A;  P_v = I² · R",
+    "merksatz": "Farbcode-Regel: Schwarz 0, Braun 1, Rot 2, Orange 3, Gelb 4, Grün 5, Blau 6, Violett 7, Grau 8, Weiß 9!",
+    "verwandte_themen": [
+      "top_technik_eb5",
+      "top_technik_ec2",
+      "top_technik_ed1"
+    ]
+  },
+  {
+    "topic_id": "top_technik_ec2",
+    "kategorie": "Technik",
+    "titel": "Kondensatoren & Kapazität",
+    "kernaussage": "Kondensatoren speichern elektrische Energie im elektrostatischen Feld und sperren Gleichstrom.",
+    "erklaerung": "Die Kapazität C in Farad hängt von der Plattenfläche, dem Plattenabstand und dem Dielektrikum ab. An Wechselspannung besitzt ein Kondensator einen kapazitiven Blindwiderstand Xc, der mit steigender Frequenz abnimmt. Die Spannung eilt dem Strom um 90° phasenverschoben hinterher. Elektrolytkondensatoren (Elkos) sind gepolt und dürfen nicht verpolt betrieben werden.",
+    "formel": "C = ε · A / d;  X_C = 1 / (2 · π · f · C)",
+    "merksatz": "Am Kondensator eilt der Strom voraus (Merksatz: 'Beim Kondensat-or eilt der Strom vor')!",
+    "verwandte_themen": [
+      "top_technik_eb1",
+      "top_technik_ec3",
+      "top_technik_ed2"
+    ]
+  },
+  {
+    "topic_id": "top_technik_ec3",
+    "kategorie": "Technik",
+    "titel": "Spulen & Induktivität",
+    "kernaussage": "Spulen speichern Energie im magnetischen Feld und setzen jeder Stromänderung einen Gegenstrom entgegen.",
+    "erklaerung": "Die Induktivität L in Henry steigt quadratisch mit der Windungszahl und proportional zur Permeabilität des Kernmaterials (z. B. Ferrit, Eisenpulver). An Wechselspannung besitzt die Spule einen induktiven Blindwiderstand XL, der proportional mit der Frequenz zunimmt. Die Spannung eilt dem Strom um 90° voraus (Lenzsche Regel: Induktionsspannung wirkt ihrer Ursache entgegen).",
+    "formel": "L = µ · N² · A / l;  X_L = 2 · π · f · L",
+    "merksatz": "Bei Induktivitäten die Ströme sich verspäten!",
+    "verwandte_themen": [
+      "top_technik_eb2",
+      "top_technik_ec2",
+      "top_technik_ed2"
+    ]
+  },
+  {
+    "topic_id": "top_technik_ec4",
+    "kategorie": "Technik",
+    "titel": "Transformatoren & Impedanzübertrager",
+    "kernaussage": "Transformatoren übertragen Wechselspannung induktiv und transformieren Spannungen, Ströme und Impedanzen.",
+    "erklaerung": "Ein Übertrager besteht aus zwei oder mehr magnetisch gekoppelten Wicklungen. Das Spannungsübersetzungsverhältnis entspricht dem Verhältnis der Windungszahlen (N1/N2). Ströme transformieren sich umgekehrt proportional. Entscheidend für den Antennenbau: Impedanzen transformieren sich quadratisch mit dem Windungsverhältnis (z. B. 1:2 Windungen = 1:4 Impedanz, wie beim 1:4 Balun).",
+    "formel": "U₁ / U₂ = N₁ / N₂ = I₂ / I₁;  Z₁ / Z₂ = (N₁ / N₂)²",
+    "merksatz": "Windungen doppelt = Spannung doppelt, aber Impedanz vierfach!",
+    "verwandte_themen": [
+      "top_technik_ec3",
+      "top_technik_eg4"
+    ]
+  },
+  {
+    "topic_id": "top_technik_ec5",
+    "kategorie": "Technik",
+    "titel": "Halbleiterdioden & Gleichrichter",
+    "kernaussage": "Dioden leiten elektrischen Strom nur in Durchlassrichtung und sperren in Gegenrichtung.",
+    "erklaerung": "Eine Halbleiterdiode besteht aus einem PN-Übergang mit Schwellenspannung (Silizium ca. 0,7 V, Germanium / Schottky ca. 0,2–0,3 V). Zener-Dioden nutzen den definierten Durchbruch in Sperrrichtung zur Spannungsstabilisierung. Kapazitätsdioden (Varicaps) ändern ihre Sperrschichtkapazität mit der Steuerspannung und dienen zur elektronischen Frequenzabstimmung.",
+    "formel": "Durchlassspannung: Si ≈ 0,7 V, Ge ≈ 0,3 V; Brückengleichrichter U_gl ≈ 1,41 · U_eff - 2·U_D",
+    "merksatz": "Dreieck im Schaltzeichen zeigt die Durchlassrichtung (von Anode nach Kathode)!",
+    "verwandte_themen": [
+      "top_technik_ec6",
+      "top_technik_ed3",
+      "top_technik_ee1"
+    ]
+  },
+  {
+    "topic_id": "top_technik_ec6",
+    "kategorie": "Technik",
+    "titel": "Bipolartransistoren & FETs",
+    "kernaussage": "Transistoren sind steuerbare elektronische Halbleiterbauelemente zur Signalverstärkung und Schaltung.",
+    "erklaerung": "Bipolartransistoren (NPN, PNP) sind stromgesteuert: Ein kleiner Basisstrom steuert einen großen Kollektorstrom (Gleichstromverstärkung B = Ic / Ib). Feldeffekttransistoren (JFET, MOSFET) sind spannungsgesteuert: Eine elektrische Spannung am Gate steuert den Drain-Source-Strom nahezu leistungs- und stromlos. Transistoren werden als Schalter, NF- und HF-Verstärker oder Oszillatoren eingesetzt.",
+    "formel": "I_E = I_B + I_C;  B = I_C / I_B",
+    "merksatz": "NPN-Pfeil am Emitter zeigt: 'Nicht Pfeil Nach innen' (zeigt nach außen)!",
+    "verwandte_themen": [
+      "top_technik_ec5",
+      "top_technik_ed4",
+      "top_technik_ed5"
+    ]
+  },
+  {
+    "topic_id": "top_technik_ed1",
+    "kategorie": "Technik",
+    "titel": "Reihen- & Parallelschaltung",
+    "kernaussage": "In der Reihenschaltung addieren sich Widerstände und Teilspannungen; in der Parallelschaltung addieren sich Teilströme.",
+    "erklaerung": "Reihenschaltung: Der Strom ist überall gleich groß, Spannungen teilen sich proportional zu den Widerständen auf. Parallelschaltung: Die Spannung ist an allen Zweigen gleich groß, der Gesamtwiderstand ist stets kleiner als der kleinste Einzelwiderstand. Kondensatoren verhalten sich exakt umgekehrt wie Widerstände (parallel addieren sich Kapazitäten, in Reihe sinkt die Gesamtkapazität).",
+    "formel": "Reihe: R_ges = R₁ + R₂;  Parallel: 1/R_ges = 1/R₁ + 1/R₂  (bzw. (R₁·R₂)/(R₁+R₂))",
+    "merksatz": "Kondensatoren rechnen sich genau umgekehrt zu Widerständen und Spulen!",
+    "verwandte_themen": [
+      "top_technik_eb5",
+      "top_technik_ec1",
+      "top_technik_ec2"
+    ]
+  },
+  {
+    "topic_id": "top_technik_ed2",
+    "kategorie": "Technik",
+    "titel": "Schwingkreise & HF-Filter",
+    "kernaussage": "Bei der Resonanzfrequenz heben sich induktiver und kapazitiver Blindwiderstand gegenseitig auf.",
+    "erklaerung": "Ein Schwingkreis aus Spule und Kondensator schwingt bei der Resonanzfrequenz f0 (Thomson-Formel), bei der XL = XC gilt. Im Reihenschwingkreis sinkt der Scheinwiderstand im Resonanzfall auf das Minimum (Null bzw. ohmscher Verlustwiderstand). Im Parallelschwingkreis wird der Scheinwiderstand im Resonanzfall maximal (Sperrkreis). Filter (Tiefpass, Hochpass, Bandpass) formen das Frequenzspektrum.",
+    "formel": "f₀ = 1 / (2 · π · √(L · C));  Tiefpass dämpft Frequenzen f > f_grenz",
+    "merksatz": "Reihenresonanz saugt durch (minimaler Widerstand), Parallelresonanz sperrt ab (maximaler Widerstand)!",
+    "verwandte_themen": [
+      "top_technik_ec2",
+      "top_technik_ec3",
+      "top_technik_ef2",
+      "top_technik_ej2"
+    ]
+  },
+  {
+    "topic_id": "top_technik_ed3",
+    "kategorie": "Technik",
+    "titel": "Strom- & Spannungsversorgung",
+    "kernaussage": "Netzteile wandeln 230 V Netzwechselspannung in eine stabile, brummarme Gleichspannung um.",
+    "erklaerung": "Klassische Netzteile bestehen aus Transformator, Gleichrichter (Graetz-Brücke), Ladekondensator zur Glättung und Spannungsregler. Die Restwelligkeit sinkt mit größerer Glättungskapazität. Schaltnetzteile arbeiten mit hoher Schaltfrequenz (effizient, kompakt), erfordern jedoch aufwendige Entstörfilter, um Störemissionen im Amateurfunkbereich zu vermeiden.",
+    "formel": "U_peak = √2 · U_eff;  Restbrumm ΔU ≈ I_L / (f_brumm · C)",
+    "merksatz": "Hinter der Graetzbrücke beträgt die Brummfrequenz 100 Hz (doppelte Netzfrequenz)!",
+    "verwandte_themen": [
+      "top_technik_ec4",
+      "top_technik_ec5",
+      "top_technik_ej1"
+    ]
+  },
+  {
+    "topic_id": "top_technik_ed4",
+    "kategorie": "Technik",
+    "titel": "Verstärkerstufen (NF & HF)",
+    "kernaussage": "Verstärker heben schwache Signale an und werden je nach Ruhestrom in Klassen (A, AB, B, C) eingeteilt.",
+    "erklaerung": "Klasse-A-Verstärker verstärken über volle 360° der Periode mit geringster Verzerrung, besitzen jedoch einen niedrigen Wirkungsgrad. Klasse-B (Gegentakt) und Klasse-AB bieten hohen Wirkungsgrad bei guter Linearität (Standard für SSB-Sendeendstufen). Klasse-C leitet nur in kurzen Spitzenpulsen (< 180°), hat sehr hohen Wirkungsgrad (> 70%), ist jedoch nichtlinear und nur für amplitudenkonstante Signale (FM, CW) geeignet.",
+    "formel": "Verstärkung: V = U_aus / U_ein;  Verstärkungsmaß in dB: G = 20 · log₁₀(U_aus / U_ein)",
+    "merksatz": "Klasse AB für sauberes SSB; Klasse C für sparsames FM und CW!",
+    "verwandte_themen": [
+      "top_technik_ec6",
+      "top_technik_ef3",
+      "top_technik_ef4"
+    ]
+  },
+  {
+    "topic_id": "top_technik_ed5",
+    "kategorie": "Technik",
+    "titel": "Oszillatorschaltungen & Frequenzerzeugung",
+    "kernaussage": "Oszillatoren erzeugen ungedämpfte Hochfrequenzschwingungen durch phasenrichtige Mitkopplung.",
+    "erklaerung": "Ein Oszillator benötigt einen Verstärker, ein frequenzbestimmendes Glied (Schwingkreis oder Quarz) und eine Rückkopplung. Schwingungsbedingung (Barkhausen): Phasenverschiebung 0° (oder 360°) und Schleifenverstärkung mindestens 1. Schwingquarze nutzen den piezoelektrischen Effekt und bieten eine um Zehnerpotenzen höhere Güte und Frequenzstabilität als Spulen-Kondensator-Kreise.",
+    "formel": "Schwingbedingung: |V · k| ≥ 1 und Phasenverschiebung φ = 0° (Mitkopplung)",
+    "merksatz": "Mitkopplung erzeugt Schwingung, Gegenkopplung stabilisiert den Verstärker!",
+    "verwandte_themen": [
+      "top_technik_ed2",
+      "top_technik_ef3"
+    ]
+  },
+  {
+    "topic_id": "top_technik_ee1",
+    "kategorie": "Technik",
+    "titel": "Modulationsverfahren Übersicht",
+    "kernaussage": "Modulation prägt ein niederfrequentes Nutzsignal auf eine hochfrequente Trägerwelle auf.",
+    "erklaerung": "Hochfrequente Träger breiten sich effizient über Antennen aus, tragen jedoch zunächst keine Information. Bei der Modulation wird ein Kennwert des Trägers im Rhythmus des Sprach- oder Datensignals verändert: die Amplitude (AM, SSB), die Frequenz (FM) oder die Phasenlage (PM, PSK). Im Empfänger rekonstruiert ein Demodulator das ursprüngliche Nutzsignal.",
+    "formel": "Träger s(t) = A(t) · cos(2π f(t) t + φ(t))",
+    "merksatz": "Ohne Modulation sendet man nur einen leeren, stummen Träger!",
+    "verwandte_themen": [
+      "top_technik_ee2",
+      "top_technik_ee3",
+      "top_technik_ee4"
+    ]
+  },
+  {
+    "topic_id": "top_technik_ee2",
+    "kategorie": "Technik",
+    "titel": "Amplitudenmodulation, SSB & CW",
+    "kernaussage": "SSB (Einseitenbandmodulation) unterdrückt Träger und ein Seitenband für maximale Reichweite und Bandbreiteneffizienz.",
+    "erklaerung": "Klassische AM belegt die doppelte Audiobandbreite (z. B. 6 kHz) und verbraucht zwei Drittel der Sendeleistung im redundanten Träger. SSB (Single Sideband) filtert den Träger und ein Seitenband aus. Die Bandbreite sinkt auf ca. 2,7 kHz, die gesamte Sendeleistung fließt in das informationsrelevante Seitenband. Üblich: LSB auf Bändern unter 10 MHz, USB ab 10 MHz aufwärts. CW (Morsetelegrafie) tastet den Träger nur ein und aus (Bandbreite < 500 Hz).",
+    "formel": "B_AM = 2 · f_NF_max;  B_SSB ≈ f_NF_max (ca. 2,7 kHz);  B_CW ≈ 100–500 Hz",
+    "merksatz": "LSB unter 10 MHz (Low=LSB), USB über 10 MHz (Up=USB)!",
+    "verwandte_themen": [
+      "top_technik_ee1",
+      "top_technik_ef2",
+      "top_betrieb_bb2"
+    ]
+  },
+  {
+    "topic_id": "top_technik_ee3",
+    "kategorie": "Technik",
+    "titel": "Frequenz- & Phasenmodulation (FM/PM)",
+    "kernaussage": "FM moduliert die Frequenz des Trägers bei konstanter Amplitude und ist immun gegen Amplitudenstörungen.",
+    "erklaerung": "Bei Frequenzmodulation steuert die Tonhöhe die Frequenzänderungsgeschwindigkeit und die Lautstärke den Frequenzhub Δf. Weil die Hüllkurvenamplitude konstant bleibt, können Sendeendstufen im hocheffizienten C-Betrieb arbeiten, und Empfänger können Amplitudenstörungen (z. B. Zündfunken, Knacken) durch Amplitudenbegrenzer restlos kappen. Standard-Kanalraster im 2m/70cm-Band: 12,5 kHz (Hub ±2,5 kHz).",
+    "formel": "Carson-Formel: B_FM = 2 · (Δf + f_NF_max);  m = Δf / f_NF_max",
+    "merksatz": "FM schneidet Knackstörungen ab, braucht aber mehr Bandbreite als SSB!",
+    "verwandte_themen": [
+      "top_technik_ee1",
+      "top_technik_ef3",
+      "top_betrieb_be2"
+    ]
+  },
+  {
+    "topic_id": "top_technik_ee4",
+    "kategorie": "Technik",
+    "titel": "Digitale Modulationsverfahren & Digimodes",
+    "kernaussage": "Digitale Modi übertragen diskrete Bitsignale mit hoher Störresistenz und automatischer Fehlerkorrektur.",
+    "erklaerung": "Digitale Übertragungsverfahren nutzen Frequenzumtastung (FSK), Phasenumtastung (PSK) oder Quadraturamplitudenmodulation (QAM). Schmalband-Modi wie FT8 ermöglichen weltweite QSOs selbst weit unter dem akustischen Rauschteppich (-20 dB SNR). Digitale Sprachverfahren (DMR, C4FM, D-Star) komprimieren Sprache digital mit Vocodern und übertragen Rufzeichen und Metadaten parallel.",
+    "formel": "Baudrate = Symbolwechsel/s; Bitrate = Baudrate · Bits/Symbol",
+    "merksatz": "FT8 hört noch dort, wo das menschliche Ohr nur noch Rauschen wahrnimmt!",
+    "verwandte_themen": [
+      "top_technik_ea2",
+      "top_technik_ee1",
+      "top_technik_ef6"
+    ]
+  },
+  {
+    "topic_id": "top_technik_ef1",
+    "kategorie": "Technik",
+    "titel": "Empfängerkonzepte & Direktmischer",
+    "kernaussage": "Direktmischempfänger setzen das Antennensignal in einem Schritt direkt in das hörbare Niederfrequenzband um.",
+    "erklaerung": "Ein Direktüberlagerungsempfänger (Synchrodyn) mischt das Eingangssignal mit einer Oszillatorfrequenz, die exakt der Empfangsfrequenz entspricht (Zwischenfrequenz = 0 Hz). Das Mischprodukt hinter dem Tiefpass ist direkt das NF-Audiosignal. Vorteil: Einfacher Aufbau, keine Spiegelfrequenzproblematik bei ZF. Nachteil: Keine Trennung der beiden Seitenbänder ohne Phasenmethode (I/Q-Mischer).",
+    "formel": "f_NF = |f_HF - f_LO|;  Für f_LO = f_HF ist f_ZF = 0 Hz",
+    "merksatz": "Direktmischer hat ZF = 0: Kein ZF-Filter nötig, aber Nachbarkanal schlägt durch!",
+    "verwandte_themen": [
+      "top_technik_ef2",
+      "top_technik_ef6"
+    ]
+  },
+  {
+    "topic_id": "top_technik_ef2",
+    "kategorie": "Technik",
+    "titel": "Überlagerungsempfänger (Superhet) & Spiegelfrequenz",
+    "kernaussage": "Der Superhet mischt das Empfangssignal auf eine feste Zwischenfrequenz, um optimale Selektion und Verstärkung zu erzielen.",
+    "erklaerung": "Ein Superheterodyn-Empfänger mischt die variable Eingangsfrequenz fe mit dem Lokaloszillator fLO auf eine konstante Zwischenfrequenz fZF. Dort bewirken steilflankige Quarz- oder Keramikfilter hohe Kanaltrennung (Nachbarkanalselektion). Unerwünschter Nebeneffekt: Die Spiegelfrequenz fsp liegt im Abstand von genau 2·fZF zur Empfangsfrequenz und muss durch Vorfilter vor dem Mischer unterdrückt werden.",
+    "formel": "f_ZF = |f_E - f_LO|;  f_Spiegel = f_E ± 2 · f_ZF",
+    "merksatz": "Spiegelfrequenz liegt immer um den doppelten Zwischenfrequenzabstand entfernt!",
+    "verwandte_themen": [
+      "top_technik_ed2",
+      "top_technik_ef1",
+      "top_technik_ef6"
+    ]
+  },
+  {
+    "topic_id": "top_technik_ef3",
+    "kategorie": "Technik",
+    "titel": "Senderaufbau & Senderstufen",
+    "kernaussage": "Ein Sender generiert ein frequenzstabiles Signal, moduliert es und verstärkt es zur Abstrahlung.",
+    "erklaerung": "Typische Senderstufen umfassen: Oszillator (VFO / DDS) zur Frequenzerzeugung, Pufferstufe (verhindert Frequenzverziehen durch Laständerungen), Modulator, Treiberstufe, Leistungsverstärker (PA) und ein Tiefpassfilter am Ausgang. Das Ausgangsfilter ist essenziell, um unerwünschte Oberwellen (Harmonische) auf das gesetzlich geforderte Maß abzusenken.",
+    "formel": "P_Sender = P_Träger + P_Seitenbänder;  Oberwellendämpfung ≥ 50 dB gefordert",
+    "merksatz": "Pufferstufe schützt den Oszillator, Tiefpass schützt das Nachbarband!",
+    "verwandte_themen": [
+      "top_technik_ed4",
+      "top_technik_ed5",
+      "top_technik_ef4",
+      "top_technik_ej2"
+    ]
+  },
+  {
+    "topic_id": "top_technik_ef4",
+    "kategorie": "Technik",
+    "titel": "Sendeendstufen & Linearität",
+    "kernaussage": "Endstufen für SSB müssen absolut linear arbeiten, um Intermodulationsverzerrungen und Bandverbreiterung zu vermeiden.",
+    "erklaerung": "Bei Amplituden- und Einseitenbandmodulation (SSB) muss die Hüllkurvenform unverzerrt verstärkt werden (Klasse-AB oder Klasse-A). Übersteuerung führt zu Intermodulationsprodukten (Splatter), die benachbarte Funkamateure massiv stören. Bei frequenzmodulierten Signalen (FM) darf die Endstufe hingegen im nichtlinearen C-Betrieb mit maximalem Wirkungsgrad betrieben werden.",
+    "formel": "PEP = (U_s,max)² / (2 · R_L);  Wirkungsgrad η = P_HF / P_DC",
+    "merksatz": "SSB braucht strikte Linearität (Klasse AB), FM liebt hohen Wirkungsgrad (Klasse C)!",
+    "verwandte_themen": [
+      "top_technik_ed4",
+      "top_technik_ee2",
+      "top_technik_ef3"
+    ]
+  },
+  {
+    "topic_id": "top_technik_ef5",
+    "kategorie": "Technik",
+    "titel": "Konverter & Transverter",
+    "kernaussage": "Transverter setzen Sende- und Empfangssignale zwischen einem Basisbandgerät und einem höheren Frequenzband um.",
+    "erklaerung": "Mit einem Transverter kann beispielsweise ein bestehendes 10m- oder 2m-Allmode-Funkgerät auf VHF-, UHF- oder Mikrowellenbändern (z. B. 23 cm, 13 cm, QO-100 Satellit bei 2,4 / 10 GHz) betrieben werden. Ein Mischer mit hochstabilem Oszillator verschiebt das gesamte Band frequenzlinear nach oben (Up-Conversion) und beim Empfang nach unten (Down-Conversion).",
+    "formel": "f_Ziel = f_Basis + f_LO",
+    "merksatz": "Transverter macht aus dem Kurzwellengerät eine vollwertige Mikrowellenstation!",
+    "verwandte_themen": [
+      "top_technik_ef2",
+      "top_technik_ef3"
+    ]
+  },
+  {
+    "topic_id": "top_technik_ef6",
+    "kategorie": "Technik",
+    "titel": "Digitale Signalverarbeitung & SDR",
+    "kernaussage": "Software Defined Radios (SDR) digitalisieren Hochfrequenz direkt und verlagern Filterung und Modulation in Software.",
+    "erklaerung": "Moderne Transceiver digitalisieren HF-Signale mit schnellen Analog-Digital-Wandlern (ADC). Ein digitaler Signalprozessor (DSP) oder FPGA übernimmt Mischer, Bandfilter, ZF-Verstärkung, Demodulation und Störaustastung (Noise Reduction). Mithilfe von I/Q-Mischung (In-Phase und Quadratur) können Spiegelfrequenzen rein rechnerisch unterdrückt und das Funkspektrum in Echtzeit als Wasserfall dargestellt werden.",
+    "formel": "Nyquist-Shannon-Theorem: Abtastrate f_Abtast ≥ 2 · f_max",
+    "merksatz": "Software Defined Radio: Gestern lötete man Filterquarze, heute programmiert man DSP-Filter!",
+    "verwandte_themen": [
+      "top_technik_ea2",
+      "top_technik_ee4",
+      "top_technik_ef1"
+    ]
+  },
+  {
+    "topic_id": "top_technik_eg1",
+    "kategorie": "Technik",
+    "titel": "Antennen-Grundformen: Dipol & Vertikal",
+    "kernaussage": "Der Halbwellendipol (λ/2) ist die Grundform aller resonanten Antennen mit einem Fußpunktwiderstand von ca. 73 Ω.",
+    "erklaerung": "Ein gestreckter Halbwellendipol besteht aus zwei λ/4 langen Schenkeln. In Resonanz hat er im Speisepunkt im Zentrum eine maximale Stromstärke (Strombauch) und minimale Spannung (Spannungsknoten), was eine niederohmige Impedanz von ca. 50–75 Ω ergibt. Vertikalantennen (Groundplane) nutzen einen λ/4-Strahler gegen Radials als künstliche Erde und besitzen rundstrahlende Flachstrahlung (Impedanz ca. 36 Ω ohne Verkürzung).",
+    "formel": "Gesamtlänge Dipol: l [m] ≈ 0,95 · (150 / f [MHz]);  λ/4-Strahler: l [m] ≈ 0,95 · (75 / f [MHz])",
+    "merksatz": "Dipol hat Strombauch in der Mitte und Spannungsbauch an den Enden!",
+    "verwandte_themen": [
+      "top_technik_eb3",
+      "top_technik_eg2",
+      "top_technik_eg3"
+    ]
+  },
+  {
+    "topic_id": "top_technik_eg2",
+    "kategorie": "Technik",
+    "titel": "Richtantennen, Gewinn (dBi/dBd) & Richtdiagramm",
+    "kernaussage": "Richtantennen bündeln die Strahlungsleistung in eine Vorzugsrichtung und erzielen dadurch Antennengewinn.",
+    "erklaerung": "Eine Yagi-Uda-Antenne besteht aus einem gespeisten Erreger (Dipol), einem geringfügig längeren Reflektor (hinter dem Erreger) und kürzeren Direktoren (in Strahlungsrichtung). Der Gewinn gibt an, wie viel mehr Leistung in der Hauptstrahlrichtung ankommt im Vergleich zum Kugelstrahler (dBi) oder Halbwellendipol (dBd). Das Vor-Rück-Verhältnis (F/B) beschreibt die Dämpfung rückwärtiger Signale.",
+    "formel": "G [dBi] = G [dBd] + 2,15 dB;  Leistungsverhältnis 3 dB = doppelte Leistung, 10 dB = verzehnfachte Leistung",
+    "merksatz": "Reflektor ist länger, Direktor ist kürzer als der Strahler. Gewinn in dBi ist immer um 2,15 höher als in dBd!",
+    "verwandte_themen": [
+      "top_technik_eg1",
+      "top_technik_eg5"
+    ]
+  },
+  {
+    "topic_id": "top_technik_eg3",
+    "kategorie": "Technik",
+    "titel": "Übertragungsleitungen & Wellenwiderstand",
+    "kernaussage": "Der Wellenwiderstand eines HF-Kabels hängt rein von Geometrie und Dielektrikum ab, nicht von der Kabellänge.",
+    "erklaerung": "Koaxialkabel (Standard im Amateurfunk: 50 Ω wie RG-58, RG-213, Aircell 7) schirmen HF-Felder nach außen ab. Zweidrahtleitungen (Hühnerleiter, z. B. 450 Ω) weisen extrem geringe Dämpfung auf, müssen aber symmetrisch gespeist werden. Die Kabeldämpfung steigt mit zunehmender Frequenz und Länge deutlich an. Durch das Dielektrikum breitet sich die Welle langsamer aus (Verkürzungsfaktor Vk ca. 0,66–0,85).",
+    "formel": "Z₀ = √(L' / C');  Elektrische Länge l_el = l_geo / V_k",
+    "merksatz": "Dünnes RG-58 taugt für Kurzwelle, auf 70 cm schluckt es den halben Sender!",
+    "verwandte_themen": [
+      "top_technik_eg1",
+      "top_technik_eg4"
+    ]
+  },
+  {
+    "topic_id": "top_technik_eg4",
+    "kategorie": "Technik",
+    "titel": "Antennenanpassung, SWR & Balun",
+    "kernaussage": "Fehlanpassung zwischen Antenne und Kabel erzeugt stehende Wellen (SWR) und reflektierte Leistung.",
+    "erklaerung": "Stimmt die Antennenimpedanz ZA nicht mit dem Wellenwiderstand des Kabels Z0 überein, wird ein Teil der HF-Energie reflektiert. Das Stehwellenverhältnis (SWR) drückt diese Fehlanpassung aus (Ideal SWR 1,0; unkritisch bis 1,5–2,0). Ein Antennentuner transformiert die Impedanz am Stationseingang auf 50 Ω. Ein Balun (balanced-to-unbalanced) verbindet unsymmetrische Koaxialkabel mit symmetrischen Dipolen und verhindert Mantelwellen.",
+    "formel": "s = U_max / U_min = Z_Last / Z₀ (für Z_Last > Z₀);  Reflexionsfaktor r = (s - 1) / (s + 1)",
+    "merksatz": "Balun = BALanced to UNbalanced; blockiert Mantelwellen und verhindert HF im Shack!",
+    "verwandte_themen": [
+      "top_technik_ec4",
+      "top_technik_eg3",
+      "top_technik_ei4"
+    ]
+  },
+  {
+    "topic_id": "top_technik_eg5",
+    "kategorie": "Technik",
+    "titel": "Strahlungsleistung: ERP und EIRP",
+    "kernaussage": "ERP und EIRP beziffern die effektiv in Hauptstrahlrichtung abgestrahlte Leistung unter Berücksichtigung von Kabeldämpfung und Antennengewinn.",
+    "erklaerung": "Die Sendeleistung an der Antenne ergibt sich aus der Senderleistung minus Kabeldämpfung. Multipliziert mit dem Antennengewinn ergibt sich die äquivalente Strahlungsleistung: EIRP bezieht sich auf den isotropen Kugelstrahler, ERP auf den Halbwellendipol. Der Unterschied beträgt exakt 2,15 dB (Faktor 1,64). Die BEMFV-Anzeigepflicht gilt ab 10 Watt EIRP.",
+    "formel": "EIRP = P_Antenne · 10^(G_dBi / 10);  ERP = P_Antenne · 10^(G_dBd / 10);  EIRP = ERP · 1,64",
+    "merksatz": "EIRP bezieht sich auf Isotrop (i), ERP auf den Dipol (d). EIRP ist immer 1,64-mal größer als ERP!",
+    "verwandte_themen": [
+      "top_technik_eg2",
+      "top_vorschriften_ve5"
+    ]
+  },
+  {
+    "topic_id": "top_technik_eh1",
+    "kategorie": "Technik",
+    "titel": "Die Ionosphäre & Schichtenaufbau",
+    "kernaussage": "Die Ionosphäre reflektiert Kurzwellen und ermöglicht weltweite Funkverbindungen ohne Satelliten.",
+    "erklaerung": "Durch solare UV- und Röntgenstrahlung werden Gasmoleküle in 60 bis 400 km Höhe ionisiert. Man unterscheidet: D-Schicht (60–90 km, dämpft tagsüber tiefere KW-Bänder, verschwindet nachts), E-Schicht (100–120 km, ermöglicht Sporadic-E im Sommer), F1- und F2-Schicht (150–400 km, verschmelzen nachts zur F-Schicht). Die Ionisation folgt dem 11-jährigen Sonnenfleckenzyklus.",
+    "formel": "Grenzfrequenz f_g ≈ 9 · √(N_max) [Hz]",
+    "merksatz": "D-Schicht dämpft am Tag (Dead on Day); F-Schicht funkt Tag und Nacht (Far away)!",
+    "verwandte_themen": [
+      "top_technik_eh2",
+      "top_technik_eh3"
+    ]
+  },
+  {
+    "topic_id": "top_technik_eh2",
+    "kategorie": "Technik",
+    "titel": "Kurzwellenausbreitung & Tote Zone",
+    "kernaussage": "Bodenwelle und Raumwelle bestimmen die Reichweite auf Kurzwelle; dazwischen liegt die tote Zone.",
+    "erklaerung": "Die Bodenwelle folgt der Erdkrümmung, wird jedoch durch den Erdboden stark gedämpft (Reichweite ca. 20–100 km). Die Raumwelle wird an der Ionosphäre zur Erde zurückgebeugt (Hop). Der Bereich zwischen dem Ende der Bodenwelle und dem ersten Auftreffen der Raumwelle heißt 'Tote Zone' (Skip Zone), in der kein Empfang möglich ist. Die höchste nutzbare Frequenz heißt MUF (Maximum Usable Frequency).",
+    "formel": "MUF = f_Grenz / cos(Einfallswinkel φ)",
+    "merksatz": "In der toten Zone hört man die Bodenwelle nicht mehr und die Raumwelle fliegt oben drüber!",
+    "verwandte_themen": [
+      "top_technik_eh1",
+      "top_betrieb_bb1"
+    ]
+  },
+  {
+    "topic_id": "top_technik_eh3",
+    "kategorie": "Technik",
+    "titel": "Wellenausbreitung oberhalb 30 MHz (VHF/UHF)",
+    "kernaussage": "VHF- und UHF-Signale breiten sich primär quasioptisch auf Sichtverbindung aus.",
+    "erklaerung": "Signale im 2m- und 70cm-Band durchdringen die normale Ionosphäre ins Weltall (wichtig für Satellitenfunk). Die terrestrische Reichweite wird durch den Radiohorizont begrenzt (ca. 15% weiter als der optische Horizont wegen atmosphärischer Brechung). Besondere Überreichweiten entstehen durch Inversionswetterlagen (Troposphärischer Dukt) oder Sporadic-E im Frühsommer.",
+    "formel": "Radiohorizont d [km] ≈ 4,12 · (√(h_Sender [m]) + √(h_Empfänger [m]))",
+    "merksatz": "Auf UKW gilt: Antennenhöhe ist durch nichts zu ersetzen außer durch noch mehr Antennenhöhe!",
+    "verwandte_themen": [
+      "top_technik_eh1",
+      "top_betrieb_be2"
+    ]
+  },
+  {
+    "topic_id": "top_technik_ei1",
+    "kategorie": "Technik",
+    "titel": "Multimeter (Spannung, Strom & Widerstand)",
+    "kernaussage": "Spannungsmesser werden parallel zur Messstelle geschaltet, Strommesser stets in Reihe in den aufgetrennten Kreis.",
+    "erklaerung": "Ein ideales Voltmeter besitzt einen unendlich hohen Innenwiderstand, um den Stromkreis nicht zu belasten. Ein ideales Amperemeter besitzt einen Innenwiderstand von 0 Ω, um keinen Spannungsabfall zu erzeugen. Bei versehentlicher Parallelschaltung eines Amperemeters an eine Spannungsquelle entsteht ein Kurzschluss! Vor Widerstandsmessungen muss die Schaltung immer spannungslos geschaltet werden.",
+    "formel": "Innenwiderstand: R_i,Volt -> ∞;  R_i,Ampere -> 0",
+    "merksatz": "Spannung messen: Parallel dranhalten. Strom messen: Leitung auftrennen und dazwischenhängen!",
+    "verwandte_themen": [
+      "top_technik_eb5",
+      "top_technik_ei4"
+    ]
+  },
+  {
+    "topic_id": "top_technik_ei2",
+    "kategorie": "Technik",
+    "titel": "Vektorielle Netzwerkanalysatoren (VNA)",
+    "kernaussage": "Ein VNA misst Betrag und Phase von Reflexion (S11) und Transmission (S21) zur Antennen- und Filteranalyse.",
+    "erklaerung": "Moderne Handheld-VNAs (z. B. NanoVNA) erfassen Betrag und Phasenwinkel reflektierter und durchgelassener Hochfrequenz. Damit lassen sich komplexe Impedanzen (R + jX), SWR, Resonanzfrequenzen von Antennen sowie Bandbreite und Dämpfung von Filtern präzise im Smith-Diagramm darstellen. Vor jeder Messung ist eine Kalibrierung (Open, Short, Load) an der Messebene unerlässlich.",
+    "formel": "S₁₁ = reflektierte Welle / einlaufende Welle;  Smith-Diagramm: Mittelpunkt = 50 Ω reell",
+    "merksatz": "Mitte im Smith-Diagramm ist das Ziel: Genau 50 Ohm ohne Blindanteile!",
+    "verwandte_themen": [
+      "top_technik_eg4",
+      "top_technik_ei4"
+    ]
+  },
+  {
+    "topic_id": "top_technik_ei3",
+    "kategorie": "Technik",
+    "titel": "Oszilloskope & Signalformanalyse",
+    "kernaussage": "Das Oszilloskop stellt den zeitlichen Verlauf elektrischer Spannungen direkt zweidimensional auf dem Schirm dar.",
+    "erklaerung": "Die X-Achse (Zeitbasis in s/div oder µs/div) zeigt den Zeitverlauf, die Y-Achse (Volt/div) die Amplitude. Damit können Spitzenwerte (Uss), Periodendauer T, Übersteuerungen (Clipping), Phasenverschiebungen und Modulationshüllkurven direkt visuell beurteilt werden. Tastköpfe mit 10:1-Teiler verringern die kapazitive Belastung der Messschaltung drastisch.",
+    "formel": "Periodendauer T = Abszissenteile · Time/Div;  f = 1 / T",
+    "merksatz": "Oszilloskop = Das Auge des Funkamateurs in die Schaltung!",
+    "verwandte_themen": [
+      "top_technik_eb4",
+      "top_technik_ef4"
+    ]
+  },
+  {
+    "topic_id": "top_technik_ei4",
+    "kategorie": "Technik",
+    "titel": "Stehwellenmessgeräte & Richtkoppler",
+    "kernaussage": "Ein SWR-Meter trennt vorlaufende und rücklaufende Welle über Richtkoppler zur Überwachung der Antennenanpassung.",
+    "erklaerung": "Das SWR-Meter wird in die Koaxialleitung zwischen Sender und Antenne eingeschleift. Über induktive und kapazitive Kopplung misst es die hinlaufende Leistung Pvor und die von der Antenne reflektierte Leistung Prück. Aus dem Verhältnis berechnet sich das SWR. Ein plötzlicher SWR-Anstieg deutet auf Kabelschäden, Antennendefekte oder Feuchtigkeit im Stecker hin.",
+    "formel": "s = (1 + √(P_rück / P_vor)) / (1 - √(P_rück / P_vor))",
+    "merksatz": "Rücklaufende Leistung nahe Null = Perfektes SWR von 1,0!",
+    "verwandte_themen": [
+      "top_technik_eg4",
+      "top_technik_ei2"
+    ]
+  },
+  {
+    "topic_id": "top_technik_ei5",
+    "kategorie": "Technik",
+    "titel": "Frequenzmessung & Frequenzzähler",
+    "kernaussage": "Digitale Frequenzzähler ermitteln Frequenzen durch Zählen von Signalperioden über ein präzises Zeitfenster.",
+    "erklaerung": "Ein Frequenzzähler zählt Signalimpulse während einer definierten Torzeit (z. B. 1 Sekunde). Die Genauigkeit hängt direkt vom internen Referenzoszillator ab (z. B. temperaturkompensierter Quarzoszillator TCXO oder ofengesteuerter OCXO). Zur Vermeidung von Messfehlern durch Oberwellen muss dem Zähler ein selektives Vorfilter oder Dämpfungsglied vorgeschaltet werden.",
+    "formel": "f = N_Impulse / Torzeit",
+    "merksatz": "Längere Torzeit = höhere Auflösung, aber langsamere Anzeige!",
+    "verwandte_themen": [
+      "top_technik_ed5",
+      "top_technik_ef3"
+    ]
+  },
+  {
+    "topic_id": "top_technik_ej1",
+    "kategorie": "Technik",
+    "titel": "Elektromagnetische Verträglichkeit (EMV) & Störursachen",
+    "kernaussage": "EMV umfasst das fehlerfreie Funktionieren eigener Funkanlagen ohne Beeinträchtigung anderer elektronischer Geräte.",
+    "erklaerung": "Störungen entstehen durch unzureichende Störfestigkeit von Unterhaltungselektronik oder mangelhafte Aussendungsreinheit. Kopplungsmechanismen sind: galvanische Kopplung (gemeinsame Masseleitung), kapazitive Kopplung (elektrisches Feld), induktive Kopplung (Magnetfeld) und Strahlungskopplung über Antennen und Kabel als Empfänger. Mantelwellen auf Koaxialkabeln sind eine der häufigsten Ursachen von Einstrahlung.",
+    "formel": "EMV-Dreieck: Störquelle -> Koppelpfad -> Störsenke",
+    "merksatz": "Entstören packt man an der Quelle an oder blockiert den Koppelpfad!",
+    "verwandte_themen": [
+      "top_technik_eg4",
+      "top_technik_ej2",
+      "top_vorschriften_ve3"
+    ]
+  },
+  {
+    "topic_id": "top_technik_ej2",
+    "kategorie": "Technik",
+    "titel": "Unerwünschte Aussendungen & Entstörmaßnahmen",
+    "kernaussage": "Klappferrite, Mantelwellensperren und Tiefpassfilter unterdrücken Störungen effektiv am Entstehungsort.",
+    "erklaerung": "Unerwünschte Aussendungen gliedern sich in Oberwellen (ganzzahlige Vielfache der Sendefrequenz) und Nebenwellen (z. B. Mischprodukte). Gesetzliche Grenzwerte fordern typisch mindestens 50 dB Dämpfung gegenüber der Trägerleistung. Maßnahmen: Klappferrite auf Kabel wickeln (erhöht HF-Impedanz für Mantelwellen), Tiefpassfilter am Senderausgang und saubere Erdung aller Gehäuse.",
+    "formel": "Oberwellen: f_n = n · f_Grundwelle (n = 2, 3, 4 ...)",
+    "merksatz": "Ein Tiefpass lässt die Grundwelle durch und schneidet alle Oberwellen gnadenlos ab!",
+    "verwandte_themen": [
+      "top_technik_ed2",
+      "top_technik_ef3",
+      "top_technik_ej1"
+    ]
+  },
+  {
+    "topic_id": "top_technik_ek1",
+    "kategorie": "Technik",
+    "titel": "Personenschutz an elektrischen & Funkanlagen",
+    "kernaussage": "Ab 50 V Wechselspannung oder 120 V Gleichspannung besteht akute Lebensgefahr durch Herzkammerflimmern.",
+    "erklaerung": "Der menschliche Körper hat einen elektrischen Widerstand von ca. 1.000 Ω. Ein Strom von nur 30–50 mA über den Herzmuskel kann tödliches Herzkammerflimmern auslösen. FI-Schutzschalter (RCD mit IΔn ≤ 30 mA) schalten bei Fehlerströmen in Millisekunden ab. An Sendeantennen drohen bei Berührung schwere HF-Verbrennungen (auch ohne Erdschluss!).",
+    "formel": "Berührungsspannung: U_grenz = 50 V AC / 120 V DC;  RCD-Auslösefehlerstrom ≤ 30 mA",
+    "merksatz": "Strom macht klein, schwarz und hässlich – vor Arbeiten immer Stecker ziehen und Elkos entladen!",
+    "verwandte_themen": [
+      "top_technik_eb5",
+      "top_technik_ek2",
+      "top_vorschriften_ve6"
+    ]
+  },
+  {
+    "topic_id": "top_technik_ek2",
+    "kategorie": "Technik",
+    "titel": "Anlagensicherheit, Erdung & Blitzschutz",
+    "kernaussage": "Antennenmaste und Koaxialkabel müssen nach VDE 0855 blitzstromtragfähig in den Gebäude-Potentialausgleich eingebunden werden.",
+    "erklaerung": "Außenantennen unterliegen der VDE 0855-300. Antennenstandrohre müssen mit mindestens 16 mm² Kupferdraht (oder 25 mm² Aluminium / 50 mm² Stahl) auf kürzestem Weg mit der Blitzschutz- oder Erdungsanlage verbunden werden. Alle Koaxialschirme werden über Erdungsschienen am Gebäudeeintritt in den Potentialausgleich einbezogen. Bei aufziehendem Gewitter: Antennenstecker ziehen und mit Abstand zur Wand ablegen!",
+    "formel": "Mindestquerschnitt Blitzschutzerdung: 16 mm² Cu, 25 mm² Al oder 50 mm² Stahl",
+    "merksatz": "Ein Antennenmast auf dem Dach ohne Erdung ist eine Einladung für den Blitz!",
+    "verwandte_themen": [
+      "top_technik_ek1",
+      "top_vorschriften_ve5",
+      "top_vorschriften_ve6"
+    ]
+  },
+  {
+    "topic_id": "top_betrieb_ba1",
+    "kategorie": "Betrieb",
+    "titel": "Internationales Buchstabieralphabet",
+    "kernaussage": "Das ICAO/ITU-Buchstabieralphabet garantiert verwechslungsfreie Übertragung von Rufzeichen und Standorten weltweit.",
+    "erklaerung": "Um Übertragungsfehler bei Rauschen und Akzenten auszuschließen, werden Rufzeichen und Eigennamen phonetisch buchstabiert: Alfa, Bravo, Charlie, Delta, Echo, Foxtrott, Golf, Hotel, India, Juliett, Kilo, Lima, Mike, November, Oscar, Papa, Quebec, Romeo, Sierra, Tango, Uniform, Victor, Whiskey, X-ray, Yankee, Zulu. Zahlen werden klar und international ausgesprochen (z. B. Nadazero, Unaone).",
+    "formel": "DL1ABC = Delta Lima One Alfa Bravo Charlie",
+    "merksatz": "Niemals Fantasiewörter erfinden – im internationalen Funkverkehr gilt ausnahmslos ICAO!",
+    "verwandte_themen": [
+      "top_betrieb_bc1",
+      "top_betrieb_bd1"
+    ]
+  },
+  {
+    "topic_id": "top_betrieb_bb1",
+    "kategorie": "Betrieb",
+    "titel": "Amateurfunkbänder der Klasse E",
+    "kernaussage": "Klasse E berechtigt zur weltweiten Nutzung bestimmter Kurzwellenbänder sowie der VHF-/UHF- und Mikrowellenbänder.",
+    "erklaerung": "Funkamateure der Klasse E dürfen folgende Kurzwellenbänder nutzen: 160m (1,81–2,0 MHz), 80m (3,5–3,8 MHz), 15m (21,0–21,45 MHz) und 10m (28,0–29,7 MHz). Zudem stehen das 2m-Band (144–146 MHz), 70cm-Band (430–440 MHz) sowie Mikrowellenbänder ab 2,3 GHz und der geostationäre Satellit QO-100 zur Verfügung.",
+    "formel": "160m (1,8 MHz), 80m (3,5 MHz), 15m (21 MHz), 10m (28 MHz), 2m (144 MHz), 70cm (430 MHz)",
+    "merksatz": "Klasse E auf KW: 160m, 80m, 15m und 10m – vier faszinierende Fenster in die Kurzwelle!",
+    "verwandte_themen": [
+      "top_betrieb_bb2",
+      "top_vorschriften_vd7"
+    ]
+  },
+  {
+    "topic_id": "top_betrieb_bb2",
+    "kategorie": "Betrieb",
+    "titel": "IARU-Bandpläne & Bandsegmentierung",
+    "kernaussage": "IARU-Bandpläne unterteilen Frequenzbänder freiwillig in Exklusivbereiche für CW, Digimodes und Sprache.",
+    "erklaerung": "Um gegenseitige Störungen unterschiedlicher Sendearten zu vermeiden, vereinbaren die Funkamateure über die International Amateur Radio Union (IARU) Bandpläne. Das untere Bandende ist fast immer exklusiv Morsetelegrafie (CW) vorbehalten, gefolgt von Schmalband-Digimodes (FT8, RTTY, PSK). Erst darüber liegen die breiteren Sprechfunkbereiche (SSB, FM). Bandpläne sind Ehrenkodex jedes Funkamateurs.",
+    "formel": "Typische Bandaufteilung: Unten = CW, Mitte = Digimodes, Oben = SSB / FM",
+    "merksatz": "Niemals mit SSB ins Telegrafiesegment am Bandanfang hineinrufen!",
+    "verwandte_themen": [
+      "top_betrieb_bb1",
+      "top_betrieb_bd1"
+    ]
+  },
+  {
+    "topic_id": "top_betrieb_bc1",
+    "kategorie": "Betrieb",
+    "titel": "Rufzeichenaufbau & Landeskenner",
+    "kernaussage": "Jedes Amateurfunkrufzeichen identifiziert Funkamateur, Herkunftsland und Lizenzklasse weltweit eindeutig.",
+    "erklaerung": "Ein deutsches Rufzeichen besteht aus: Präfix (Landeskenner 'D' + zweiter Buchstabe z. B. 'DO' für Klasse E), einer Ziffer (0 bis 9) und einem Suffix aus zwei oder drei Buchstaben (z. B. DO1ABC). Internationale Präfixe zeigen das Heimatland (z. B. F = Frankreich, G = Großbritannien, I = Italien, EA = Spanien, W/K = USA, JA = Japan).",
+    "formel": "Aufbau: [Präfix / Landeskenner] + [Ziffer] + [Suffix]; Klasse E in DL typisch: DO1–DO9",
+    "merksatz": "DO = Klasse E; DL/DJ/DK = Klasse A; DN = Ausbildungsrufzeichen!",
+    "verwandte_themen": [
+      "top_betrieb_ba1",
+      "top_betrieb_bc2",
+      "top_vorschriften_vd2"
+    ]
+  },
+  {
+    "topic_id": "top_betrieb_bc2",
+    "kategorie": "Betrieb",
+    "titel": "Rufzeichenzusätze & Sonderstationen",
+    "kernaussage": "Zusätze hinter dem Rufzeichen signalisieren mobilen, portablen oder maritimen Funkbetrieb.",
+    "erklaerung": "Wird eine Funkstation nicht am festen Wohnort betrieben, können offizielle Zusätze angehängt werden: /p (portabel = vorübergehender ortsfester Betrieb im Freien), /m (mobil = Betrieb aus Landfahrzeugen), /mm (maritim mobil = an Bord von Wasserfahrzeugen auf See) oder /am (aeronautisch mobil = an Bord von Luftfahrzeugen). Sonderrufzeichen (z. B. DP0POL, DL0FLAG) besitzen oft spezielle Präfixe.",
+    "formel": "Beispiele: DO1ABC/p (Portabel), DO1ABC/m (Mobil), DO1ABC/mm (See)",
+    "merksatz": "/p für Picknick & Portabel, /m für Motorisiert, /mm für Meer & Maritim!",
+    "verwandte_themen": [
+      "top_betrieb_bc1",
+      "top_vorschriften_vd2"
+    ]
+  },
+  {
+    "topic_id": "top_betrieb_bd1",
+    "kategorie": "Betrieb",
+    "titel": "Betriebsabwicklung & QSO-Ablauf",
+    "kernaussage": "Ein Funkgespräch (QSO) folgt einer strukturierten Abwicklung vom CQ-Ruf bis zur Verabschiedung.",
+    "erklaerung": "Vor dem Senden muss die Frequenz immer abgehört werden ('Ist die Frequenz frei? / Is this frequency in use?'). Ein allgemeiner Anruf erfolgt mit 'CQ'. Ein Standard-QSO umfasst: Nennung beider Rufzeichen, Rapportvergabe (RST), Stationsvorstellung (Name, QTH/Standort), Wetter, Ausrüstung und Verabschiedung mit '73' (Viele Grüße). Am Ende wird das eigene Rufzeichen nochmals genannt.",
+    "formel": "Allgemeiner Anruf: 'CQ CQ CQ de DO1ABC DO1ABC DO1ABC pse k'",
+    "merksatz": "Erst hören, fragen ob frei, dann rufen – Höflichkeit ist oberstes Gebot!",
+    "verwandte_themen": [
+      "top_betrieb_bd2",
+      "top_betrieb_bd3",
+      "top_betrieb_bg1"
+    ]
+  },
+  {
+    "topic_id": "top_betrieb_bd2",
+    "kategorie": "Betrieb",
+    "titel": "Q-Schlüssel & Funkabkürzungen",
+    "kernaussage": "Dreibuchstabige Q-Gruppen ermöglichen sprachunabhängige, blitzschnelle Verständigung weltweit.",
+    "erklaerung": "Q-Gruppen stammen aus der Telegrafie und werden heute in allen Sendearten verwendet. Wichtigste Kürzel: QTH (Standort), QSL (Empfangsbestätigung), QRM (Störung durch andere Sender), QRN (atmosphärische Störungen / Gewitter), QRO (Leistung erhöhen), QRP (kleine Leistung ≤ 5W), QRZ? (Wer ruft mich?), QSY (Frequenzwechsel). Ein Fragezeichen dahinter macht aus der Aussage eine Frage.",
+    "formel": "QTH? = Wo ist Ihr Standort?  |  QTH Berlin = Mein Standort ist Berlin.",
+    "merksatz": "QRM = Man-made (Menschliche Störung); QRN = Nature (Natürliche Störung / Gewitter)!",
+    "verwandte_themen": [
+      "top_betrieb_bd1",
+      "top_betrieb_bd3"
+    ]
+  },
+  {
+    "topic_id": "top_betrieb_bd3",
+    "kategorie": "Betrieb",
+    "titel": "Das RST-System (Signalbeurteilung)",
+    "kernaussage": "Der RST-Rapport beziffert Verständlichkeit, Signalstärke und Tonqualität in einem dreistelligen Code.",
+    "erklaerung": "R (Readability): Skala 1 bis 5 (5 = vollkommen verständlich). S (Signal Strength): Skala 1 bis 9 (gemessen am S-Meter des Empfängers, 9 = extrem stark; über 9 in dB wie S9+20dB). T (Tone): Skala 1 bis 9, wird nur bei CW/Morsen vergeben (9 = reinster Ton ohne Brummen). Im Sprechfunk wird nur 'RS' übermittelt (z. B. 'Du hast ein 59 Signal').",
+    "formel": "RS(T): R = 1–5, S = 1–9, T = 1–9; Ein S-Punkt entspricht ca. 6 dB Signalpegelunterschied",
+    "merksatz": "59 = Perfekt verständlich und bombastisch stark!",
+    "verwandte_themen": [
+      "top_betrieb_bd1",
+      "top_betrieb_bd2"
+    ]
+  },
+  {
+    "topic_id": "top_betrieb_be1",
+    "kategorie": "Betrieb",
+    "titel": "Contest- & Pile-Up-Betrieb",
+    "kernaussage": "Im Contest und Pile-Up zählt maximale Kürze: Rufzeichen, Rapport und laufende Nummer genügen.",
+    "erklaerung": "Bei Funkwettbewerben (Contesten) geht es darum, in fester Zeit möglichst viele Stationen zu erreichen. Smalltalk entfällt; übermittelt werden nur Rufzeichen, RS(T) und Contest-Nummer bzw. DOK. Ein 'Pile-Up' entsteht, wenn hunderte Stationen gleichzeitig eine seltene DX-Expedition rufen. Die DX-Station arbeitet dann oft 'Split' (Sendefrequenz und Hörfrequenz getrennt, z. B. 'UP 5').",
+    "formel": "'Split UP 5': DX-Station sendet auf 14.195 MHz, hört aber Anrufe auf 14.200 MHz ab!",
+    "merksatz": "Bei Split niemals auf der Sendefrequenz der DX-Station antworten!",
+    "verwandte_themen": [
+      "top_betrieb_bd1",
+      "top_betrieb_be2"
+    ]
+  },
+  {
+    "topic_id": "top_betrieb_be2",
+    "kategorie": "Betrieb",
+    "titel": "Relaisfunkstellen & Umsetzer",
+    "kernaussage": "Relaisfunkstellen auf exponierten Standorten empfangen Signale und senden sie zeitgleich mit höherer Leistung weiter.",
+    "erklaerung": "Um die Reichweite mobiler und portabler Handfunkgeräte zu vergrößern, arbeiten Relais mit Frequenzablage: Im 2m-Band beträgt der Relaisversatz standardmäßig -600 kHz (Sendefrequenz 600 kHz unter Relais-Ausgabe). Im 70cm-Band beträgt die Ablage in Deutschland -7,6 MHz (bzw. 1,6 MHz). Das Öffnen erfolgt über 1750-Hz-Tonruf oder subaudiophile Ruftöne (CTCSS).",
+    "formel": "Relaisablage: 2m = 600 kHz; 70cm = 7,6 MHz (bzw. 1,6 MHz)",
+    "merksatz": "Auf 2m 600 kHz Ablage, auf 70cm 7,6 MHz – das Relais hört dir auf der Eingabe zu!",
+    "verwandte_themen": [
+      "top_betrieb_bb1",
+      "top_vorschriften_vd5"
+    ]
+  },
+  {
+    "topic_id": "top_betrieb_be3",
+    "kategorie": "Betrieb",
+    "titel": "Satellitenfunk & QO-100",
+    "kernaussage": "Amateursatelliten ermöglichen Weitverkehr auf VHF/UHF; QO-100 deckt als geostationärer Transponder ein Drittel der Erde ab.",
+    "erklaerung": "LEO-Satelliten (Low Earth Orbit, z. B. ISS, SO-50) umrunden die Erde in 90 Minuten. Wegen der hohen Bahngeschwindigkeit tritt eine signifikante Frequenzverschiebung auf (Doppler-Effekt: Frequenz steigt beim Annähern und fällt beim Entfernen). Der geostationäre Satellit QO-100 (Es'hail-2) steht fest über dem Äquator: Uplink auf 2,4 GHz (13 cm), Downlink auf 10,4 GHz (3 cm mit LNB).",
+    "formel": "Doppler-Effekt: Δf = f₀ · (v / c); Annäherung = Tonhöhe steigt",
+    "merksatz": "QO-100: Fester Punkt am Himmel – kein Antennennachführen nötig!",
+    "verwandte_themen": [
+      "top_technik_eb3",
+      "top_betrieb_be2"
+    ]
+  },
+  {
+    "topic_id": "top_betrieb_be4",
+    "kategorie": "Betrieb",
+    "titel": "Amateurfunk-Peilen (Fuchsjagd / ARDF)",
+    "kernaussage": "Beim ARDF werden versteckte Minisender im Gelände mit Peilempfänger und Richtantenne auf Zeit geortet.",
+    "erklaerung": "Amateur Radio Direction Finding (ARDF) kombiniert Orientierungslauf mit Funktechnik. Auf 80m oder 2m senden 'Füchse' zyklisch Kennungen in Morsetelegrafie (MOE, MOI, MOS, MOH, MO5). Mit Richtantennen (Ferrit- oder Rahmenantennen auf 80m mit Nullstellen-Peilung, kleine Yagis auf 2m mit Maximum-Peilung) ermittelt der Peiler die exakte Richtung durch Kreuzpeilung.",
+    "formel": "Kreuzpeilung: Schnittpunkt zweier Standlinien ergibt den Senderstandort",
+    "merksatz": "Auf 80m peilt man auf das scharfe Minimum, auf 2m auf das breite Maximum!",
+    "verwandte_themen": [
+      "top_technik_eg2",
+      "top_betrieb_bd1"
+    ]
+  },
+  {
+    "topic_id": "top_betrieb_bf1",
+    "kategorie": "Betrieb",
+    "titel": "Not- & Katastrophenfunk",
+    "kernaussage": "Im Notfall unterstützen Funkamateure Behörden bei Stromausfall und Infrastrukturkollaps mit unabhängiger Funkkommunikation.",
+    "erklaerung": "Internationale Notruffrequenzen (z. B. 3.760 kHz, 7.110 kHz, 14.300 kHz) sind bei Notfällen sofort für Notverkehr freizuhalten. Notruf-Kennwörter: 'MAYDAY' (akute Lebensgefahr im Sprechfunk), 'SOS' (in CW), 'PAN PAN' (Dringlichkeitsmeldung). Jeder Funkamateur ist verpflichtet, Notrufe sofort entgegenzunehmen, weiterzuleiten und jegliche andere Aussendung auf der Frequenz einzustellen.",
+    "formel": "Notverkehr hat absoluten Vorrang vor jedem anderen Funkbetrieb!",
+    "merksatz": "MAYDAY dreimal rufen: Wer das hört, stoppt sofort jeden anderen Funkverkehr und hört mit!",
+    "verwandte_themen": [
+      "top_betrieb_bd1",
+      "top_vorschriften_va1"
+    ]
+  },
+  {
+    "topic_id": "top_betrieb_bg1",
+    "kategorie": "Betrieb",
+    "titel": "Logbuchführung & QSL-Karten",
+    "kernaussage": "QSL-Karten bestätigen getätigte Funkkontakte schriftlich; Logbücher dokumentieren Datum, Zeit und Betriebsparameter.",
+    "erklaerung": "Eine QSL-Karte ist die Visitenkarte des Funkamateurs und enthält: Gegenstation, Datum, UTC-Zeit, Band/Frequenz, Sendeart und RST-Rapport. Der weltweite Austausch erfolgt kostengünstig über das QSL-Büro der nationalen Amateurfunkverbände (z. B. DARC) oder elektronisch über Portale wie eQSL und Logbook of the World (LoTW). Ein Stationslogbuch ist in DL nicht mehr gesetzlich vorgeschrieben, bleibt aber guter Brauch.",
+    "formel": "QSL = 'Ich bestätige den Empfang' / 'Bestätigen Sie den Empfang?'",
+    "merksatz": "Die QSL-Karte ist die Höflichkeit des Funkamateurs und der Beweis für jedes Diplom!",
+    "verwandte_themen": [
+      "top_betrieb_bd1",
+      "top_betrieb_bd3"
+    ]
+  },
+  {
+    "topic_id": "top_vorschriften_va1",
+    "kategorie": "Vorschriften",
+    "titel": "ITU Radio Regulations & Definition des Amateurfunks",
+    "kernaussage": "Der Amateurfunkdienst ist ein nichtgewerblicher, experimenteller Funkdienst zur eigenen Ausbildung und Völkerverständigung.",
+    "erklaerung": "Laut Artikel 1 der Vollzugsordnung für den Funkdienst (ITU Radio Regulations) ist der Amateurfunkdienst ein Funkdienst, der von Funkamateuren für die eigene Ausbildung, für den Verkehr untereinander und für technische Studien wahrgenommen wird. Funkamateure sind ordnungsgemäß ermächtigte Personen, die sich lediglich aus persönlicher Neigung und ohne wirtschaftliches Interesse mit der Funktechnik befassen.",
+    "formel": "ITU RR Art. 1.56: Amateurfunkdienst = nichtgewerblich, technisch-experimentell",
+    "merksatz": "Kommerzielle Nutzung, geschäftliche Werbung oder verschlüsselte Nachrichten sind strikt verboten!",
+    "verwandte_themen": [
+      "top_vorschriften_va2",
+      "top_vorschriften_vc1"
+    ]
+  },
+  {
+    "topic_id": "top_vorschriften_va2",
+    "kategorie": "Vorschriften",
+    "titel": "Definition der Amateurfunkstelle & Zulassung",
+    "kernaussage": "Eine Amateurfunkstelle besteht aus Sendern, Empfängern und Antennen, die ausschließlich für den Amateurfunkdienst betrieben werden.",
+    "erklaerung": "Jede Amateurfunkstelle erfordert eine behördliche Zulassung und Zuteilung eines personengebundenen Rufzeichens durch die Bundesnetzagentur. Der Funkbetrieb darf nur unter direkter Aufsicht des Zulassungsinhabers erfolgen. Amateurfunkgeräte dürfen vom Funkamateur selbst gebaut oder modifiziert werden (Selbstbaurecht).",
+    "formel": "Zulassung = Amateurfunkprüfungszeugnis + Rufzeichenzuteilung",
+    "merksatz": "Die Lizenzurkunde berechtigt zum Betrieb der Station und zum Selbstbau von Sendern!",
+    "verwandte_themen": [
+      "top_vorschriften_va1",
+      "top_vorschriften_vc1"
+    ]
+  },
+  {
+    "topic_id": "top_vorschriften_va3",
+    "kategorie": "Vorschriften",
+    "titel": "ITU Artikel 25: Internationale Bestimmungen",
+    "kernaussage": "Artikel 25 der Radio Regulations regelt den weltweiten Funkverkehr zwischen Funkamateuren verschiedener Länder.",
+    "erklaerung": "Aussendungen zwischen Amateurfunkstellen verschiedener Länder müssen sich auf technische Mitteilungen und persönliche Bemerkungen beschränken. Die Übermittlung von Nachrichten für Dritte ist grundsätzlich unzulässig (Ausnahme: Not- und Katastrophenfunk). Signale müssen in Klartext übertragen werden; Geheimschriften und Codes zur Verschleierung des Inhalts sind international verboten.",
+    "formel": "ITU RR Art. 25: Klartextgebot, kein Drittverkehr, keine Verschleierung",
+    "merksatz": "Klartext reden: Geheimschriften und Verschlüsselung haben im Amateurfunk nichts verloren!",
+    "verwandte_themen": [
+      "top_vorschriften_va1",
+      "top_vorschriften_vb1"
+    ]
+  },
+  {
+    "topic_id": "top_vorschriften_va4",
+    "kategorie": "Vorschriften",
+    "titel": "ITU-Regionen & weltweite Frequenzzuweisung",
+    "kernaussage": "Die Welt ist in drei ITU-Regionen aufgeteilt, in denen Frequenzbänder unterschiedlich zugewiesen sein können.",
+    "erklaerung": "Region 1 umfasst Europa, Afrika, den Nahen Osten und das nördliche Asien (inkl. Russland). Region 2 umfasst Nord- und Südamerika. Region 3 umfasst Asien und Ozeanien (Australien). Funkdienste werden primär (Hauptnutzer mit Schutzanspruch) oder sekundär (müssen Primärnutzer dulden und dürfen diese nicht stören) zugewiesen.",
+    "formel": "Deutschland liegt in ITU-Region 1. Primärdienst = Vorrang; Sekundärdienst = keine Störung verursachen",
+    "merksatz": "Deutschland = Region 1. Sekundärnutzer zieht gegen den Primärfunkdienst immer den Kürzeren!",
+    "verwandte_themen": [
+      "top_betrieb_bb1",
+      "top_vorschriften_vd7"
+    ]
+  },
+  {
+    "topic_id": "top_vorschriften_vb1",
+    "kategorie": "Vorschriften",
+    "titel": "CEPT-Regelungen & Gastfunkbetrieb",
+    "kernaussage": "Dank CEPT-Empfehlungen dürfen Funkamateure in vielen Ländern ohne gesonderte Gastlizenz funken.",
+    "erklaerung": "Die CEPT-Empfehlung T/R 61-01 regelt den kurzzeitigen Gastfunkbetrieb im Ausland (bis zu 3 Monate) für Inhaber von HAREC-Zeugnissen (Klasse A) und CEPT-Novice-Zeugnissen (Klasse E nach ECC-Report 89). Beim Senden im Ausland wird das Gastland-Präfix mit Schrägstrich vor das eigene Rufzeichen gesetzt (z. B. F/DO1ABC bei Funkbetrieb in Frankreich).",
+    "formel": "Auslandsrufzeichen: [Gastland-Präfix] / [Eigenes Rufzeichen]  (z. B. EA8/DO1ABC)",
+    "merksatz": "CEPT macht Grenzen auf: Im Urlaub einfach Landeskenner voranstellen und losfunken!",
+    "verwandte_themen": [
+      "top_betrieb_bc1",
+      "top_vorschriften_vc1"
+    ]
+  },
+  {
+    "topic_id": "top_vorschriften_vc1",
+    "kategorie": "Vorschriften",
+    "titel": "Amateurfunkgesetz (AFuG)",
+    "kernaussage": "Das AFuG ist das deutsche Stammgesetz, das Voraussetzungen, Rechte, Pflichten und behördliche Aufsicht regelt.",
+    "erklaerung": "Das AFuG regelt die Prüfung, Zulassung, Rufzeichenzuteilung und die Befugnisse der Bundesnetzagentur (BNetzA). Es garantiert das Privileg des Funkamateurs, Sendeanlagen ohne vorherige Baumusterprüfung selbst zu bauen und zu betreiben. Bei schwerwiegenden Verstößen gegen Gesetze oder Störung fremder Funkdienste kann die Behörde die Zulassung widerrufen.",
+    "formel": "AFuG § 3: Zulassung zur Teilnahme am Amateurfunkdienst; Selbstbaurecht für Funkamateure",
+    "merksatz": "Das AFuG ist unser Grundgesetz: Es schenkt uns das weltweit geschätzte Selbstbaurecht!",
+    "verwandte_themen": [
+      "top_vorschriften_va1",
+      "top_vorschriften_vd1"
+    ]
+  },
+  {
+    "topic_id": "top_vorschriften_vd1",
+    "kategorie": "Vorschriften",
+    "titel": "Amateurfunkverordnung (AFuV) & Lizenzklassen",
+    "kernaussage": "Die AFuV konkretisiert die Regelungen des AFuG und definiert die drei Zeugnisklassen N, E und A.",
+    "erklaerung": "Die 2024 reformierte AFuV teilt die Amateurfunkzulassungen in drei Stufen ein: Klasse N (Einsteigerlizenz, 2m/70cm bis 10 W ERP), Klasse E (Novice-Lizenz, 2m/70cm sowie 160m, 80m, 15m, 10m bis 100 W PEP) und Klasse A (Voll-Lizenz, alle Amateurfunkbänder bis 750 W PEP). Die Prüfung ist modular aufgebaut: Wer E hat, muss für A nur noch die Technik-Zusatzprüfung ablegen.",
+    "formel": "Klassen: N (Einsteiger, VHF/UHF 10W), E (Novice, VHF/UHF + 4 KW-Bänder 100W), A (Full, alle Bänder 750W)",
+    "merksatz": "Klasse E ist das ideale Sprungbrett: Volle Betriebs- und Gesetzeskenntnisse, 100 Watt und weltweite Kurzwelle!",
+    "verwandte_themen": [
+      "top_vorschriften_vc1",
+      "top_vorschriften_vd7"
+    ]
+  },
+  {
+    "topic_id": "top_vorschriften_vd2",
+    "kategorie": "Vorschriften",
+    "titel": "Zuteilung & Anwendung von Rufzeichen",
+    "kernaussage": "Rufzeichen müssen zu Beginn und am Ende jedes Funkkontakts sowie mindestens alle 10 Minuten genannt werden.",
+    "erklaerung": "Die Bundesnetzagentur teilt jedem Funkamateur ein persönliches Rufzeichen zu. Bei jeder Aussendung ist das zugeteilte Rufzeichen klar verständlich zu übermitteln: Zu Beginn des Funkverkehrs, bei Beendigung des Funkkontakts und bei länger dauernden Verbindungen mindestens alle zehn Minuten. Anonymes Senden ('Schwarzer Träger') ist eine Ordnungswidrigkeit.",
+    "formel": "Rufzeichennennung: Mindestens alle 10 Minuten sowie bei Beginn und Ende des QSOs",
+    "merksatz": "Wer sendet, nennt sein Rufzeichen – spätestens alle 10 Minuten!",
+    "verwandte_themen": [
+      "top_betrieb_bc1",
+      "top_vorschriften_vd1"
+    ]
+  },
+  {
+    "topic_id": "top_vorschriften_vd3",
+    "kategorie": "Vorschriften",
+    "titel": "Ausbildungsfunkbetrieb",
+    "kernaussage": "Mit einem Ausbildungsrufzeichen (DN) dürfen Personen ohne Lizenz unter Aufsicht praktische Funkerfahrung sammeln.",
+    "erklaerung": "Inhaber einer Zulassung der Klasse A oder E können ein Ausbildungsrufzeichen (Präfix DN) beantragen. Der Ausbilder muss während des Funkbetriebs unmittelbar anwesend sein, den Funkverkehr lückenlos überwachen und bei Fehlern sofort eingreifen können. Es gelten stets die Bandgrenzen und Leistungsbeschränkungen der Lizenzklasse des Ausbilders.",
+    "formel": "Ausbildungsrufzeichen Präfix: DN1–DN6 (für Klasse A), DN7–DN9 (für Klasse E)",
+    "merksatz": "Der Ausbilder trägt die volle rechtliche Verantwortung und muss danebensitzen!",
+    "verwandte_themen": [
+      "top_vorschriften_vd1",
+      "top_vorschriften_vd2"
+    ]
+  },
+  {
+    "topic_id": "top_vorschriften_vd4",
+    "kategorie": "Vorschriften",
+    "titel": "Klubstationen & Mitbenutzung",
+    "kernaussage": "Klubstationsrufzeichen werden für Vereine oder Ortsverbände zugeteilt und von Mitgliedern mitbenutzt.",
+    "erklaerung": "Für eine Klubstation bestimmt der Leiter des Vereins einen verantwortlichen Funkamateur, der die behördliche Zulassung hält. Andere Funkamateure dürfen die Klubstation unter deren Rufzeichen mitbenutzen, dürfen dabei aber nur die Frequenzen und Leistungen nutzen, die ihrer eigenen persönlichen Zeugnisklasse entsprechen (oder der des Klubstationsleiters, je nachdem, was geringer ist).",
+    "formel": "Klubstationspräfixe: DL0, DF0, DK0, DO0...",
+    "merksatz": "Der Verantwortliche haftet für den ordnungsgemäßen Zustand der Klubstation!",
+    "verwandte_themen": [
+      "top_betrieb_bc1",
+      "top_vorschriften_vd1"
+    ]
+  },
+  {
+    "topic_id": "top_vorschriften_vd5",
+    "kategorie": "Vorschriften",
+    "titel": "Automatisch arbeitende Stationen (Relais & Baken)",
+    "kernaussage": "Relaisfunkstellen und Funkbaken bedürfen einer gesonderten Zuteilung und müssen fernabschaltbar sein.",
+    "erklaerung": "Automatisch arbeitende Amateurfunkstellen (Umsetzer, Funkbaken, Digipeater) arbeiten ohne ständige Anwesenheit einer Bedienperson. Sie bedürfen einer gesonderten Zuteilung durch die BNetzA. Der Verantwortliche muss sicherstellen, dass die Station bei technischen Fehlern oder Störungen jederzeit unverzüglich über Fernsteuerung (Notabschaltung) abgeschaltet werden kann.",
+    "formel": "Zulassungspflichtig nach § 13 AFuV; Fernabschaltbarkeit zwingend vorgeschrieben",
+    "merksatz": "Ein Relais ohne funktionierende Fernabschaltung darf nicht betrieben werden!",
+    "verwandte_themen": [
+      "top_betrieb_be2",
+      "top_vorschriften_vd6"
+    ]
+  },
+  {
+    "topic_id": "top_vorschriften_vd6",
+    "kategorie": "Vorschriften",
+    "titel": "Remote-Stationen & Fernbedienung",
+    "kernaussage": "Fernbediente Stationen müssen über sichere Steuerkanäle gegen unbefugte Nutzung geschützt sein.",
+    "erklaerung": "Wird eine Amateurfunkstelle über das Internet oder Funkstrecken aus der Ferne gesteuert (Remote Station), muss der Steuerkanal wirksam gegen Fremdzugriff abgesichert sein. Es gelten die Rufzeichenregeln des Standorts der Sendeantenne. Auch hier muss eine Notabschaltung bei Abreißen der Steuerverbindung nach wenigen Sekunden automatisch greifen.",
+    "formel": "Fail-Safe: Bei Verbindungsabriss muss der Sender sofort automatisch die Tastung beenden (Watchdog)",
+    "merksatz": "Reißt das Internet ab, muss der ferngesteuerte Sender sofort schweigen!",
+    "verwandte_themen": [
+      "top_vorschriften_vd4",
+      "top_vorschriften_vd5"
+    ]
+  },
+  {
+    "topic_id": "top_vorschriften_vd7",
+    "kategorie": "Vorschriften",
+    "titel": "Frequenzbereiche & Sendeleistungen Klasse E",
+    "kernaussage": "Klasse E darf auf 160m, 80m, 15m, 10m sowie 2m und 70cm mit maximal 100 Watt bzw. 75 Watt PEP senden.",
+    "erklaerung": "Die Sendeleistungsgrenzen der Klasse E nach Anlage 1 AFuV lauten: 160m (1,81–2,0 MHz) max. 100 W PEP; 80m (3,5–3,8 MHz) max. 100 W PEP; 15m (21,0–21,45 MHz) max. 100 W PEP; 10m (28,0–29,7 MHz) max. 100 W PEP. Auf 2m (144–146 MHz) und 70cm (430–440 MHz) beträgt die maximale Leistung 75 W PEP. Auf 6m, 4m, 40m, 20m und den WARC-Bändern besteht für Klasse E kein Senderecht.",
+    "formel": "Leistungsgrenzen Klasse E: KW (160m/80m/15m/10m) = 100 W PEP; UKW (2m/70cm) = 75 W PEP",
+    "merksatz": "100 Watt auf Kurzwelle, 75 Watt auf UKW – das sind die festen Grenzen der Klasse E!",
+    "verwandte_themen": [
+      "top_betrieb_bb1",
+      "top_vorschriften_vd1"
+    ]
+  },
+  {
+    "topic_id": "top_vorschriften_ve1",
+    "kategorie": "Vorschriften",
+    "titel": "Telekommunikationsgesetz (TKG) & Abhörverbot",
+    "kernaussage": "Das TKG schützt fremde Funkdienste; versehentlich abgehörte Nachrichten dürfen weder aufgezeichnet noch verwertet werden.",
+    "erklaerung": "Laut § 89 TKG (Abhörverbot) dürfen mit Funkanlagen nur Aussendungen abgehört werden, die für die Allgemeinheit oder für den Amateurfunkdienst bestimmt sind. Werden versehentlich andere Funkdienste (z. B. BOS-Polizeifunk, Flugfunk, Richtfunk) empfangen, dürfen Inhalt und die Tatsache des Empfangs Dritten nicht mitgeteilt und nicht verwertet werden.",
+    "formel": "§ 89 TKG: Abhörverbot fremder Nachrichten; Verstoß ist strafbewehrt (§ 148 TKG)",
+    "merksatz": "Nicht für dich bestimmt? Nicht aufzeichnen, nicht weitererzählen, sofort wegdrehen!",
+    "verwandte_themen": [
+      "top_vorschriften_vc1",
+      "top_vorschriften_ve2"
+    ]
+  },
+  {
+    "topic_id": "top_vorschriften_ve2",
+    "kategorie": "Vorschriften",
+    "titel": "Telekommunikationsgeheimnis (TTDSG)",
+    "kernaussage": "Das Fernmeldegeheimnis schützt die Vertraulichkeit von Kommunikationsinhalten und Verkehrsdaten.",
+    "erklaerung": "Das TTDSG (Telekommunikation-Telemedien-Datenschutz-Gesetz) garantiert das im Grundgesetz (Art. 10 GG) verankerte Fernmeldegeheimnis. Es verbietet das unbefugte Abfangen, Veröffentlichen oder Weiterleiten fremder Kommunikationsdaten. Im Amateurfunkdienst ausgetauschte Mitteilungen sind zwar grundsätzlich öffentlich, persönliche Daten von Funkamateuren unterliegen jedoch dem Datenschutz.",
+    "formel": "Art. 10 Grundgesetz & TTDSG: Brief-, Post- und Fernmeldegeheimnis ist unverletzlich",
+    "merksatz": "Vertrauliche Mitteilungen Dritter sind tabu!",
+    "verwandte_themen": [
+      "top_vorschriften_ve1",
+      "top_vorschriften_ve7"
+    ]
+  },
+  {
+    "topic_id": "top_vorschriften_ve3",
+    "kategorie": "Vorschriften",
+    "titel": "EMVG & Störungsbearbeitung",
+    "kernaussage": "Das EMVG regelt den Schutz vor elektromagnetischen Störungen und die Befugnisse des Funkmessdienstes der BNetzA.",
+    "erklaerung": "Das Gesetz über die elektromagnetische Verträglichkeit von Betriebsmitteln (EMVG) sichert ein störungsfreies elektromagnetisches Umfeld. Verursacht ein Gerät Funkstörungen oder wird gestört, kann der Prüf- und Messdienst der BNetzA eingeschaltet werden. Die Behörde kann den Betrieb störender Geräte untersagen oder Nachbesserung anordnen. Verursacher schuldhafter Störungen tragen die Messkosten.",
+    "formel": "EMVG § 4: Grundlegende Anforderungen an Störaussendung und Störfestigkeit",
+    "merksatz": "Der Messdienst der Bundesnetzagentur ortet Störquellen peilgenau!",
+    "verwandte_themen": [
+      "top_technik_ej1",
+      "top_vorschriften_ve4"
+    ]
+  },
+  {
+    "topic_id": "top_vorschriften_ve4",
+    "kategorie": "Vorschriften",
+    "titel": "Funkanlagengesetz (FuAG) & CE-Kennzeichnung",
+    "kernaussage": "Kommerziell in Verkehr gebrachte Funkgeräte müssen das CE-Zeichen tragen; Eigenbauten von Funkamateuren sind ausgenommen.",
+    "erklaerung": "Das FuAG regelt die Bereitstellung von Funkanlagen auf dem Markt und verlangt die Einhaltung grundlegender Anforderungen (Gesundheitsschutz, EMV, effiziente Frequenznutzung) sowie CE-Kennzeichnung. Funkamateure dürfen ihre Geräte für den Eigenbedarf selbst bauen und modifizieren. Eigenbauten dürfen jedoch nicht gewerblich in den Handel gebracht werden.",
+    "formel": "Eigenbauten von Funkamateuren nach § 2 Abs. 2 FuAG vom Geltungsbereich ausgenommen",
+    "merksatz": "Eigenbauten brauchen kein CE-Zeichen, müssen aber die technischen Grenzwerte trotzdem einhalten!",
+    "verwandte_themen": [
+      "top_vorschriften_vc1",
+      "top_vorschriften_ve3"
+    ]
+  },
+  {
+    "topic_id": "top_vorschriften_ve5",
+    "kategorie": "Vorschriften",
+    "titel": "BEMFV & Personenschutz-Grenzwerte",
+    "kernaussage": "Ab 10 Watt EIRP Strahlungsleistung muss für ortsfeste Funkanlagen eine Selbsterklärung bei der BNetzA eingereicht werden.",
+    "erklaerung": "Die Verordnung über das Nachweisverfahren zur Begrenzung elektromagnetischer Felder (BEMFV) schützt die Bevölkerung vor schädlichen Wirkungen hochfrequenter Felder (Grenzwerte nach DIN VDE 0848). Bei Sendeanlagen mit ≥ 10 W EIRP muss der Funkamateur den Sicherheitsabstand berechnen, dokumentieren und der BNetzA anzeigen. Innerhalb des kontrollierbaren Bereichs (Grundstücksgrenze) dürfen sich keine unbeteiligten Personen aufhalten.",
+    "formel": "Anzeigepflicht: Strahlungsleistung P_EIRP ≥ 10 Watt; Watt-Wächter-Programm des DARC/BNetzA",
+    "merksatz": "Ab 10 Watt EIRP ist die Selbsterklärung Pflicht – Sicherheit für Nachbarn und Familie!",
+    "verwandte_themen": [
+      "top_technik_eg5",
+      "top_technik_ek1",
+      "top_vorschriften_ve6"
+    ]
+  },
+  {
+    "topic_id": "top_vorschriften_ve6",
+    "kategorie": "Vorschriften",
+    "titel": "Sicherheits- & Umweltvorschriften",
+    "kernaussage": "Elektrische Sicherheit, statische Standfestigkeit und Brandschutz von Antennenanlagen sind gesetzliche Betreiberpflichten.",
+    "erklaerung": "Jeder Funkamateur ist für die statische Sicherheit seiner Maste, die Windlast nach DIN 1055 sowie den Brandschutz verantwortlich. Antennen und Zuleitungen dürfen Nachbargrundstücke nicht gefährden oder unbefugt überqueren. Schutzabstände zu öffentlichen Freileitungen (Strom, Telefon) müssen bei Mastbruch zwingend eingehalten werden.",
+    "formel": "Schutzabstand zu Freileitungen: Mindestens Antennen- bzw. Masthöhe plus 1 Meter Sicherheitszuschlag",
+    "merksatz": "Kippt der Mast um, darf er keine Stromleitung oder das Nachbardach berühren!",
+    "verwandte_themen": [
+      "top_technik_ek1",
+      "top_technik_ek2",
+      "top_vorschriften_ve5"
+    ]
+  },
+  {
+    "topic_id": "top_vorschriften_ve7",
+    "kategorie": "Vorschriften",
+    "titel": "Behördliche Maßnahmen & Bußgeldvorschriften",
+    "kernaussage": "Vorsätzliche oder fahrlässige Verstöße gegen AFuG und AFuV können mit empfindlichen Bußgeldern geahndet werden.",
+    "erklaerung": "Die BNetzA kann Funkstellen betreten, überprüfen und bei Verstößen die sofortige Außerbetriebnahme anordnen. Ordnungswidrigkeiten sind unter anderem: Senden ohne Rufzeichen, Überschreitung der zulässigen Sendeleistung, Betrieb außerhalb der zugewiesenen Bänder, Störung von Notverkehr oder Verstoß gegen die BEMFV. Bußgelder können bis zu 10.000 € betragen.",
+    "formel": "AFuG § 16: Ordnungswidrigkeiten können mit Geldbußen geahndet werden",
+    "merksatz": "Sauberer Funkbetrieb schützt vor Ärger mit dem Peilwagen und teuren Bußgeldern!",
+    "verwandte_themen": [
+      "top_vorschriften_vc1",
+      "top_vorschriften_vd7"
+    ]
+  }
+]

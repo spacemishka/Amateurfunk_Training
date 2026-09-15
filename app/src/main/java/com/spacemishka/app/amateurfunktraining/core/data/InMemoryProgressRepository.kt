@@ -89,4 +89,85 @@ class InMemoryProgressRepository : ProgressRepository {
     override fun getStreakStream(): Flow<Int> {
         return streakFlow.asStateFlow()
     }
+
+    override suspend fun getAllProgress(): List<QuestionProgress> {
+        return progressMap.value.values.toList()
+    }
+
+    override suspend fun importProgress(items: List<com.spacemishka.app.amateurfunktraining.core.model.QuestionProgressBackupDto>, mode: com.spacemishka.app.amateurfunktraining.core.model.ImportMode) {
+        if (mode == com.spacemishka.app.amateurfunktraining.core.model.ImportMode.OVERWRITE) {
+            val newMap = items.associate { dto ->
+                dto.frageId to QuestionProgress(
+                    questionId = dto.frageId,
+                    status = try { ProgressStatus.valueOf(dto.status) } catch (_: Exception) { ProgressStatus.NEU },
+                    errorCount = dto.fehlerzaehler,
+                    lastAnsweredTimestamp = dto.letzteAntwort,
+                    leitnerBox = dto.leitnerBox,
+                    isBookmarked = dto.istLesezeichen
+                )
+            }
+            progressMap.value = newMap
+        } else {
+            val current = progressMap.value.toMutableMap()
+            for (dto in items) {
+                val existing = current[dto.frageId]
+                if (existing == null) {
+                    current[dto.frageId] = QuestionProgress(
+                        questionId = dto.frageId,
+                        status = try { ProgressStatus.valueOf(dto.status) } catch (_: Exception) { ProgressStatus.NEU },
+                        errorCount = dto.fehlerzaehler,
+                        lastAnsweredTimestamp = dto.letzteAntwort,
+                        leitnerBox = dto.leitnerBox,
+                        isBookmarked = dto.istLesezeichen
+                    )
+                } else {
+                    val mergedBox = maxOf(existing.leitnerBox, dto.leitnerBox)
+                    val mergedErrors = maxOf(existing.errorCount, dto.fehlerzaehler)
+                    val mergedTime = maxOf(existing.lastAnsweredTimestamp, dto.letzteAntwort)
+                    val mergedBookmark = existing.isBookmarked || dto.istLesezeichen
+                    val mergedStatus = if (mergedBox >= 5) {
+                        ProgressStatus.GEMEISTERT
+                    } else if (mergedBox > 1 || mergedErrors > 0 || mergedTime > 0) {
+                        ProgressStatus.IN_BEARBEITUNG
+                    } else {
+                        ProgressStatus.NEU
+                    }
+                    current[dto.frageId] = QuestionProgress(
+                        questionId = dto.frageId,
+                        status = mergedStatus,
+                        errorCount = mergedErrors,
+                        lastAnsweredTimestamp = mergedTime,
+                        leitnerBox = mergedBox,
+                        isBookmarked = mergedBookmark
+                    )
+                }
+            }
+            progressMap.value = current
+        }
+    }
+
+    override suspend fun getStreakData(): Pair<String?, Int> {
+        return Pair(lastPracticeDateStr, storedStreak)
+    }
+
+    override suspend fun setStreakData(lastDate: String?, streak: Int, mode: com.spacemishka.app.amateurfunktraining.core.model.ImportMode) {
+        if (mode == com.spacemishka.app.amateurfunktraining.core.model.ImportMode.OVERWRITE) {
+            lastPracticeDateStr = lastDate
+            storedStreak = streak
+        } else {
+            if (streak > storedStreak || (lastPracticeDateStr == null && lastDate != null)) {
+                lastPracticeDateStr = lastDate
+                storedStreak = maxOf(storedStreak, streak)
+            }
+        }
+        streakFlow.value = StreakManager.computeDisplayStreak(lastPracticeDateStr, storedStreak)
+    }
+
+    override suspend fun clearAllProgress() {
+        progressMap.value = emptyMap()
+        lastPracticeDateStr = null
+        storedStreak = 0
+        streakFlow.value = 0
+    }
 }
+

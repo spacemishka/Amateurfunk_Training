@@ -1,0 +1,272 @@
+{
+  "q_gruppen": [
+    {
+      "code": "QRA",
+      "frage": "Wie ist der Name Ihrer Funkstelle?",
+      "antwort": "Der Name meiner Funkstelle ist...",
+      "bedeutung": "Stationsname / Rufzeichen",
+      "kategorie": "Station"
+    },
+    {
+      "code": "QRG",
+      "frage": "Wie ist meine genaue Frequenz?",
+      "antwort": "Ihre genaue Frequenz ist... kHz/MHz.",
+      "bedeutung": "Frequenzangabe",
+      "kategorie": "Technik"
+    },
+    {
+      "code": "QRK",
+      "frage": "Wie ist die Verständlichkeit meiner Zeichen?",
+      "antwort": "Die Verständlichkeit Ihrer Zeichen ist... (1 = schlecht bis 5 = ausgezeichnet).",
+      "bedeutung": "Verständlichkeit (Readability)",
+      "kategorie": "Signal"
+    },
+    {
+      "code": "QRL",
+      "frage": "Sind Sie beschäftigt? / Ist diese Frequenz belegt?",
+      "antwort": "Ich bin beschäftigt (bitte nicht stören) / Diese Frequenz ist belegt.",
+      "bedeutung": "Frequenzbelegung / Frequenzanfrage vor Aussendung",
+      "kategorie": "Betrieb"
+    },
+    {
+      "code": "QRM",
+      "frage": "Werden Sie durch andere Stationen gestört?",
+      "antwort": "Ich werde durch andere Stationen gestört (1 = kaum bis 5 = sehr stark).",
+      "bedeutung": "Künstliche Störungen (andere Sender)",
+      "kategorie": "Signal"
+    },
+    {
+      "code": "QRN",
+      "frage": "Werden Sie durch atmosphärische Störungen beeinträchtigt?",
+      "antwort": "Ich werde durch atmosphärische Störungen (Gewitter, Prasseln) beeinträchtigt.",
+      "bedeutung": "Atmosphärisches Rauschen / Naturstörungen",
+      "kategorie": "Signal"
+    },
+    {
+      "code": "QRO",
+      "frage": "Soll ich die Sendeleistung erhöhen?",
+      "antwort": "Erhöhen Sie die Sendeleistung.",
+      "bedeutung": "Sendeleistung erhöhen / High Power",
+      "kategorie": "Betrieb"
+    },
+    {
+      "code": "QRP",
+      "frage": "Soll ich die Sendeleistung vermindern?",
+      "antwort": "Vermindern Sie die Sendeleistung.",
+      "bedeutung": "Geringe Sendeleistung (typisch max. 5 W CW / 10 W SSB)",
+      "kategorie": "Betrieb"
+    },
+    {
+      "code": "QRQ",
+      "frage": "Soll ich schneller geben?",
+      "antwort": "Geben Sie schneller (... Wörter pro Minute).",
+      "bedeutung": "Telegrafie-Gabetempo steigern",
+      "kategorie": "Telegrafie"
+    },
+    {
+      "code": "QRS",
+      "frage": "Soll ich langsamer geben?",
+      "antwort": "Geben Sie langsamer (... Wörter pro Minute).",
+      "bedeutung": "Telegrafie-Gabetempo senken",
+      "kategorie": "Telegrafie"
+    },
+    {
+      "code": "QRT",
+      "frage": "Soll ich die Sendung einstellen?",
+      "antwort": "Stellen Sie die Sendung ein / Ich beende meine Aussendungen.",
+      "bedeutung": "Funkbetrieb beenden",
+      "kategorie": "Betrieb"
+    },
+    {
+      "code": "QRU",
+      "frage": "Haben Sie noch etwas für mich?",
+      "antwort": "Ich habe nichts mehr für Sie.",
+      "bedeutung": "Keine weiteren Nachrichten vorhanden",
+      "kategorie": "Betrieb"
+    },
+    {
+      "code": "QRV",
+      "frage": "Sind Sie betriebsbereit?",
+      "antwort": "Ich bin betriebsbereit.",
+      "bedeutung": "Empfangsbereitschaft / QRV sein",
+      "kategorie": "Betrieb"
+    },
+    {
+      "code": "QRX",
+      "frage": "Wann werden Sie mich wieder rufen?",
+      "antwort": "Ich werde Sie um ... Uhr wieder rufen / Bitte warten Sie.",
+      "bedeutung": "Kurze Pause / Bitte warten",
+      "kategorie": "Betrieb"
+    },
+    {
+      "code": "QRZ",
+      "frage": "Wer ruft mich?",
+      "antwort": "Sie werden von ... auf ... gerufen.",
+      "bedeutung": "Wer ruft? / Rufzeichenabfrage",
+      "kategorie": "Betrieb"
+    },
+    {
+      "code": "QSB",
+      "frage": "Schwankt die Stärke meiner Zeichen (Fading)?",
+      "antwort": "Die Stärke Ihrer Zeichen schwankt.",
+      "bedeutung": "Schwund / Signal-Fading",
+      "kategorie": "Signal"
+    },
+    {
+      "code": "QSL",
+      "frage": "Können Sie den Empfang bestätigen?",
+      "antwort": "Ich bestätige den Empfang (per QSL-Karte oder elektronisch).",
+      "bedeutung": "Empfangsbestätigung / QSL-Karte",
+      "kategorie": "Betrieb"
+    },
+    {
+      "code": "QSO",
+      "frage": "Können Sie mit ... unmittelbar Funkverkehr durchführen?",
+      "antwort": "Ich kann mit ... unmittelbar Funkverkehr durchführen.",
+      "bedeutung": "Funkverbindung / Funkgespräch",
+      "kategorie": "Betrieb"
+    },
+    {
+      "code": "QSY",
+      "frage": "Soll ich auf eine andere Frequenz wechseln?",
+      "antwort": "Wechseln Sie auf die Frequenz ... kHz/MHz.",
+      "bedeutung": "Frequenzwechsel",
+      "kategorie": "Betrieb"
+    },
+    {
+      "code": "QTH",
+      "frage": "Wie ist Ihr Standort?",
+      "antwort": "Mein Standort (Breite/Länge, Ort oder Maidenhead-Locator) ist...",
+      "bedeutung": "Standort der Funkstelle",
+      "kategorie": "Station"
+    }
+  ],
+  "landeskenner": [
+    { "praefix": "DA - DL", "land": "Deutschland", "kontinent": "Europa", "itu_zone": 28, "cq_zone": 14 },
+    { "praefix": "DM, DT", "land": "Deutschland (historisch / Club)", "kontinent": "Europa", "itu_zone": 28, "cq_zone": 14 },
+    { "praefix": "DO", "land": "Deutschland (Einsteigerklasse E / N)", "kontinent": "Europa", "itu_zone": 28, "cq_zone": 14 },
+    { "praefix": "OE", "land": "Österreich", "kontinent": "Europa", "itu_zone": 28, "cq_zone": 15 },
+    { "praefix": "HB9", "land": "Schweiz", "kontinent": "Europa", "itu_zone": 28, "cq_zone": 14 },
+    { "praefix": "HB0", "land": "Liechtenstein", "kontinent": "Europa", "itu_zone": 28, "cq_zone": 14 },
+    { "praefix": "F", "land": "Frankreich", "kontinent": "Europa", "itu_zone": 27, "cq_zone": 14 },
+    { "praefix": "G, M, 2E", "land": "Großbritannien (England)", "kontinent": "Europa", "itu_zone": 27, "cq_zone": 14 },
+    { "praefix": "GM", "land": "Schottland", "kontinent": "Europa", "itu_zone": 27, "cq_zone": 14 },
+    { "praefix": "GW", "land": "Wales", "kontinent": "Europa", "itu_zone": 27, "cq_zone": 14 },
+    { "praefix": "I", "land": "Italien", "kontinent": "Europa", "itu_zone": 28, "cq_zone": 15 },
+    { "praefix": "EA", "land": "Spanien", "kontinent": "Europa", "itu_zone": 37, "cq_zone": 14 },
+    { "praefix": "CT", "land": "Portugal", "kontinent": "Europa", "itu_zone": 37, "cq_zone": 14 },
+    { "praefix": "PA - PI", "land": "Niederlande", "kontinent": "Europa", "itu_zone": 27, "cq_zone": 14 },
+    { "praefix": "ON - OT", "land": "Belgien", "kontinent": "Europa", "itu_zone": 27, "cq_zone": 14 },
+    { "praefix": "LX", "land": "Luxemburg", "kontinent": "Europa", "itu_zone": 27, "cq_zone": 14 },
+    { "praefix": "SM, 7S", "land": "Schweden", "kontinent": "Europa", "itu_zone": 18, "cq_zone": 14 },
+    { "praefix": "LA - LN", "land": "Norwegen", "kontinent": "Europa", "itu_zone": 18, "cq_zone": 14 },
+    { "praefix": "OH, OF", "land": "Finnland", "kontinent": "Europa", "itu_zone": 18, "cq_zone": 15 },
+    { "praefix": "OZ", "land": "Dänemark", "kontinent": "Europa", "itu_zone": 18, "cq_zone": 14 },
+    { "praefix": "SP", "land": "Polen", "kontinent": "Europa", "itu_zone": 28, "cq_zone": 15 },
+    { "praefix": "OK, OL", "land": "Tschechische Republik", "kontinent": "Europa", "itu_zone": 28, "cq_zone": 15 },
+    { "praefix": "OM", "land": "Slowakei", "kontinent": "Europa", "itu_zone": 28, "cq_zone": 15 },
+    { "praefix": "HA, HG", "land": "Ungarn", "kontinent": "Europa", "itu_zone": 28, "cq_zone": 15 },
+    { "praefix": "W, K, N, AA-AK", "land": "USA", "kontinent": "Nordamerika", "itu_zone": 6, "cq_zone": 3 },
+    { "praefix": "VE, VA", "land": "Kanada", "kontinent": "Nordamerika", "itu_zone": 4, "cq_zone": 2 },
+    { "praefix": "JA - JS", "land": "Japan", "kontinent": "Asien", "itu_zone": 45, "cq_zone": 25 }
+  ],
+  "bandplan_klasse_e": [
+    {
+      "band": "160m-Band",
+      "frequenzbereich": "1810 – 2000 kHz",
+      "max_leistung_pep": "100 W (1810-1850 kHz) / 10 W (1850-2000 kHz)",
+      "primaer_sekundaer": "Primär (1810-1850 kHz) / Sekundär (1850-2000 kHz)",
+      "bemerkung": "Klasse E: 100 W PEP bis 1850 kHz, danach Leistungsreduzierung auf 10 W PEP."
+    },
+    {
+      "band": "80m-Band",
+      "frequenzbereich": "3500 – 3800 kHz",
+      "max_leistung_pep": "100 W PEP",
+      "primaer_sekundaer": "Primär (Gemeinschaftsdienst)",
+      "bemerkung": "Klasse E: Beliebtes Band für Europa-Verkehr (Tag/Nacht). 3500-3570 kHz CW, 3600-3800 kHz SSB."
+    },
+    {
+      "band": "15m-Band",
+      "frequenzbereich": "21,000 – 21,450 MHz",
+      "max_leistung_pep": "100 W PEP",
+      "primaer_sekundaer": "Primär (exklusiv)",
+      "bemerkung": "Klasse E: Weltweiter DX-Funkverkehr über F2-Schicht im Sonnenfleckenmaximum."
+    },
+    {
+      "band": "10m-Band",
+      "frequenzbereich": "28,000 – 29,700 MHz",
+      "max_leistung_pep": "100 W PEP",
+      "primaer_sekundaer": "Primär (exklusiv)",
+      "bemerkung": "Klasse E: Sporadic-E im Sommer und interkontinentale DX-Verbindungen. 29,600 MHz FM-Anruffrequenz."
+    },
+    {
+      "band": "2m-Band (VHF)",
+      "frequenzbereich": "144,000 – 146,000 MHz",
+      "max_leistung_pep": "75 W PEP",
+      "primaer_sekundaer": "Primär (exklusiv)",
+      "bemerkung": "Klasse E: 144,000-144,150 CW; 144,200-144,400 SSB/Digi; 145,500 MHz FM-Mobil-Anruffrequenz; Relaisbetrieb 145,600-145,7875 MHz."
+    },
+    {
+      "band": "70cm-Band (UHF)",
+      "frequenzbereich": "430,000 – 440,000 MHz",
+      "max_leistung_pep": "75 W PEP",
+      "primaer_sekundaer": "Sekundär",
+      "bemerkung": "Klasse E: Sekundärstatus beachten (militärische Funkanwendungen haben Vorrang). Relaisausgaben 438,650-439,400 MHz."
+    }
+  ],
+  "gesetze_und_vorschriften": [
+    {
+      "titel": "Amateurfunkgesetz (AFuG § 2)",
+      "paragraph": "§ 2 Begriffsbestimmungen",
+      "inhalt": "Der Amateurfunkdienst ist ein Funkdienst, der von Funkamateuren untereinander, für die eigene Ausbildung und für technische Studien wahrgenommen wird. Funkamateure handeln aus persönlichem Interesse und ohne wirtschaftlichen Zweck."
+    },
+    {
+      "titel": "Amateurfunkverordnung (AFuV § 16)",
+      "paragraph": "§ 16 Rufzeichen und Betriebsabwicklung",
+      "inhalt": "Zu Beginn und am Ende jeder Funkverbindung sowie mindestens alle 10 Minuten während einer länger andauernden Verbindung ist das zugeteilte personengebundene Rufzeichen deutlich auszusenden."
+    },
+    {
+      "titel": "Amateurfunkverordnung (AFuV § 9)",
+      "paragraph": "§ 9 Zulassung zur Teilnahme am Amateurfunkdienst",
+      "inhalt": "Die Zulassung berechtigt zur Nutzung der den jeweiligen Klassen (N, E, A) zugeteilten Frequenzbereiche mit den festgelegten Sendeleistungen. Inhaber der Klasse E dürfen die Bänder 160m, 80m, 15m, 10m, 2m und 70cm nutzen."
+    },
+    {
+      "titel": "BEMFV (Elektromagnetische Verträglichkeit)",
+      "paragraph": "§ 9 Anzeige ortsfester Amateurfunkstellen",
+      "inhalt": "Stationen, die eine äquivalente isotrope Strahlungsleistung (EIRP) von 10 Watt oder mehr aussenden, müssen vor Inbetriebnahme der Bundesnetzagentur eine Selbsterklärung anzeigen."
+    },
+    {
+      "titel": "Drittverkehrsverbot",
+      "paragraph": "AFuG § 5",
+      "inhalt": "Nachrichten dürfen im Amateurfunkdienst nur für und an andere Funkamateure übermittelt werden. Die Übermittlung von Nachrichten für oder von Dritten ist im Inland und grenzüberschreitend unzulässig, es sei denn, im Not- und Katastrophenfunkfall."
+    }
+  ],
+  "itu_alphabet": [
+    { "buchstabe": "A", "wort": "Alpha", "aussprache": "AL-FAH" },
+    { "buchstabe": "B", "wort": "Bravo", "aussprache": "BRAH-VOH" },
+    { "buchstabe": "C", "wort": "Charlie", "aussprache": "CHAR-LEE" },
+    { "buchstabe": "D", "wort": "Delta", "aussprache": "DELL-TAH" },
+    { "buchstabe": "E", "wort": "Echo", "aussprache": "ECK-OH" },
+    { "buchstabe": "F", "wort": "Foxtrot", "aussprache": "FOKS-TROT" },
+    { "buchstabe": "G", "wort": "Golf", "aussprache": "GOLF" },
+    { "buchstabe": "H", "wort": "Hotel", "aussprache": "HOH-TELL" },
+    { "buchstabe": "I", "wort": "India", "aussprache": "IN-DEE-AH" },
+    { "buchstabe": "J", "wort": "Juliett", "aussprache": "JEW-LEE-ETT" },
+    { "buchstabe": "K", "wort": "Kilo", "aussprache": "KEY-LOH" },
+    { "buchstabe": "L", "wort": "Lima", "aussprache": "LEE-MAH" },
+    { "buchstabe": "M", "wort": "Mike", "aussprache": "MIKE" },
+    { "buchstabe": "N", "wort": "November", "aussprache": "NO-VEM-BER" },
+    { "buchstabe": "O", "wort": "Oscar", "aussprache": "OSS-CAH" },
+    { "buchstabe": "P", "wort": "Papa", "aussprache": "PAH-PAH" },
+    { "buchstabe": "Q", "wort": "Quebec", "aussprache": "KEH-BECK" },
+    { "buchstabe": "R", "wort": "Romeo", "aussprache": "ROW-ME-OH" },
+    { "buchstabe": "S", "wort": "Sierra", "aussprache": "SEE-AIR-RAH" },
+    { "buchstabe": "T", "wort": "Tango", "aussprache": "TANG-GO" },
+    { "buchstabe": "U", "wort": "Uniform", "aussprache": "YOU-NEE-FORM" },
+    { "buchstabe": "V", "wort": "Victor", "aussprache": "VIK-TAH" },
+    { "buchstabe": "W", "wort": "Whiskey", "aussprache": "WISS-KEY" },
+    { "buchstabe": "X", "wort": "X-ray", "aussprache": "ECKS-RAY" },
+    { "buchstabe": "Y", "wort": "Yankee", "aussprache": "YANG-KEY" },
+    { "buchstabe": "Z", "wort": "Zulu", "aussprache": "ZOO-LOO" }
+  ]
+}

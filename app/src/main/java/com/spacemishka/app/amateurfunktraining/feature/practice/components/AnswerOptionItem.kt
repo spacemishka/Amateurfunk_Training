@@ -67,9 +67,9 @@ fun AnswerOptionItem(
 
     val targetContainerColor = when (visualState) {
         AnswerItemVisualState.DEFAULT -> MaterialTheme.colorScheme.surface
-        AnswerItemVisualState.SELECTED_PENDING -> SelectedOptionContainer
-        AnswerItemVisualState.CORRECT -> CorrectGreenContainer
-        AnswerItemVisualState.WRONG -> WrongRedContainer
+        AnswerItemVisualState.SELECTED_PENDING -> MaterialTheme.colorScheme.primary.copy(alpha = 0.16f)
+        AnswerItemVisualState.CORRECT -> CorrectGreen.copy(alpha = 0.16f)
+        AnswerItemVisualState.WRONG -> WrongRed.copy(alpha = 0.16f)
         AnswerItemVisualState.DIMMED -> MaterialTheme.colorScheme.surface.copy(alpha = 0.5f)
     }
 
@@ -98,7 +98,13 @@ fun AnswerOptionItem(
             )
             .background(animatedContainerColor)
             .semantics(mergeDescendants = true) {
-                contentDescription = "Option $optionLetter"
+                val stateSuffix = when (visualState) {
+                    AnswerItemVisualState.CORRECT -> ", Richtig"
+                    AnswerItemVisualState.WRONG -> ", Falsch"
+                    AnswerItemVisualState.SELECTED_PENDING -> ", Ausgewählt"
+                    else -> ""
+                }
+                contentDescription = "Option $optionLetter: $optionText$stateSuffix"
             }
             .clickable(enabled = enabled, onClick = onClick)
             .padding(14.dp)

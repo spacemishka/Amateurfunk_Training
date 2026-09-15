@@ -1,0 +1,222 @@
+[
+  {
+    "id": "formel_ohm",
+    "kategorie": "GLEICHSTROM",
+    "titel": "Ohmsches Gesetz",
+    "formel": "U = R · I",
+    "beschreibung": "Grundlegendes Gesetz der Elektrotechnik: Der Zusammenhang zwischen elektrischer Spannung U, elektrischem Widerstand R und elektrischer Stromstärke I.",
+    "variablen": [
+      { "symbol": "U", "name": "Elektrische Spannung", "einheit": "Volt (V)" },
+      { "symbol": "R", "name": "Elektrischer Widerstand", "einheit": "Ohm (Ω)" },
+      { "symbol": "I", "name": "Elektrische Stromstärke", "einheit": "Ampere (A)" }
+    ],
+    "umstellungen": [
+      "I = U / R",
+      "R = U / I"
+    ],
+    "beispiel": "Ein Widerstand von 100 Ω an 12 V zieht einen Strom von I = 12 V / 100 Ω = 0,12 A (120 mA).",
+    "pruefungs_tipp": "Achte stets auf Einheitenvorsätze: 1 kΩ = 1000 Ω, 1 mA = 0,001 A."
+  },
+  {
+    "id": "formel_leistung_ui",
+    "kategorie": "GLEICHSTROM",
+    "titel": "Elektrische Leistung",
+    "formel": "P = U · I",
+    "beschreibung": "Die von einem Gleichstromverbraucher aufgenommene oder abgegebene elektrische Leistung P.",
+    "variablen": [
+      { "symbol": "P", "name": "Elektrische Leistung", "einheit": "Watt (W)" },
+      { "symbol": "U", "name": "Elektrische Spannung", "einheit": "Volt (V)" },
+      { "symbol": "I", "name": "Elektrische Stromstärke", "einheit": "Ampere (A)" }
+    ],
+    "umstellungen": [
+      "P = I² · R",
+      "P = U² / R",
+      "I = P / U",
+      "U = P / I"
+    ],
+    "beispiel": "Ein Funkgerät zieht bei 13,8 V Sendespannung 5 A Strom: P = 13,8 V · 5 A = 69 W.",
+    "pruefungs_tipp": "Durch Einsetzen des Ohmschen Gesetzes entstehen die Varianten P = I² · R und P = U² / R."
+  },
+  {
+    "id": "formel_widerstand_reihe",
+    "kategorie": "GLEICHSTROM",
+    "titel": "Reihenschaltung von Widerständen",
+    "formel": "R_ges = R1 + R2 + ... + Rn",
+    "beschreibung": "In der Reihenschaltung addieren sich die Teilwiderstände zum Gesamtwiderstand. Der Strom durch alle Widerstände ist gleich.",
+    "variablen": [
+      { "symbol": "R_ges", "name": "Gesamtwiderstand", "einheit": "Ohm (Ω)" },
+      { "symbol": "R1, R2", "name": "Einzelwiderstände", "einheit": "Ohm (Ω)" }
+    ],
+    "umstellungen": [],
+    "beispiel": "Zwei Widerstände mit R1 = 220 Ω und R2 = 330 Ω in Reihe: R_ges = 550 Ω.",
+    "pruefungs_tipp": "Der Gesamtwiderstand ist immer größer als der größte Einzelwiderstand."
+  },
+  {
+    "id": "formel_widerstand_parallel",
+    "kategorie": "GLEICHSTROM",
+    "titel": "Parallelschaltung von Widerständen",
+    "formel": "1 / R_ges = 1/R1 + 1/R2",
+    "beschreibung": "In der Parallelschaltung addieren sich die Leitwerte. An allen parallelen Zweigen liegt die gleiche Spannung an.",
+    "variablen": [
+      { "symbol": "R_ges", "name": "Gesamtwiderstand", "einheit": "Ohm (Ω)" },
+      { "symbol": "R1, R2", "name": "Einzelwiderstände", "einheit": "Ohm (Ω)" }
+    ],
+    "umstellungen": [
+      "R_ges = (R1 · R2) / (R1 + R2)",
+      "R_ges = R / n (für n gleiche Widerstände)"
+    ],
+    "beispiel": "Zwei gleiche Widerstände von 100 Ω parallel: R_ges = 100 Ω / 2 = 50 Ω.",
+    "pruefungs_tipp": "Der Gesamtwiderstand ist immer kleiner als der kleinste Einzelwiderstand."
+  },
+  {
+    "id": "formel_kondensator_parallel",
+    "kategorie": "BAUELEMENTE",
+    "titel": "Parallelschaltung von Kondensatoren",
+    "formel": "C_ges = C1 + C2 + ... + Cn",
+    "beschreibung": "Bei Kondensatoren verhält sich die Zusammenschaltung genau umgekehrt zu Widerständen: Parallel addieren sich die Kapazitäten.",
+    "variablen": [
+      { "symbol": "C_ges", "name": "Gesamtkapazität", "einheit": "Farad (F)" },
+      { "symbol": "C1, C2", "name": "Einzelkapazitäten", "einheit": "Farad (F / µF / pF)" }
+    ],
+    "umstellungen": [],
+    "beispiel": "Zwei Kondensatoren mit 100 nF und 220 nF parallel: C_ges = 320 nF.",
+    "pruefungs_tipp": "Merkhilfe: Parallele Platten vergrößern die wirksame Fläche, daher steigt die Kapazität."
+  },
+  {
+    "id": "formel_kondensator_reihe",
+    "kategorie": "BAUELEMENTE",
+    "titel": "Reihenschaltung von Kondensatoren",
+    "formel": "1 / C_ges = 1/C1 + 1/C2",
+    "beschreibung": "In Reihe geschaltete Kondensatoren ergeben eine geringere Gesamtkapazität als der kleinste Einzelkondensator.",
+    "variablen": [
+      { "symbol": "C_ges", "name": "Gesamtkapazität", "einheit": "Farad (F)" },
+      { "symbol": "C1, C2", "name": "Einzelkapazitäten", "einheit": "Farad (F / µF / pF)" }
+    ],
+    "umstellungen": [
+      "C_ges = (C1 · C2) / (C1 + C2)"
+    ],
+    "beispiel": "Zwei gleiche 100 pF Kondensatoren in Reihe: C_ges = 50 pF.",
+    "pruefungs_tipp": "In Reihe teilen sich die Spannungen auf: Spannungsfestigkeit erhöht sich."
+  },
+  {
+    "id": "formel_wellenlaenge_frequenz",
+    "kategorie": "HF_WECHSELSTROM",
+    "titel": "Wellenlänge und Frequenz",
+    "formel": "λ = c / f",
+    "beschreibung": "Zusammenhang zwischen Wellenlänge λ, Frequenz f und der Lichtgeschwindigkeit c ≈ 300 000 km/s im freien Raum.",
+    "variablen": [
+      { "symbol": "λ", "name": "Wellenlänge (Lambda)", "einheit": "Meter (m)" },
+      { "symbol": "c", "name": "Lichtgeschwindigkeit", "einheit": "≈ 300 000 km/s = 3·10⁸ m/s" },
+      { "symbol": "f", "name": "Frequenz", "einheit": "Hertz (Hz)" }
+    ],
+    "umstellungen": [
+      "λ [m] ≈ 300 / f [MHz]",
+      "f [MHz] ≈ 300 / λ [m]",
+      "f = c / λ"
+    ],
+    "beispiel": "Für das 2m-Band (145 MHz): λ = 300 / 145 ≈ 2,07 m.",
+    "pruefungs_tipp": "Mit der Faustformel λ [m] = 300 / f [MHz] lassen sich fast alle Prüfungsfragen im Kopf lösen."
+  },
+  {
+    "id": "formel_periodendauer",
+    "kategorie": "HF_WECHSELSTROM",
+    "titel": "Periodendauer und Frequenz",
+    "formel": "T = 1 / f",
+    "beschreibung": "Die Periodendauer T ist die Zeitdauer für eine vollständige Schwingung einer Wechselgröße.",
+    "variablen": [
+      { "symbol": "T", "name": "Periodendauer", "einheit": "Sekunden (s)" },
+      { "symbol": "f", "name": "Frequenz", "einheit": "Hertz (Hz)" }
+    ],
+    "umstellungen": [
+      "f = 1 / T"
+    ],
+    "beispiel": "Für Netzwechselspannung f = 50 Hz: T = 1 / 50 s = 0,02 s = 20 ms.",
+    "pruefungs_tipp": "1 µs Periodendauer entspricht einer Frequenz von f = 1 MHz."
+  },
+  {
+    "id": "formel_thomson_resonanz",
+    "kategorie": "HF_WECHSELSTROM",
+    "titel": "Thomson-Schwingkreisformel",
+    "formel": "f₀ = 1 / (2 · π · √(L · C))",
+    "beschreibung": "Resonanzfrequenz f₀ eines ungedämpften elektrischen Schwingkreises aus Induktivität L und Kapazität C.",
+    "variablen": [
+      { "symbol": "f₀", "name": "Resonanzfrequenz", "einheit": "Hertz (Hz)" },
+      { "symbol": "L", "name": "Induktivität", "einheit": "Henry (H)" },
+      { "symbol": "C", "name": "Kapazität", "einheit": "Farad (F)" }
+    ],
+    "umstellungen": [
+      "ω₀ = 1 / √(L · C)  (Resonanzkreisfrequenz)"
+    ],
+    "beispiel": "Wird C vervierfacht, halbiert sich die Resonanzfrequenz f₀.",
+    "pruefungs_tipp": "In der Prüfung oft als Proportionalitätsfrage: Verdopplung von L und C verringert f₀ um den Faktor 2."
+  },
+  {
+    "id": "formel_db_leistung",
+    "kategorie": "PEGEL_DAEMPFUNG",
+    "titel": "Leistungspegel in Dezibel (dB)",
+    "formel": "a [dB] = 10 · lg(P2 / P1)",
+    "beschreibung": "Logarithmisches Verhältnis zweier Leistungen P2 und P1. Positive Werte bedeuten Gewinn/Verstärkung, negative Werte Dämpfung.",
+    "variablen": [
+      { "symbol": "a", "name": "Dämpfung / Gewinn", "einheit": "Dezibel (dB)" },
+      { "symbol": "P2", "name": "Ausgangsleistung", "einheit": "Watt (W)" },
+      { "symbol": "P1", "name": "Eingangsleistung", "einheit": "Watt (W)" }
+    ],
+    "umstellungen": [
+      "P2 / P1 = 10^(a / 10)"
+    ],
+    "beispiel": "+3 dB entspricht Verdopplung der Leistung (Faktor 2), +10 dB entspricht Verzehnfachung (Faktor 10), -6 dB entspricht Viertelung (Faktor 0,25).",
+    "pruefungs_tipp": "Merke die Faustwerte: 3 dB ≈ 2x, 6 dB ≈ 4x, 10 dB = 10x, 20 dB = 100x Leistung."
+  },
+  {
+    "id": "formel_db_spannung",
+    "kategorie": "PEGEL_DAEMPFUNG",
+    "titel": "Spannungspegel in Dezibel (dB)",
+    "formel": "a [dB] = 20 · lg(U2 / U1)",
+    "beschreibung": "Logarithmisches Verhältnis zweier Spannungen U2 und U1 an gleichen Impedanzen. Aufgrund quadratischem Leistungsbezug mit Faktor 20 berechnet.",
+    "variablen": [
+      { "symbol": "a", "name": "Spannungsverhältnis in dB", "einheit": "Dezibel (dB)" },
+      { "symbol": "U2", "name": "Ausgangsspannung", "einheit": "Volt (V)" },
+      { "symbol": "U1", "name": "Eingangsspannung", "einheit": "Volt (V)" }
+    ],
+    "umstellungen": [
+      "U2 / U1 = 10^(a / 20)"
+    ],
+    "beispiel": "+6 dB entspricht Verdopplung der Spannung (Faktor 2), +20 dB entspricht Verzehnfachung der Spannung (Faktor 10).",
+    "pruefungs_tipp": "Wichtig: Bei Leistung gilt Faktor 10, bei Spannung/Strom gilt Faktor 20!"
+  },
+  {
+    "id": "formel_dipol_laenge",
+    "kategorie": "ANTENNEN_EMV",
+    "titel": "Halbwellendipol Gesamtlänge",
+    "formel": "L ≈ (λ / 2) · 0,95 ≈ 142,5 / f [MHz]",
+    "beschreibung": "Geometrische Länge eines gestreckten Halbwellen-Drahtdipols unter Berücksichtigung des Verkürzungsfaktors von ca. 0,95.",
+    "variablen": [
+      { "symbol": "L", "name": "Gesamtlänge des Dipols", "einheit": "Meter (m)" },
+      { "symbol": "λ", "name": "Wellenlänge", "einheit": "Meter (m)" },
+      { "symbol": "f", "name": "Frequenz", "einheit": "Megahertz (MHz)" }
+    ],
+    "umstellungen": [
+      "l_ast = L / 2 ≈ 71,25 / f [MHz] (Länge eines Dipol-Schenkels)"
+    ],
+    "beispiel": "Für das 10m-Band (28,5 MHz): L = 142,5 / 28,5 = 5,00 m (zwei Schenkel à 2,50 m).",
+    "pruefungs_tipp": "Ein Lambda/2-Dipol hat in Resonanz im Freiraum einen Fußpunktwiderstand von ca. 73 Ω (nahe an 50 Ω Koaxialkabel)."
+  },
+  {
+    "id": "formel_eirp",
+    "kategorie": "ANTENNEN_EMV",
+    "titel": "Äquivalente isotrope Strahlungsleistung (EIRP)",
+    "formel": "EIRP = P_sender · g_kabel · g_antenne",
+    "beschreibung": "Die effektive Strahlungsleistung bezogen auf einen isotropen Kugelstrahler. Wichtig für die gesetzliche Selbsterklärung (10 Watt EIRP Grenze).",
+    "variablen": [
+      { "symbol": "EIRP", "name": "Strahlungsleistung (isotrop)", "einheit": "Watt (W)" },
+      { "symbol": "P_sender", "name": "Sender-Ausgangsleistung", "einheit": "Watt (W)" },
+      { "symbol": "g_antenne", "name": "Antennengewinn (linear bezogen auf Isotropstrahler dBi)", "einheit": "Faktor" }
+    ],
+    "umstellungen": [
+      "EIRP [dBm] = P_sender [dBm] - Kabeldämpfung [dB] + Antennengewinn [dBi]",
+      "ERP = EIRP / 1,64 (Bezug auf Halbwellendipol, 2,15 dB Differenz)"
+    ],
+    "beispiel": "Ein 5 W Sender an einer Antenne mit 3 dBi Gewinn (Faktor 2) und 0 dB Kabelverlust erzeugt EIRP = 5 W · 2 = 10 W EIRP.",
+    "pruefungs_tipp": "Ab 10 Watt EIRP ist in Deutschland eine Standortbescheinigung (BNetzA) erforderlich."
+  }
+]

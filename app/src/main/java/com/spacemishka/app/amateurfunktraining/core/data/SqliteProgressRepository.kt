@@ -7,8 +7,10 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import com.spacemishka.app.amateurfunktraining.core.leitner.LeitnerCalculator
 import com.spacemishka.app.amateurfunktraining.core.leitner.StreakManager
+import com.spacemishka.app.amateurfunktraining.core.model.ImportMode
 import com.spacemishka.app.amateurfunktraining.core.model.ProgressStatus
 import com.spacemishka.app.amateurfunktraining.core.model.QuestionProgress
+import com.spacemishka.app.amateurfunktraining.core.model.QuestionProgressBackupDto
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
@@ -24,7 +26,7 @@ class SqliteProgressRepository(
     databaseName: String = "amateurfunk_progress.db"
 ) : ProgressRepository {
 
-    private val dbHelper = ProgressDbHelper(context, databaseName)
+    private val dbHelper = AmateurfunkDbHelper(context, databaseName)
     private val _allProgressFlow = MutableStateFlow<Map<String, QuestionProgress>>(emptyMap())
     private val _streakFlow = MutableStateFlow(0)
 
@@ -236,42 +238,106 @@ class SqliteProgressRepository(
         )
     }
 
+    override suspend fun getAllProgress(): List<QuestionProgress> = withContext(ioDispatcher) {
+        _allProgressFlow.value.values.toList()
+    }
+
+    override suspend fun importProgress(
+        items: List<QuestionProgressBackupDto>,
+        mode: ImportMode
+    ): Unit = withContext(ioDispatcher) {
+        val db = dbHelper.writableDatabase
+        db.beginTransaction()
+        try {
+            if (mode == ImportMode.OVERWRITE) {
+                db.delete("QuestionProgress", null, null)
+                for (item in items) {
+                    val values = ContentValues().apply {
+                        put("frage_id", item.frageId)
+                        put("status", item.status)
+                        put("fehlerzaehler", item.fehlerzaehler)
+                        put("letzte_antwort", item.letzteAntwort)
+                        put("leitner_box", item.leitnerBox)
+                        put("ist_lesezeichen", if (item.istLesezeichen) 1 else 0)
+                    }
+                    db.insertWithOnConflict("QuestionProgress", null, values, SQLiteDatabase.CONFLICT_REPLACE)
+                }
+            } else {
+                val currentMap = readAllProgressFromDb()
+                for (item in items) {
+                    val existing = currentMap[item.frageId]
+                    val mergedBox = if (existing != null) maxOf(existing.leitnerBox, item.leitnerBox) else item.leitnerBox
+                    val mergedErrors = if (existing != null) maxOf(existing.errorCount, item.fehlerzaehler) else item.fehlerzaehler
+                    val mergedTime = if (existing != null) maxOf(existing.lastAnsweredTimestamp, item.letzteAntwort) else item.letzteAntwort
+                    val mergedBookmark = (existing?.isBookmarked == true) || item.istLesezeichen
+                    val mergedStatus = if (mergedBox >= 5) {
+                        ProgressStatus.GEMEISTERT.name
+                    } else if (mergedBox > 1 || mergedErrors > 0 || mergedTime > 0) {
+                        ProgressStatus.IN_BEARBEITUNG.name
+                    } else {
+                        item.status
+                    }
+
+                    val values = ContentValues().apply {
+                        put("frage_id", item.frageId)
+                        put("status", mergedStatus)
+                        put("fehlerzaehler", mergedErrors)
+                        put("letzte_antwort", mergedTime)
+                        put("leitner_box", mergedBox)
+                        put("ist_lesezeichen", if (mergedBookmark) 1 else 0)
+                    }
+                    db.insertWithOnConflict("QuestionProgress", null, values, SQLiteDatabase.CONFLICT_REPLACE)
+                }
+            }
+            db.setTransactionSuccessful()
+        } finally {
+            db.endTransaction()
+        }
+
+        _allProgressFlow.value = readAllProgressFromDb()
+    }
+
+    override suspend fun getStreakData(): Pair<String?, Int> = withContext(ioDispatcher) {
+        readStreakFromDb()
+    }
+
+    override suspend fun setStreakData(
+        lastDate: String?,
+        streak: Int,
+        mode: ImportMode
+    ): Unit = withContext(ioDispatcher) {
+        val (currentDate, currentStreak) = readStreakFromDb()
+        val (targetDate, targetStreak) = if (mode == ImportMode.OVERWRITE) {
+            Pair(lastDate, streak)
+        } else {
+            if (streak > currentStreak || (currentDate == null && lastDate != null)) {
+                Pair(lastDate, maxOf(currentStreak, streak))
+            } else {
+                Pair(currentDate, currentStreak)
+            }
+        }
+        if (targetDate != null) {
+            saveStreakToDb(targetDate, targetStreak)
+        }
+        _streakFlow.value = StreakManager.computeDisplayStreak(targetDate, targetStreak)
+    }
+
+    override suspend fun clearAllProgress(): Unit = withContext(ioDispatcher) {
+        val db = dbHelper.writableDatabase
+        db.beginTransaction()
+        try {
+            db.delete("QuestionProgress", null, null)
+            db.delete("UserMeta", null, null)
+            db.setTransactionSuccessful()
+        } finally {
+            db.endTransaction()
+        }
+        _allProgressFlow.value = emptyMap()
+        _streakFlow.value = 0
+    }
+
     companion object {
         private const val KEY_LAST_PRACTICE_DATE = "last_practice_date"
         private const val KEY_STREAK = "user_streak"
-    }
-
-    private class ProgressDbHelper(context: Context, dbName: String) : SQLiteOpenHelper(context, dbName, null, 1) {
-        override fun onCreate(db: SQLiteDatabase) {
-            db.execSQL(
-                """
-                CREATE TABLE IF NOT EXISTS QuestionProgress (
-                    frage_id TEXT NOT NULL PRIMARY KEY,
-                    status TEXT NOT NULL,
-                    fehlerzaehler INTEGER NOT NULL DEFAULT 0,
-                    letzte_antwort INTEGER NOT NULL DEFAULT 0,
-                    leitner_box INTEGER NOT NULL DEFAULT 1,
-                    ist_lesezeichen INTEGER NOT NULL DEFAULT 0
-                )
-                """.trimIndent()
-            )
-
-            db.execSQL(
-                """
-                CREATE TABLE IF NOT EXISTS UserMeta (
-                    key TEXT NOT NULL PRIMARY KEY,
-                    value TEXT NOT NULL
-                )
-                """.trimIndent()
-            )
-
-            db.execSQL("CREATE INDEX IF NOT EXISTS idx_progress_fehler ON QuestionProgress(fehlerzaehler)")
-            db.execSQL("CREATE INDEX IF NOT EXISTS idx_progress_lesezeichen ON QuestionProgress(ist_lesezeichen)")
-            db.execSQL("CREATE INDEX IF NOT EXISTS idx_progress_box ON QuestionProgress(leitner_box)")
-        }
-
-        override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
-            // Future schema migrations
-        }
     }
 }

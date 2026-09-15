@@ -20,4 +20,15 @@ sealed interface PracticeMode {
     data object ProblemQuestions : PracticeMode {
         override val title: String = "Problemfragen"
     }
+
+    data class ExamMistakes(
+        val questionIds: List<String>,
+        override val title: String = "Fehlertraining (Prüfung)"
+    ) : PracticeMode
+
+    data class TopicQuestions(
+        val topicId: String,
+        val topicTitle: String,
+        override val title: String = "Thema: $topicTitle"
+    ) : PracticeMode
 }

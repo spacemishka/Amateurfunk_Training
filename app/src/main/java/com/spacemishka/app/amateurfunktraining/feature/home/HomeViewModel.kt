@@ -16,6 +16,10 @@ import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
+import com.spacemishka.app.amateurfunktraining.core.data.ExamRepository
+import com.spacemishka.app.amateurfunktraining.core.model.ExamHistoryEntry
+import com.spacemishka.app.amateurfunktraining.core.model.ExamReadiness
+
 data class HomeUiState(
     val isLoading: Boolean = true,
     val categoryCounts: Map<Category, Int> = emptyMap(),
@@ -24,12 +28,16 @@ data class HomeUiState(
     val dueLeitnerCount: Int = 0,
     val bookmarkCount: Int = 0,
     val problemCount: Int = 0,
+    val examReadiness: ExamReadiness? = null,
+    val lastExamEntry: ExamHistoryEntry? = null,
+    val latestExamMistakeIds: List<String> = emptyList(),
     val errorMessage: String? = null
 )
 
 class HomeViewModel(
     private val questionRepository: QuestionRepository,
-    private val progressRepository: ProgressRepository
+    private val progressRepository: ProgressRepository,
+    private val examRepository: ExamRepository? = null
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(HomeUiState())
@@ -47,6 +55,21 @@ class HomeViewModel(
             }
             .launchIn(viewModelScope)
 
+        examRepository?.getExamHistoryStream()
+            ?.onEach { history ->
+                val readiness = examRepository.getReadiness()
+                val lastExam = history.firstOrNull()
+                val mistakeIds = examRepository.getLatestWrongQuestionIds(50)
+                _uiState.update {
+                    it.copy(
+                        examReadiness = readiness,
+                        lastExamEntry = lastExam,
+                        latestExamMistakeIds = mistakeIds
+                    )
+                }
+            }
+            ?.launchIn(viewModelScope)
+
         loadData()
     }
 
@@ -58,6 +81,9 @@ class HomeViewModel(
                 val dueCount = progressRepository.getDueLeitnerQuestionIds().size
                 val bookmarkCount = progressRepository.getBookmarkedQuestionIds().size
                 val problemCount = progressRepository.getProblemQuestionIds().size
+                val readiness = examRepository?.getReadiness()
+                val recentHistory = examRepository?.getRecentExamResults(1)
+                val mistakes = examRepository?.getLatestWrongQuestionIds(50) ?: emptyList()
 
                 _uiState.update {
                     it.copy(
@@ -65,7 +91,10 @@ class HomeViewModel(
                         categoryCounts = counts,
                         dueLeitnerCount = dueCount,
                         bookmarkCount = bookmarkCount,
-                        problemCount = problemCount
+                        problemCount = problemCount,
+                        examReadiness = readiness,
+                        lastExamEntry = recentHistory?.firstOrNull(),
+                        latestExamMistakeIds = mistakes
                     )
                 }
 

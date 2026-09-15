@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.spacemishka.app.amateurfunktraining.core.data.ProgressRepository
 import com.spacemishka.app.amateurfunktraining.core.data.QuestionRepository
+import com.spacemishka.app.amateurfunktraining.core.data.TopicRepository
 import com.spacemishka.app.amateurfunktraining.core.leitner.LeitnerCalculator
 import com.spacemishka.app.amateurfunktraining.core.model.Category
 import com.spacemishka.app.amateurfunktraining.core.model.Question
@@ -15,7 +16,8 @@ import kotlinx.coroutines.launch
 
 class PracticeViewModel(
     private val questionRepository: QuestionRepository,
-    private val progressRepository: ProgressRepository
+    private val progressRepository: ProgressRepository,
+    private val topicRepository: TopicRepository? = null
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(PracticeUiState())
@@ -46,6 +48,13 @@ class PracticeViewModel(
                         val problemIds = progressRepository.getProblemQuestionIds().toSet()
                         allQuestions.filter { it.id in problemIds }
                     }
+                    is PracticeMode.ExamMistakes -> {
+                        val mistakeIds = mode.questionIds.toSet()
+                        allQuestions.filter { it.id in mistakeIds }
+                    }
+                    is PracticeMode.TopicQuestions -> {
+                        questionRepository.getQuestionsByTopic(mode.topicId)
+                    }
                 }
 
                 val preparedQuestions = if (shuffle && mode !is PracticeMode.ProblemQuestions) {
@@ -58,6 +67,7 @@ class PracticeViewModel(
 
                 val firstQuestion = preparedQuestions.firstOrNull()
                 val firstProgress = firstQuestion?.let { progressRepository.getProgressForQuestion(it.id) }
+                val firstTopic = firstQuestion?.let { topicRepository?.getTopicById(it.topicId) }
 
                 _uiState.update {
                     it.copy(
@@ -72,7 +82,8 @@ class PracticeViewModel(
                         isFinished = false,
                         isBookmarked = firstProgress?.isBookmarked ?: false,
                         currentLeitnerBox = firstProgress?.leitnerBox ?: 1,
-                        currentErrorCount = firstProgress?.errorCount ?: 0
+                        currentErrorCount = firstProgress?.errorCount ?: 0,
+                        currentTopic = firstTopic
                     )
                 }
             } catch (e: Exception) {
@@ -131,6 +142,7 @@ class PracticeViewModel(
             val nextQuestion = currentState.questions[nextIndex]
             viewModelScope.launch {
                 val nextProgress = progressRepository.getProgressForQuestion(nextQuestion.id)
+                val nextTopic = topicRepository?.getTopicById(nextQuestion.topicId)
                 _uiState.update {
                     it.copy(
                         currentIndex = nextIndex,
@@ -139,7 +151,8 @@ class PracticeViewModel(
                         isCorrect = null,
                         isBookmarked = nextProgress?.isBookmarked ?: false,
                         currentLeitnerBox = nextProgress?.leitnerBox ?: 1,
-                        currentErrorCount = nextProgress?.errorCount ?: 0
+                        currentErrorCount = nextProgress?.errorCount ?: 0,
+                        currentTopic = nextTopic
                     )
                 }
             }
@@ -162,6 +175,7 @@ class PracticeViewModel(
         viewModelScope.launch {
             val firstQuestion = retryList.firstOrNull()
             val firstProgress = firstQuestion?.let { progressRepository.getProgressForQuestion(it.id) }
+            val firstTopic = firstQuestion?.let { topicRepository?.getTopicById(it.topicId) }
 
             _uiState.update {
                 it.copy(
@@ -175,9 +189,16 @@ class PracticeViewModel(
                     isFinished = false,
                     isBookmarked = firstProgress?.isBookmarked ?: false,
                     currentLeitnerBox = firstProgress?.leitnerBox ?: 1,
-                    currentErrorCount = firstProgress?.errorCount ?: 0
+                    currentErrorCount = firstProgress?.errorCount ?: 0,
+                    currentTopic = firstTopic
                 )
             }
+        }
+    }
+
+    fun markTopicAsViewed(topicId: String) {
+        viewModelScope.launch {
+            topicRepository?.markTopicAsViewed(topicId)
         }
     }
 }

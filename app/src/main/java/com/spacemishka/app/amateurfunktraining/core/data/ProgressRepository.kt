@@ -1,6 +1,8 @@
 package com.spacemishka.app.amateurfunktraining.core.data
 
+import com.spacemishka.app.amateurfunktraining.core.model.ImportMode
 import com.spacemishka.app.amateurfunktraining.core.model.QuestionProgress
+import com.spacemishka.app.amateurfunktraining.core.model.QuestionProgressBackupDto
 import kotlinx.coroutines.flow.Flow
 
 interface ProgressRepository {
@@ -13,4 +15,12 @@ interface ProgressRepository {
     suspend fun getBookmarkedQuestionIds(): List<String>
     suspend fun getDueLeitnerQuestionIds(currentTimestamp: Long = System.currentTimeMillis()): List<String>
     fun getStreakStream(): Flow<Int>
+
+    // MVP 6: Import / Export & Data Portability
+    suspend fun getAllProgress(): List<QuestionProgress>
+    suspend fun importProgress(items: List<QuestionProgressBackupDto>, mode: ImportMode)
+    suspend fun getStreakData(): Pair<String?, Int>
+    suspend fun setStreakData(lastDate: String?, streak: Int, mode: ImportMode)
+    suspend fun clearAllProgress()
 }
+

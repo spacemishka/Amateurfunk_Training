@@ -1,7 +1,9 @@
 package com.spacemishka.app.amateurfunktraining.feature.practice
 
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -12,7 +14,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -23,6 +25,7 @@ import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.Lightbulb
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.outlined.BookmarkBorder
 import androidx.compose.material3.Button
@@ -44,6 +47,9 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -52,12 +58,18 @@ import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.material.icons.filled.Calculate
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.spacemishka.app.amateurfunktraining.feature.calculator.CalculatorBottomSheet
+import com.spacemishka.app.amateurfunktraining.feature.calculator.CalculatorViewModel
 import com.spacemishka.app.amateurfunktraining.feature.practice.components.AnswerItemVisualState
 import com.spacemishka.app.amateurfunktraining.feature.practice.components.AnswerOptionItem
 import com.spacemishka.app.amateurfunktraining.feature.practice.components.ExplanationBox
 import com.spacemishka.app.amateurfunktraining.feature.practice.components.QuestionCard
+import com.spacemishka.app.amateurfunktraining.feature.topic.components.TopicBottomSheet
 import com.spacemishka.app.amateurfunktraining.ui.theme.CorrectGreen
 import com.spacemishka.app.amateurfunktraining.ui.theme.RadioBlue
 import com.spacemishka.app.amateurfunktraining.ui.theme.WrongRed
@@ -70,6 +82,9 @@ fun PracticeScreen(
     modifier: Modifier = Modifier
 ) {
     val state by viewModel.uiState.collectAsState()
+    var showTopicSheet by remember { mutableStateOf(false) }
+    var showCalculatorSheet by remember { mutableStateOf(false) }
+    val calculatorViewModel: CalculatorViewModel = viewModel()
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
@@ -105,9 +120,23 @@ fun PracticeScreen(
                 },
                 actions = {
                     if (!state.isFinished && state.currentQuestion != null) {
+                        IconButton(
+                            onClick = { showCalculatorSheet = true },
+                            modifier = Modifier
+                                .size(48.dp)
+                                .semantics { contentDescription = "Formel-Rechner öffnen" }
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.Calculate,
+                                contentDescription = null,
+                                tint = RadioBlue
+                            )
+                        }
+
                         val bookmarkDesc = if (state.isBookmarked) "Lesezeichen entfernen" else "Lesezeichen setzen"
                         IconButton(
-                            onClick = { viewModel.toggleBookmark() }
+                            onClick = { viewModel.toggleBookmark() },
+                            modifier = Modifier.size(48.dp)
                         ) {
                             Icon(
                                 imageVector = if (state.isBookmarked) Icons.Filled.Bookmark else Icons.Outlined.BookmarkBorder,
@@ -134,7 +163,10 @@ fun PracticeScreen(
                             .padding(16.dp)
                     ) {
                         Button(
-                            onClick = { viewModel.nextQuestion() },
+                            onClick = {
+                                showTopicSheet = false
+                                viewModel.nextQuestion()
+                            },
                             enabled = state.isAnswerConfirmed,
                             modifier = Modifier
                                 .fillMaxWidth()
@@ -262,12 +294,58 @@ fun PracticeScreen(
                                 visible = state.isAnswerConfirmed
                             )
 
+                            if (state.isAnswerConfirmed && state.currentTopic != null) {
+                                val currentTopic = state.currentTopic!!
+                                OutlinedButton(
+                                    onClick = {
+                                        showTopicSheet = true
+                                        viewModel.markTopicAsViewed(currentTopic.id)
+                                    },
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .semantics {
+                                            contentDescription = "Hintergrundwissen: ${currentTopic.title}"
+                                        },
+                                    shape = RoundedCornerShape(12.dp),
+                                    colors = ButtonDefaults.outlinedButtonColors(contentColor = RadioBlue),
+                                    border = BorderStroke(1.5.dp, RadioBlue.copy(alpha = 0.5f))
+                                ) {
+                                    Icon(
+                                        imageVector = Icons.Default.Lightbulb,
+                                        contentDescription = null,
+                                        modifier = Modifier.size(18.dp),
+                                        tint = RadioBlue
+                                    )
+                                    Spacer(modifier = Modifier.width(8.dp))
+                                    Text(
+                                        text = "Kurz erklärt: ${currentTopic.title}",
+                                        fontWeight = FontWeight.Bold,
+                                        maxLines = 1,
+                                        overflow = TextOverflow.Ellipsis
+                                    )
+                                }
+                            }
+
                             Spacer(modifier = Modifier.height(24.dp))
                         }
                     }
                 }
             }
         }
+    }
+
+    if (showTopicSheet && state.currentTopic != null) {
+        TopicBottomSheet(
+            topic = state.currentTopic!!,
+            onDismissRequest = { showTopicSheet = false }
+        )
+    }
+
+    if (showCalculatorSheet) {
+        CalculatorBottomSheet(
+            viewModel = calculatorViewModel,
+            onDismissRequest = { showCalculatorSheet = false }
+        )
     }
 }
 
@@ -282,6 +360,8 @@ private fun EmptyPracticeView(
         is PracticeMode.ProblemQuestions -> Pair("Keine Problemfragen vorhanden", "Fragen, die du 2-mal oder öfter falsch beantwortest, landen automatisch in dieser Liste.")
         is PracticeMode.DueLeitner -> Pair("Keine fälligen Fragen heute", "Großartig! Du hast alle heute fälligen Leitner-Wiederholungen bereits abgeschlossen.")
         is PracticeMode.CategoryMode -> Pair("Keine Fragen gefunden", "Für dieses Fach sind aktuell keine Fragen verfügbar.")
+        is PracticeMode.ExamMistakes -> Pair("Keine Fehlfragen vorhanden", "In der letzten Prüfungssimulation gab es keine Fehlfragen oder alle wurden gemeistert.")
+        is PracticeMode.TopicQuestions -> Pair("Keine Fragen gefunden", "Für dieses Thema wurden aktuell keine Prüfungsfragen gefunden.")
     }
 
     Card(

@@ -2,6 +2,7 @@ package com.spacemishka.app.amateurfunktraining.feature.practice
 
 import com.spacemishka.app.amateurfunktraining.core.model.Category
 import com.spacemishka.app.amateurfunktraining.core.model.Question
+import com.spacemishka.app.amateurfunktraining.core.model.Topic
 
 data class PracticeUiState(
     val isLoading: Boolean = true,
@@ -17,7 +18,8 @@ data class PracticeUiState(
     val errorMessage: String? = null,
     val isBookmarked: Boolean = false,
     val currentLeitnerBox: Int = 1,
-    val currentErrorCount: Int = 0
+    val currentErrorCount: Int = 0,
+    val currentTopic: Topic? = null
 ) {
     val category: Category
         get() = (practiceMode as? PracticeMode.CategoryMode)?.category ?: Category.ALL

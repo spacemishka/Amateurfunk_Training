@@ -63,6 +63,11 @@ class AssetQuestionRepository(
         return loadQuestions().firstOrNull { it.id.equals(id, ignoreCase = true) }
     }
 
+    override suspend fun getQuestionsByTopic(topicId: String): List<Question> {
+        val target = topicId.lowercase()
+        return loadQuestions().filter { it.topicId.equals(target, ignoreCase = true) }
+    }
+
     override suspend fun getCategoryCounts(): Map<Category, Int> {
         val all = loadQuestions()
         return mapOf(
