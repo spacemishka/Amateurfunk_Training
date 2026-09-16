@@ -91,25 +91,43 @@ build-release-apk:
       ./gradlew assembleRelease --no-daemon \
         -PversionName="$VERSION_NAME" \
         -PversionCode="$VERSION_CODE"
-    # APK signieren, falls Keystore-Variablen gesetzt sind
+    # APK signieren (mit Keystore-Secret oder automatisch generiertem CI-Schlüssel)
     - |
       if [ -n "$KEYSTORE_BASE64" ]; then
         echo "$KEYSTORE_BASE64" | base64 --decode > release.keystore
-        BUILD_TOOLS_VERSION=$(ls "${ANDROID_HOME}/build-tools/" | tail -1)
-        "${ANDROID_HOME}/build-tools/${BUILD_TOOLS_VERSION}/apksigner" sign \
-          --ks release.keystore \
-          --ks-pass "pass:${KEYSTORE_PASSWORD}" \
-          --ks-key-alias "${KEY_ALIAS}" \
-          --key-pass "pass:${KEY_PASSWORD}" \
-          --out "app/build/outputs/apk/release/AmateurfunkTraining-${VERSION_NAME}.apk" \
-          app/build/outputs/apk/release/app-release-unsigned.apk
-        rm -f release.keystore
-        echo "APK signed successfully: AmateurfunkTraining-${VERSION_NAME}.apk"
+        KS_PASS="${KEYSTORE_PASSWORD}"
+        KS_ALIAS="${KEY_ALIAS}"
+        KEY_PASS="${KEY_PASSWORD}"
       else
-        mv app/build/outputs/apk/release/app-release-unsigned.apk \
-           "app/build/outputs/apk/release/AmateurfunkTraining-${VERSION_NAME}-unsigned.apk"
-        echo "No keystore configured – APK left unsigned."
+        echo "Kein Keystore konfiguriert – erstelle CI-Signierschlüssel..."
+        keytool -genkeypair -v \
+          -keystore release.keystore \
+          -alias amateurfunk \
+          -keyalg RSA \
+          -keysize 2048 \
+          -validity 10000 \
+          -storepass android \
+          -keypass android \
+          -dname "CN=AmateurfunkTraining, OU=App, O=SpaceMishka, C=DE"
+        KS_PASS="android"
+        KS_ALIAS="amateurfunk"
+        KEY_PASS="android"
       fi
+      BUILD_TOOLS_VERSION=$(ls "${ANDROID_HOME}/build-tools/" | tail -1)
+      TARGET_APK="app/build/outputs/apk/release/AmateurfunkTraining-${VERSION_NAME}.apk"
+      "${ANDROID_HOME}/build-tools/${BUILD_TOOLS_VERSION}/apksigner" sign \
+        --ks release.keystore \
+        --ks-pass "pass:${KS_PASS}" \
+        --ks-key-alias "${KS_ALIAS}" \
+        --key-pass "pass:${KEY_PASS}" \
+        --v1-signing-enabled true \
+        --v2-signing-enabled true \
+        --v3-signing-enabled true \
+        --out "$TARGET_APK" \
+        app/build/outputs/apk/release/app-release-unsigned.apk
+      rm -f release.keystore
+      echo "APK signiert und verifiziert: $TARGET_APK"
+      "${ANDROID_HOME}/build-tools/${BUILD_TOOLS_VERSION}/apksigner" verify --verbose "$TARGET_APK"
   artifacts:
     paths:
       - app/build/outputs/apk/release/*.apk

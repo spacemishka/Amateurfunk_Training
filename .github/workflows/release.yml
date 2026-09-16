@@ -81,8 +81,8 @@ jobs:
             -PversionName="$VERSION_NAME" \
             -PversionCode="$VERSION_CODE"
 
-      # 8. APK signieren oder umbenennen
-      - name: Process Release APK
+      # 8. APK signieren (mit Keystore-Secret oder automatisch generiertem CI-Schlüssel)
+      - name: Sign Release APK
         env:
           KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
@@ -98,27 +98,60 @@ jobs:
             exit 1
           fi
           
-          echo "Gefundene APK: $SRC_APK"
+          echo "Quelldatei: $SRC_APK"
+          BUILD_TOOLS_DIR=$(ls -d "$ANDROID_HOME/build-tools/"* | tail -1)
+          echo "Verwende Build-Tools aus: $BUILD_TOOLS_DIR"
           
           if [ -n "$KEYSTORE_BASE64" ]; then
-            echo "Keystore gefunden – signiere APK..."
+            echo "Keystore-Secret vorhanden – signiere mit Produktionsschlüssel..."
             echo "$KEYSTORE_BASE64" | base64 --decode > release.keystore
-            BUILD_TOOLS_DIR=$(ls -d "$ANDROID_HOME/build-tools/"* | tail -1)
-            "$BUILD_TOOLS_DIR/apksigner" sign \
-              --ks release.keystore \
-              --ks-pass "pass:$KEYSTORE_PASSWORD" \
-              --ks-key-alias "$KEY_ALIAS" \
-              --key-pass "pass:$KEY_PASSWORD" \
-              --out "$APK_DIR/AmateurfunkTraining-$VERSION_NAME.apk" \
-              "$SRC_APK"
-            rm -f release.keystore
-            echo "APK erfolgreich signiert: $APK_DIR/AmateurfunkTraining-$VERSION_NAME.apk"
+            KS_PASS="$KEYSTORE_PASSWORD"
+            KS_ALIAS="$KEY_ALIAS"
+            KEY_PASS="$KEY_PASSWORD"
           else
-            echo "Kein Keystore-Secret konfiguriert – APK bleibt unsigned."
-            cp "$SRC_APK" "$APK_DIR/AmateurfunkTraining-$VERSION_NAME-unsigned.apk"
+            echo "Kein Keystore-Secret vorhanden – generiere CI-Signierschlüssel..."
+            keytool -genkeypair -v \
+              -keystore release.keystore \
+              -alias amateurfunk \
+              -keyalg RSA \
+              -keysize 2048 \
+              -validity 10000 \
+              -storepass android \
+              -keypass android \
+              -dname "CN=AmateurfunkTraining, OU=App, O=SpaceMishka, C=DE"
+            KS_PASS="android"
+            KS_ALIAS="amateurfunk"
+            KEY_PASS="android"
           fi
+          
+          TARGET_APK="$APK_DIR/AmateurfunkTraining-$VERSION_NAME.apk"
+          
+          "$BUILD_TOOLS_DIR/apksigner" sign \
+            --ks release.keystore \
+            --ks-pass "pass:$KS_PASS" \
+            --ks-key-alias "$KS_ALIAS" \
+            --key-pass "pass:$KEY_PASS" \
+            --v1-signing-enabled true \
+            --v2-signing-enabled true \
+            --v3-signing-enabled true \
+            --out "$TARGET_APK" \
+            "$SRC_APK"
+          
+          rm -f release.keystore
+          
+          echo "Verifiziere APK-Signatur..."
+          "$BUILD_TOOLS_DIR/apksigner" verify --verbose "$TARGET_APK"
+          echo "APK erfolgreich signiert und bereit zur Installation: $TARGET_APK"
 
-      # 9. GitHub Release erstellen und APK hochladen
+      # 9. APK als Workflow-Artefakt speichern (direkt in GitHub Actions herunterladbar)
+      - name: Upload APK as Workflow Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: AmateurfunkTraining-${{ steps.version.outputs.version_name }}
+          path: app/build/outputs/apk/release/AmateurfunkTraining-*.apk
+          retention-days: 30
+
+      # 10. GitHub Release erstellen und signierte APK hochladen
       - name: Create GitHub Release and upload APK
         uses: softprops/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/') || inputs.version_name != ''
