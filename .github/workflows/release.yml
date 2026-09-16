@@ -1,10 +1,20 @@
-﻿name: Release APK Build
+name: Release APK Build
 
-# Trigger: Wenn ein versionierter Tag (z.B. v1.6.0) gepusht wird
+# Trigger: Bei Tags (z.B. v1.6.0, v0.1, 0.1) oder manuell via GitHub UI
 on:
   push:
     tags:
-      - 'v*.*.*'
+      - 'v*'
+      - '[0-9]+.*'
+  workflow_dispatch:
+    inputs:
+      version_name:
+        description: 'Versionsname (z.B. 0.1 oder 1.0.0)'
+        required: false
+        default: '0.1'
+
+permissions:
+  contents: write
 
 jobs:
   build-release-apk:
@@ -34,16 +44,31 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
-      # 5. Versionsnummer aus dem Git-Tag extrahieren (z.B. "v1.6.0" -> "1.6.0")
-      - name: Extract version from tag
+      # 5. Versionsnummer extrahieren (z.B. "v1.6.0" -> "1.6.0" oder "0.1" -> "0.1")
+      - name: Extract version
         id: version
         run: |
-          TAG="${GITHUB_REF#refs/tags/v}"
-          echo "VERSION_NAME=$TAG" >> "$GITHUB_ENV"
-          VERSION_CODE=$(git tag --list 'v*.*.*' | wc -l)
+          RAW_TAG="${{ inputs.version_name }}"
+          if [ -z "$RAW_TAG" ]; then
+            RAW_TAG="${GITHUB_REF_NAME}"
+          fi
+          # 'v' am Anfang entfernen, falls vorhanden
+          VERSION_NAME="${RAW_TAG#v}"
+          if [ -z "$VERSION_NAME" ]; then
+            VERSION_NAME="1.0.0"
+          fi
+          
+          # VersionCode: Gesamtzahl der Commits als aufsteigender Zähler (mindestens 1)
+          VERSION_CODE=$(git rev-list --count HEAD 2>/dev/null || echo 1)
+          if [ "$VERSION_CODE" -lt 1 ]; then
+            VERSION_CODE=1
+          fi
+          
+          echo "VERSION_NAME=$VERSION_NAME" >> "$GITHUB_ENV"
           echo "VERSION_CODE=$VERSION_CODE" >> "$GITHUB_ENV"
-          echo "version_name=$TAG" >> "$GITHUB_OUTPUT"
+          echo "version_name=$VERSION_NAME" >> "$GITHUB_OUTPUT"
           echo "version_code=$VERSION_CODE" >> "$GITHUB_OUTPUT"
+          echo "Building version $VERSION_NAME (versionCode: $VERSION_CODE)"
 
       # 6. Unit-Tests ausführen
       - name: Run unit tests
@@ -56,44 +81,54 @@ jobs:
             -PversionName="$VERSION_NAME" \
             -PversionCode="$VERSION_CODE"
 
-      # 8. APK signieren (nur wenn Keystore-Secrets konfiguriert sind)
-      - name: Sign Release APK
-        if: ${{ env.KEYSTORE_BASE64 != '' }}
+      # 8. APK signieren oder umbenennen
+      - name: Process Release APK
         env:
           KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
           KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+          VERSION_NAME: ${{ steps.version.outputs.version_name }}
         run: |
-          echo "$KEYSTORE_BASE64" | base64 --decode > release.keystore
-          $ANDROID_HOME/build-tools/$(ls "$ANDROID_HOME/build-tools/" | tail -1)/apksigner sign \
-            --ks release.keystore \
-            --ks-pass "pass:$KEYSTORE_PASSWORD" \
-            --ks-key-alias "$KEY_ALIAS" \
-            --key-pass "pass:$KEY_PASSWORD" \
-            --out app/build/outputs/apk/release/AmateurfunkTraining-${{ steps.version.outputs.version_name }}.apk \
-            app/build/outputs/apk/release/app-release-unsigned.apk
-          rm -f release.keystore
+          APK_DIR="app/build/outputs/apk/release"
+          SRC_APK=$(find "$APK_DIR" -maxdepth 1 -name "*.apk" | head -n 1)
+          
+          if [ -z "$SRC_APK" ]; then
+            echo "Fehler: Keine APK-Datei in $APK_DIR gefunden!"
+            exit 1
+          fi
+          
+          echo "Gefundene APK: $SRC_APK"
+          
+          if [ -n "$KEYSTORE_BASE64" ]; then
+            echo "Keystore gefunden – signiere APK..."
+            echo "$KEYSTORE_BASE64" | base64 --decode > release.keystore
+            BUILD_TOOLS_DIR=$(ls -d "$ANDROID_HOME/build-tools/"* | tail -1)
+            "$BUILD_TOOLS_DIR/apksigner" sign \
+              --ks release.keystore \
+              --ks-pass "pass:$KEYSTORE_PASSWORD" \
+              --ks-key-alias "$KEY_ALIAS" \
+              --key-pass "pass:$KEY_PASSWORD" \
+              --out "$APK_DIR/AmateurfunkTraining-$VERSION_NAME.apk" \
+              "$SRC_APK"
+            rm -f release.keystore
+            echo "APK erfolgreich signiert: $APK_DIR/AmateurfunkTraining-$VERSION_NAME.apk"
+          else
+            echo "Kein Keystore-Secret konfiguriert – APK bleibt unsigned."
+            cp "$SRC_APK" "$APK_DIR/AmateurfunkTraining-$VERSION_NAME-unsigned.apk"
+          fi
 
-      # 9. Unsigned APK umbenennen (wenn kein Keystore konfiguriert)
-      - name: Rename unsigned APK
-        if: ${{ env.KEYSTORE_BASE64 == '' }}
-        env:
-          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
-        run: |
-          mv app/build/outputs/apk/release/app-release-unsigned.apk \
-             app/build/outputs/apk/release/AmateurfunkTraining-${{ steps.version.outputs.version_name }}-unsigned.apk
-
-      # 10. GitHub Release erstellen und APK hochladen
+      # 9. GitHub Release erstellen und APK hochladen
       - name: Create GitHub Release and upload APK
         uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/') || inputs.version_name != ''
         with:
           name: "AmateurfunkTraining v${{ steps.version.outputs.version_name }}"
-          tag_name: ${{ github.ref_name }}
+          tag_name: ${{ github.ref_name || format('v{0}', steps.version.outputs.version_name) }}
           draft: false
           prerelease: false
           generate_release_notes: true
           files: |
-            app/build/outputs/apk/release/*.apk
+            app/build/outputs/apk/release/AmateurfunkTraining-*.apk
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
