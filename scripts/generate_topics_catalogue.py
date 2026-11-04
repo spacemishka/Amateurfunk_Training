@@ -293,22 +293,22 @@ TOPICS = [
     {
         "topic_id": "top_technik_eg1",
         "kategorie": "Technik",
-        "titel": "Antennen-Grundformen: Dipol & Vertikal",
-        "kernaussage": "Der Halbwellendipol (λ/2) ist die Grundform aller resonanten Antennen mit einem Fußpunktwiderstand von ca. 73 Ω.",
-        "erklaerung": "Ein gestreckter Halbwellendipol besteht aus zwei λ/4 langen Schenkeln. In Resonanz hat er im Speisepunkt im Zentrum eine maximale Stromstärke (Strombauch) und minimale Spannung (Spannungsknoten), was eine niederohmige Impedanz von ca. 50–75 Ω ergibt. Vertikalantennen (Groundplane) nutzen einen λ/4-Strahler gegen Radials als künstliche Erde und besitzen rundstrahlende Flachstrahlung (Impedanz ca. 36 Ω ohne Verkürzung).",
-        "formel": "Gesamtlänge Dipol: l [m] ≈ 0,95 · (150 / f [MHz]);  λ/4-Strahler: l [m] ≈ 0,95 · (75 / f [MHz])",
-        "merksatz": "Dipol hat Strombauch in der Mitte und Spannungsbauch an den Enden!",
+        "titel": "Antennenbauformen: Dipol, Vertikal, Loops & Richtantennen",
+        "kernaussage": "Je nach Einsatzzweck nutzt der Funkamateur resonante Halbwellendipole, Vertikalantennen, Schleifenantennen oder Richtstrahler.",
+        "erklaerung": "Grundform ist der gestreckte Halbwellendipol (zwei λ/4-Schenkel, mittengespeist ca. 73 Ω). Der Faltdipol (zwei parallele Leiter, Umfang 1 λ) besitzt eine Impedanz von ca. 240–300 Ω. Schleifenantennen (Loop) haben einen Umfang von ca. 1 λ: Dreieckig als Deltaloop oder quadratisch als Quad-Schleife mit leichtem Gewinn. Magnetic Loops (magnetische Rahmenantennen) sind extrem kompakt (Umfang < λ/4) und empfangen vorwiegend die magnetische Feldkomponente, was sie unempfindlicher gegen elektrische Störungen macht. Vertikalstrahler (Groundplane λ/4 oder 5/8 λ) strahlen rund und flach ab. Im Mikrowellenbereich bündeln Parabolspiegel mit Speisesystem die HF zu extrem scharfen Keulen.",
+        "formel": "Dipol-Länge: l [m] ≈ 142,5 / f [MHz]; Loop-Umfang ≈ 300 / f [MHz]; 5/8-λ strahlt flacher als λ/4",
+        "merksatz": "Dipol strahlt quer zum Draht, Vertikal rundherum, Parabol bündelt Mikrowellen scharf wie ein Scheinwerfer!",
         "verwandte_themen": ["top_technik_eb3", "top_technik_eg2", "top_technik_eg3"]
     },
     {
         "topic_id": "top_technik_eg2",
         "kategorie": "Technik",
-        "titel": "Richtantennen, Gewinn (dBi/dBd) & Richtdiagramm",
-        "kernaussage": "Richtantennen bündeln die Strahlungsleistung in eine Vorzugsrichtung und erzielen dadurch Antennengewinn.",
-        "erklaerung": "Eine Yagi-Uda-Antenne besteht aus einem gespeisten Erreger (Dipol), einem geringfügig längeren Reflektor (hinter dem Erreger) und kürzeren Direktoren (in Strahlungsrichtung). Der Gewinn gibt an, wie viel mehr Leistung in der Hauptstrahlrichtung ankommt im Vergleich zum Kugelstrahler (dBi) oder Halbwellendipol (dBd). Das Vor-Rück-Verhältnis (F/B) beschreibt die Dämpfung rückwärtiger Signale.",
-        "formel": "G [dBi] = G [dBd] + 2,15 dB;  Leistungsverhältnis 3 dB = doppelte Leistung, 10 dB = verzehnfachte Leistung",
-        "merksatz": "Reflektor ist länger, Direktor ist kürzer als der Strahler. Gewinn in dBi ist immer um 2,15 höher als in dBd!",
-        "verwandte_themen": ["top_technik_eg1", "top_technik_eg5"]
+        "titel": "Antennenmerkmale (Verkürzungsfaktor, Impedanz, Diagramm & Gewinn)",
+        "kernaussage": "Verkürzungsfaktor, Fußpunktimpedanz, Resonanz, Polarisation und Richtwirkung bestimmen die Abstrahleigenschaften jeder Antenne.",
+        "erklaerung": "Wegen des Schlankheitsgrads und Endkapazitäten breitet sich Strom auf Antennendrähten langsamer aus als im Vakuum (Verkürzungsfaktor Vk typisch ca. 0,95 bzw. 95 %). Im Resonanzfall besitzt ein mittengespeister Halbwellendipol im Zentrum ein Strommaximum (Strombauch) und minimale Spannung (Spannungsknoten), was eine niederohmige Speiseimpedanz von ca. 73 Ω ergibt (Stromspeisung). Endgespeiste Halbwellenleiter erfordern dagegen Spannungsspeisung bei sehr hoher Impedanz (mehrere kΩ). Der Faltdipol hat ca. 240–300 Ω, eine Groundplane mit Radialen ca. 36 Ω. Yagi-Richtantennen besitzen einen getriebenen Dipol, längere Reflektoren und kürzere Direktoren. Der Gewinn wird in dBi (Bezug Kugelstrahler) oder dBd (Bezug Halbwellendipol) angegeben: G [dBi] = G [dBd] + 2,15 dB. Die Polarisation richtet sich nach dem elektrischen Feldvektor (z. B. horizontaler Dipol = horizontale Polarisation).",
+        "formel": "l [m] = 0,95 · (λ / 2); Z_Dipol ≈ 73 Ω; Z_Faltdipol ≈ 240–300 Ω; G [dBi] = G [dBd] + 2,15 dB",
+        "merksatz": "In der Mitte Strombauch (niederohmig ~73 Ω), am Ende Spannungsbauch (hochohmig); dBi ist immer um 2,15 dB größer als dBd!",
+        "verwandte_themen": ["top_technik_eg1", "top_technik_eg3", "top_technik_eg4", "top_technik_eg5"]
     },
     {
         "topic_id": "top_technik_eg3",
@@ -472,117 +472,117 @@ TOPICS = [
         "erklaerung": "Um Übertragungsfehler bei Rauschen und Akzenten auszuschließen, werden Rufzeichen und Eigennamen phonetisch buchstabiert: Alfa, Bravo, Charlie, Delta, Echo, Foxtrott, Golf, Hotel, India, Juliett, Kilo, Lima, Mike, November, Oscar, Papa, Quebec, Romeo, Sierra, Tango, Uniform, Victor, Whiskey, X-ray, Yankee, Zulu. Zahlen werden klar und international ausgesprochen (z. B. Nadazero, Unaone).",
         "formel": "DL1ABC = Delta Lima One Alfa Bravo Charlie",
         "merksatz": "Niemals Fantasiewörter erfinden – im internationalen Funkverkehr gilt ausnahmslos ICAO!",
-        "verwandte_themen": ["top_betrieb_bc1", "top_betrieb_bd1"]
+        "verwandte_themen": ["top_betrieb_bb1", "top_betrieb_bd1", "top_betrieb_be1"]
     },
     {
         "topic_id": "top_betrieb_bb1",
         "kategorie": "Betrieb",
-        "titel": "Amateurfunkbänder der Klasse E",
-        "kernaussage": "Klasse E berechtigt zur weltweiten Nutzung bestimmter Kurzwellenbänder sowie der VHF-/UHF- und Mikrowellenbänder.",
-        "erklaerung": "Funkamateure der Klasse E dürfen folgende Kurzwellenbänder nutzen: 160m (1,81–2,0 MHz), 80m (3,5–3,8 MHz), 15m (21,0–21,45 MHz) und 10m (28,0–29,7 MHz). Zudem stehen das 2m-Band (144–146 MHz), 70cm-Band (430–440 MHz) sowie Mikrowellenbänder ab 2,3 GHz und der geostationäre Satellit QO-100 zur Verfügung.",
-        "formel": "160m (1,8 MHz), 80m (3,5 MHz), 15m (21 MHz), 10m (28 MHz), 2m (144 MHz), 70cm (430 MHz)",
-        "merksatz": "Klasse E auf KW: 160m, 80m, 15m und 10m – vier faszinierende Fenster in die Kurzwelle!",
-        "verwandte_themen": ["top_betrieb_bb2", "top_vorschriften_vd7"]
+        "titel": "Betriebliche Abkürzungen (CQ, DX, CW, TX/RX)",
+        "kernaussage": "Betriebliche Abkürzungen sparen Sendezeit und ermöglichen sprachunabhängige, präzise Verständigung weltweit.",
+        "erklaerung": "Im Amateurfunk – insbesondere bei Morsetelegrafie (CW) und digitalen Schmalbandmodi – sparen standardisierte Abkürzungen wertvolle Übertragungszeit. 'CQ' ruft alle Stationen ('seek you'), 'CQ DX' fordert gezielt Weitverkehrsstationen auf (auf Kurzwelle außerhalb des eigenen Kontinents, auf UKW außerhalb des lokalen Einzugsgebiets). Die Funkgeräte werden als 'RX' (Empfänger), 'TX' (Sender) und 'TRX' (Transceiver) bezeichnet. Zum Durchgangsabschluss signalisiert 'K' (Kommen / Sendeaufforderung), während 'BK' (Break) eine Unterbrechung anfordert und 'R' (Roger) den fehlerfreien Empfang quittiert. Zum Abschied wünscht man sich traditionell '73' (Beste Grüße).",
+        "formel": "CQ = Allgemeiner Anruf; DX = Weitverkehr; K = Bitte senden (Over); 73 = Herzliche Grüße",
+        "merksatz": "CQ ruft die Welt, DX sucht die Ferne, K übergibt das Wort und 73 verabschiedet herzlich!",
+        "verwandte_themen": ["top_betrieb_bb2", "top_betrieb_bd1", "top_betrieb_be1"]
     },
     {
         "topic_id": "top_betrieb_bb2",
         "kategorie": "Betrieb",
-        "titel": "IARU-Bandpläne & Bandsegmentierung",
-        "kernaussage": "IARU-Bandpläne unterteilen Frequenzbänder freiwillig in Exklusivbereiche für CW, Digimodes und Sprache.",
-        "erklaerung": "Um gegenseitige Störungen unterschiedlicher Sendearten zu vermeiden, vereinbaren die Funkamateure über die International Amateur Radio Union (IARU) Bandpläne. Das untere Bandende ist fast immer exklusiv Morsetelegrafie (CW) vorbehalten, gefolgt von Schmalband-Digimodes (FT8, RTTY, PSK). Erst darüber liegen die breiteren Sprechfunkbereiche (SSB, FM). Bandpläne sind Ehrenkodex jedes Funkamateurs.",
-        "formel": "Typische Bandaufteilung: Unten = CW, Mitte = Digimodes, Oben = SSB / FM",
-        "merksatz": "Niemals mit SSB ins Telegrafiesegment am Bandanfang hineinrufen!",
-        "verwandte_themen": ["top_betrieb_bb1", "top_betrieb_bd1"]
+        "titel": "Q-Schlüssel & Funkabkürzungen (QTH, QSL, QRM, QRN...)",
+        "kernaussage": "Dreibuchstabige Q-Gruppen ermöglichen eine weltweite, sprachunabhängige Verständigung im Funkverkehr.",
+        "erklaerung": "Q-Schlüssel bestehen aus drei Buchstaben beginnend mit 'Q'. Ein nachgestelltes Fragezeichen wandelt die Aussage in eine Frage um (z. B. 'QTH?' = Wo ist Ihr Standort? vs. 'QTH Hamburg' = Mein Standort ist Hamburg). Wichtigste Gruppen im Funkbetrieb: QTH (Standort), QSO (Funkgespräch/Verbindung), QSL (Bestätigung), QRV (betriebsbereit), QRT (Sendeschluss/Abschalten), QRZ? (Wer ruft mich?), QSY (Frequenzwechsel), QRO (Leistung erhöhen) und QRP (kleine Leistung ≤ 5 Watt). Störungen werden unterschieden in QRM (künstliche Störungen durch andere Sender) und QRN (natürliche atmosphärische Störungen wie Gewitter). QSB bezeichnet Signalschwund (Fading).",
+        "formel": "Q-Gruppe ohne '?' = Mitteilung (z. B. QTH Berlin); Q-Gruppe mit '?' = Frage (z. B. QTH?)",
+        "merksatz": "QRM = Menschliche Störung (Man-made), QRN = Natürliche Störung (Nature), QRP = Kleine Leistung!",
+        "verwandte_themen": ["top_betrieb_bb1", "top_betrieb_bd1", "top_betrieb_be2"]
     },
     {
         "topic_id": "top_betrieb_bc1",
         "kategorie": "Betrieb",
-        "titel": "Rufzeichenaufbau & Landeskenner",
-        "kernaussage": "Jedes Amateurfunkrufzeichen identifiziert Funkamateur, Herkunftsland und Lizenzklasse weltweit eindeutig.",
-        "erklaerung": "Ein deutsches Rufzeichen besteht aus: Präfix (Landeskenner 'D' + zweiter Buchstabe z. B. 'DO' für Klasse E), einer Ziffer (0 bis 9) und einem Suffix aus zwei oder drei Buchstaben (z. B. DO1ABC). Internationale Präfixe zeigen das Heimatland (z. B. F = Frankreich, G = Großbritannien, I = Italien, EA = Spanien, W/K = USA, JA = Japan).",
-        "formel": "Aufbau: [Präfix / Landeskenner] + [Ziffer] + [Suffix]; Klasse E in DL typisch: DO1–DO9",
-        "merksatz": "DO = Klasse E; DL/DJ/DK = Klasse A; DN = Ausbildungsrufzeichen!",
-        "verwandte_themen": ["top_betrieb_ba1", "top_betrieb_bc2", "top_vorschriften_vd2"]
+        "titel": "Frequenzbereiche & Bänder der Klasse E",
+        "kernaussage": "Amateurfunkbänder sind nach Frequenz und Wellenlänge in HF (Kurzwelle), VHF (UKW) und UHF (Dezimeterwelle) unterteilt.",
+        "erklaerung": "Das Funkspektrum ist in standardisierte Frequenzbereiche gegliedert: Kurzwelle / HF (High Frequency, 3–30 MHz, Dekameterwellen) umfasst unter anderem das 10m-Band (28–29,7 MHz) sowie für Klasse E auch 160m, 80m und 15m. VHF / UKW (Very High Frequency, 30–300 MHz, Meterwellen) beinhaltet das populäre 2m-Band (144–146 MHz). UHF (Ultra High Frequency, 300–3000 MHz, Dezimeterwellen) beherbergt das 70cm-Band (430–440 MHz). Die Wellenlänge berechnet sich über die Faustformel λ [m] ≈ 300 / f [MHz].",
+        "formel": "HF = 3–30 MHz (KW / 10m); VHF = 30–300 MHz (UKW / 2m); UHF = 300–3000 MHz (70cm)",
+        "merksatz": "HF ist Kurzwelle (10m), VHF ist UKW (2m), UHF ist Dezimeterwelle (70cm)!",
+        "verwandte_themen": ["top_betrieb_bc2", "top_vorschriften_vd7", "top_technik_eb3"]
     },
     {
         "topic_id": "top_betrieb_bc2",
         "kategorie": "Betrieb",
-        "titel": "Rufzeichenzusätze & Sonderstationen",
-        "kernaussage": "Zusätze hinter dem Rufzeichen signalisieren mobilen, portablen oder maritimen Funkbetrieb.",
-        "erklaerung": "Wird eine Funkstation nicht am festen Wohnort betrieben, können offizielle Zusätze angehängt werden: /p (portabel = vorübergehender ortsfester Betrieb im Freien), /m (mobil = Betrieb aus Landfahrzeugen), /mm (maritim mobil = an Bord von Wasserfahrzeugen auf See) oder /am (aeronautisch mobil = an Bord von Luftfahrzeugen). Sonderrufzeichen (z. B. DP0POL, DL0FLAG) besitzen oft spezielle Präfixe.",
-        "formel": "Beispiele: DO1ABC/p (Portabel), DO1ABC/m (Mobil), DO1ABC/mm (See)",
-        "merksatz": "/p für Picknick & Portabel, /m für Motorisiert, /mm für Meer & Maritim!",
-        "verwandte_themen": ["top_betrieb_bc1", "top_vorschriften_vd2"]
+        "titel": "IARU-Bandpläne & Bandsegmentierung",
+        "kernaussage": "IARU-Bandpläne unterteilen Frequenzbänder freiwillig in Exklusivbereiche für Morsen (CW), Digimodes und Sprache.",
+        "erklaerung": "Um gegenseitige Störungen unterschiedlicher Sendearten zu vermeiden, vereinbaren die Funkamateure über die International Amateur Radio Union (IARU) Bandpläne. Obwohl sie keine Gesetze sind, gelten sie als bindender Ehrenkodex jedes Funkamateurs. Das untere Bandende ist ausnahmslos der schmalbandigen Morsetelegrafie (CW) vorbehalten. Daran schließen sich digitale Betriebsarten (z. B. FT8, RTTY) und Baken an. Erst im oberen Teil liegen die breiteren Sprechfunkbereiche. Bei SSB-Telefonie gilt die weltweite Konvention: Unterhalb 10 MHz nutzt man LSB (Lower Sideband), oberhalb 10 MHz USB (Upper Sideband).",
+        "formel": "Unterhalb 10 MHz = LSB; Oberhalb 10 MHz = USB; Bandanfang = exklusiv CW!",
+        "merksatz": "Unter 10 MHz LSB, über 10 MHz USB – und niemals mit Sprache ins Telegrafiesegment rufen!",
+        "verwandte_themen": ["top_betrieb_bc1", "top_betrieb_be1", "top_technik_ee2"]
     },
     {
         "topic_id": "top_betrieb_bd1",
         "kategorie": "Betrieb",
-        "titel": "Betriebsabwicklung & QSO-Ablauf",
-        "kernaussage": "Ein Funkgespräch (QSO) folgt einer strukturierten Abwicklung vom CQ-Ruf bis zur Verabschiedung.",
-        "erklaerung": "Vor dem Senden muss die Frequenz immer abgehört werden ('Ist die Frequenz frei? / Is this frequency in use?'). Ein allgemeiner Anruf erfolgt mit 'CQ'. Ein Standard-QSO umfasst: Nennung beider Rufzeichen, Rapportvergabe (RST), Stationsvorstellung (Name, QTH/Standort), Wetter, Ausrüstung und Verabschiedung mit '73' (Viele Grüße). Am Ende wird das eigene Rufzeichen nochmals genannt.",
-        "formel": "Allgemeiner Anruf: 'CQ CQ CQ de DO1ABC DO1ABC DO1ABC pse k'",
-        "merksatz": "Erst hören, fragen ob frei, dann rufen – Höflichkeit ist oberstes Gebot!",
-        "verwandte_themen": ["top_betrieb_bd2", "top_betrieb_bd3", "top_betrieb_bg1"]
+        "titel": "Rufzeichenaufbau & Rufzeichenarten (DO, DL, DA, DN, DP)",
+        "kernaussage": "Deutsche Rufzeichen kennzeichnen durch Präfix und Ziffer eindeutig Lizenzklasse, Stationsart oder Sonderfunktion.",
+        "erklaerung": "Deutsche Amateurfunkrufzeichen beginnen mit den ITU-Landeskennern DA bis DR. Einzelpersonen erhalten in Klasse E ein personengebundenes Rufzeichen mit dem Präfix 'DO' (DO1–DO9) und zweistelligem oder dreistelligem Suffix (z. B. DO1ABC). Klasse A nutzt Rufzeichen wie 'DL', 'DJ', 'DK', 'DD', 'DF', 'DG', 'DH', 'DM' (z. B. DL1ABC). 'DN' kennzeichnet Ausbildungsstationen (z. B. DN9 für Ausbildung in Klasse E). 'DA0', 'DF0', 'DK0', 'DL0' etc. sind Klubstationen. Extraterritoriale Sonderstationen (z. B. DP0GVN in der Antarktis, DP0POL auf dem Forschungsschiff Polarstern) und Baken nutzen das Präfix 'DP'.",
+        "formel": "DO = Klasse E; DL/DJ/DK = Klasse A; DN = Ausbildung; DF0/DL0 = Klubstation; DP0 = Sonderstation",
+        "merksatz": "DO funkt mit Klasse E, DL mit Klasse A, DN bildet aus und Nullstellen (0) gehören Klubs und Baken!",
+        "verwandte_themen": ["top_betrieb_bd2", "top_betrieb_bd3", "top_vorschriften_vd2"]
     },
     {
         "topic_id": "top_betrieb_bd2",
         "kategorie": "Betrieb",
-        "titel": "Q-Schlüssel & Funkabkürzungen",
-        "kernaussage": "Dreibuchstabige Q-Gruppen ermöglichen sprachunabhängige, blitzschnelle Verständigung weltweit.",
-        "erklaerung": "Q-Gruppen stammen aus der Telegrafie und werden heute in allen Sendearten verwendet. Wichtigste Kürzel: QTH (Standort), QSL (Empfangsbestätigung), QRM (Störung durch andere Sender), QRN (atmosphärische Störungen / Gewitter), QRO (Leistung erhöhen), QRP (kleine Leistung ≤ 5W), QRZ? (Wer ruft mich?), QSY (Frequenzwechsel). Ein Fragezeichen dahinter macht aus der Aussage eine Frage.",
-        "formel": "QTH? = Wo ist Ihr Standort?  |  QTH Berlin = Mein Standort ist Berlin.",
-        "merksatz": "QRM = Man-made (Menschliche Störung); QRN = Nature (Natürliche Störung / Gewitter)!",
-        "verwandte_themen": ["top_betrieb_bd1", "top_betrieb_bd3"]
+        "titel": "Rufzeichenzusätze (/m, /p, /mm, /am)",
+        "kernaussage": "Zusätze hinter dem Schrägstrich (/ ) informieren über den mobilen, portablen oder maritimen Betriebsstatus.",
+        "erklaerung": "Wird eine Amateurfunkstelle nicht am gemeldeten festen Wohnort betrieben, können offizielle Zusätze angehängt werden: '/p' (portabel: vorübergehender ortsfester Betrieb im Freien, z. B. Zelt oder Berg), '/m' (mobil: Funkbetrieb in Bewegung auf Landfahrzeugen oder Binnengewässern), '/mm' (maritim mobil: an Bord von Seeschiffen auf Hoher See) und '/am' (aeronautisch mobil: an Bord von Luftfahrzeugen mit Erlaubnis des Piloten). Beim Gastfunkbetrieb im Ausland wird der Landeskenner des Gastlandes mit Schrägstrich vorangestellt (z. B. F/DO1ABC in Frankreich).",
+        "formel": "DO1ABC/p (Portabel) | DO1ABC/m (Mobil) | DO1ABC/mm (See) | DO1ABC/am (Flugzeug)",
+        "merksatz": "/p fürs Picknick (portabel), /m fürs Mobil, /mm fürs Meer und /am für die Luft (aeronautisch)!",
+        "verwandte_themen": ["top_betrieb_bd1", "top_betrieb_bd3", "top_vorschriften_vd2"]
     },
     {
         "topic_id": "top_betrieb_bd3",
         "kategorie": "Betrieb",
-        "titel": "Das RST-System (Signalbeurteilung)",
-        "kernaussage": "Der RST-Rapport beziffert Verständlichkeit, Signalstärke und Tonqualität in einem dreistelligen Code.",
-        "erklaerung": "R (Readability): Skala 1 bis 5 (5 = vollkommen verständlich). S (Signal Strength): Skala 1 bis 9 (gemessen am S-Meter des Empfängers, 9 = extrem stark; über 9 in dB wie S9+20dB). T (Tone): Skala 1 bis 9, wird nur bei CW/Morsen vergeben (9 = reinster Ton ohne Brummen). Im Sprechfunk wird nur 'RS' übermittelt (z. B. 'Du hast ein 59 Signal').",
-        "formel": "RS(T): R = 1–5, S = 1–9, T = 1–9; Ein S-Punkt entspricht ca. 6 dB Signalpegelunterschied",
-        "merksatz": "59 = Perfekt verständlich und bombastisch stark!",
-        "verwandte_themen": ["top_betrieb_bd1", "top_betrieb_bd2"]
+        "titel": "Landeskenner & ITU-Präfixe weltweit",
+        "kernaussage": "Die ersten Zeichen eines Rufzeichens (Präfix) bestimmen nach der ITU-Zuweisung weltweit eindeutig das Heimatland.",
+        "erklaerung": "Die Internationale Fernmeldeunion (ITU) weist jedem Staat exklusive Rufzeichenblöcke zu. In Europa funkst du z. B. mit OE (Österreich), HB9/HB0 (Schweiz/Liechtenstein), F (Frankreich), I (Italien), EA (Spanien), PA–PI (Niederlande), ON–OT (Belgien), SP (Polen), OK (Tschechien) und G/M (Großbritannien). Stationen aus den USA beginnen mit W, K, N oder AA–AL; Stationen aus Japan mit JA–JS. Deutschland verfügt über den Block DA–DR. Präfixlisten und Online-Callbooks (z. B. QRZ.com) helfen beim schnellen Zuordnen.",
+        "formel": "DA–DR = Deutschland; OE = Österreich; HB9 = Schweiz; F = Frankreich; W/K = USA; JA = Japan",
+        "merksatz": "OE für Österreich, HB für die Schweiz, F für Frankreich und DA bis DR für Deutschland!",
+        "verwandte_themen": ["top_betrieb_bd1", "top_betrieb_bd2", "top_vorschriften_va4"]
     },
     {
         "topic_id": "top_betrieb_be1",
         "kategorie": "Betrieb",
-        "titel": "Contest- & Pile-Up-Betrieb",
-        "kernaussage": "Im Contest und Pile-Up zählt maximale Kürze: Rufzeichen, Rapport und laufende Nummer genügen.",
-        "erklaerung": "Bei Funkwettbewerben (Contesten) geht es darum, in fester Zeit möglichst viele Stationen zu erreichen. Smalltalk entfällt; übermittelt werden nur Rufzeichen, RS(T) und Contest-Nummer bzw. DOK. Ein 'Pile-Up' entsteht, wenn hunderte Stationen gleichzeitig eine seltene DX-Expedition rufen. Die DX-Station arbeitet dann oft 'Split' (Sendefrequenz und Hörfrequenz getrennt, z. B. 'UP 5').",
-        "formel": "'Split UP 5': DX-Station sendet auf 14.195 MHz, hört aber Anrufe auf 14.200 MHz ab!",
-        "merksatz": "Bei Split niemals auf der Sendefrequenz der DX-Station antworten!",
-        "verwandte_themen": ["top_betrieb_bd1", "top_betrieb_be2"]
+        "titel": "Betriebsabwicklung & QSO-Ablauf",
+        "kernaussage": "Jedes Funkgespräch (QSO) erfordert vorab ein Prüfen der Frequenz und folgt einem klaren, fairen Ablauf.",
+        "erklaerung": "Vor dem Aussenden muss der Funkamateur die Frequenz sorgfältig abhören und nachfragen ('Ist die Frequenz frei?' bzw. 'Is this frequency in use?'). Ein allgemeiner Anruf erfolgt durch dreimaliges CQ gefolgt von 'de' und dem eigenen Rufzeichen. Die antwortende Station nennt das gerufene Rufzeichen, 'de' und das eigene Rufzeichen. Nach dem Zustandekommen des Kontakts (QSO) tauschen beide Stationen Rufzeichen, Signalrapport (RS/RST), Namen (Operator) und Standort (QTH) aus. Am Ende verabschiedet man sich mit '73' und nennt nochmals das eigene Rufzeichen.",
+        "formel": "Ablauf: 1. Frequenz prüfen -> 2. CQ-Ruf -> 3. Antwort mit 'de [Call]' -> 4. Rapport & QTH -> 5. '73'",
+        "merksatz": "Erst hören, fragen ob frei, dann kurz rufen – Disziplin und Höflichkeit schaffen beste Verbindungen!",
+        "verwandte_themen": ["top_betrieb_ba1", "top_betrieb_be2", "top_betrieb_bg1"]
     },
     {
         "topic_id": "top_betrieb_be2",
         "kategorie": "Betrieb",
-        "titel": "Relaisfunkstellen & Umsetzer",
-        "kernaussage": "Relaisfunkstellen auf exponierten Standorten empfangen Signale und senden sie zeitgleich mit höherer Leistung weiter.",
-        "erklaerung": "Um die Reichweite mobiler und portabler Handfunkgeräte zu vergrößern, arbeiten Relais mit Frequenzablage: Im 2m-Band beträgt der Relaisversatz standardmäßig -600 kHz (Sendefrequenz 600 kHz unter Relais-Ausgabe). Im 70cm-Band beträgt die Ablage in Deutschland -7,6 MHz (bzw. 1,6 MHz). Das Öffnen erfolgt über 1750-Hz-Tonruf oder subaudiophile Ruftöne (CTCSS).",
-        "formel": "Relaisablage: 2m = 600 kHz; 70cm = 7,6 MHz (bzw. 1,6 MHz)",
-        "merksatz": "Auf 2m 600 kHz Ablage, auf 70cm 7,6 MHz – das Relais hört dir auf der Eingabe zu!",
-        "verwandte_themen": ["top_betrieb_bb1", "top_vorschriften_vd5"]
+        "titel": "Signalbeurteilung & RST-System",
+        "kernaussage": "Der RST-Code bewertet Verständlichkeit (R), Signalstärke (S) und Tonreinheit (T) präzise und objektiv.",
+        "erklaerung": "Zur Qualitätsbewertung einer Funkverbindung dient das dreiteilige RST-System: R (Readability / Verständlichkeit) von 1 (unverständlich) bis 5 (vollkommen lesbar). S (Signal Strength / Signalstärke) von 1 (kaum wahrnehmbar) bis 9 (sehr starkes Signal); ein S-Punkt entspricht ca. 6 dB Pegeländerung. T (Tone / Tonqualität) von 1 bis 9 wird ausschließlich bei Morsetelegrafie (CW) vergeben und bewertet die Reinheit des Tons (9 = musikalischer, sauberer Gleichstromton). Im Sprechfunk wird nur der zweistellige 'RS'-Wert übermittelt (z. B. '59'). Der RST-Rapport wird bei Direktverbindungen und im Relaisfunkverkehr zur präzisen Signalbeurteilung verwendet.",
+        "formel": "RS(T): R = 1–5 (Lesbarkeit) | S = 1–9 (Stärke) | T = 1–9 (Ton nur CW); 1 S-Stufe ≈ 6 dB",
+        "merksatz": "59 im Sprechfunk, 599 in CW – das beste Signal, das man sich im Äther wünschen kann!",
+        "verwandte_themen": ["top_betrieb_bb2", "top_betrieb_be1", "top_technik_ei4"]
     },
     {
         "topic_id": "top_betrieb_be3",
         "kategorie": "Betrieb",
-        "titel": "Satellitenfunk & QO-100",
-        "kernaussage": "Amateursatelliten ermöglichen Weitverkehr auf VHF/UHF; QO-100 deckt als geostationärer Transponder ein Drittel der Erde ab.",
-        "erklaerung": "LEO-Satelliten (Low Earth Orbit, z. B. ISS, SO-50) umrunden die Erde in 90 Minuten. Wegen der hohen Bahngeschwindigkeit tritt eine signifikante Frequenzverschiebung auf (Doppler-Effekt: Frequenz steigt beim Annähern und fällt beim Entfernen). Der geostationäre Satellit QO-100 (Es'hail-2) steht fest über dem Äquator: Uplink auf 2,4 GHz (13 cm), Downlink auf 10,4 GHz (3 cm mit LNB).",
-        "formel": "Doppler-Effekt: Δf = f₀ · (v / c); Annäherung = Tonhöhe steigt",
-        "merksatz": "QO-100: Fester Punkt am Himmel – kein Antennennachführen nötig!",
-        "verwandte_themen": ["top_technik_eb3", "top_betrieb_be2"]
+        "titel": "Contest, Pile-Up, DX-Pedition & Fuchsjagd (ARDF)",
+        "kernaussage": "Conteste und Pile-Ups erfordern höchste Funkdisziplin, während Peilsport (ARDF) Orientierung und Funktechnik verbindet.",
+        "erklaerung": "Bei Contesten (Funkwettbewerben) zählt jede Sekunde: Smalltalk entfällt; man tauscht nur Rufzeichen, Rapport und laufende Nummer bzw. Zonen/DOK aus. Bei 'Pile-Ups' auf seltene DX-Expeditionen arbeitet die DX-Station oft 'Split' (Sendefrequenz und Empfangsfrequenz getrennt, z. B. 'UP 5' = rufe 5 kHz höher als die DX-Sendefrequenz). Beim Amateurfunk-Peilsport (ARDF / Fuchsjagd) orten Läufer mit Richtantenne und Peilempfänger versteckte Minisender im Gelände auf 80m (Ferritantenne / Minimumpeilung) oder 2m (Yagi / Maximumpeilung).",
+        "formel": "Contest = Rufzeichen + RST + Seriennummer; Split 'UP 5' = Höre 5 kHz über Sendefrequenz; ARDF = Peilsport",
+        "merksatz": "Im Contest zählt Kürze, bei Split diszipliniert auf der Hörfrequenz antworten!",
+        "verwandte_themen": ["top_betrieb_be1", "top_betrieb_be2", "top_technik_eg2"]
     },
     {
         "topic_id": "top_betrieb_be4",
         "kategorie": "Betrieb",
-        "titel": "Amateurfunk-Peilen (Fuchsjagd / ARDF)",
-        "kernaussage": "Beim ARDF werden versteckte Minisender im Gelände mit Peilempfänger und Richtantenne auf Zeit geortet.",
-        "erklaerung": "Amateur Radio Direction Finding (ARDF) kombiniert Orientierungslauf mit Funktechnik. Auf 80m oder 2m senden 'Füchse' zyklisch Kennungen in Morsetelegrafie (MOE, MOI, MOS, MOH, MO5). Mit Richtantennen (Ferrit- oder Rahmenantennen auf 80m mit Nullstellen-Peilung, kleine Yagis auf 2m mit Maximum-Peilung) ermittelt der Peiler die exakte Richtung durch Kreuzpeilung.",
-        "formel": "Kreuzpeilung: Schnittpunkt zweier Standlinien ergibt den Senderstandort",
-        "merksatz": "Auf 80m peilt man auf das scharfe Minimum, auf 2m auf das breite Maximum!",
-        "verwandte_themen": ["top_technik_eg2", "top_betrieb_bd1"]
+        "titel": "Relaisfunkstellen, Baken, Satelliten & Transponder",
+        "kernaussage": "Relais und Satellitenrelais erweitern lokale UKW-Signale über Frequenzversatz und weltraumgestützte Transponder.",
+        "erklaerung": "Relaisfunkstellen (Repeater) empfangen Signale auf der Eingabefrequenz und strahlen sie simultan auf der Ausgabefrequenz ab. Der standardmäßige Relaisversatz beträgt im 2m-Band -600 kHz und im 70cm-Band -7,6 MHz (oder -1,6 MHz). Das Öffnen geschieht via 1750-Hz-Rufton oder CTCSS-Subton. Satelliten im niedrigen Erdorbit (LEO) weisen infolge ihrer Bahngeschwindigkeit eine Doppler-Frequenzverschiebung auf. Der geostationäre Transpondersatellit QO-100 (Es'hail-2) steht stationär: Uplink auf 2,4 GHz (13 cm) und Downlink auf 10,4 GHz (3 cm). Lineartransponder wandeln oft das Seitenband invertierend (USB rein -> LSB raus).",
+        "formel": "Relaisablage: 2m = 600 kHz, 70cm = 7,6 MHz; Doppler: Annäherung f steigt, Entfernung f sinkt",
+        "merksatz": "2m hat 600 kHz, 70cm 7,6 MHz Ablage; QO-100 sendet fest aus dem geostationären Orbit!",
+        "verwandte_themen": ["top_vorschriften_vd5", "top_technik_ef5", "top_technik_eb3"]
     },
     {
         "topic_id": "top_betrieb_bf1",
@@ -801,12 +801,12 @@ TOPICS = [
     {
         "topic_id": "top_vorschriften_ve7",
         "kategorie": "Vorschriften",
-        "titel": "Behördliche Maßnahmen & Bußgeldvorschriften",
-        "kernaussage": "Vorsätzliche oder fahrlässige Verstöße gegen AFuG und AFuV können mit empfindlichen Bußgeldern geahndet werden.",
-        "erklaerung": "Die BNetzA kann Funkstellen betreten, überprüfen und bei Verstößen die sofortige Außerbetriebnahme anordnen. Ordnungswidrigkeiten sind unter anderem: Senden ohne Rufzeichen, Überschreitung der zulässigen Sendeleistung, Betrieb außerhalb der zugewiesenen Bänder, Störung von Notverkehr oder Verstoß gegen die BEMFV. Bußgelder können bis zu 10.000 € betragen.",
-        "formel": "AFuG § 16: Ordnungswidrigkeiten können mit Geldbußen geahndet werden",
-        "merksatz": "Sauberer Funkbetrieb schützt vor Ärger mit dem Peilwagen und teuren Bußgeldern!",
-        "verwandte_themen": ["top_vorschriften_vc1", "top_vorschriften_vd7"]
+        "titel": "Beiträge, Gebühren, Bordfunk & Haftung",
+        "kernaussage": "Funkamateure tragen Frequenzschutzbeiträge, benötigen an Bord von Schiffen/Flugzeugen Erlaubnis und haften für ihre Antennen.",
+        "erklaerung": "Für die Zuteilung eines personengebundenen Rufzeichens oder Prüfungsabnahmen erhebt die Bundesnetzagentur einmalige Gebühren nach der BNetzABGebV. Zudem fallen für Inhaber zugeteilter Rufzeichen jährliche Beiträge nach der Frequenzschutzbeitragsverordnung (FSBeitrV) sowie dem EMVG an. Werden fällige Gebühren beharrlich nicht bezahlt, kann die Rufzeichenzuteilung widerrufen werden. Für Funkbetrieb an Bord von Luftfahrzeugen oder Schiffen ist ausnahmslos die vorherige Zustimmung des verantwortlichen Luftfahrzeugführers bzw. Schiffsführers erforderlich. Für Schäden gegenüber Dritten, die durch die Antennenanlage entstehen (z. B. Absturz bei Sturm), haftet der Betreiber der Amateurfunkstelle vollumfänglich nach bürgerlichem Recht.",
+        "formel": "BNetzABGebV = einmalige Amtshandlungsgebühren; FSBeitrV = jährliche Frequenzschutzbeiträge; Bordfunk = Zustimmung des Kapitäns/Piloten",
+        "merksatz": "Einmalige Gebühren für die Zuteilung, jährliche Beiträge fürs Rufzeichen, Flug/Schiff nur mit Erlaubnis des Kapitäns!",
+        "verwandte_themen": ["top_vorschriften_vc1", "top_vorschriften_vd2", "top_vorschriften_ve6"]
     }
 ]
 
@@ -845,6 +845,20 @@ def main():
         if target_topic_id in topic_map:
             q["topic_id"] = target_topic_id
             updated_count += 1
+            
+            # Fachlich fundierte, substanzielle Erklärung für jede Frage generieren
+            correct_ans = q["antworten"][q["richtige_antwort"]]
+            t = topic_map[target_topic_id]
+            explanation_parts = [
+                f"Musterlösung: „{correct_ans}“",
+                f"💡 Fachlicher Hintergrund ({t['titel']}):\n{t['kernaussage']}"
+            ]
+            if t.get("formel"):
+                explanation_parts.append(f"📐 Formel / Regel: {t['formel']}")
+            if t.get("merksatz"):
+                explanation_parts.append(f"📌 Merksatz: {t['merksatz']}")
+            
+            q["erklaerung"] = "\n\n".join(explanation_parts)
         else:
             missing_topics.add((qid, target_topic_id))
             
