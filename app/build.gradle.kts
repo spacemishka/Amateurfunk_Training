@@ -15,8 +15,8 @@ android {
         minSdk = 31
         targetSdk = 37
         // versionCode und versionName werden im CI durch `-PversionCode` / `-PversionName` überschrieben.
-        // Lokal wird der Default-Wert verwendet.
-        versionCode = (project.findProperty("versionCode") as String?)?.toIntOrNull() ?: 1
+        // Lokal wird ein sicherer Standardwert verwendet.
+        versionCode = (project.findProperty("versionCode") as String?)?.toIntOrNull() ?: 20
         versionName = (project.findProperty("versionName") as String?) ?: "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
