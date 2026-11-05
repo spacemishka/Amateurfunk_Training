@@ -4812,7 +4812,7 @@
     ],
     "richtige_antwort": 1,
     "erklaerung": "Musterlösung: „55“\n\n💡 Fachlicher Hintergrund (Signalbeurteilung & RST-System):\nDer RST-Code bewertet Verständlichkeit (R), Signalstärke (S) und Tonreinheit (T) präzise und objektiv.\n\n📐 Formel / Regel: RS(T): R = 1–5 (Lesbarkeit) | S = 1–9 (Stärke) | T = 1–9 (Ton nur CW); 1 S-Stufe ≈ 6 dB\n\n📌 Merksatz: 59 im Sprechfunk, 599 in CW – das beste Signal, das man sich im Äther wünschen kann!",
-    "bild_svg": null
+    "bild_svg": "question_images/BE204.png"
   },
   {
     "id": "BE205",
@@ -4827,7 +4827,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „59“\n\n💡 Fachlicher Hintergrund (Signalbeurteilung & RST-System):\nDer RST-Code bewertet Verständlichkeit (R), Signalstärke (S) und Tonreinheit (T) präzise und objektiv.\n\n📐 Formel / Regel: RS(T): R = 1–5 (Lesbarkeit) | S = 1–9 (Stärke) | T = 1–9 (Ton nur CW); 1 S-Stufe ≈ 6 dB\n\n📌 Merksatz: 59 im Sprechfunk, 599 in CW – das beste Signal, das man sich im Äther wünschen kann!",
-    "bild_svg": null
+    "bild_svg": "question_images/BE205.png"
   },
   {
     "id": "BE206",
@@ -4842,7 +4842,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „59+20 dB“\n\n💡 Fachlicher Hintergrund (Signalbeurteilung & RST-System):\nDer RST-Code bewertet Verständlichkeit (R), Signalstärke (S) und Tonreinheit (T) präzise und objektiv.\n\n📐 Formel / Regel: RS(T): R = 1–5 (Lesbarkeit) | S = 1–9 (Stärke) | T = 1–9 (Ton nur CW); 1 S-Stufe ≈ 6 dB\n\n📌 Merksatz: 59 im Sprechfunk, 599 in CW – das beste Signal, das man sich im Äther wünschen kann!",
-    "bild_svg": null
+    "bild_svg": "question_images/BE206.png"
   },
   {
     "id": "BE207",
@@ -4857,7 +4857,7 @@
     ],
     "richtige_antwort": 3,
     "erklaerung": "Musterlösung: „55“\n\n💡 Fachlicher Hintergrund (Signalbeurteilung & RST-System):\nDer RST-Code bewertet Verständlichkeit (R), Signalstärke (S) und Tonreinheit (T) präzise und objektiv.\n\n📐 Formel / Regel: RS(T): R = 1–5 (Lesbarkeit) | S = 1–9 (Stärke) | T = 1–9 (Ton nur CW); 1 S-Stufe ≈ 6 dB\n\n📌 Merksatz: 59 im Sprechfunk, 599 in CW – das beste Signal, das man sich im Äther wünschen kann!",
-    "bild_svg": null
+    "bild_svg": "question_images/BE207.png"
   },
   {
     "id": "BE208",
@@ -4872,7 +4872,7 @@
     ],
     "richtige_antwort": 3,
     "erklaerung": "Musterlösung: „59“\n\n💡 Fachlicher Hintergrund (Signalbeurteilung & RST-System):\nDer RST-Code bewertet Verständlichkeit (R), Signalstärke (S) und Tonreinheit (T) präzise und objektiv.\n\n📐 Formel / Regel: RS(T): R = 1–5 (Lesbarkeit) | S = 1–9 (Stärke) | T = 1–9 (Ton nur CW); 1 S-Stufe ≈ 6 dB\n\n📌 Merksatz: 59 im Sprechfunk, 599 in CW – das beste Signal, das man sich im Äther wünschen kann!",
-    "bild_svg": null
+    "bild_svg": "question_images/BE208.png"
   },
   {
     "id": "BE209",
@@ -4887,7 +4887,7 @@
     ],
     "richtige_antwort": 1,
     "erklaerung": "Musterlösung: „59+20 dB“\n\n💡 Fachlicher Hintergrund (Signalbeurteilung & RST-System):\nDer RST-Code bewertet Verständlichkeit (R), Signalstärke (S) und Tonreinheit (T) präzise und objektiv.\n\n📐 Formel / Regel: RS(T): R = 1–5 (Lesbarkeit) | S = 1–9 (Stärke) | T = 1–9 (Ton nur CW); 1 S-Stufe ≈ 6 dB\n\n📌 Merksatz: 59 im Sprechfunk, 599 in CW – das beste Signal, das man sich im Äther wünschen kann!",
-    "bild_svg": null
+    "bild_svg": "question_images/BE209.png"
   },
   {
     "id": "BE210",
@@ -4917,7 +4917,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „der stetigen Verbesserung von Amateurfunkanlagen und Betriebstechnik.“\n\n💡 Fachlicher Hintergrund (Contest, Pile-Up, DX-Pedition & Fuchsjagd (ARDF)):\nConteste und Pile-Ups erfordern höchste Funkdisziplin, während Peilsport (ARDF) Orientierung und Funktechnik verbindet.\n\n📐 Formel / Regel: Contest = Rufzeichen + RST + Seriennummer; Split 'UP 5' = Höre 5 kHz über Sendefrequenz; ARDF = Peilsport\n\n📌 Merksatz: Im Contest zählt Kürze, bei Split diszipliniert auf der Hörfrequenz antworten!",
-    "bild_svg": null
+    "bild_svg": "question_images/BE301.png"
   },
   {
     "id": "BE302",
@@ -4932,7 +4932,7 @@
     ],
     "richtige_antwort": 3,
     "erklaerung": "Musterlösung: „Um in der vorgegebenen Zeitdauer möglichst viele Verbindungen herzustellen.“\n\n💡 Fachlicher Hintergrund (Contest, Pile-Up, DX-Pedition & Fuchsjagd (ARDF)):\nConteste und Pile-Ups erfordern höchste Funkdisziplin, während Peilsport (ARDF) Orientierung und Funktechnik verbindet.\n\n📐 Formel / Regel: Contest = Rufzeichen + RST + Seriennummer; Split 'UP 5' = Höre 5 kHz über Sendefrequenz; ARDF = Peilsport\n\n📌 Merksatz: Im Contest zählt Kürze, bei Split diszipliniert auf der Hörfrequenz antworten!",
-    "bild_svg": null
+    "bild_svg": "question_images/BE302.png"
   },
   {
     "id": "BE303",
@@ -4947,7 +4947,7 @@
     ],
     "richtige_antwort": 1,
     "erklaerung": "Musterlösung: „Ich übermittle die in der Ausschreibung festgelegten Daten, damit die Verbindung gewertet wird.“\n\n💡 Fachlicher Hintergrund (Contest, Pile-Up, DX-Pedition & Fuchsjagd (ARDF)):\nConteste und Pile-Ups erfordern höchste Funkdisziplin, während Peilsport (ARDF) Orientierung und Funktechnik verbindet.\n\n📐 Formel / Regel: Contest = Rufzeichen + RST + Seriennummer; Split 'UP 5' = Höre 5 kHz über Sendefrequenz; ARDF = Peilsport\n\n📌 Merksatz: Im Contest zählt Kürze, bei Split diszipliniert auf der Hörfrequenz antworten!",
-    "bild_svg": null
+    "bild_svg": "question_images/BE303.png"
   },
   {
     "id": "BE304",
@@ -6042,7 +6042,7 @@
     ],
     "richtige_antwort": 0,
     "erklaerung": "Musterlösung: „2000 kV/m“\n\n💡 Fachlicher Hintergrund (Elektrisches Feld):\nZwischen getrennten elektrischen Ladungen bzw. Spannungen existiert ein elektrisches Feld, das Kräfte auf Ladungsträger ausübt.\n\n📐 Formel / Regel: E = U / d  [V/m]\n\n📌 Merksatz: Feldlinien gehen vom Pluspol aus und enden am Minuspol!",
-    "bild_svg": null
+    "bild_svg": "question_images/EB103.png"
   },
   {
     "id": "EB104",
@@ -6072,7 +6072,7 @@
     ],
     "richtige_antwort": 0,
     "erklaerung": "Musterlösung: „Elektrische Feldlinien“\n\n💡 Fachlicher Hintergrund (Elektrisches Feld):\nZwischen getrennten elektrischen Ladungen bzw. Spannungen existiert ein elektrisches Feld, das Kräfte auf Ladungsträger ausübt.\n\n📐 Formel / Regel: E = U / d  [V/m]\n\n📌 Merksatz: Feldlinien gehen vom Pluspol aus und enden am Minuspol!",
-    "bild_svg": null
+    "bild_svg": "question_images/EB105.png"
   },
   {
     "id": "EB201",
@@ -6102,7 +6102,7 @@
     ],
     "richtige_antwort": 0,
     "erklaerung": "Musterlösung: „Homogenes magnetisches Feld“\n\n💡 Fachlicher Hintergrund (Magnetisches Feld):\nJeder elektrische Stromfluss ist zwingend von einem geschlossenen magnetischen Wirbelfeld umgeben.\n\n📐 Formel / Regel: H = (I · N) / l; B = µ · H\n\n📌 Merksatz: Rechte Hand: Daumen zeigt technischen Strom (+ nach -), gekrümmte Finger das Magnetfeld!",
-    "bild_svg": null
+    "bild_svg": "question_images/EB202.png"
   },
   {
     "id": "EB203",
@@ -6117,7 +6117,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „183,6 A/m“\n\n💡 Fachlicher Hintergrund (Magnetisches Feld):\nJeder elektrische Stromfluss ist zwingend von einem geschlossenen magnetischen Wirbelfeld umgeben.\n\n📐 Formel / Regel: H = (I · N) / l; B = µ · H\n\n📌 Merksatz: Rechte Hand: Daumen zeigt technischen Strom (+ nach -), gekrümmte Finger das Magnetfeld!",
-    "bild_svg": null
+    "bild_svg": "question_images/EB203.png"
   },
   {
     "id": "EB204",
@@ -6162,7 +6162,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „Magnetische Feldlinien“\n\n💡 Fachlicher Hintergrund (Magnetisches Feld):\nJeder elektrische Stromfluss ist zwingend von einem geschlossenen magnetischen Wirbelfeld umgeben.\n\n📐 Formel / Regel: H = (I · N) / l; B = µ · H\n\n📌 Merksatz: Rechte Hand: Daumen zeigt technischen Strom (+ nach -), gekrümmte Finger das Magnetfeld!",
-    "bild_svg": null
+    "bild_svg": "question_images/EB206.png"
   },
   {
     "id": "EB301",
@@ -6252,7 +6252,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „Horizontale Polarisation“\n\n💡 Fachlicher Hintergrund (Elektromagnetisches Feld & Wellenausbreitung):\nEin elektromagnetisches Wechselfeld breitet sich als Welle mit Lichtgeschwindigkeit im Raum aus.\n\n📐 Formel / Regel: c = λ · f  =>  λ [m] ≈ 300 / f [MHz]\n\n📌 Merksatz: Hohe Frequenz = kurze Welle (kleine Antenne); tiefe Frequenz = lange Welle (große Antenne)!",
-    "bild_svg": null
+    "bild_svg": "question_images/EB306.png"
   },
   {
     "id": "EB307",
@@ -6267,7 +6267,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „Vertikale Polarisation“\n\n💡 Fachlicher Hintergrund (Elektromagnetisches Feld & Wellenausbreitung):\nEin elektromagnetisches Wechselfeld breitet sich als Welle mit Lichtgeschwindigkeit im Raum aus.\n\n📐 Formel / Regel: c = λ · f  =>  λ [m] ≈ 300 / f [MHz]\n\n📌 Merksatz: Hohe Frequenz = kurze Welle (kleine Antenne); tiefe Frequenz = lange Welle (große Antenne)!",
-    "bild_svg": null
+    "bild_svg": "question_images/EB307.png"
   },
   {
     "id": "EB308",
@@ -6282,7 +6282,7 @@
     ],
     "richtige_antwort": 1,
     "erklaerung": "Musterlösung: „Zirkulare Polarisation“\n\n💡 Fachlicher Hintergrund (Elektromagnetisches Feld & Wellenausbreitung):\nEin elektromagnetisches Wechselfeld breitet sich als Welle mit Lichtgeschwindigkeit im Raum aus.\n\n📐 Formel / Regel: c = λ · f  =>  λ [m] ≈ 300 / f [MHz]\n\n📌 Merksatz: Hohe Frequenz = kurze Welle (kleine Antenne); tiefe Frequenz = lange Welle (große Antenne)!",
-    "bild_svg": null
+    "bild_svg": "question_images/EB308.png"
   },
   {
     "id": "EB309",
@@ -6297,7 +6297,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „horizontal.“\n\n💡 Fachlicher Hintergrund (Elektromagnetisches Feld & Wellenausbreitung):\nEin elektromagnetisches Wechselfeld breitet sich als Welle mit Lichtgeschwindigkeit im Raum aus.\n\n📐 Formel / Regel: c = λ · f  =>  λ [m] ≈ 300 / f [MHz]\n\n📌 Merksatz: Hohe Frequenz = kurze Welle (kleine Antenne); tiefe Frequenz = lange Welle (große Antenne)!",
-    "bild_svg": null
+    "bild_svg": "question_images/EB309.png"
   },
   {
     "id": "EB310",
@@ -6312,7 +6312,7 @@
     ],
     "richtige_antwort": 0,
     "erklaerung": "Musterlösung: „vertikal.“\n\n💡 Fachlicher Hintergrund (Elektromagnetisches Feld & Wellenausbreitung):\nEin elektromagnetisches Wechselfeld breitet sich als Welle mit Lichtgeschwindigkeit im Raum aus.\n\n📐 Formel / Regel: c = λ · f  =>  λ [m] ≈ 300 / f [MHz]\n\n📌 Merksatz: Hohe Frequenz = kurze Welle (kleine Antenne); tiefe Frequenz = lange Welle (große Antenne)!",
-    "bild_svg": null
+    "bild_svg": "question_images/EB310.png"
   },
   {
     "id": "EB311",
@@ -6477,7 +6477,7 @@
     ],
     "richtige_antwort": 0,
     "erklaerung": "Musterlösung: „0,7 V und −0,7 V“\n\n💡 Fachlicher Hintergrund (Sinusförmige Signale & Wechselgrößen):\nBei sinusförmigen Wechselgrößen entspricht der Effektivwert der thermischen Gleichstromwirkung.\n\n📐 Formel / Regel: U_eff = U_s / √2 ≈ 0,707 · U_s;  T = 1 / f\n\n📌 Merksatz: Effektivwert = Scheitelwert mal 0,707 (bzw. Scheitelwert = Effektivwert mal 1,414)!",
-    "bild_svg": null
+    "bild_svg": "question_images/EB405.png"
   },
   {
     "id": "EB406",
@@ -6492,7 +6492,7 @@
     ],
     "richtige_antwort": 1,
     "erklaerung": "Musterlösung: „12 V“\n\n💡 Fachlicher Hintergrund (Sinusförmige Signale & Wechselgrößen):\nBei sinusförmigen Wechselgrößen entspricht der Effektivwert der thermischen Gleichstromwirkung.\n\n📐 Formel / Regel: U_eff = U_s / √2 ≈ 0,707 · U_s;  T = 1 / f\n\n📌 Merksatz: Effektivwert = Scheitelwert mal 0,707 (bzw. Scheitelwert = Effektivwert mal 1,414)!",
-    "bild_svg": null
+    "bild_svg": "question_images/EB406.png"
   },
   {
     "id": "EB407",
@@ -6507,7 +6507,7 @@
     ],
     "richtige_antwort": 3,
     "erklaerung": "Musterlösung: „40 V“\n\n💡 Fachlicher Hintergrund (Sinusförmige Signale & Wechselgrößen):\nBei sinusförmigen Wechselgrößen entspricht der Effektivwert der thermischen Gleichstromwirkung.\n\n📐 Formel / Regel: U_eff = U_s / √2 ≈ 0,707 · U_s;  T = 1 / f\n\n📌 Merksatz: Effektivwert = Scheitelwert mal 0,707 (bzw. Scheitelwert = Effektivwert mal 1,414)!",
-    "bild_svg": null
+    "bild_svg": "question_images/EB407.png"
   },
   {
     "id": "EB408",
@@ -6537,7 +6537,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „83,3 kHz“\n\n💡 Fachlicher Hintergrund (Sinusförmige Signale & Wechselgrößen):\nBei sinusförmigen Wechselgrößen entspricht der Effektivwert der thermischen Gleichstromwirkung.\n\n📐 Formel / Regel: U_eff = U_s / √2 ≈ 0,707 · U_s;  T = 1 / f\n\n📌 Merksatz: Effektivwert = Scheitelwert mal 0,707 (bzw. Scheitelwert = Effektivwert mal 1,414)!",
-    "bild_svg": null
+    "bild_svg": "question_images/EB409.png"
   },
   {
     "id": "EB410",
@@ -6552,7 +6552,7 @@
     ],
     "richtige_antwort": 1,
     "erklaerung": "Musterlösung: „50 Hz“\n\n💡 Fachlicher Hintergrund (Sinusförmige Signale & Wechselgrößen):\nBei sinusförmigen Wechselgrößen entspricht der Effektivwert der thermischen Gleichstromwirkung.\n\n📐 Formel / Regel: U_eff = U_s / √2 ≈ 0,707 · U_s;  T = 1 / f\n\n📌 Merksatz: Effektivwert = Scheitelwert mal 0,707 (bzw. Scheitelwert = Effektivwert mal 1,414)!",
-    "bild_svg": null
+    "bild_svg": "question_images/EB410.png"
   },
   {
     "id": "EB411",
@@ -6567,7 +6567,7 @@
     ],
     "richtige_antwort": 3,
     "erklaerung": "Musterlösung: „8,33 MHz“\n\n💡 Fachlicher Hintergrund (Sinusförmige Signale & Wechselgrößen):\nBei sinusförmigen Wechselgrößen entspricht der Effektivwert der thermischen Gleichstromwirkung.\n\n📐 Formel / Regel: U_eff = U_s / √2 ≈ 0,707 · U_s;  T = 1 / f\n\n📌 Merksatz: Effektivwert = Scheitelwert mal 0,707 (bzw. Scheitelwert = Effektivwert mal 1,414)!",
-    "bild_svg": null
+    "bild_svg": "question_images/EB411.png"
   },
   {
     "id": "EB501",
@@ -6912,7 +6912,7 @@
     ],
     "richtige_antwort": 0,
     "erklaerung": "Musterlösung: „NTC“\n\n💡 Fachlicher Hintergrund (Ohmsche Widerstände & Farbcode):\nWiderstände begrenzen den elektrischen Stromfluss und dienen als Spannungsteiler.\n\n📐 Formel / Regel: R = ρ · l / A;  P_v = I² · R\n\n📌 Merksatz: Farbcode-Regel: Schwarz 0, Braun 1, Rot 2, Orange 3, Gelb 4, Grün 5, Blau 6, Violett 7, Grau 8, Weiß 9!",
-    "bild_svg": null
+    "bild_svg": "question_images/EC109.png"
   },
   {
     "id": "EC110",
@@ -6927,7 +6927,7 @@
     ],
     "richtige_antwort": 0,
     "erklaerung": "Musterlösung: „𝜗“\n\n💡 Fachlicher Hintergrund (Ohmsche Widerstände & Farbcode):\nWiderstände begrenzen den elektrischen Stromfluss und dienen als Spannungsteiler.\n\n📐 Formel / Regel: R = ρ · l / A;  P_v = I² · R\n\n📌 Merksatz: Farbcode-Regel: Schwarz 0, Braun 1, Rot 2, Orange 3, Gelb 4, Grün 5, Blau 6, Violett 7, Grau 8, Weiß 9!",
-    "bild_svg": null
+    "bild_svg": "question_images/EC110.png"
   },
   {
     "id": "EC113",
@@ -6972,7 +6972,7 @@
     ],
     "richtige_antwort": 1,
     "erklaerung": "Musterlösung: „10 kΩ“\n\n💡 Fachlicher Hintergrund (Ohmsche Widerstände & Farbcode):\nWiderstände begrenzen den elektrischen Stromfluss und dienen als Spannungsteiler.\n\n📐 Formel / Regel: R = ρ · l / A;  P_v = I² · R\n\n📌 Merksatz: Farbcode-Regel: Schwarz 0, Braun 1, Rot 2, Orange 3, Gelb 4, Grün 5, Blau 6, Violett 7, Grau 8, Weiß 9!",
-    "bild_svg": null
+    "bild_svg": "question_images/EC115.png"
   },
   {
     "id": "EC116",
@@ -7017,7 +7017,7 @@
     ],
     "richtige_antwort": 3,
     "erklaerung": "Musterlösung: „𝑡 𝑈“\n\n💡 Fachlicher Hintergrund (Kondensatoren & Kapazität):\nKondensatoren speichern elektrische Energie im elektrostatischen Feld und sperren Gleichstrom.\n\n📐 Formel / Regel: C = ε · A / d;  X_C = 1 / (2 · π · f · C)\n\n📌 Merksatz: Am Kondensator eilt der Strom voraus (Merksatz: 'Beim Kondensat-or eilt der Strom vor')!",
-    "bild_svg": null
+    "bild_svg": "question_images/EC201.png"
   },
   {
     "id": "EC202",
@@ -7122,7 +7122,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „𝑡 𝑈“\n\n💡 Fachlicher Hintergrund (Spulen & Induktivität):\nSpulen speichern Energie im magnetischen Feld und setzen jeder Stromänderung einen Gegenstrom entgegen.\n\n📐 Formel / Regel: L = µ · N² · A / l;  X_L = 2 · π · f · L\n\n📌 Merksatz: Bei Induktivitäten die Ströme sich verspäten!",
-    "bild_svg": null
+    "bild_svg": "question_images/EC301.png"
   },
   {
     "id": "EC302",
@@ -7137,7 +7137,7 @@
     ],
     "richtige_antwort": 1,
     "erklaerung": "Musterlösung: „leuchtet Lampe 1 zuerst.“\n\n💡 Fachlicher Hintergrund (Spulen & Induktivität):\nSpulen speichern Energie im magnetischen Feld und setzen jeder Stromänderung einen Gegenstrom entgegen.\n\n📐 Formel / Regel: L = µ · N² · A / l;  X_L = 2 · π · f · L\n\n📌 Merksatz: Bei Induktivitäten die Ströme sich verspäten!",
-    "bild_svg": null
+    "bild_svg": "question_images/EC302.png"
   },
   {
     "id": "EC303",
@@ -7197,7 +7197,7 @@
     ],
     "richtige_antwort": 3,
     "erklaerung": "Musterlösung: „6 µH“\n\n💡 Fachlicher Hintergrund (Spulen & Induktivität):\nSpulen speichern Energie im magnetischen Feld und setzen jeder Stromänderung einen Gegenstrom entgegen.\n\n📐 Formel / Regel: L = µ · N² · A / l;  X_L = 2 · π · f · L\n\n📌 Merksatz: Bei Induktivitäten die Ströme sich verspäten!",
-    "bild_svg": null
+    "bild_svg": "question_images/EC306.png"
   },
   {
     "id": "EC307",
@@ -7212,7 +7212,7 @@
     ],
     "richtige_antwort": 0,
     "erklaerung": "Musterlösung: „Die Induktivität steigt auf 48 µH.“\n\n💡 Fachlicher Hintergrund (Spulen & Induktivität):\nSpulen speichern Energie im magnetischen Feld und setzen jeder Stromänderung einen Gegenstrom entgegen.\n\n📐 Formel / Regel: L = µ · N² · A / l;  X_L = 2 · π · f · L\n\n📌 Merksatz: Bei Induktivitäten die Ströme sich verspäten!",
-    "bild_svg": null
+    "bild_svg": "question_images/EC307.png"
   },
   {
     "id": "EC401",
@@ -7227,7 +7227,7 @@
     ],
     "richtige_antwort": 1,
     "erklaerung": "Musterlösung: „Etwa 15 V“\n\n💡 Fachlicher Hintergrund (Transformatoren & Impedanzübertrager):\nTransformatoren übertragen Wechselspannung induktiv und transformieren Spannungen, Ströme und Impedanzen.\n\n📐 Formel / Regel: U₁ / U₂ = N₁ / N₂ = I₂ / I₁;  Z₁ / Z₂ = (N₁ / N₂)²\n\n📌 Merksatz: Windungen doppelt = Spannung doppelt, aber Impedanz vierfach!",
-    "bild_svg": null
+    "bild_svg": "question_images/EC401.png"
   },
   {
     "id": "EC402",
@@ -7347,7 +7347,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „Schottkydiode“\n\n💡 Fachlicher Hintergrund (Halbleiterdioden & Gleichrichter):\nDioden leiten elektrischen Strom nur in Durchlassrichtung und sperren in Gegenrichtung.\n\n📐 Formel / Regel: Durchlassspannung: Si ≈ 0,7 V, Ge ≈ 0,3 V; Brückengleichrichter U_gl ≈ 1,41 · U_eff - 2·U_D\n\n📌 Merksatz: Dreieck im Schaltzeichen zeigt die Durchlassrichtung (von Anode nach Kathode)!",
-    "bild_svg": null
+    "bild_svg": "question_images/EC505.png"
   },
   {
     "id": "EC506",
@@ -7362,7 +7362,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „Germaniumdiode“\n\n💡 Fachlicher Hintergrund (Halbleiterdioden & Gleichrichter):\nDioden leiten elektrischen Strom nur in Durchlassrichtung und sperren in Gegenrichtung.\n\n📐 Formel / Regel: Durchlassspannung: Si ≈ 0,7 V, Ge ≈ 0,3 V; Brückengleichrichter U_gl ≈ 1,41 · U_eff - 2·U_D\n\n📌 Merksatz: Dreieck im Schaltzeichen zeigt die Durchlassrichtung (von Anode nach Kathode)!",
-    "bild_svg": null
+    "bild_svg": "question_images/EC506.png"
   },
   {
     "id": "EC507",
@@ -7377,7 +7377,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „Siliziumdiode“\n\n💡 Fachlicher Hintergrund (Halbleiterdioden & Gleichrichter):\nDioden leiten elektrischen Strom nur in Durchlassrichtung und sperren in Gegenrichtung.\n\n📐 Formel / Regel: Durchlassspannung: Si ≈ 0,7 V, Ge ≈ 0,3 V; Brückengleichrichter U_gl ≈ 1,41 · U_eff - 2·U_D\n\n📌 Merksatz: Dreieck im Schaltzeichen zeigt die Durchlassrichtung (von Anode nach Kathode)!",
-    "bild_svg": null
+    "bild_svg": "question_images/EC507.png"
   },
   {
     "id": "EC508",
@@ -7392,7 +7392,7 @@
     ],
     "richtige_antwort": 1,
     "erklaerung": "Musterlösung: „Leuchtdiode“\n\n💡 Fachlicher Hintergrund (Halbleiterdioden & Gleichrichter):\nDioden leiten elektrischen Strom nur in Durchlassrichtung und sperren in Gegenrichtung.\n\n📐 Formel / Regel: Durchlassspannung: Si ≈ 0,7 V, Ge ≈ 0,3 V; Brückengleichrichter U_gl ≈ 1,41 · U_eff - 2·U_D\n\n📌 Merksatz: Dreieck im Schaltzeichen zeigt die Durchlassrichtung (von Anode nach Kathode)!",
-    "bild_svg": null
+    "bild_svg": "question_images/EC508.png"
   },
   {
     "id": "EC509",
@@ -7407,7 +7407,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „0,6 V 1,3 V“\n\n💡 Fachlicher Hintergrund (Halbleiterdioden & Gleichrichter):\nDioden leiten elektrischen Strom nur in Durchlassrichtung und sperren in Gegenrichtung.\n\n📐 Formel / Regel: Durchlassspannung: Si ≈ 0,7 V, Ge ≈ 0,3 V; Brückengleichrichter U_gl ≈ 1,41 · U_eff - 2·U_D\n\n📌 Merksatz: Dreieck im Schaltzeichen zeigt die Durchlassrichtung (von Anode nach Kathode)!",
-    "bild_svg": null
+    "bild_svg": "question_images/EC509.png"
   },
   {
     "id": "EC510",
@@ -7422,7 +7422,7 @@
     ],
     "richtige_antwort": 1,
     "erklaerung": "Musterlösung: „−0,4 V 0,3 V“\n\n💡 Fachlicher Hintergrund (Halbleiterdioden & Gleichrichter):\nDioden leiten elektrischen Strom nur in Durchlassrichtung und sperren in Gegenrichtung.\n\n📐 Formel / Regel: Durchlassspannung: Si ≈ 0,7 V, Ge ≈ 0,3 V; Brückengleichrichter U_gl ≈ 1,41 · U_eff - 2·U_D\n\n📌 Merksatz: Dreieck im Schaltzeichen zeigt die Durchlassrichtung (von Anode nach Kathode)!",
-    "bild_svg": null
+    "bild_svg": "question_images/EC510.png"
   },
   {
     "id": "EC511",
@@ -7437,7 +7437,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „−1,3 V −2,0 V“\n\n💡 Fachlicher Hintergrund (Halbleiterdioden & Gleichrichter):\nDioden leiten elektrischen Strom nur in Durchlassrichtung und sperren in Gegenrichtung.\n\n📐 Formel / Regel: Durchlassspannung: Si ≈ 0,7 V, Ge ≈ 0,3 V; Brückengleichrichter U_gl ≈ 1,41 · U_eff - 2·U_D\n\n📌 Merksatz: Dreieck im Schaltzeichen zeigt die Durchlassrichtung (von Anode nach Kathode)!",
-    "bild_svg": null
+    "bild_svg": "question_images/EC511.png"
   },
   {
     "id": "EC512",
@@ -7452,7 +7452,7 @@
     ],
     "richtige_antwort": 1,
     "erklaerung": "Musterlösung: „−3,0 V −3,7 V“\n\n💡 Fachlicher Hintergrund (Halbleiterdioden & Gleichrichter):\nDioden leiten elektrischen Strom nur in Durchlassrichtung und sperren in Gegenrichtung.\n\n📐 Formel / Regel: Durchlassspannung: Si ≈ 0,7 V, Ge ≈ 0,3 V; Brückengleichrichter U_gl ≈ 1,41 · U_eff - 2·U_D\n\n📌 Merksatz: Dreieck im Schaltzeichen zeigt die Durchlassrichtung (von Anode nach Kathode)!",
-    "bild_svg": null
+    "bild_svg": "question_images/EC512.png"
   },
   {
     "id": "EC513",
@@ -7482,7 +7482,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „Leuchtanzeige“\n\n💡 Fachlicher Hintergrund (Halbleiterdioden & Gleichrichter):\nDioden leiten elektrischen Strom nur in Durchlassrichtung und sperren in Gegenrichtung.\n\n📐 Formel / Regel: Durchlassspannung: Si ≈ 0,7 V, Ge ≈ 0,3 V; Brückengleichrichter U_gl ≈ 1,41 · U_eff - 2·U_D\n\n📌 Merksatz: Dreieck im Schaltzeichen zeigt die Durchlassrichtung (von Anode nach Kathode)!",
-    "bild_svg": null
+    "bild_svg": "question_images/EC514.png"
   },
   {
     "id": "EC515",
@@ -7512,7 +7512,7 @@
     ],
     "richtige_antwort": 0,
     "erklaerung": "Musterlösung: „150 Ω/0,1 W“\n\n💡 Fachlicher Hintergrund (Halbleiterdioden & Gleichrichter):\nDioden leiten elektrischen Strom nur in Durchlassrichtung und sperren in Gegenrichtung.\n\n📐 Formel / Regel: Durchlassspannung: Si ≈ 0,7 V, Ge ≈ 0,3 V; Brückengleichrichter U_gl ≈ 1,41 · U_eff - 2·U_D\n\n📌 Merksatz: Dreieck im Schaltzeichen zeigt die Durchlassrichtung (von Anode nach Kathode)!",
-    "bild_svg": null
+    "bild_svg": "question_images/EC516.png"
   },
   {
     "id": "EC517",
@@ -7527,7 +7527,7 @@
     ],
     "richtige_antwort": 0,
     "erklaerung": "Musterlösung: „Z-Diode“\n\n💡 Fachlicher Hintergrund (Halbleiterdioden & Gleichrichter):\nDioden leiten elektrischen Strom nur in Durchlassrichtung und sperren in Gegenrichtung.\n\n📐 Formel / Regel: Durchlassspannung: Si ≈ 0,7 V, Ge ≈ 0,3 V; Brückengleichrichter U_gl ≈ 1,41 · U_eff - 2·U_D\n\n📌 Merksatz: Dreieck im Schaltzeichen zeigt die Durchlassrichtung (von Anode nach Kathode)!",
-    "bild_svg": null
+    "bild_svg": "question_images/EC517.png"
   },
   {
     "id": "EC518",
@@ -7557,7 +7557,7 @@
     ],
     "richtige_antwort": 1,
     "erklaerung": "Musterlösung: „Spannungsstabilisierung“\n\n💡 Fachlicher Hintergrund (Halbleiterdioden & Gleichrichter):\nDioden leiten elektrischen Strom nur in Durchlassrichtung und sperren in Gegenrichtung.\n\n📐 Formel / Regel: Durchlassspannung: Si ≈ 0,7 V, Ge ≈ 0,3 V; Brückengleichrichter U_gl ≈ 1,41 · U_eff - 2·U_D\n\n📌 Merksatz: Dreieck im Schaltzeichen zeigt die Durchlassrichtung (von Anode nach Kathode)!",
-    "bild_svg": null
+    "bild_svg": "question_images/EC519.png"
   },
   {
     "id": "EC520",
@@ -7572,7 +7572,7 @@
     ],
     "richtige_antwort": 1,
     "erklaerung": "Musterlösung: „0 V +12 V +4,7 V“\n\n💡 Fachlicher Hintergrund (Halbleiterdioden & Gleichrichter):\nDioden leiten elektrischen Strom nur in Durchlassrichtung und sperren in Gegenrichtung.\n\n📐 Formel / Regel: Durchlassspannung: Si ≈ 0,7 V, Ge ≈ 0,3 V; Brückengleichrichter U_gl ≈ 1,41 · U_eff - 2·U_D\n\n📌 Merksatz: Dreieck im Schaltzeichen zeigt die Durchlassrichtung (von Anode nach Kathode)!",
-    "bild_svg": null
+    "bild_svg": "question_images/EC520.png"
   },
   {
     "id": "EC521",
@@ -7587,7 +7587,7 @@
     ],
     "richtige_antwort": 3,
     "erklaerung": "Musterlösung: „ca. 293 Ω“\n\n💡 Fachlicher Hintergrund (Halbleiterdioden & Gleichrichter):\nDioden leiten elektrischen Strom nur in Durchlassrichtung und sperren in Gegenrichtung.\n\n📐 Formel / Regel: Durchlassspannung: Si ≈ 0,7 V, Ge ≈ 0,3 V; Brückengleichrichter U_gl ≈ 1,41 · U_eff - 2·U_D\n\n📌 Merksatz: Dreieck im Schaltzeichen zeigt die Durchlassrichtung (von Anode nach Kathode)!",
-    "bild_svg": null
+    "bild_svg": "question_images/EC521.png"
   },
   {
     "id": "EC522",
@@ -7602,7 +7602,7 @@
     ],
     "richtige_antwort": 0,
     "erklaerung": "Musterlösung: „ca. 202 Ω.“\n\n💡 Fachlicher Hintergrund (Halbleiterdioden & Gleichrichter):\nDioden leiten elektrischen Strom nur in Durchlassrichtung und sperren in Gegenrichtung.\n\n📐 Formel / Regel: Durchlassspannung: Si ≈ 0,7 V, Ge ≈ 0,3 V; Brückengleichrichter U_gl ≈ 1,41 · U_eff - 2·U_D\n\n📌 Merksatz: Dreieck im Schaltzeichen zeigt die Durchlassrichtung (von Anode nach Kathode)!",
-    "bild_svg": null
+    "bild_svg": "question_images/EC522.png"
   },
   {
     "id": "EC601",
@@ -7677,7 +7677,7 @@
     ],
     "richtige_antwort": 1,
     "erklaerung": "Musterlösung: „B C D EC606 Bei diesem Bauelement handelt es sich um einen A NPN-Transistor.“\n\n💡 Fachlicher Hintergrund (Bipolartransistoren & FETs):\nTransistoren sind steuerbare elektronische Halbleiterbauelemente zur Signalverstärkung und Schaltung.\n\n📐 Formel / Regel: I_E = I_B + I_C;  B = I_C / I_B\n\n📌 Merksatz: NPN-Pfeil am Emitter zeigt: 'Nicht Pfeil Nach innen' (zeigt nach außen)!",
-    "bild_svg": null
+    "bild_svg": "question_images/EC605.png"
   },
   {
     "id": "EC607",
@@ -7692,7 +7692,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „PNP-Transistor.“\n\n💡 Fachlicher Hintergrund (Bipolartransistoren & FETs):\nTransistoren sind steuerbare elektronische Halbleiterbauelemente zur Signalverstärkung und Schaltung.\n\n📐 Formel / Regel: I_E = I_B + I_C;  B = I_C / I_B\n\n📌 Merksatz: NPN-Pfeil am Emitter zeigt: 'Nicht Pfeil Nach innen' (zeigt nach außen)!",
-    "bild_svg": null
+    "bild_svg": "question_images/EC607.png"
   },
   {
     "id": "EC608",
@@ -7722,7 +7722,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „1 = Kollektor, 2 = Basis, 3 = Emitter“\n\n💡 Fachlicher Hintergrund (Bipolartransistoren & FETs):\nTransistoren sind steuerbare elektronische Halbleiterbauelemente zur Signalverstärkung und Schaltung.\n\n📐 Formel / Regel: I_E = I_B + I_C;  B = I_C / I_B\n\n📌 Merksatz: NPN-Pfeil am Emitter zeigt: 'Nicht Pfeil Nach innen' (zeigt nach außen)!",
-    "bild_svg": null
+    "bild_svg": "question_images/EC609.png"
   },
   {
     "id": "EC610",
@@ -7737,7 +7737,7 @@
     ],
     "richtige_antwort": 1,
     "erklaerung": "Musterlösung: „0,6 V“\n\n💡 Fachlicher Hintergrund (Bipolartransistoren & FETs):\nTransistoren sind steuerbare elektronische Halbleiterbauelemente zur Signalverstärkung und Schaltung.\n\n📐 Formel / Regel: I_E = I_B + I_C;  B = I_C / I_B\n\n📌 Merksatz: NPN-Pfeil am Emitter zeigt: 'Nicht Pfeil Nach innen' (zeigt nach außen)!",
-    "bild_svg": null
+    "bild_svg": "question_images/EC610.png"
   },
   {
     "id": "EC611",
@@ -7767,7 +7767,7 @@
     ],
     "richtige_antwort": 3,
     "erklaerung": "Musterlösung: „+2,0 V +5,6 V +1,4 V“\n\n💡 Fachlicher Hintergrund (Bipolartransistoren & FETs):\nTransistoren sind steuerbare elektronische Halbleiterbauelemente zur Signalverstärkung und Schaltung.\n\n📐 Formel / Regel: I_E = I_B + I_C;  B = I_C / I_B\n\n📌 Merksatz: NPN-Pfeil am Emitter zeigt: 'Nicht Pfeil Nach innen' (zeigt nach außen)!",
-    "bild_svg": null
+    "bild_svg": "question_images/EC612.png"
   },
   {
     "id": "EC613",
@@ -7782,7 +7782,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „-5,6 V 0 V -6,2 V“\n\n💡 Fachlicher Hintergrund (Bipolartransistoren & FETs):\nTransistoren sind steuerbare elektronische Halbleiterbauelemente zur Signalverstärkung und Schaltung.\n\n📐 Formel / Regel: I_E = I_B + I_C;  B = I_C / I_B\n\n📌 Merksatz: NPN-Pfeil am Emitter zeigt: 'Nicht Pfeil Nach innen' (zeigt nach außen)!",
-    "bild_svg": null
+    "bild_svg": "question_images/EC613.png"
   },
   {
     "id": "EC614",
@@ -7797,7 +7797,7 @@
     ],
     "richtige_antwort": 3,
     "erklaerung": "Musterlösung: „-2,0 V -5,6 V -1,4 V“\n\n💡 Fachlicher Hintergrund (Bipolartransistoren & FETs):\nTransistoren sind steuerbare elektronische Halbleiterbauelemente zur Signalverstärkung und Schaltung.\n\n📐 Formel / Regel: I_E = I_B + I_C;  B = I_C / I_B\n\n📌 Merksatz: NPN-Pfeil am Emitter zeigt: 'Nicht Pfeil Nach innen' (zeigt nach außen)!",
-    "bild_svg": null
+    "bild_svg": "question_images/EC614.png"
   },
   {
     "id": "EC615",
@@ -7812,7 +7812,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „+5,6 V 0 V +6,2 V“\n\n💡 Fachlicher Hintergrund (Bipolartransistoren & FETs):\nTransistoren sind steuerbare elektronische Halbleiterbauelemente zur Signalverstärkung und Schaltung.\n\n📐 Formel / Regel: I_E = I_B + I_C;  B = I_C / I_B\n\n📌 Merksatz: NPN-Pfeil am Emitter zeigt: 'Nicht Pfeil Nach innen' (zeigt nach außen)!",
-    "bild_svg": null
+    "bild_svg": "question_images/EC615.png"
   },
   {
     "id": "ED101",
@@ -7827,7 +7827,7 @@
     ],
     "richtige_antwort": 0,
     "erklaerung": "Musterlösung: „𝑈1 = 5 ⋅ 𝑈2“\n\n💡 Fachlicher Hintergrund (Reihen- & Parallelschaltung):\nIn der Reihenschaltung addieren sich Widerstände und Teilspannungen; in der Parallelschaltung addieren sich Teilströme.\n\n📐 Formel / Regel: Reihe: R_ges = R₁ + R₂;  Parallel: 1/R_ges = 1/R₁ + 1/R₂  (bzw. (R₁·R₂)/(R₁+R₂))\n\n📌 Merksatz: Kondensatoren rechnen sich genau umgekehrt zu Widerständen und Spulen!",
-    "bild_svg": null
+    "bild_svg": "question_images/ED101.png"
   },
   {
     "id": "ED102",
@@ -7842,7 +7842,7 @@
     ],
     "richtige_antwort": 3,
     "erklaerung": "Musterlösung: „𝑈1 = 𝑈2 6“\n\n💡 Fachlicher Hintergrund (Reihen- & Parallelschaltung):\nIn der Reihenschaltung addieren sich Widerstände und Teilspannungen; in der Parallelschaltung addieren sich Teilströme.\n\n📐 Formel / Regel: Reihe: R_ges = R₁ + R₂;  Parallel: 1/R_ges = 1/R₁ + 1/R₂  (bzw. (R₁·R₂)/(R₁+R₂))\n\n📌 Merksatz: Kondensatoren rechnen sich genau umgekehrt zu Widerständen und Spulen!",
-    "bild_svg": null
+    "bild_svg": "question_images/ED102.png"
   },
   {
     "id": "ED103",
@@ -7857,7 +7857,7 @@
     ],
     "richtige_antwort": 3,
     "erklaerung": "Musterlösung: „6,0 V“\n\n💡 Fachlicher Hintergrund (Reihen- & Parallelschaltung):\nIn der Reihenschaltung addieren sich Widerstände und Teilspannungen; in der Parallelschaltung addieren sich Teilströme.\n\n📐 Formel / Regel: Reihe: R_ges = R₁ + R₂;  Parallel: 1/R_ges = 1/R₁ + 1/R₂  (bzw. (R₁·R₂)/(R₁+R₂))\n\n📌 Merksatz: Kondensatoren rechnen sich genau umgekehrt zu Widerständen und Spulen!",
-    "bild_svg": null
+    "bild_svg": "question_images/ED103.png"
   },
   {
     "id": "ED104",
@@ -7932,7 +7932,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „500 Ω“\n\n💡 Fachlicher Hintergrund (Reihen- & Parallelschaltung):\nIn der Reihenschaltung addieren sich Widerstände und Teilspannungen; in der Parallelschaltung addieren sich Teilströme.\n\n📐 Formel / Regel: Reihe: R_ges = R₁ + R₂;  Parallel: 1/R_ges = 1/R₁ + 1/R₂  (bzw. (R₁·R₂)/(R₁+R₂))\n\n📌 Merksatz: Kondensatoren rechnen sich genau umgekehrt zu Widerständen und Spulen!",
-    "bild_svg": null
+    "bild_svg": "question_images/ED108.png"
   },
   {
     "id": "ED109",
@@ -7947,7 +7947,7 @@
     ],
     "richtige_antwort": 1,
     "erklaerung": "Musterlösung: „1 kΩ“\n\n💡 Fachlicher Hintergrund (Reihen- & Parallelschaltung):\nIn der Reihenschaltung addieren sich Widerstände und Teilspannungen; in der Parallelschaltung addieren sich Teilströme.\n\n📐 Formel / Regel: Reihe: R_ges = R₁ + R₂;  Parallel: 1/R_ges = 1/R₁ + 1/R₂  (bzw. (R₁·R₂)/(R₁+R₂))\n\n📌 Merksatz: Kondensatoren rechnen sich genau umgekehrt zu Widerständen und Spulen!",
-    "bild_svg": null
+    "bild_svg": "question_images/ED109.png"
   },
   {
     "id": "ED110",
@@ -7962,7 +7962,7 @@
     ],
     "richtige_antwort": 0,
     "erklaerung": "Musterlösung: „1 kΩ“\n\n💡 Fachlicher Hintergrund (Reihen- & Parallelschaltung):\nIn der Reihenschaltung addieren sich Widerstände und Teilspannungen; in der Parallelschaltung addieren sich Teilströme.\n\n📐 Formel / Regel: Reihe: R_ges = R₁ + R₂;  Parallel: 1/R_ges = 1/R₁ + 1/R₂  (bzw. (R₁·R₂)/(R₁+R₂))\n\n📌 Merksatz: Kondensatoren rechnen sich genau umgekehrt zu Widerständen und Spulen!",
-    "bild_svg": null
+    "bild_svg": "question_images/ED110.png"
   },
   {
     "id": "ED111",
@@ -7977,7 +7977,7 @@
     ],
     "richtige_antwort": 3,
     "erklaerung": "Musterlösung: „2 kΩ“\n\n💡 Fachlicher Hintergrund (Reihen- & Parallelschaltung):\nIn der Reihenschaltung addieren sich Widerstände und Teilspannungen; in der Parallelschaltung addieren sich Teilströme.\n\n📐 Formel / Regel: Reihe: R_ges = R₁ + R₂;  Parallel: 1/R_ges = 1/R₁ + 1/R₂  (bzw. (R₁·R₂)/(R₁+R₂))\n\n📌 Merksatz: Kondensatoren rechnen sich genau umgekehrt zu Widerständen und Spulen!",
-    "bild_svg": null
+    "bild_svg": "question_images/ED111.png"
   },
   {
     "id": "ED112",
@@ -7992,7 +7992,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „2 kΩ“\n\n💡 Fachlicher Hintergrund (Reihen- & Parallelschaltung):\nIn der Reihenschaltung addieren sich Widerstände und Teilspannungen; in der Parallelschaltung addieren sich Teilströme.\n\n📐 Formel / Regel: Reihe: R_ges = R₁ + R₂;  Parallel: 1/R_ges = 1/R₁ + 1/R₂  (bzw. (R₁·R₂)/(R₁+R₂))\n\n📌 Merksatz: Kondensatoren rechnen sich genau umgekehrt zu Widerständen und Spulen!",
-    "bild_svg": null
+    "bild_svg": "question_images/ED112.png"
   },
   {
     "id": "ED113",
@@ -8007,7 +8007,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „1 kΩ“\n\n💡 Fachlicher Hintergrund (Reihen- & Parallelschaltung):\nIn der Reihenschaltung addieren sich Widerstände und Teilspannungen; in der Parallelschaltung addieren sich Teilströme.\n\n📐 Formel / Regel: Reihe: R_ges = R₁ + R₂;  Parallel: 1/R_ges = 1/R₁ + 1/R₂  (bzw. (R₁·R₂)/(R₁+R₂))\n\n📌 Merksatz: Kondensatoren rechnen sich genau umgekehrt zu Widerständen und Spulen!",
-    "bild_svg": null
+    "bild_svg": "question_images/ED113.png"
   },
   {
     "id": "ED114",
@@ -8022,7 +8022,7 @@
     ],
     "richtige_antwort": 0,
     "erklaerung": "Musterlösung: „250 Ω“\n\n💡 Fachlicher Hintergrund (Reihen- & Parallelschaltung):\nIn der Reihenschaltung addieren sich Widerstände und Teilspannungen; in der Parallelschaltung addieren sich Teilströme.\n\n📐 Formel / Regel: Reihe: R_ges = R₁ + R₂;  Parallel: 1/R_ges = 1/R₁ + 1/R₂  (bzw. (R₁·R₂)/(R₁+R₂))\n\n📌 Merksatz: Kondensatoren rechnen sich genau umgekehrt zu Widerständen und Spulen!",
-    "bild_svg": null
+    "bild_svg": "question_images/ED114.png"
   },
   {
     "id": "ED115",
@@ -8037,7 +8037,7 @@
     ],
     "richtige_antwort": 0,
     "erklaerung": "Musterlösung: „550 Ω“\n\n💡 Fachlicher Hintergrund (Reihen- & Parallelschaltung):\nIn der Reihenschaltung addieren sich Widerstände und Teilspannungen; in der Parallelschaltung addieren sich Teilströme.\n\n📐 Formel / Regel: Reihe: R_ges = R₁ + R₂;  Parallel: 1/R_ges = 1/R₁ + 1/R₂  (bzw. (R₁·R₂)/(R₁+R₂))\n\n📌 Merksatz: Kondensatoren rechnen sich genau umgekehrt zu Widerständen und Spulen!",
-    "bild_svg": null
+    "bild_svg": "question_images/ED115.png"
   },
   {
     "id": "ED116",
@@ -8052,7 +8052,7 @@
     ],
     "richtige_antwort": 1,
     "erklaerung": "Musterlösung: „950 Ω“\n\n💡 Fachlicher Hintergrund (Reihen- & Parallelschaltung):\nIn der Reihenschaltung addieren sich Widerstände und Teilspannungen; in der Parallelschaltung addieren sich Teilströme.\n\n📐 Formel / Regel: Reihe: R_ges = R₁ + R₂;  Parallel: 1/R_ges = 1/R₁ + 1/R₂  (bzw. (R₁·R₂)/(R₁+R₂))\n\n📌 Merksatz: Kondensatoren rechnen sich genau umgekehrt zu Widerständen und Spulen!",
-    "bild_svg": null
+    "bild_svg": "question_images/ED116.png"
   },
   {
     "id": "ED117",
@@ -8127,7 +8127,7 @@
     ],
     "richtige_antwort": 1,
     "erklaerung": "Musterlösung: „10 nF“\n\n💡 Fachlicher Hintergrund (Reihen- & Parallelschaltung):\nIn der Reihenschaltung addieren sich Widerstände und Teilspannungen; in der Parallelschaltung addieren sich Teilströme.\n\n📐 Formel / Regel: Reihe: R_ges = R₁ + R₂;  Parallel: 1/R_ges = 1/R₁ + 1/R₂  (bzw. (R₁·R₂)/(R₁+R₂))\n\n📌 Merksatz: Kondensatoren rechnen sich genau umgekehrt zu Widerständen und Spulen!",
-    "bild_svg": null
+    "bild_svg": "question_images/ED121.png"
   },
   {
     "id": "ED122",
@@ -8142,7 +8142,7 @@
     ],
     "richtige_antwort": 0,
     "erklaerung": "Musterlösung: „1,0 µF“\n\n💡 Fachlicher Hintergrund (Reihen- & Parallelschaltung):\nIn der Reihenschaltung addieren sich Widerstände und Teilspannungen; in der Parallelschaltung addieren sich Teilströme.\n\n📐 Formel / Regel: Reihe: R_ges = R₁ + R₂;  Parallel: 1/R_ges = 1/R₁ + 1/R₂  (bzw. (R₁·R₂)/(R₁+R₂))\n\n📌 Merksatz: Kondensatoren rechnen sich genau umgekehrt zu Widerständen und Spulen!",
-    "bild_svg": null
+    "bild_svg": "question_images/ED122.png"
   },
   {
     "id": "ED123",
@@ -8157,7 +8157,7 @@
     ],
     "richtige_antwort": 3,
     "erklaerung": "Musterlösung: „4 nF“\n\n💡 Fachlicher Hintergrund (Reihen- & Parallelschaltung):\nIn der Reihenschaltung addieren sich Widerstände und Teilspannungen; in der Parallelschaltung addieren sich Teilströme.\n\n📐 Formel / Regel: Reihe: R_ges = R₁ + R₂;  Parallel: 1/R_ges = 1/R₁ + 1/R₂  (bzw. (R₁·R₂)/(R₁+R₂))\n\n📌 Merksatz: Kondensatoren rechnen sich genau umgekehrt zu Widerständen und Spulen!",
-    "bild_svg": null
+    "bild_svg": "question_images/ED123.png"
   },
   {
     "id": "ED124",
@@ -8172,7 +8172,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „100 nF“\n\n💡 Fachlicher Hintergrund (Reihen- & Parallelschaltung):\nIn der Reihenschaltung addieren sich Widerstände und Teilspannungen; in der Parallelschaltung addieren sich Teilströme.\n\n📐 Formel / Regel: Reihe: R_ges = R₁ + R₂;  Parallel: 1/R_ges = 1/R₁ + 1/R₂  (bzw. (R₁·R₂)/(R₁+R₂))\n\n📌 Merksatz: Kondensatoren rechnen sich genau umgekehrt zu Widerständen und Spulen!",
-    "bild_svg": null
+    "bild_svg": "question_images/ED124.png"
   },
   {
     "id": "ED201",
@@ -8187,7 +8187,7 @@
     ],
     "richtige_antwort": 0,
     "erklaerung": "Musterlösung: „Tiefpass“\n\n💡 Fachlicher Hintergrund (Schwingkreise & HF-Filter):\nBei der Resonanzfrequenz heben sich induktiver und kapazitiver Blindwiderstand gegenseitig auf.\n\n📐 Formel / Regel: f₀ = 1 / (2 · π · √(L · C));  Tiefpass dämpft Frequenzen f > f_grenz\n\n📌 Merksatz: Reihenresonanz saugt durch (minimaler Widerstand), Parallelresonanz sperrt ab (maximaler Widerstand)!",
-    "bild_svg": null
+    "bild_svg": "question_images/ED201.png"
   },
   {
     "id": "ED202",
@@ -8202,7 +8202,7 @@
     ],
     "richtige_antwort": 1,
     "erklaerung": "Musterlösung: „Hochpass“\n\n💡 Fachlicher Hintergrund (Schwingkreise & HF-Filter):\nBei der Resonanzfrequenz heben sich induktiver und kapazitiver Blindwiderstand gegenseitig auf.\n\n📐 Formel / Regel: f₀ = 1 / (2 · π · √(L · C));  Tiefpass dämpft Frequenzen f > f_grenz\n\n📌 Merksatz: Reihenresonanz saugt durch (minimaler Widerstand), Parallelresonanz sperrt ab (maximaler Widerstand)!",
-    "bild_svg": null
+    "bild_svg": "question_images/ED202.png"
   },
   {
     "id": "ED203",
@@ -8217,7 +8217,7 @@
     ],
     "richtige_antwort": 0,
     "erklaerung": "Musterlösung: „Bandpass“\n\n💡 Fachlicher Hintergrund (Schwingkreise & HF-Filter):\nBei der Resonanzfrequenz heben sich induktiver und kapazitiver Blindwiderstand gegenseitig auf.\n\n📐 Formel / Regel: f₀ = 1 / (2 · π · √(L · C));  Tiefpass dämpft Frequenzen f > f_grenz\n\n📌 Merksatz: Reihenresonanz saugt durch (minimaler Widerstand), Parallelresonanz sperrt ab (maximaler Widerstand)!",
-    "bild_svg": null
+    "bild_svg": "question_images/ED203.png"
   },
   {
     "id": "ED204",
@@ -8232,7 +8232,7 @@
     ],
     "richtige_antwort": 0,
     "erklaerung": "Musterlösung: „Bandsperre“\n\n💡 Fachlicher Hintergrund (Schwingkreise & HF-Filter):\nBei der Resonanzfrequenz heben sich induktiver und kapazitiver Blindwiderstand gegenseitig auf.\n\n📐 Formel / Regel: f₀ = 1 / (2 · π · √(L · C));  Tiefpass dämpft Frequenzen f > f_grenz\n\n📌 Merksatz: Reihenresonanz saugt durch (minimaler Widerstand), Parallelresonanz sperrt ab (maximaler Widerstand)!",
-    "bild_svg": null
+    "bild_svg": "question_images/ED204.png"
   },
   {
     "id": "ED205",
@@ -8247,7 +8247,7 @@
     ],
     "richtige_antwort": 3,
     "erklaerung": "Musterlösung: „einen Serienschwingkreis.“\n\n💡 Fachlicher Hintergrund (Schwingkreise & HF-Filter):\nBei der Resonanzfrequenz heben sich induktiver und kapazitiver Blindwiderstand gegenseitig auf.\n\n📐 Formel / Regel: f₀ = 1 / (2 · π · √(L · C));  Tiefpass dämpft Frequenzen f > f_grenz\n\n📌 Merksatz: Reihenresonanz saugt durch (minimaler Widerstand), Parallelresonanz sperrt ab (maximaler Widerstand)!",
-    "bild_svg": null
+    "bild_svg": "question_images/ED205.png"
   },
   {
     "id": "ED206",
@@ -8262,7 +8262,7 @@
     ],
     "richtige_antwort": 3,
     "erklaerung": "Musterlösung: „einen Parallelschwingkreis.“\n\n💡 Fachlicher Hintergrund (Schwingkreise & HF-Filter):\nBei der Resonanzfrequenz heben sich induktiver und kapazitiver Blindwiderstand gegenseitig auf.\n\n📐 Formel / Regel: f₀ = 1 / (2 · π · √(L · C));  Tiefpass dämpft Frequenzen f > f_grenz\n\n📌 Merksatz: Reihenresonanz saugt durch (minimaler Widerstand), Parallelresonanz sperrt ab (maximaler Widerstand)!",
-    "bild_svg": null
+    "bild_svg": "question_images/ED206.png"
   },
   {
     "id": "ED207",
@@ -8283,7 +8283,7 @@
     "id": "ED208",
     "kategorie": "Technik",
     "topic_id": "top_technik_ed2",
-    "frage_text": "Was stellt die folgende Schaltung dar? 𝑈E 𝑈A",
+    "frage_text": "Was stellt die folgende Schaltung dar?",
     "antworten": [
       "Hochpass",
       "Bandpass",
@@ -8292,13 +8292,13 @@
     ],
     "richtige_antwort": 3,
     "erklaerung": "Musterlösung: „Tiefpass“\n\n💡 Fachlicher Hintergrund (Schwingkreise & HF-Filter):\nBei der Resonanzfrequenz heben sich induktiver und kapazitiver Blindwiderstand gegenseitig auf.\n\n📐 Formel / Regel: f₀ = 1 / (2 · π · √(L · C));  Tiefpass dämpft Frequenzen f > f_grenz\n\n📌 Merksatz: Reihenresonanz saugt durch (minimaler Widerstand), Parallelresonanz sperrt ab (maximaler Widerstand)!",
-    "bild_svg": null
+    "bild_svg": "question_images/ED208.png"
   },
   {
     "id": "ED209",
     "kategorie": "Technik",
     "topic_id": "top_technik_ed2",
-    "frage_text": "Was stellt die folgende Schaltung dar? 𝑈E 𝑈A",
+    "frage_text": "Was stellt die folgende Schaltung dar?",
     "antworten": [
       "Tiefpass",
       "Hochpass",
@@ -8307,7 +8307,7 @@
     ],
     "richtige_antwort": 0,
     "erklaerung": "Musterlösung: „Tiefpass“\n\n💡 Fachlicher Hintergrund (Schwingkreise & HF-Filter):\nBei der Resonanzfrequenz heben sich induktiver und kapazitiver Blindwiderstand gegenseitig auf.\n\n📐 Formel / Regel: f₀ = 1 / (2 · π · √(L · C));  Tiefpass dämpft Frequenzen f > f_grenz\n\n📌 Merksatz: Reihenresonanz saugt durch (minimaler Widerstand), Parallelresonanz sperrt ab (maximaler Widerstand)!",
-    "bild_svg": null
+    "bild_svg": "question_images/ED209.png"
   },
   {
     "id": "ED210",
@@ -8315,20 +8315,20 @@
     "topic_id": "top_technik_ed2",
     "frage_text": "Welche Schaltung könnte für die Tiefpassfilterung in einem Mikrofonverstärker eingesetzt werden?",
     "antworten": [
-      "B C D ED211 Was stellt die folgende Schaltung dar? 𝑈E 𝑈A A Hochpass",
-      "Tiefpass",
-      "Bandpass",
-      "Sperrkreis"
+      "Schaltung A",
+      "Schaltung B",
+      "Schaltung C",
+      "Schaltung D"
     ],
     "richtige_antwort": 0,
     "erklaerung": "Musterlösung: „B C D ED211 Was stellt die folgende Schaltung dar? 𝑈E 𝑈A A Hochpass“\n\n💡 Fachlicher Hintergrund (Schwingkreise & HF-Filter):\nBei der Resonanzfrequenz heben sich induktiver und kapazitiver Blindwiderstand gegenseitig auf.\n\n📐 Formel / Regel: f₀ = 1 / (2 · π · √(L · C));  Tiefpass dämpft Frequenzen f > f_grenz\n\n📌 Merksatz: Reihenresonanz saugt durch (minimaler Widerstand), Parallelresonanz sperrt ab (maximaler Widerstand)!",
-    "bild_svg": null
+    "bild_svg": "question_images/ED210.png"
   },
   {
     "id": "ED212",
     "kategorie": "Technik",
     "topic_id": "top_technik_ed2",
-    "frage_text": "Was stellt die folgende Schaltung dar? 𝑈E 𝑈A",
+    "frage_text": "Was stellt die folgende Schaltung dar?",
     "antworten": [
       "Tiefpass",
       "Hochpass",
@@ -8337,7 +8337,7 @@
     ],
     "richtige_antwort": 1,
     "erklaerung": "Musterlösung: „Hochpass“\n\n💡 Fachlicher Hintergrund (Schwingkreise & HF-Filter):\nBei der Resonanzfrequenz heben sich induktiver und kapazitiver Blindwiderstand gegenseitig auf.\n\n📐 Formel / Regel: f₀ = 1 / (2 · π · √(L · C));  Tiefpass dämpft Frequenzen f > f_grenz\n\n📌 Merksatz: Reihenresonanz saugt durch (minimaler Widerstand), Parallelresonanz sperrt ab (maximaler Widerstand)!",
-    "bild_svg": null
+    "bild_svg": "question_images/ED212.png"
   },
   {
     "id": "ED213",
@@ -8345,20 +8345,20 @@
     "topic_id": "top_technik_ed2",
     "frage_text": "Welche Schaltung stellt ein Hochpassfilter dar?",
     "antworten": [
-      "B C D ED214 Was stellt die folgende Schaltung dar? 𝑈E 𝑈A A Sperrkreis",
-      "Saugkreis",
-      "Tiefpass",
-      "Bandpass"
+      "Schaltung A",
+      "Schaltung B",
+      "Schaltung C",
+      "Schaltung D"
     ],
     "richtige_antwort": 0,
     "erklaerung": "Musterlösung: „B C D ED214 Was stellt die folgende Schaltung dar? 𝑈E 𝑈A A Sperrkreis“\n\n💡 Fachlicher Hintergrund (Schwingkreise & HF-Filter):\nBei der Resonanzfrequenz heben sich induktiver und kapazitiver Blindwiderstand gegenseitig auf.\n\n📐 Formel / Regel: f₀ = 1 / (2 · π · √(L · C));  Tiefpass dämpft Frequenzen f > f_grenz\n\n📌 Merksatz: Reihenresonanz saugt durch (minimaler Widerstand), Parallelresonanz sperrt ab (maximaler Widerstand)!",
-    "bild_svg": null
+    "bild_svg": "question_images/ED213.png"
   },
   {
     "id": "ED215",
     "kategorie": "Technik",
     "topic_id": "top_technik_ed2",
-    "frage_text": "Was stellt die folgende Schaltung dar? 𝑈E 𝑈A",
+    "frage_text": "Was stellt die folgende Schaltung dar?",
     "antworten": [
       "Sperrkreis",
       "Saugkreis",
@@ -8367,7 +8367,7 @@
     ],
     "richtige_antwort": 1,
     "erklaerung": "Musterlösung: „Saugkreis“\n\n💡 Fachlicher Hintergrund (Schwingkreise & HF-Filter):\nBei der Resonanzfrequenz heben sich induktiver und kapazitiver Blindwiderstand gegenseitig auf.\n\n📐 Formel / Regel: f₀ = 1 / (2 · π · √(L · C));  Tiefpass dämpft Frequenzen f > f_grenz\n\n📌 Merksatz: Reihenresonanz saugt durch (minimaler Widerstand), Parallelresonanz sperrt ab (maximaler Widerstand)!",
-    "bild_svg": null
+    "bild_svg": "question_images/ED215.png"
   },
   {
     "id": "ED216",
@@ -8442,7 +8442,7 @@
     ],
     "richtige_antwort": 0,
     "erklaerung": "Musterlösung: „B C D 4.4.4 Verstärker ED401 Was versteht man in der Elektronik unter Leistungsverstärkung? A Die Ausgangsleistung ist gegenüber der Eingangsleistung größer und dazu ist eine Spannungsquelle notwendig.“\n\n💡 Fachlicher Hintergrund (Strom- & Spannungsversorgung):\nNetzteile wandeln 230 V Netzwechselspannung in eine stabile, brummarme Gleichspannung um.\n\n📐 Formel / Regel: U_peak = √2 · U_eff;  Restbrumm ΔU ≈ I_L / (f_brumm · C)\n\n📌 Merksatz: Hinter der Graetzbrücke beträgt die Brummfrequenz 100 Hz (doppelte Netzfrequenz)!",
-    "bild_svg": null
+    "bild_svg": "question_images/ED304.png"
   },
   {
     "id": "ED402",
@@ -8457,7 +8457,7 @@
     ],
     "richtige_antwort": 1,
     "erklaerung": "Musterlösung: „NF-Verstärker“\n\n💡 Fachlicher Hintergrund (Verstärkerstufen (NF & HF)):\nVerstärker heben schwache Signale an und werden je nach Ruhestrom in Klassen (A, AB, B, C) eingeteilt.\n\n📐 Formel / Regel: Verstärkung: V = U_aus / U_ein;  Verstärkungsmaß in dB: G = 20 · log₁₀(U_aus / U_ein)\n\n📌 Merksatz: Klasse AB für sauberes SSB; Klasse C für sparsames FM und CW!",
-    "bild_svg": null
+    "bild_svg": "question_images/ED402.png"
   },
   {
     "id": "ED403",
@@ -8592,7 +8592,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „𝑡 Amplitude“\n\n💡 Fachlicher Hintergrund (Modulationsverfahren Übersicht):\nModulation prägt ein niederfrequentes Nutzsignal auf eine hochfrequente Trägerwelle auf.\n\n📐 Formel / Regel: Träger s(t) = A(t) · cos(2π f(t) t + φ(t))\n\n📌 Merksatz: Ohne Modulation sendet man nur einen leeren, stummen Träger!",
-    "bild_svg": null
+    "bild_svg": "question_images/EE101.png"
   },
   {
     "id": "EE201",
@@ -8712,7 +8712,7 @@
     ],
     "richtige_antwort": 3,
     "erklaerung": "Musterlösung: „FM“\n\n💡 Fachlicher Hintergrund (Frequenz- & Phasenmodulation (FM/PM)):\nFM moduliert die Frequenz des Trägers bei konstanter Amplitude und ist immun gegen Amplitudenstörungen.\n\n📐 Formel / Regel: Carson-Formel: B_FM = 2 · (Δf + f_NF_max);  m = Δf / f_NF_max\n\n📌 Merksatz: FM schneidet Knackstörungen ab, braucht aber mehr Bandbreite als SSB!",
-    "bild_svg": null
+    "bild_svg": "question_images/EE301.png"
   },
   {
     "id": "EE302",
@@ -8877,7 +8877,7 @@
     ],
     "richtige_antwort": 3,
     "erklaerung": "Musterlösung: „𝑡 Amplitude“\n\n💡 Fachlicher Hintergrund (Digitale Modulationsverfahren & Digimodes):\nDigitale Modi übertragen diskrete Bitsignale mit hoher Störresistenz und automatischer Fehlerkorrektur.\n\n📐 Formel / Regel: Baudrate = Symbolwechsel/s; Bitrate = Baudrate · Bits/Symbol\n\n📌 Merksatz: FT8 hört noch dort, wo das menschliche Ohr nur noch Rauschen wahrnimmt!",
-    "bild_svg": null
+    "bild_svg": "question_images/EE406.png"
   },
   {
     "id": "EE407",
@@ -8892,7 +8892,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „𝑡 Amplitude“\n\n💡 Fachlicher Hintergrund (Digitale Modulationsverfahren & Digimodes):\nDigitale Modi übertragen diskrete Bitsignale mit hoher Störresistenz und automatischer Fehlerkorrektur.\n\n📐 Formel / Regel: Baudrate = Symbolwechsel/s; Bitrate = Baudrate · Bits/Symbol\n\n📌 Merksatz: FT8 hört noch dort, wo das menschliche Ohr nur noch Rauschen wahrnimmt!",
-    "bild_svg": null
+    "bild_svg": "question_images/EE407.png"
   },
   {
     "id": "EE408",
@@ -9027,7 +9027,7 @@
     ],
     "richtige_antwort": 0,
     "erklaerung": "Musterlösung: „Detektorempfänger“\n\n💡 Fachlicher Hintergrund (Empfängerkonzepte & Direktmischer):\nDirektmischempfänger setzen das Antennensignal in einem Schritt direkt in das hörbare Niederfrequenzband um.\n\n📐 Formel / Regel: f_NF = |f_HF - f_LO|;  Für f_LO = f_HF ist f_ZF = 0 Hz\n\n📌 Merksatz: Direktmischer hat ZF = 0: Kein ZF-Filter nötig, aber Nachbarkanal schlägt durch!",
-    "bild_svg": null
+    "bild_svg": "question_images/EF101.png"
   },
   {
     "id": "EF102",
@@ -9057,7 +9057,7 @@
     ],
     "richtige_antwort": 1,
     "erklaerung": "Musterlösung: „10,7 MHz und 52,7 MHz“\n\n💡 Fachlicher Hintergrund (Überlagerungsempfänger (Superhet) & Spiegelfrequenz):\nDer Superhet mischt das Empfangssignal auf eine feste Zwischenfrequenz, um optimale Selektion und Verstärkung zu erzielen.\n\n📐 Formel / Regel: f_ZF = |f_E - f_LO|;  f_Spiegel = f_E ± 2 · f_ZF\n\n📌 Merksatz: Spiegelfrequenz liegt immer um den doppelten Zwischenfrequenzabstand entfernt!",
-    "bild_svg": null
+    "bild_svg": "question_images/EF201.png"
   },
   {
     "id": "EF202",
@@ -9177,7 +9177,7 @@
     ],
     "richtige_antwort": 1,
     "erklaerung": "Musterlösung: „Zur Hilfsträgererzeugung, um CW- oder SSBSignale hörbar zu machen“\n\n💡 Fachlicher Hintergrund (Überlagerungsempfänger (Superhet) & Spiegelfrequenz):\nDer Superhet mischt das Empfangssignal auf eine feste Zwischenfrequenz, um optimale Selektion und Verstärkung zu erzielen.\n\n📐 Formel / Regel: f_ZF = |f_E - f_LO|;  f_Spiegel = f_E ± 2 · f_ZF\n\n📌 Merksatz: Spiegelfrequenz liegt immer um den doppelten Zwischenfrequenzabstand entfernt!",
-    "bild_svg": null
+    "bild_svg": "question_images/EF209.png"
   },
   {
     "id": "EF210",
@@ -9282,7 +9282,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „𝑓 𝑈“\n\n💡 Fachlicher Hintergrund (Überlagerungsempfänger (Superhet) & Spiegelfrequenz):\nDer Superhet mischt das Empfangssignal auf eine feste Zwischenfrequenz, um optimale Selektion und Verstärkung zu erzielen.\n\n📐 Formel / Regel: f_ZF = |f_E - f_LO|;  f_Spiegel = f_E ± 2 · f_ZF\n\n📌 Merksatz: Spiegelfrequenz liegt immer um den doppelten Zwischenfrequenzabstand entfernt!",
-    "bild_svg": null
+    "bild_svg": "question_images/EF216.png"
   },
   {
     "id": "EF217",
@@ -9327,7 +9327,7 @@
     ],
     "richtige_antwort": 0,
     "erklaerung": "Musterlösung: „Punkt 4“\n\n💡 Fachlicher Hintergrund (Überlagerungsempfänger (Superhet) & Spiegelfrequenz):\nDer Superhet mischt das Empfangssignal auf eine feste Zwischenfrequenz, um optimale Selektion und Verstärkung zu erzielen.\n\n📐 Formel / Regel: f_ZF = |f_E - f_LO|;  f_Spiegel = f_E ± 2 · f_ZF\n\n📌 Merksatz: Spiegelfrequenz liegt immer um den doppelten Zwischenfrequenzabstand entfernt!",
-    "bild_svg": null
+    "bild_svg": "question_images/EF219.png"
   },
   {
     "id": "EF301",
@@ -9342,7 +9342,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „12,1 MHz“\n\n💡 Fachlicher Hintergrund (Senderaufbau & Senderstufen):\nEin Sender generiert ein frequenzstabiles Signal, moduliert es und verstärkt es zur Abstrahlung.\n\n📐 Formel / Regel: P_Sender = P_Träger + P_Seitenbänder;  Oberwellendämpfung ≥ 50 dB gefordert\n\n📌 Merksatz: Pufferstufe schützt den Oszillator, Tiefpass schützt das Nachbarband!",
-    "bild_svg": null
+    "bild_svg": "question_images/EF301.png"
   },
   {
     "id": "EF302",
@@ -9357,7 +9357,7 @@
     ],
     "richtige_antwort": 3,
     "erklaerung": "Musterlösung: „3,560 MHz“\n\n💡 Fachlicher Hintergrund (Senderaufbau & Senderstufen):\nEin Sender generiert ein frequenzstabiles Signal, moduliert es und verstärkt es zur Abstrahlung.\n\n📐 Formel / Regel: P_Sender = P_Träger + P_Seitenbänder;  Oberwellendämpfung ≥ 50 dB gefordert\n\n📌 Merksatz: Pufferstufe schützt den Oszillator, Tiefpass schützt das Nachbarband!",
-    "bild_svg": null
+    "bild_svg": "question_images/EF302.png"
   },
   {
     "id": "EF303",
@@ -9372,7 +9372,7 @@
     ],
     "richtige_antwort": 0,
     "erklaerung": "Musterlösung: „14,04 MHz“\n\n💡 Fachlicher Hintergrund (Senderaufbau & Senderstufen):\nEin Sender generiert ein frequenzstabiles Signal, moduliert es und verstärkt es zur Abstrahlung.\n\n📐 Formel / Regel: P_Sender = P_Träger + P_Seitenbänder;  Oberwellendämpfung ≥ 50 dB gefordert\n\n📌 Merksatz: Pufferstufe schützt den Oszillator, Tiefpass schützt das Nachbarband!",
-    "bild_svg": null
+    "bild_svg": "question_images/EF303.png"
   },
   {
     "id": "EF304",
@@ -9432,7 +9432,7 @@
     ],
     "richtige_antwort": 1,
     "erklaerung": "Musterlösung: „𝑓 kHz 𝑈A 0,3 3,0“\n\n💡 Fachlicher Hintergrund (Senderaufbau & Senderstufen):\nEin Sender generiert ein frequenzstabiles Signal, moduliert es und verstärkt es zur Abstrahlung.\n\n📐 Formel / Regel: P_Sender = P_Träger + P_Seitenbänder;  Oberwellendämpfung ≥ 50 dB gefordert\n\n📌 Merksatz: Pufferstufe schützt den Oszillator, Tiefpass schützt das Nachbarband!",
-    "bild_svg": null
+    "bild_svg": "question_images/EF307.png"
   },
   {
     "id": "EF308",
@@ -9447,7 +9447,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „ca. 2,5 kHz“\n\n💡 Fachlicher Hintergrund (Senderaufbau & Senderstufen):\nEin Sender generiert ein frequenzstabiles Signal, moduliert es und verstärkt es zur Abstrahlung.\n\n📐 Formel / Regel: P_Sender = P_Träger + P_Seitenbänder;  Oberwellendämpfung ≥ 50 dB gefordert\n\n📌 Merksatz: Pufferstufe schützt den Oszillator, Tiefpass schützt das Nachbarband!",
-    "bild_svg": null
+    "bild_svg": "question_images/EF308.png"
   },
   {
     "id": "EF309",
@@ -9462,7 +9462,7 @@
     ],
     "richtige_antwort": 0,
     "erklaerung": "Musterlösung: „Punkt 2“\n\n💡 Fachlicher Hintergrund (Senderaufbau & Senderstufen):\nEin Sender generiert ein frequenzstabiles Signal, moduliert es und verstärkt es zur Abstrahlung.\n\n📐 Formel / Regel: P_Sender = P_Träger + P_Seitenbänder;  Oberwellendämpfung ≥ 50 dB gefordert\n\n📌 Merksatz: Pufferstufe schützt den Oszillator, Tiefpass schützt das Nachbarband!",
-    "bild_svg": null
+    "bild_svg": "question_images/EF309.png"
   },
   {
     "id": "EF310",
@@ -9597,7 +9597,7 @@
     ],
     "richtige_antwort": 1,
     "erklaerung": "Musterlösung: „Einen Transverter für das 2 m-Band“\n\n💡 Fachlicher Hintergrund (Konverter & Transverter):\nTransverter setzen Sende- und Empfangssignale zwischen einem Basisbandgerät und einem höheren Frequenzband um.\n\n📐 Formel / Regel: f_Ziel = f_Basis + f_LO\n\n📌 Merksatz: Transverter macht aus dem Kurzwellengerät eine vollwertige Mikrowellenstation!",
-    "bild_svg": null
+    "bild_svg": "question_images/EF503.png"
   },
   {
     "id": "EF504",
@@ -9612,7 +9612,7 @@
     ],
     "richtige_antwort": 0,
     "erklaerung": "Musterlösung: „Einen 13 cm-Konverter für einen VHF-Sender“\n\n💡 Fachlicher Hintergrund (Konverter & Transverter):\nTransverter setzen Sende- und Empfangssignale zwischen einem Basisbandgerät und einem höheren Frequenzband um.\n\n📐 Formel / Regel: f_Ziel = f_Basis + f_LO\n\n📌 Merksatz: Transverter macht aus dem Kurzwellengerät eine vollwertige Mikrowellenstation!",
-    "bild_svg": null
+    "bild_svg": "question_images/EF504.png"
   },
   {
     "id": "EF505",
@@ -9642,7 +9642,7 @@
     ],
     "richtige_antwort": 0,
     "erklaerung": "Musterlösung: „1: A/D-Umsetzer, 2: D/A-Umsetzer“\n\n💡 Fachlicher Hintergrund (Digitale Signalverarbeitung & SDR):\nSoftware Defined Radios (SDR) digitalisieren Hochfrequenz direkt und verlagern Filterung und Modulation in Software.\n\n📐 Formel / Regel: Nyquist-Shannon-Theorem: Abtastrate f_Abtast ≥ 2 · f_max\n\n📌 Merksatz: Software Defined Radio: Gestern lötete man Filterquarze, heute programmiert man DSP-Filter!",
-    "bild_svg": null
+    "bild_svg": "question_images/EF601.png"
   },
   {
     "id": "EF602",
@@ -9717,7 +9717,7 @@
     ],
     "richtige_antwort": 1,
     "erklaerung": "Musterlösung: „Endgespeiste Antenne mit einfachem Anpassglied“\n\n💡 Fachlicher Hintergrund (Antennenbauformen: Dipol, Vertikal, Loops & Richtantennen):\nJe nach Einsatzzweck nutzt der Funkamateur resonante Halbwellendipole, Vertikalantennen, Schleifenantennen oder Richtstrahler.\n\n📐 Formel / Regel: Dipol-Länge: l [m] ≈ 142,5 / f [MHz]; Loop-Umfang ≈ 300 / f [MHz]; 5/8-λ strahlt flacher als λ/4\n\n📌 Merksatz: Dipol strahlt quer zum Draht, Vertikal rundherum, Parabol bündelt Mikrowellen scharf wie ein Scheinwerfer!",
-    "bild_svg": null
+    "bild_svg": "question_images/EG103.png"
   },
   {
     "id": "EG104",
@@ -9732,7 +9732,7 @@
     ],
     "richtige_antwort": 3,
     "erklaerung": "Musterlösung: „Fuchs-Antenne“\n\n💡 Fachlicher Hintergrund (Antennenbauformen: Dipol, Vertikal, Loops & Richtantennen):\nJe nach Einsatzzweck nutzt der Funkamateur resonante Halbwellendipole, Vertikalantennen, Schleifenantennen oder Richtstrahler.\n\n📐 Formel / Regel: Dipol-Länge: l [m] ≈ 142,5 / f [MHz]; Loop-Umfang ≈ 300 / f [MHz]; 5/8-λ strahlt flacher als λ/4\n\n📌 Merksatz: Dipol strahlt quer zum Draht, Vertikal rundherum, Parabol bündelt Mikrowellen scharf wie ein Scheinwerfer!",
-    "bild_svg": null
+    "bild_svg": "question_images/EG104.png"
   },
   {
     "id": "EG105",
@@ -9837,7 +9837,7 @@
     ],
     "richtige_antwort": 0,
     "erklaerung": "Musterlösung: „1 Reflektor, 2 Strahler und 3 Direktor.“\n\n💡 Fachlicher Hintergrund (Antennenbauformen: Dipol, Vertikal, Loops & Richtantennen):\nJe nach Einsatzzweck nutzt der Funkamateur resonante Halbwellendipole, Vertikalantennen, Schleifenantennen oder Richtstrahler.\n\n📐 Formel / Regel: Dipol-Länge: l [m] ≈ 142,5 / f [MHz]; Loop-Umfang ≈ 300 / f [MHz]; 5/8-λ strahlt flacher als λ/4\n\n📌 Merksatz: Dipol strahlt quer zum Draht, Vertikal rundherum, Parabol bündelt Mikrowellen scharf wie ein Scheinwerfer!",
-    "bild_svg": null
+    "bild_svg": "question_images/EG111.png"
   },
   {
     "id": "EG112",
@@ -10092,7 +10092,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „B C D EG215 Für welche Antenne ist dieses Strahlungsdiagramm typisch? A Halbwellendipol“\n\n💡 Fachlicher Hintergrund (Antennenmerkmale (Verkürzungsfaktor, Impedanz, Diagramm & Gewinn)):\nVerkürzungsfaktor, Fußpunktimpedanz, Resonanz, Polarisation und Richtwirkung bestimmen die Abstrahleigenschaften jeder Antenne.\n\n📐 Formel / Regel: l [m] = 0,95 · (λ / 2); Z_Dipol ≈ 73 Ω; Z_Faltdipol ≈ 240–300 Ω; G [dBi] = G [dBd] + 2,15 dB\n\n📌 Merksatz: In der Mitte Strombauch (niederohmig ~73 Ω), am Ende Spannungsbauch (hochohmig); dBi ist immer um 2,15 dB größer als dBd!",
-    "bild_svg": null
+    "bild_svg": "question_images/EG214.png"
   },
   {
     "id": "EG216",
@@ -10107,7 +10107,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „Groundplane“\n\n💡 Fachlicher Hintergrund (Antennenmerkmale (Verkürzungsfaktor, Impedanz, Diagramm & Gewinn)):\nVerkürzungsfaktor, Fußpunktimpedanz, Resonanz, Polarisation und Richtwirkung bestimmen die Abstrahleigenschaften jeder Antenne.\n\n📐 Formel / Regel: l [m] = 0,95 · (λ / 2); Z_Dipol ≈ 73 Ω; Z_Faltdipol ≈ 240–300 Ω; G [dBi] = G [dBd] + 2,15 dB\n\n📌 Merksatz: In der Mitte Strombauch (niederohmig ~73 Ω), am Ende Spannungsbauch (hochohmig); dBi ist immer um 2,15 dB größer als dBd!",
-    "bild_svg": null
+    "bild_svg": "question_images/EG216.png"
   },
   {
     "id": "EG217",
@@ -10122,7 +10122,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „eine Richtantenne.“\n\n💡 Fachlicher Hintergrund (Antennenmerkmale (Verkürzungsfaktor, Impedanz, Diagramm & Gewinn)):\nVerkürzungsfaktor, Fußpunktimpedanz, Resonanz, Polarisation und Richtwirkung bestimmen die Abstrahleigenschaften jeder Antenne.\n\n📐 Formel / Regel: l [m] = 0,95 · (λ / 2); Z_Dipol ≈ 73 Ω; Z_Faltdipol ≈ 240–300 Ω; G [dBi] = G [dBd] + 2,15 dB\n\n📌 Merksatz: In der Mitte Strombauch (niederohmig ~73 Ω), am Ende Spannungsbauch (hochohmig); dBi ist immer um 2,15 dB größer als dBd!",
-    "bild_svg": null
+    "bild_svg": "question_images/EG217.png"
   },
   {
     "id": "EG218",
@@ -10137,7 +10137,7 @@
     ],
     "richtige_antwort": 1,
     "erklaerung": "Musterlösung: „Yagi-Uda“\n\n💡 Fachlicher Hintergrund (Antennenmerkmale (Verkürzungsfaktor, Impedanz, Diagramm & Gewinn)):\nVerkürzungsfaktor, Fußpunktimpedanz, Resonanz, Polarisation und Richtwirkung bestimmen die Abstrahleigenschaften jeder Antenne.\n\n📐 Formel / Regel: l [m] = 0,95 · (λ / 2); Z_Dipol ≈ 73 Ω; Z_Faltdipol ≈ 240–300 Ω; G [dBi] = G [dBd] + 2,15 dB\n\n📌 Merksatz: In der Mitte Strombauch (niederohmig ~73 Ω), am Ende Spannungsbauch (hochohmig); dBi ist immer um 2,15 dB größer als dBd!",
-    "bild_svg": null
+    "bild_svg": "question_images/EG218.png"
   },
   {
     "id": "EG219",
@@ -10317,7 +10317,7 @@
     ],
     "richtige_antwort": 3,
     "erklaerung": "Musterlösung: „5 dB“\n\n💡 Fachlicher Hintergrund (Übertragungsleitungen & Wellenwiderstand):\nDer Wellenwiderstand eines HF-Kabels hängt rein von Geometrie und Dielektrikum ab, nicht von der Kabellänge.\n\n📐 Formel / Regel: Z₀ = √(L' / C');  Elektrische Länge l_el = l_geo / V_k\n\n📌 Merksatz: Dünnes RG-58 taugt für Kurzwelle, auf 70 cm schluckt es den halben Sender!",
-    "bild_svg": null
+    "bild_svg": "question_images/EG307.png"
   },
   {
     "id": "EG308",
@@ -10512,7 +10512,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „Mantelstrom“\n\n💡 Fachlicher Hintergrund (Antennenanpassung, SWR & Balun):\nFehlanpassung zwischen Antenne und Kabel erzeugt stehende Wellen (SWR) und reflektierte Leistung.\n\n📐 Formel / Regel: s = U_max / U_min = Z_Last / Z₀ (für Z_Last > Z₀);  Reflexionsfaktor r = (s - 1) / (s + 1)\n\n📌 Merksatz: Balun = BALanced to UNbalanced; blockiert Mantelwellen und verhindert HF im Shack!",
-    "bild_svg": null
+    "bild_svg": "question_images/EG404.png"
   },
   {
     "id": "EG405",
@@ -10572,7 +10572,7 @@
     ],
     "richtige_antwort": 0,
     "erklaerung": "Musterlösung: „lassen sich Mantelwellen dämpfen.“\n\n💡 Fachlicher Hintergrund (Antennenanpassung, SWR & Balun):\nFehlanpassung zwischen Antenne und Kabel erzeugt stehende Wellen (SWR) und reflektierte Leistung.\n\n📐 Formel / Regel: s = U_max / U_min = Z_Last / Z₀ (für Z_Last > Z₀);  Reflexionsfaktor r = (s - 1) / (s + 1)\n\n📌 Merksatz: Balun = BALanced to UNbalanced; blockiert Mantelwellen und verhindert HF im Shack!",
-    "bild_svg": null
+    "bild_svg": "question_images/EG408.png"
   },
   {
     "id": "EG501",
@@ -11232,7 +11232,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „𝑅 A V“\n\n💡 Fachlicher Hintergrund (Multimeter (Spannung, Strom & Widerstand)):\nSpannungsmesser werden parallel zur Messstelle geschaltet, Strommesser stets in Reihe in den aufgetrennten Kreis.\n\n📐 Formel / Regel: Innenwiderstand: R_i,Volt -> ∞;  R_i,Ampere -> 0\n\n📌 Merksatz: Spannung messen: Parallel dranhalten. Strom messen: Leitung auftrennen und dazwischenhängen!",
-    "bild_svg": null
+    "bild_svg": "question_images/EI102.png"
   },
   {
     "id": "EI103",
@@ -11247,7 +11247,7 @@
     ],
     "richtige_antwort": 1,
     "erklaerung": "Musterlösung: „2,9 V“\n\n💡 Fachlicher Hintergrund (Multimeter (Spannung, Strom & Widerstand)):\nSpannungsmesser werden parallel zur Messstelle geschaltet, Strommesser stets in Reihe in den aufgetrennten Kreis.\n\n📐 Formel / Regel: Innenwiderstand: R_i,Volt -> ∞;  R_i,Ampere -> 0\n\n📌 Merksatz: Spannung messen: Parallel dranhalten. Strom messen: Leitung auftrennen und dazwischenhängen!",
-    "bild_svg": null
+    "bild_svg": "question_images/EI103.png"
   },
   {
     "id": "EI104",
@@ -11262,7 +11262,7 @@
     ],
     "richtige_antwort": 0,
     "erklaerung": "Musterlösung: „88 V“\n\n💡 Fachlicher Hintergrund (Multimeter (Spannung, Strom & Widerstand)):\nSpannungsmesser werden parallel zur Messstelle geschaltet, Strommesser stets in Reihe in den aufgetrennten Kreis.\n\n📐 Formel / Regel: Innenwiderstand: R_i,Volt -> ∞;  R_i,Ampere -> 0\n\n📌 Merksatz: Spannung messen: Parallel dranhalten. Strom messen: Leitung auftrennen und dazwischenhängen!",
-    "bild_svg": null
+    "bild_svg": "question_images/EI104.png"
   },
   {
     "id": "EI201",
@@ -11367,7 +11367,7 @@
     ],
     "richtige_antwort": 2,
     "erklaerung": "Musterlösung: „4 ms“\n\n💡 Fachlicher Hintergrund (Oszilloskope & Signalformanalyse):\nDas Oszilloskop stellt den zeitlichen Verlauf elektrischer Spannungen direkt zweidimensional auf dem Schirm dar.\n\n📐 Formel / Regel: Periodendauer T = Abszissenteile · Time/Div;  f = 1 / T\n\n📌 Merksatz: Oszilloskop = Das Auge des Funkamateurs in die Schaltung!",
-    "bild_svg": null
+    "bild_svg": "question_images/EI301.png"
   },
   {
     "id": "EI302",
@@ -11382,7 +11382,7 @@
     ],
     "richtige_antwort": 1,
     "erklaerung": "Musterlösung: „250 Hz“\n\n💡 Fachlicher Hintergrund (Oszilloskope & Signalformanalyse):\nDas Oszilloskop stellt den zeitlichen Verlauf elektrischer Spannungen direkt zweidimensional auf dem Schirm dar.\n\n📐 Formel / Regel: Periodendauer T = Abszissenteile · Time/Div;  f = 1 / T\n\n📌 Merksatz: Oszilloskop = Das Auge des Funkamateurs in die Schaltung!",
-    "bild_svg": null
+    "bild_svg": "question_images/EI302.png"
   },
   {
     "id": "EI303",
@@ -11397,7 +11397,7 @@
     ],
     "richtige_antwort": 1,
     "erklaerung": "Musterlösung: „200 µs.“\n\n💡 Fachlicher Hintergrund (Oszilloskope & Signalformanalyse):\nDas Oszilloskop stellt den zeitlichen Verlauf elektrischer Spannungen direkt zweidimensional auf dem Schirm dar.\n\n📐 Formel / Regel: Periodendauer T = Abszissenteile · Time/Div;  f = 1 / T\n\n📌 Merksatz: Oszilloskop = Das Auge des Funkamateurs in die Schaltung!",
-    "bild_svg": null
+    "bild_svg": "question_images/EI303.png"
   },
   {
     "id": "EI304",
@@ -11487,7 +11487,7 @@
     ],
     "richtige_antwort": 3,
     "erklaerung": "Musterlösung: „Punkt 1“\n\n💡 Fachlicher Hintergrund (Stehwellenmessgeräte & Richtkoppler):\nEin SWR-Meter trennt vorlaufende und rücklaufende Welle über Richtkoppler zur Überwachung der Antennenanpassung.\n\n📐 Formel / Regel: s = (1 + √(P_rück / P_vor)) / (1 - √(P_rück / P_vor))\n\n📌 Merksatz: Rücklaufende Leistung nahe Null = Perfektes SWR von 1,0!",
-    "bild_svg": null
+    "bild_svg": "question_images/EI405.png"
   },
   {
     "id": "EI501",
@@ -11997,7 +11997,7 @@
     ],
     "richtige_antwort": 1,
     "erklaerung": "Musterlösung: „𝑓 Leistung 30 MHz“\n\n💡 Fachlicher Hintergrund (Unerwünschte Aussendungen & Entstörmaßnahmen):\nKlappferrite, Mantelwellensperren und Tiefpassfilter unterdrücken Störungen effektiv am Entstehungsort.\n\n📐 Formel / Regel: Oberwellen: f_n = n · f_Grundwelle (n = 2, 3, 4 ...)\n\n📌 Merksatz: Ein Tiefpass lässt die Grundwelle durch und schneidet alle Oberwellen gnadenlos ab!",
-    "bild_svg": null
+    "bild_svg": "question_images/EJ208.png"
   },
   {
     "id": "EJ209",

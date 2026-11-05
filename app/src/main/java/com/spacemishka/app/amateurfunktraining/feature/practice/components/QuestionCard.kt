@@ -116,6 +116,13 @@ fun QuestionCard(
                 ),
                 color = MaterialTheme.colorScheme.onSurface
             )
+
+            if (!question.imageSvg.isNullOrBlank()) {
+                QuestionImageView(
+                    imagePath = question.imageSvg,
+                    questionId = question.id
+                )
+            }
         }
     }
 }

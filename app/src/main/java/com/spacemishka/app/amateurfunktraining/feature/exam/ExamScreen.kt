@@ -66,6 +66,7 @@ import androidx.compose.ui.unit.sp
 import com.spacemishka.app.amateurfunktraining.core.exam.ExamTimerManager
 import com.spacemishka.app.amateurfunktraining.core.model.Category
 import com.spacemishka.app.amateurfunktraining.core.model.ExamResult
+import com.spacemishka.app.amateurfunktraining.feature.practice.components.QuestionImageView
 import com.spacemishka.app.amateurfunktraining.ui.layout.isTabletLayout
 import com.spacemishka.app.amateurfunktraining.ui.theme.CategoryBetrieb
 import com.spacemishka.app.amateurfunktraining.ui.theme.CategoryTechnik
@@ -309,6 +310,13 @@ fun ExamScreen(
                                             ),
                                             color = MaterialTheme.colorScheme.onSurface
                                         )
+
+                                        if (!question.imageSvg.isNullOrBlank()) {
+                                            QuestionImageView(
+                                                imagePath = question.imageSvg,
+                                                questionId = question.id
+                                            )
+                                        }
                                     }
                                 }
 
@@ -428,6 +436,13 @@ fun ExamScreen(
                                     ),
                                     color = MaterialTheme.colorScheme.onSurface
                                 )
+
+                                if (!question.imageSvg.isNullOrBlank()) {
+                                    QuestionImageView(
+                                        imagePath = question.imageSvg,
+                                        questionId = question.id
+                                    )
+                                }
                             }
                         }
 
