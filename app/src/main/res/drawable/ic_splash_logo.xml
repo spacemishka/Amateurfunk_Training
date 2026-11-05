@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="160dp"
+    android:height="160dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Subtle Radial Glow around Emitter -->
+    <path
+        android:pathData="M54,30m-20,0a20,20 0,1 1,40 0a20,20 0,1 1,-40 0"
+        android:fillColor="#1538BDF8" />
+
+    <!-- Classic Amateur Radio Diamond Rhombus Badge -->
+    <path
+        android:pathData="M54,19 L80,50 L54,85 L28,50 Z"
+        android:fillColor="#2A1E5BB0"
+        android:strokeColor="#9038BDF8"
+        android:strokeWidth="1.8"
+        android:strokeLineJoin="round" />
+
+    <!-- Radio Waves: Inner (radius 7.5) -->
+    <path
+        android:pathData="M48.7,24.7 A7.5,7.5 0 0,0 48.7,35.3"
+        android:strokeColor="#38BDF8"
+        android:strokeWidth="2.2"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+    <path
+        android:pathData="M59.3,24.7 A7.5,7.5 0 0,1 59.3,35.3"
+        android:strokeColor="#38BDF8"
+        android:strokeWidth="2.2"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+
+    <!-- Radio Waves: Middle (radius 14.0) -->
+    <path
+        android:pathData="M44.1,20.1 A14,14 0 0,0 44.1,39.9"
+        android:strokeColor="#C038BDF8"
+        android:strokeWidth="2.2"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+    <path
+        android:pathData="M63.9,20.1 A14,14 0 0,1 63.9,39.9"
+        android:strokeColor="#C038BDF8"
+        android:strokeWidth="2.2"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+
+    <!-- Radio Waves: Outer (radius 20.5) -->
+    <path
+        android:pathData="M39.5,15.5 A20.5,20.5 0 0,0 39.5,44.5"
+        android:strokeColor="#8038BDF8"
+        android:strokeWidth="2.0"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+    <path
+        android:pathData="M68.5,15.5 A20.5,20.5 0 0,1 68.5,44.5"
+        android:strokeColor="#8038BDF8"
+        android:strokeWidth="2.0"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+
+    <!-- Central Vertical Spine -->
+    <path
+        android:pathData="M54,32 L54,72"
+        android:strokeColor="#38BDF8"
+        android:strokeWidth="1.6"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+
+    <!-- Mast Main Legs -->
+    <path
+        android:pathData="M52,34 L42,72"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2.4"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+    <path
+        android:pathData="M56,34 L66,72"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2.4"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+
+    <!-- Mast Cross Bracing & Lattice Rungs -->
+    <path
+        android:pathData="M50,42 L58,42 M50,42 L60.5,51 M58,42 L47.5,51 M47.5,51 L60.5,51 M47.5,51 L63.5,61 M60.5,51 L44.5,61 M44.5,61 L63.5,61 M44.5,61 L66,72 M63.5,61 L42,72"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="#00000000" />
+
+    <!-- Mast Base Plate -->
+    <path
+        android:pathData="M40,72 L68,72"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2.6"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+
+    <!-- Ground Symbol (Massezeichen) -->
+    <path
+        android:pathData="M54,72 L54,76 M48,76 L60,76 M50,78.5 L58,78.5 M52,81 L56,81"
+        android:strokeColor="#38BDF8"
+        android:strokeWidth="2.0"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+
+    <!-- Emitter Beacon Gold Flare -->
+    <path
+        android:pathData="M54,30m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-10 0"
+        android:fillColor="#50F59E0B" />
+    <!-- Emitter Beacon Core Bulb -->
+    <path
+        android:pathData="M54,30m-2.5,0a2.5,2.5 0,1 1,5 0a2.5,2.5 0,1 1,-5 0"
+        android:fillColor="#FFFFFF"
+        android:strokeColor="#F59E0B"
+        android:strokeWidth="1.2" />
+</vector>
+
