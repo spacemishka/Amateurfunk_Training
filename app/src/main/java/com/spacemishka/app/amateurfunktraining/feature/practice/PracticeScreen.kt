@@ -9,12 +9,14 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -68,6 +70,7 @@ import com.spacemishka.app.amateurfunktraining.feature.calculator.CalculatorView
 import com.spacemishka.app.amateurfunktraining.feature.practice.components.AnswerItemVisualState
 import com.spacemishka.app.amateurfunktraining.feature.practice.components.AnswerOptionItem
 import com.spacemishka.app.amateurfunktraining.feature.practice.components.ExplanationBox
+import com.spacemishka.app.amateurfunktraining.ui.layout.isTabletLayout
 import com.spacemishka.app.amateurfunktraining.feature.practice.components.QuestionCard
 import com.spacemishka.app.amateurfunktraining.feature.topic.components.TopicBottomSheet
 import com.spacemishka.app.amateurfunktraining.ui.theme.CorrectGreen
@@ -82,6 +85,7 @@ fun PracticeScreen(
     modifier: Modifier = Modifier
 ) {
     val state by viewModel.uiState.collectAsState()
+    val isTablet = isTabletLayout()
     var showTopicSheet by remember { mutableStateOf(false) }
     var showCalculatorSheet by remember { mutableStateOf(false) }
     val calculatorViewModel: CalculatorViewModel = viewModel()
@@ -152,7 +156,7 @@ fun PracticeScreen(
             )
         },
         bottomBar = {
-            if (!state.isFinished && state.currentQuestion != null) {
+            if (!isTablet && !state.isFinished && state.currentQuestion != null) {
                 Surface(
                     tonalElevation = 6.dp,
                     shadowElevation = 8.dp
@@ -254,79 +258,216 @@ fun PracticeScreen(
                         val question = state.currentQuestion!!
                         val optionLetters = listOf("A", "B", "C", "D")
 
-                        Column(
-                            modifier = Modifier
-                                .fillMaxSize()
-                                .verticalScroll(rememberScrollState())
-                                .padding(vertical = 16.dp),
-                            verticalArrangement = Arrangement.spacedBy(14.dp)
-                        ) {
-                            QuestionCard(
-                                question = question,
-                                leitnerBox = state.currentLeitnerBox,
-                                errorCount = state.currentErrorCount
-                            )
-
-                            Spacer(modifier = Modifier.height(4.dp))
-
-                            question.answers.forEachIndexed { index, answerText ->
-                                val visualState = when {
-                                    !state.isAnswerConfirmed -> {
-                                        if (state.selectedAnswerIndex == index) AnswerItemVisualState.SELECTED_PENDING
-                                        else AnswerItemVisualState.DEFAULT
-                                    }
-                                    index == question.correctAnswerIndex -> AnswerItemVisualState.CORRECT
-                                    state.selectedAnswerIndex == index -> AnswerItemVisualState.WRONG
-                                    else -> AnswerItemVisualState.DIMMED
-                                }
-
-                                AnswerOptionItem(
-                                    optionLetter = optionLetters.getOrElse(index) { "?" },
-                                    optionText = answerText,
-                                    visualState = visualState,
-                                    enabled = !state.isAnswerConfirmed,
-                                    onClick = { viewModel.selectAnswer(index) }
-                                )
-                            }
-
-                            ExplanationBox(
-                                explanation = question.explanation,
-                                visible = state.isAnswerConfirmed
-                            )
-
-                            if (state.isAnswerConfirmed && state.currentTopic != null) {
-                                val currentTopic = state.currentTopic!!
-                                OutlinedButton(
-                                    onClick = {
-                                        showTopicSheet = true
-                                        viewModel.markTopicAsViewed(currentTopic.id)
-                                    },
+                        if (isTablet) {
+                            // Tablet 2-Pane Side-by-Side Layout
+                            Box(
+                                modifier = Modifier
+                                    .fillMaxSize()
+                                    .padding(vertical = 12.dp),
+                                contentAlignment = Alignment.TopCenter
+                            ) {
+                                Row(
                                     modifier = Modifier
-                                        .fillMaxWidth()
-                                        .semantics {
-                                            contentDescription = "Hintergrundwissen: ${currentTopic.title}"
-                                        },
-                                    shape = RoundedCornerShape(12.dp),
-                                    colors = ButtonDefaults.outlinedButtonColors(contentColor = RadioBlue),
-                                    border = BorderStroke(1.5.dp, RadioBlue.copy(alpha = 0.5f))
+                                        .fillMaxSize()
+                                        .widthIn(max = 1300.dp),
+                                    horizontalArrangement = Arrangement.spacedBy(24.dp)
                                 ) {
-                                    Icon(
-                                        imageVector = Icons.Default.Lightbulb,
-                                        contentDescription = null,
-                                        modifier = Modifier.size(18.dp),
-                                        tint = RadioBlue
-                                    )
-                                    Spacer(modifier = Modifier.width(8.dp))
-                                    Text(
-                                        text = "Kurz erklärt: ${currentTopic.title}",
-                                        fontWeight = FontWeight.Bold,
-                                        maxLines = 1,
-                                        overflow = TextOverflow.Ellipsis
-                                    )
+                                    // Left Pane: Frage, Erklärung & Themenwissen
+                                    Column(
+                                        modifier = Modifier
+                                            .weight(1f)
+                                            .fillMaxHeight()
+                                            .verticalScroll(rememberScrollState()),
+                                        verticalArrangement = Arrangement.spacedBy(14.dp)
+                                    ) {
+                                        QuestionCard(
+                                            question = question,
+                                            leitnerBox = state.currentLeitnerBox,
+                                            errorCount = state.currentErrorCount
+                                        )
+
+                                        ExplanationBox(
+                                            explanation = question.explanation,
+                                            visible = state.isAnswerConfirmed
+                                        )
+
+                                        if (state.isAnswerConfirmed && state.currentTopic != null) {
+                                            val currentTopic = state.currentTopic!!
+                                            OutlinedButton(
+                                                onClick = {
+                                                    showTopicSheet = true
+                                                    viewModel.markTopicAsViewed(currentTopic.id)
+                                                },
+                                                modifier = Modifier
+                                                    .fillMaxWidth()
+                                                    .semantics {
+                                                        contentDescription = "Hintergrundwissen: ${currentTopic.title}"
+                                                    },
+                                                shape = RoundedCornerShape(12.dp),
+                                                colors = ButtonDefaults.outlinedButtonColors(contentColor = RadioBlue),
+                                                border = BorderStroke(1.5.dp, RadioBlue.copy(alpha = 0.5f))
+                                            ) {
+                                                Icon(
+                                                    imageVector = Icons.Default.Lightbulb,
+                                                    contentDescription = null,
+                                                    modifier = Modifier.size(18.dp),
+                                                    tint = RadioBlue
+                                                )
+                                                Spacer(modifier = Modifier.width(8.dp))
+                                                Text(
+                                                    text = "Kurz erklärt: ${currentTopic.title}",
+                                                    fontWeight = FontWeight.Bold,
+                                                    maxLines = 1,
+                                                    overflow = TextOverflow.Ellipsis
+                                                )
+                                            }
+                                        }
+
+                                        Spacer(modifier = Modifier.height(24.dp))
+                                    }
+
+                                    // Right Pane: Antwortmöglichkeiten & Nächste Frage Button
+                                    Column(
+                                        modifier = Modifier
+                                            .weight(1.05f)
+                                            .fillMaxHeight()
+                                            .verticalScroll(rememberScrollState()),
+                                        verticalArrangement = Arrangement.spacedBy(12.dp)
+                                    ) {
+                                        question.answers.forEachIndexed { index, answerText ->
+                                            val visualState = when {
+                                                !state.isAnswerConfirmed -> {
+                                                    if (state.selectedAnswerIndex == index) AnswerItemVisualState.SELECTED_PENDING
+                                                    else AnswerItemVisualState.DEFAULT
+                                                }
+                                                index == question.correctAnswerIndex -> AnswerItemVisualState.CORRECT
+                                                state.selectedAnswerIndex == index -> AnswerItemVisualState.WRONG
+                                                else -> AnswerItemVisualState.DIMMED
+                                            }
+
+                                            AnswerOptionItem(
+                                                optionLetter = optionLetters.getOrElse(index) { "?" },
+                                                optionText = answerText,
+                                                visualState = visualState,
+                                                enabled = !state.isAnswerConfirmed,
+                                                onClick = { viewModel.selectAnswer(index) }
+                                            )
+                                        }
+
+                                        Spacer(modifier = Modifier.height(8.dp))
+
+                                        Button(
+                                            onClick = {
+                                                showTopicSheet = false
+                                                viewModel.nextQuestion()
+                                            },
+                                            enabled = state.isAnswerConfirmed,
+                                            modifier = Modifier
+                                                .fillMaxWidth()
+                                                .height(52.dp)
+                                                .semantics {
+                                                    contentDescription = if (state.currentIndex + 1 >= state.totalCount) "Übung abschließen" else "Nächste Frage"
+                                                },
+                                            shape = RoundedCornerShape(12.dp),
+                                            colors = ButtonDefaults.buttonColors(
+                                                containerColor = RadioBlue
+                                            )
+                                        ) {
+                                            Row(
+                                                verticalAlignment = Alignment.CenterVertically,
+                                                horizontalArrangement = Arrangement.spacedBy(8.dp)
+                                            ) {
+                                                Text(
+                                                    text = if (state.currentIndex + 1 >= state.totalCount) "Übung abschließen" else "Nächste Frage",
+                                                    fontSize = 16.sp,
+                                                    fontWeight = FontWeight.Bold
+                                                )
+                                                Icon(
+                                                    imageVector = Icons.AutoMirrored.Filled.ArrowForward,
+                                                    contentDescription = null
+                                                )
+                                            }
+                                        }
+
+                                        Spacer(modifier = Modifier.height(24.dp))
+                                    }
                                 }
                             }
+                        } else {
+                            Column(
+                                modifier = Modifier
+                                    .fillMaxSize()
+                                    .verticalScroll(rememberScrollState())
+                                    .padding(vertical = 16.dp),
+                                verticalArrangement = Arrangement.spacedBy(14.dp)
+                            ) {
+                                QuestionCard(
+                                    question = question,
+                                    leitnerBox = state.currentLeitnerBox,
+                                    errorCount = state.currentErrorCount
+                                )
 
-                            Spacer(modifier = Modifier.height(24.dp))
+                                Spacer(modifier = Modifier.height(4.dp))
+
+                                question.answers.forEachIndexed { index, answerText ->
+                                    val visualState = when {
+                                        !state.isAnswerConfirmed -> {
+                                            if (state.selectedAnswerIndex == index) AnswerItemVisualState.SELECTED_PENDING
+                                            else AnswerItemVisualState.DEFAULT
+                                        }
+                                        index == question.correctAnswerIndex -> AnswerItemVisualState.CORRECT
+                                        state.selectedAnswerIndex == index -> AnswerItemVisualState.WRONG
+                                        else -> AnswerItemVisualState.DIMMED
+                                    }
+
+                                    AnswerOptionItem(
+                                        optionLetter = optionLetters.getOrElse(index) { "?" },
+                                        optionText = answerText,
+                                        visualState = visualState,
+                                        enabled = !state.isAnswerConfirmed,
+                                        onClick = { viewModel.selectAnswer(index) }
+                                    )
+                                }
+
+                                ExplanationBox(
+                                    explanation = question.explanation,
+                                    visible = state.isAnswerConfirmed
+                                )
+
+                                if (state.isAnswerConfirmed && state.currentTopic != null) {
+                                    val currentTopic = state.currentTopic!!
+                                    OutlinedButton(
+                                        onClick = {
+                                            showTopicSheet = true
+                                            viewModel.markTopicAsViewed(currentTopic.id)
+                                        },
+                                        modifier = Modifier
+                                            .fillMaxWidth()
+                                            .semantics {
+                                                contentDescription = "Hintergrundwissen: ${currentTopic.title}"
+                                            },
+                                        shape = RoundedCornerShape(12.dp),
+                                        colors = ButtonDefaults.outlinedButtonColors(contentColor = RadioBlue),
+                                        border = BorderStroke(1.5.dp, RadioBlue.copy(alpha = 0.5f))
+                                    ) {
+                                        Icon(
+                                            imageVector = Icons.Default.Lightbulb,
+                                            contentDescription = null,
+                                            modifier = Modifier.size(18.dp),
+                                            tint = RadioBlue
+                                        )
+                                        Spacer(modifier = Modifier.width(8.dp))
+                                        Text(
+                                            text = "Kurz erklärt: ${currentTopic.title}",
+                                            fontWeight = FontWeight.Bold,
+                                            maxLines = 1,
+                                            overflow = TextOverflow.Ellipsis
+                                        )
+                                    }
+                                }
+
+                                Spacer(modifier = Modifier.height(24.dp))
+                            }
                         }
                     }
                 }

@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
@@ -124,18 +125,24 @@ fun TopicDetailScreen(
             }
         } else {
             val currentTopic = topic!!
-            Column(
+            Box(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(innerPadding)
-                    .verticalScroll(rememberScrollState())
-                    .padding(16.dp),
-                verticalArrangement = Arrangement.spacedBy(20.dp)
+                    .padding(innerPadding),
+                contentAlignment = Alignment.TopCenter
             ) {
-                TopicContentView(
-                    topic = currentTopic,
-                    onSelectRelatedTopic = { onSelectTopic(it) }
-                )
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .widthIn(max = 860.dp)
+                        .verticalScroll(rememberScrollState())
+                        .padding(16.dp),
+                    verticalArrangement = Arrangement.spacedBy(20.dp)
+                ) {
+                    TopicContentView(
+                        topic = currentTopic,
+                        onSelectRelatedTopic = { onSelectTopic(it) }
+                    )
 
                 // Practice Questions Action Card
                 Card(
@@ -195,4 +202,5 @@ fun TopicDetailScreen(
             }
         }
     }
+}
 }

@@ -10,12 +10,14 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -72,6 +74,7 @@ import com.spacemishka.app.amateurfunktraining.core.model.ExamHistoryEntry
 import com.spacemishka.app.amateurfunktraining.core.model.ExamReadiness
 import com.spacemishka.app.amateurfunktraining.core.model.ReadinessLevel
 import com.spacemishka.app.amateurfunktraining.feature.practice.PracticeMode
+import com.spacemishka.app.amateurfunktraining.ui.layout.isTabletLayout
 import com.spacemishka.app.amateurfunktraining.ui.theme.CategoryAll
 import com.spacemishka.app.amateurfunktraining.ui.theme.CategoryBetrieb
 import com.spacemishka.app.amateurfunktraining.ui.theme.CategoryTechnik
@@ -174,97 +177,220 @@ fun HomeScreen(
                 CircularProgressIndicator(color = RadioBlue)
             }
         } else {
-            LazyColumn(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(innerPadding),
-                contentPadding = PaddingValues(horizontal = 16.dp, vertical = 12.dp),
-                verticalArrangement = Arrangement.spacedBy(14.dp)
-            ) {
-                item {
-                    HeaderBanner(streakDays = state.streakDays)
-                }
+            val isTablet = isTabletLayout()
 
-                // Offizielle BNetzA Prüfungssimulation
-                item {
-                    ExamSimulationCard(
-                        readiness = state.examReadiness,
-                        lastExam = state.lastExamEntry,
-                        mistakeCount = state.latestExamMistakeIds.size,
-                        onStartExam = onStartExam,
-                        onStartMistakes = {
-                            onSelectPracticeMode(PracticeMode.ExamMistakes(state.latestExamMistakeIds))
+            if (isTablet) {
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(innerPadding),
+                    contentAlignment = Alignment.TopCenter
+                ) {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .widthIn(max = 1300.dp),
+                        horizontalArrangement = Arrangement.spacedBy(16.dp)
+                    ) {
+                        // Linke Spalte: Lernfortschritt, Prüfungssimulation & Leitner
+                        LazyColumn(
+                            modifier = Modifier
+                                .weight(1f)
+                                .fillMaxHeight(),
+                            contentPadding = PaddingValues(start = 24.dp, end = 8.dp, top = 16.dp, bottom = 24.dp),
+                            verticalArrangement = Arrangement.spacedBy(14.dp)
+                        ) {
+                            item {
+                                HeaderBanner(streakDays = state.streakDays)
+                            }
+
+                            // Offizielle BNetzA Prüfungssimulation
+                            item {
+                                ExamSimulationCard(
+                                    readiness = state.examReadiness,
+                                    lastExam = state.lastExamEntry,
+                                    mistakeCount = state.latestExamMistakeIds.size,
+                                    onStartExam = onStartExam,
+                                    onStartMistakes = {
+                                        onSelectPracticeMode(PracticeMode.ExamMistakes(state.latestExamMistakeIds))
+                                    }
+                                )
+                            }
+
+                            // Fällige Wiederholungen Card (Leitner)
+                            item {
+                                DueLeitnerCard(
+                                    dueCount = state.dueLeitnerCount,
+                                    onStartDue = { onSelectPracticeMode(PracticeMode.DueLeitner) }
+                                )
+                            }
+
+                            // Spezial-Training: Lesezeichen & Problemfragen
+                            item {
+                                SpecialTrainingRow(
+                                    bookmarkCount = state.bookmarkCount,
+                                    problemCount = state.problemCount,
+                                    onSelectBookmarks = { onSelectPracticeMode(PracticeMode.Bookmarks) },
+                                    onSelectProblems = { onSelectPracticeMode(PracticeMode.ProblemQuestions) }
+                                )
+                            }
+
+                            item {
+                                Spacer(modifier = Modifier.height(16.dp))
+                            }
                         }
+
+                        // Rechte Spalte: Prüfungsfächer, Themenlexikon & Nachschlagewerk
+                        LazyColumn(
+                            modifier = Modifier
+                                .weight(1f)
+                                .fillMaxHeight(),
+                            contentPadding = PaddingValues(start = 8.dp, end = 24.dp, top = 16.dp, bottom = 24.dp),
+                            verticalArrangement = Arrangement.spacedBy(14.dp)
+                        ) {
+                            item {
+                                Text(
+                                    text = "Prüfungsfächer (Klasse E)",
+                                    style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
+                                    color = MaterialTheme.colorScheme.onSurface,
+                                    modifier = Modifier.padding(top = 4.dp, bottom = 2.dp)
+                                )
+                            }
+
+                            val categories = listOf(
+                                Category.TECHNIK,
+                                Category.BETRIEB,
+                                Category.VORSCHRIFTEN,
+                                Category.ALL
+                            )
+
+                            items(categories.size) { index ->
+                                val category = categories[index]
+                                val count = state.categoryCounts[category] ?: 0
+                                val progress = state.categoryProgresses[category]
+
+                                CategoryCard(
+                                    category = category,
+                                    questionCount = count,
+                                    categoryProgress = progress,
+                                    onClick = { onSelectPracticeMode(PracticeMode.CategoryMode(category)) }
+                                )
+                            }
+
+                            item {
+                                ThemenlexikonCard(onOpenLexicon = onOpenLexicon)
+                            }
+
+                            item {
+                                ReferenceHubCard(onOpenReferenceHub = onOpenReferenceHub)
+                            }
+
+                            item {
+                                ToolsRow(
+                                    onOpenPhoneticQuiz = onOpenPhoneticQuiz,
+                                    onOpenCalculator = onOpenCalculator
+                                )
+                            }
+
+                            item {
+                                Spacer(modifier = Modifier.height(16.dp))
+                            }
+                        }
+                    }
+                }
+            } else {
+                LazyColumn(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(innerPadding),
+                    contentPadding = PaddingValues(horizontal = 16.dp, vertical = 12.dp),
+                    verticalArrangement = Arrangement.spacedBy(14.dp)
+                ) {
+                    item {
+                        HeaderBanner(streakDays = state.streakDays)
+                    }
+
+                    // Offizielle BNetzA Prüfungssimulation
+                    item {
+                        ExamSimulationCard(
+                            readiness = state.examReadiness,
+                            lastExam = state.lastExamEntry,
+                            mistakeCount = state.latestExamMistakeIds.size,
+                            onStartExam = onStartExam,
+                            onStartMistakes = {
+                                onSelectPracticeMode(PracticeMode.ExamMistakes(state.latestExamMistakeIds))
+                            }
+                        )
+                    }
+
+                    // Fällige Wiederholungen Card (Leitner)
+                    item {
+                        DueLeitnerCard(
+                            dueCount = state.dueLeitnerCount,
+                            onStartDue = { onSelectPracticeMode(PracticeMode.DueLeitner) }
+                        )
+                    }
+
+                    // Spezial-Training: Lesezeichen & Problemfragen
+                    item {
+                        SpecialTrainingRow(
+                            bookmarkCount = state.bookmarkCount,
+                            problemCount = state.problemCount,
+                            onSelectBookmarks = { onSelectPracticeMode(PracticeMode.Bookmarks) },
+                            onSelectProblems = { onSelectPracticeMode(PracticeMode.ProblemQuestions) }
+                        )
+                    }
+
+                    // Themenlexikon & Nachschlagewerk (MVP 4)
+                    item {
+                        ThemenlexikonCard(onOpenLexicon = onOpenLexicon)
+                    }
+
+                    // Formelsammlung & Nachschlagewerk (MVP 5)
+                    item {
+                        ReferenceHubCard(onOpenReferenceHub = onOpenReferenceHub)
+                    }
+
+                    // Prüfungswerkzeuge: ITU-Buchstabier-Trainer & Formel-Rechner (MVP 5)
+                    item {
+                        ToolsRow(
+                            onOpenPhoneticQuiz = onOpenPhoneticQuiz,
+                            onOpenCalculator = onOpenCalculator
+                        )
+                    }
+
+                    item {
+                        Text(
+                            text = "Prüfungsfächer (Klasse E)",
+                            style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
+                            color = MaterialTheme.colorScheme.onSurface,
+                            modifier = Modifier.padding(top = 8.dp, bottom = 4.dp)
+                        )
+                    }
+
+                    val categories = listOf(
+                        Category.TECHNIK,
+                        Category.BETRIEB,
+                        Category.VORSCHRIFTEN,
+                        Category.ALL
                     )
-                }
 
-                // Fällige Wiederholungen Card (Leitner)
-                item {
-                    DueLeitnerCard(
-                        dueCount = state.dueLeitnerCount,
-                        onStartDue = { onSelectPracticeMode(PracticeMode.DueLeitner) }
-                    )
-                }
+                    items(categories.size) { index ->
+                        val category = categories[index]
+                        val count = state.categoryCounts[category] ?: 0
+                        val progress = state.categoryProgresses[category]
 
-                // Spezial-Training: Lesezeichen & Problemfragen
-                item {
-                    SpecialTrainingRow(
-                        bookmarkCount = state.bookmarkCount,
-                        problemCount = state.problemCount,
-                        onSelectBookmarks = { onSelectPracticeMode(PracticeMode.Bookmarks) },
-                        onSelectProblems = { onSelectPracticeMode(PracticeMode.ProblemQuestions) }
-                    )
-                }
+                        CategoryCard(
+                            category = category,
+                            questionCount = count,
+                            categoryProgress = progress,
+                            onClick = { onSelectPracticeMode(PracticeMode.CategoryMode(category)) }
+                        )
+                    }
 
-                // Themenlexikon & Nachschlagewerk (MVP 4)
-                item {
-                    ThemenlexikonCard(onOpenLexicon = onOpenLexicon)
-                }
-
-                // Formelsammlung & Nachschlagewerk (MVP 5)
-                item {
-                    ReferenceHubCard(onOpenReferenceHub = onOpenReferenceHub)
-                }
-
-                // Prüfungswerkzeuge: ITU-Buchstabier-Trainer & Formel-Rechner (MVP 5)
-                item {
-                    ToolsRow(
-                        onOpenPhoneticQuiz = onOpenPhoneticQuiz,
-                        onOpenCalculator = onOpenCalculator
-                    )
-                }
-
-                item {
-                    Text(
-                        text = "Prüfungsfächer (Klasse E)",
-                        style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
-                        color = MaterialTheme.colorScheme.onSurface,
-                        modifier = Modifier.padding(top = 8.dp, bottom = 4.dp)
-                    )
-                }
-
-                val categories = listOf(
-                    Category.TECHNIK,
-                    Category.BETRIEB,
-                    Category.VORSCHRIFTEN,
-                    Category.ALL
-                )
-
-                items(categories.size) { index ->
-                    val category = categories[index]
-                    val count = state.categoryCounts[category] ?: 0
-                    val progress = state.categoryProgresses[category]
-
-                    CategoryCard(
-                        category = category,
-                        questionCount = count,
-                        categoryProgress = progress,
-                        onClick = { onSelectPracticeMode(PracticeMode.CategoryMode(category)) }
-                    )
-                }
-
-                item {
-                    Spacer(modifier = Modifier.height(16.dp))
+                    item {
+                        Spacer(modifier = Modifier.height(16.dp))
+                    }
                 }
             }
         }

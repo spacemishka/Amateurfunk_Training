@@ -15,7 +15,12 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.GridItemSpan
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
@@ -65,6 +70,7 @@ import com.spacemishka.app.amateurfunktraining.core.model.Formula
 import com.spacemishka.app.amateurfunktraining.core.model.FormulaCategory
 import com.spacemishka.app.amateurfunktraining.core.model.QGroup
 import com.spacemishka.app.amateurfunktraining.core.model.RegulationItem
+import com.spacemishka.app.amateurfunktraining.ui.layout.isTabletLayout
 import com.spacemishka.app.amateurfunktraining.ui.theme.RadioBlue
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -77,6 +83,7 @@ fun ReferenceHubScreen(
     modifier: Modifier = Modifier
 ) {
     val state by viewModel.uiState.collectAsState()
+    val isTablet = isTabletLayout()
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
@@ -260,6 +267,73 @@ fun ReferenceHubScreen(
                     contentAlignment = Alignment.Center
                 ) {
                     CircularProgressIndicator(color = RadioBlue)
+                }
+            } else if (isTablet) {
+                LazyVerticalGrid(
+                    columns = GridCells.Adaptive(minSize = 380.dp),
+                    modifier = Modifier.fillMaxSize(),
+                    contentPadding = PaddingValues(horizontal = 24.dp, vertical = 12.dp),
+                    horizontalArrangement = Arrangement.spacedBy(16.dp),
+                    verticalArrangement = Arrangement.spacedBy(16.dp)
+                ) {
+                    when (state.currentTab) {
+                        ReferenceTab.FORMULAS -> {
+                            if (state.formulas.isEmpty()) {
+                                item(span = { GridItemSpan(maxLineSpan) }) { EmptyResultItem("Keine Formeln gefunden.") }
+                            } else {
+                                items(state.formulas, key = { it.id }) { formula ->
+                                    FormulaCard(formula = formula)
+                                }
+                            }
+                        }
+
+                        ReferenceTab.Q_GROUPS -> {
+                            if (state.qGroups.isEmpty()) {
+                                item(span = { GridItemSpan(maxLineSpan) }) { EmptyResultItem("Keine Q-Gruppen gefunden.") }
+                            } else {
+                                items(state.qGroups, key = { it.code }) { qGroup ->
+                                    QGroupCard(
+                                        qGroup = qGroup,
+                                        showQuestion = state.qGroupShowAsQuestion
+                                    )
+                                }
+                            }
+                        }
+
+                        ReferenceTab.PREFIXES -> {
+                            if (state.prefixes.isEmpty()) {
+                                item(span = { GridItemSpan(maxLineSpan) }) { EmptyResultItem("Keine Landeskenner gefunden.") }
+                            } else {
+                                items(state.prefixes, key = { it.praefix }) { prefix ->
+                                    PrefixCard(prefix = prefix)
+                                }
+                            }
+                        }
+
+                        ReferenceTab.BANDPLAN -> {
+                            if (state.bandPlan.isEmpty()) {
+                                item(span = { GridItemSpan(maxLineSpan) }) { EmptyResultItem("Keine Bandplan-Einträge gefunden.") }
+                            } else {
+                                items(state.bandPlan, key = { it.band }) { entry ->
+                                    BandPlanCard(entry = entry)
+                                }
+                            }
+                        }
+
+                        ReferenceTab.REGULATIONS -> {
+                            if (state.regulations.isEmpty()) {
+                                item(span = { GridItemSpan(maxLineSpan) }) { EmptyResultItem("Keine Vorschriften gefunden.") }
+                            } else {
+                                items(state.regulations, key = { it.titel }) { item ->
+                                    RegulationCard(regulation = item)
+                                }
+                            }
+                        }
+                    }
+
+                    item(span = { GridItemSpan(maxLineSpan) }) {
+                        Spacer(modifier = Modifier.height(24.dp))
+                    }
                 }
             } else {
                 LazyColumn(
