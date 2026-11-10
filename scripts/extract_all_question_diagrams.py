@@ -216,16 +216,17 @@ def run_extraction():
                             and w[3] <= ans_a_y0 - 0.5     # Kein Ueberlapp mit Antwort A!
                         ]
                         all_el = valid_drawings + diag_words
-                        union = all_el[0]
-                        for el in all_el[1:]:
-                            union |= el
+                        min_x0 = min(el.x0 for el in all_el)
+                        min_y0 = min(el.y0 for el in all_el)
+                        max_x1 = max(el.x1 for el in all_el)
+                        max_y1 = max(el.y1 for el in all_el)
                         
                         pad = 5
                         clip_rect = fitz.Rect(
-                            max(col_x0, union.x0 - pad),
-                            max(q_text_bottom + 1.0, union.y0 - pad),
-                            min(col_x1, union.x1 + pad),
-                            min(ans_a_y0 - 1.0, union.y1 + pad)
+                            max(col_x0, min_x0 - pad),
+                            max(q_text_bottom + 1.0, min_y0 - pad),
+                            min(col_x1, max_x1 + pad),
+                            min(ans_a_y0 - 1.0, max_y1 + pad)
                         )
                         has_image = True
                         type_a_count += 1
@@ -247,15 +248,16 @@ def run_extraction():
                     ]
                     all_el = drawings_type_b + diag_words_b
                     if all_el:
-                        union = all_el[0]
-                        for el in all_el[1:]:
-                            union |= el
+                        min_x0 = min(el.x0 for el in all_el)
+                        min_y0 = min(el.y0 for el in all_el)
+                        max_x1 = max(el.x1 for el in all_el)
+                        max_y1 = max(el.y1 for el in all_el)
                         pad = 5
                         clip_rect = fitz.Rect(
-                            max(col_x0, union.x0 - pad),
-                            max(ans_a_y0 - 4.0, union.y0 - pad),
-                            min(col_x1, union.x1 + pad),
-                            min(bottom_limit - 1.0, union.y1 + pad)
+                            max(col_x0, min_x0 - pad),
+                            max(ans_a_y0 - 4.0, min_y0 - pad),
+                            min(col_x1, max_x1 + pad),
+                            min(bottom_limit - 1.0, max_y1 + pad)
                         )
                         has_image = True
                         type_b_count += 1
