@@ -36,10 +36,48 @@ VERTICAL_CHOICES_QIDS = {
 }
 ALL_TYPE_B_QIDS = GRID_2X2_QIDS | VERTICAL_CHOICES_QIDS
 
-def clean_str(s: str) -> str:
-    s = re.sub(r'(\w+)-\s+(\w+)', r'\1\2', s)
-    s = re.sub(r'\s+', ' ', s)
-    return s.strip()
+GERMAN_GRAMMAR = {
+    'der', 'die', 'das', 'dem', 'den', 'des', 'ein', 'eine', 'einer', 'einem', 'einen',
+    'ist', 'sind', 'wird', 'werden', 'hat', 'haben', 'kann', 'können', 'aus', 'mit',
+    'von', 'in', 'bei', 'zu', 'nach', 'für', 'über', 'unter', 'sich', 'nicht'
+}
+
+def clean_hyphens(text: str) -> str:
+    # Trennungen am Zeilenende bei deutschen Woertern zusammenfuehren
+    text = re.sub(r'(\b[a-zäöüß]+)-\s*\n\s*([a-zäöüß]+)', r'\1\2', text)
+    text = re.sub(r'(\b[A-ZÄÖÜ][a-zäöüß]+)-\s*\n\s*([a-zäöüß]+)', r'\1\2', text)
+    # Zusammengesetzte Begriffe wie 'HF- und Netzkabel', 'Sporadic-E' erhalten:
+    text = re.sub(r'-\s*\n\s*', '-', text)
+    text = re.sub(r'\s*\n\s*', ' ', text)
+    text = re.sub(r'\s+', ' ', text)
+    return text.strip()
+
+def clean_qtext(raw_q: str) -> str:
+    # Diagrammbeschriftungen nach dem Satzende entfernen
+    if '?' in raw_q:
+        idx = raw_q.rfind('?')
+        after = raw_q[idx+1:].strip()
+        # Nur abschneiden, wenn nach dem '?' kein deutscher Folgesatz (wie 'Eine Amateurfunkstelle ist ...') steht
+        if after and not (after.endswith('...') or '...' in after):
+            words = set(re.findall(r'[a-zäöüß]+', after.lower()))
+            if not (words & GERMAN_GRAMMAR):
+                raw_q = raw_q[:idx+1]
+    
+    # Diagrammbeschriftungen nach Punkt am Satzende (z.B. EC521)
+    if '.' in raw_q:
+        m = re.search(r'^(.*?\b[a-zäöüß]+\.)(?:\s+[A-Z0-9\+\-𝑅𝑈𝐼𝐶𝐿].*)$', raw_q)
+        if m:
+            after = raw_q[len(m.group(1)):].strip()
+            words = set(re.findall(r'[a-zäöüß]+', after.lower()))
+            if not (words & GERMAN_GRAMMAR):
+                raw_q = m.group(1)
+                
+    # Bauteilbeschriftungen nach 'Gegeben:' (z.B. ED108, ED121)
+    m = re.search(r'^(.*?Gegeben:.*?)\s+[𝑅𝐶]\d.*$', raw_q)
+    if m:
+        raw_q = m.group(1)
+        
+    return raw_q.strip()
 
 def run_extraction():
     random.seed(42) # Reproduzierbare Mischung der Antwortoptionen
@@ -58,10 +96,8 @@ def run_extraction():
             page = doc[p]
             words = page.get_text("words")
             blocks = page.get_text("blocks")
-            # Alle Zeichnungen (auch duenne Drahtleitungen / Kondensatorplatten mit w=0 oder h=0):
             drawings = [d for d in page.get_drawings() if max(d['rect'].width, d['rect'].height) > 4]
             
-            # Alle Frage-IDs auf der Seite
             q_words = [w for w in words if q_pattern.match(w[4])]
             
             for qw in q_words:
@@ -90,102 +126,109 @@ def run_extraction():
                 ans_a = margin_a[0] if margin_a else (cand_a[0] if cand_a else None)
                 ans_a_y0 = ans_a[1] if ans_a else bottom_limit
                 
-                # --- FRAGETEXT EXTRAHIEREN ---
+                # --- GESAMTEN FRAGENTEXT & ANTWORTEN EXTRAHIEREN ---
+                # Wir sammeln alle Textbloecke in dieser Spalte zwischen qw[1] und bottom_limit:
                 q_blocks = [
                     b for b in blocks
                     if (b[0] < 300) == is_left
                     and b[1] >= qw[1] - 5
-                    and b[3] <= ans_a_y0 + 2
+                    and b[3] <= bottom_limit + 5
                 ]
-                q_blocks.sort(key=lambda b: b[1])
+                q_blocks.sort(key=lambda b: (b[1], b[0]))
+                full_text = "\n".join(b[4] for b in q_blocks)
                 
-                q_lines = []
-                q_text_bottom = qw[3]
+                # Frage-ID am Anfang entfernen
+                lines = full_text.split('\n')
+                if lines and lines[0].strip().startswith(qid):
+                    lines[0] = lines[0].strip()[len(qid):].strip()
+                full_text = "\n".join(lines).strip()
                 
-                for b in q_blocks:
-                    b_text = b[4].strip()
-                    b_width = b[2] - b[0]
+                is_type_b = (qid in ALL_TYPE_B_QIDS)
+                
+                if is_type_b:
+                    # Antwortoptionen sind Grafiken/Schaltungen/Symbole
+                    m_q = re.search(r'^(.*?)(?=\n\s*A\b|\Z)', full_text, re.DOTALL)
+                    clean_q = clean_qtext(clean_hyphens(m_q.group(1))) if m_q else f"Frage {qid}"
                     
-                    # Wenn wir bereits Zeilen haben und dieser Block sehr schmal ist (< 80pt),
-                    # ist es eine Diagrammbeschriftung (z.B. '+13,8 V', 'VFO', 'a')
-                    if len(q_lines) > 0 and b_width < 80 and not b_text.startswith("A "):
-                        joined_so_far = " ".join(q_lines)
-                        if (joined_so_far.endswith(".") or joined_so_far.endswith("?") or 
-                            joined_so_far.endswith(":") or joined_so_far.endswith("...")):
-                            break
-                    
-                    # Groessere vertikale Luecke zwischen Zeilen deutet auf Diagrammbeginn hin
-                    if b[1] > q_text_bottom + 10:
-                        break
-                    
-                    lines = b[4].split('\n')
-                    b_has_ans = False
-                    for line in lines:
-                        ls = line.strip()
-                        if ls.startswith(qid):
-                            ls = ls[len(qid):].strip()
-                        if re.match(r'^[A-D]\s', ls) or ls == 'A':
-                            b_has_ans = True
-                            break
-                        if ls:
-                            q_lines.append(ls)
-                    
-                    if not b_has_ans:
-                        q_text_bottom = max(q_text_bottom, b[3])
+                    if "Schaltung" in clean_q or "Filter" in clean_q:
+                        raw_answers = ["Schaltung A", "Schaltung B", "Schaltung C", "Schaltung D"]
+                    elif "Schaltzeichen" in clean_q or "Symbol" in clean_q or "Bauteil" in clean_q:
+                        raw_answers = ["Schaltzeichen A", "Schaltzeichen B", "Schaltzeichen C", "Schaltzeichen D"]
+                    elif "Diagramm" in clean_q or "Kennlinie" in clean_q or "Kurve" in clean_q or "Frequenzgang" in clean_q or "Strahlungsdiagramm" in clean_q:
+                        raw_answers = ["Diagramm A", "Diagramm B", "Diagramm C", "Diagramm D"]
                     else:
-                        break
-                    
-                    joined = " ".join(q_lines)
-                    # Fragetext endet regulaer mit Satzzeichen ?, ..., :
-                    if (joined.endswith("?") or joined.endswith("...") or joined.endswith(":")) and b[3] >= q_text_bottom - 2:
-                        break
-                    # Vollstaendiger Absatz, der mit Punkt endet (z.B. EC521):
-                    if (joined.endswith(".") and b_width > 100 and 
-                        not joined.endswith("z. B.") and not joined.endswith("u. a.") and not joined.endswith("bzw.")):
-                        break
-                
-                clean_qtext = clean_str(" ".join(q_lines))
-                if not clean_qtext:
-                    clean_qtext = f"Frage {qid}"
+                        raw_answers = ["Option A", "Option B", "Option C", "Option D"]
+                else:
+                    # Textantworten: Regex ueber den Gesamttext der Frage
+                    pattern = re.compile(
+                        r'^(.*?)\n\s*A\s+(.*?)\n\s*B\s+(.*?)\n\s*C\s+(.*?)\n\s*D\s+(.*?)(?=\n[VBE][A-Z]\d{3}|\Z)',
+                        re.DOTALL
+                    )
+                    m = pattern.search(full_text)
+                    if m:
+                        clean_q = clean_qtext(clean_hyphens(m.group(1)))
+                        raw_answers = [clean_hyphens(m.group(i)) for i in range(2, 6)]
+                    else:
+                        # Fallback fuer einzeilige Antworten
+                        m_q = re.search(r'^(.*?)(?=\n\s*A\b|\Z)', full_text, re.DOTALL)
+                        clean_q = clean_qtext(clean_hyphens(m_q.group(1))) if m_q else f"Frage {qid}"
+                        raw_answers = ["A", "B", "C", "D"]
                 
                 # --- GRAFIK ERKENNEN UND EXTRAHIEREN ---
                 has_image = False
                 clip_rect = None
                 
-                is_type_b = (qid in ALL_TYPE_B_QIDS)
-                
-                # Pruefe auf Type A Diagramm (zwischen Fragetext und Antwort A)
+                # Pruefe auf Type A Diagramm (Zeichnungen zwischen Frage und Antwort A)
                 drawings_type_a = [
                     d['rect'] for d in drawings
                     if col_x0 <= (d['rect'].x0 + d['rect'].x1)/2 <= col_x1
-                    and d['rect'].y0 >= q_text_bottom - 2
+                    and d['rect'].y0 >= qw[3] - 2
                     and d['rect'].y1 <= ans_a_y0 + 2
                     and (d['rect'].height > 5 or d['rect'].width > 5)
                 ]
                 
                 if drawings_type_a and not is_type_b:
-                    # TYPE A: Diagramm zwischen Fragetext und Antwort A
-                    # Diagrammbeschriftungen strikt im Intervall [q_text_bottom + 1.0, ans_a_y0 - 0.5]
-                    diag_words = [
-                        fitz.Rect(w[:4]) for w in words
-                        if col_x0 <= (w[0] + w[2])/2 <= col_x1
-                        and w[1] >= q_text_bottom + 1.0 # Absolut kein Ueberlapp mit Fragetext!
-                        and w[3] <= ans_a_y0 - 0.5     # Absolut kein Ueberlapp mit Antwort A!
+                    # Finde das Ende des Fragetextes auf der Seite:
+                    col_words = [
+                        w for w in words
+                        if (w[0] < 300) == is_left
+                        and w[1] >= qw[1] - 2
+                        and w[3] <= ans_a_y0
                     ]
-                    all_el = drawings_type_a + diag_words
-                    union = all_el[0]
-                    for el in all_el[1:]:
-                        union |= el
+                    # Letztes Wort mit Satzzeichen:
+                    punct_words = [
+                        w for w in col_words
+                        if w[4].endswith('?') or w[4].endswith('...') or w[4].endswith(':') or w[4].endswith('.')
+                    ]
+                    if punct_words:
+                        q_text_bottom = punct_words[-1][3]
+                    else:
+                        q_text_bottom = qw[3]
                     
-                    pad = 5
-                    clip_rect = fitz.Rect(
-                        max(col_x0, union.x0 - pad),
-                        max(q_text_bottom + 1.0, union.y0 - pad),
-                        min(col_x1, union.x1 + pad),
-                        min(ans_a_y0 - 1.0, union.y1 + pad)
-                    )
-                    has_image = True
-                    type_a_count += 1
+                    # Zeichnungen, die unterhalb des Fragetextes liegen:
+                    valid_drawings = [d for d in drawings_type_a if d.y1 >= q_text_bottom - 2]
+                    if valid_drawings:
+                        # Diagrammbeschriftungen strikt zwischen q_text_bottom und ans_a_y0
+                        diag_words = [
+                            fitz.Rect(w[:4]) for w in words
+                            if col_x0 <= (w[0] + w[2])/2 <= col_x1
+                            and w[1] >= q_text_bottom + 1.0 # Kein Ueberlapp mit Fragetext!
+                            and w[3] <= ans_a_y0 - 0.5     # Kein Ueberlapp mit Antwort A!
+                        ]
+                        all_el = valid_drawings + diag_words
+                        union = all_el[0]
+                        for el in all_el[1:]:
+                            union |= el
+                        
+                        pad = 5
+                        clip_rect = fitz.Rect(
+                            max(col_x0, union.x0 - pad),
+                            max(q_text_bottom + 1.0, union.y0 - pad),
+                            min(col_x1, union.x1 + pad),
+                            min(ans_a_y0 - 1.0, union.y1 + pad)
+                        )
+                        has_image = True
+                        type_a_count += 1
                 
                 elif is_type_b:
                     # TYPE B: Antwortoptionen sind Grafiken/Schaltungen/Diagramme
@@ -210,7 +253,7 @@ def run_extraction():
                         pad = 5
                         clip_rect = fitz.Rect(
                             max(col_x0, union.x0 - pad),
-                            max(q_text_bottom + 1.0, union.y0 - pad),
+                            max(ans_a_y0 - 4.0, union.y0 - pad),
                             min(col_x1, union.x1 + pad),
                             min(bottom_limit - 1.0, union.y1 + pad)
                         )
@@ -226,61 +269,8 @@ def run_extraction():
                     image_rel_path = f"question_images/{qid}.png"
                     extracted_images_count += 1
                 
-                # --- ANTWORTOPTIONEN EXTRAHIEREN ---
-                if is_type_b:
-                    # Antwortoptionen sind Schaltungen/Diagramme A, B, C, D
-                    if "Schaltung" in clean_qtext or "Filter" in clean_qtext:
-                        raw_answers = ["Schaltung A", "Schaltung B", "Schaltung C", "Schaltung D"]
-                    elif "Schaltzeichen" in clean_qtext or "Symbol" in clean_qtext or "Bauteil" in clean_qtext:
-                        raw_answers = ["Schaltzeichen A", "Schaltzeichen B", "Schaltzeichen C", "Schaltzeichen D"]
-                    elif "Diagramm" in clean_qtext or "Kennlinie" in clean_qtext or "Kurve" in clean_qtext or "Frequenzgang" in clean_qtext or "Strahlungsdiagramm" in clean_qtext:
-                        raw_answers = ["Diagramm A", "Diagramm B", "Diagramm C", "Diagramm D"]
-                    else:
-                        raw_answers = ["Option A", "Option B", "Option C", "Option D"]
-                else:
-                    # Textantworten A, B, C, D
-                    ans_region_text = ""
-                    ans_blocks = [
-                        b for b in blocks
-                        if (b[0] < 300) == is_left
-                        and b[1] >= ans_a_y0 - 2
-                        and b[3] <= bottom_limit + 4
-                    ]
-                    ans_blocks.sort(key=lambda b: b[1])
-                    for b in ans_blocks:
-                        ans_region_text += "\n" + b[4]
-                    
-                    m_ans = re.search(r'\bA\s+(.*?)\n\s*B\s+(.*?)\n\s*C\s+(.*?)\n\s*D\s+(.*?)(?=\n[VBE][A-Z]\d{3}|\n\d+(\.\d+)*|\Z)', ans_region_text, re.DOTALL)
-                    if m_ans:
-                        ans_a_txt = clean_str(m_ans.group(1))
-                        ans_b_txt = clean_str(m_ans.group(2))
-                        ans_c_txt = clean_str(m_ans.group(3))
-                        ans_d_txt = clean_str(m_ans.group(4))
-                        raw_answers = [ans_a_txt, ans_b_txt, ans_c_txt, ans_d_txt]
-                    else:
-                        lines = [l.strip() for l in ans_region_text.split('\n') if l.strip()]
-                        cur_letter = None
-                        grouped = {'A': [], 'B': [], 'C': [], 'D': []}
-                        for l in lines:
-                            first_token = l.split()[0] if l.split() else ""
-                            if first_token in ['A', 'B', 'C', 'D']:
-                                cur_letter = first_token
-                                rest = l[len(first_token):].strip()
-                                if rest:
-                                    grouped[cur_letter].append(rest)
-                            elif cur_letter:
-                                grouped[cur_letter].append(l)
-                        
-                        ans_a_txt = clean_str(" ".join(grouped['A']))
-                        ans_b_txt = clean_str(" ".join(grouped['B']))
-                        ans_c_txt = clean_str(" ".join(grouped['C']))
-                        ans_d_txt = clean_str(" ".join(grouped['D']))
-                        raw_answers = [ans_a_txt, ans_b_txt, ans_c_txt, ans_d_txt]
-                
-                # Fallback fuer Antworten
-                if not all(raw_answers):
-                    raw_answers = ["A", "B", "C", "D"]
-                
+                # Im Originalkatalog ist Index 0 (Antwort A) immer die richtige Loesung.
+                # Wir mischen deterministisch (mit seed), damit A nicht immer oben steht:
                 indices = [0, 1, 2, 3]
                 random.shuffle(indices)
                 shuffled_answers = [raw_answers[i] for i in indices]
@@ -292,7 +282,7 @@ def run_extraction():
                     "id": qid,
                     "kategorie": cat_name,
                     "topic_id": f"{topic_prefix}_{qid[:3].lower()}",
-                    "frage_text": clean_qtext,
+                    "frage_text": clean_q,
                     "antworten": shuffled_answers,
                     "richtige_antwort": correct_idx,
                     "erklaerung": erklaerung,
