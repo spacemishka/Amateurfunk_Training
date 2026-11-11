@@ -32,6 +32,7 @@ import com.spacemishka.app.amateurfunktraining.feature.exam.ExamScreen
 import com.spacemishka.app.amateurfunktraining.feature.exam.ExamViewModel
 import com.spacemishka.app.amateurfunktraining.feature.home.HomeScreen
 import com.spacemishka.app.amateurfunktraining.feature.home.HomeViewModel
+import com.spacemishka.app.amateurfunktraining.feature.onboarding.OnboardingDialog
 import com.spacemishka.app.amateurfunktraining.feature.phonetic.PhoneticQuizScreen
 import com.spacemishka.app.amateurfunktraining.feature.phonetic.PhoneticQuizViewModel
 import com.spacemishka.app.amateurfunktraining.feature.practice.PracticeMode
@@ -130,6 +131,8 @@ fun AmateurfunkApp(
     settingsRepository: SettingsRepository,
     backupManager: BackupManager
 ) {
+    val settings by settingsRepository.settingsFlow.collectAsState()
+    var showOnboardingDialog by remember { mutableStateOf(!settings.isOnboardingCompleted) }
     var currentScreen by remember { mutableStateOf<Screen>(Screen.Home) }
 
     val homeViewModel = viewModel {
@@ -212,6 +215,9 @@ fun AmateurfunkApp(
                 },
                 onOpenSettings = {
                     currentScreen = Screen.Settings
+                },
+                onOpenOnboarding = {
+                    showOnboardingDialog = true
                 }
             )
         }
@@ -375,8 +381,20 @@ fun AmateurfunkApp(
                 onNavigateBack = {
                     currentScreen = Screen.Home
                     homeViewModel.loadData()
+                },
+                onOpenOnboarding = {
+                    showOnboardingDialog = true
                 }
             )
         }
+    }
+
+    if (showOnboardingDialog) {
+        OnboardingDialog(
+            onDismiss = {
+                showOnboardingDialog = false
+                settingsRepository.setOnboardingCompleted(true)
+            }
+        )
     }
 }

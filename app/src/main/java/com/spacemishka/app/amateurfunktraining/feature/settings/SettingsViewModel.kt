@@ -44,6 +44,10 @@ class SettingsViewModel(
         settingsRepository.setFontScale(scale)
     }
 
+    fun setOnboardingCompleted(completed: Boolean) {
+        settingsRepository.setOnboardingCompleted(completed)
+    }
+
     fun exportBackup(outputStream: OutputStream) {
         val manager = backupManager ?: return
         viewModelScope.launch {

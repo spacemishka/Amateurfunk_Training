@@ -72,7 +72,9 @@ data class SettingsBackupDto(
     @SerialName("schriftgroesse")
     val schriftgroesse: String = "NORMAL",
     @SerialName("pruefungs_timer_minuten")
-    val pruefungsTimerMinuten: Int = 150
+    val pruefungsTimerMinuten: Int = 150,
+    @SerialName("onboarding_abgeschlossen")
+    val onboardingAbgeschlossen: Boolean = true
 )
 
 @Serializable

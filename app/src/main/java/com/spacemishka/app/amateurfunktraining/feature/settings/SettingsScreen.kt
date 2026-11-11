@@ -26,6 +26,7 @@ import androidx.compose.material.icons.filled.FileDownload
 import androidx.compose.material.icons.filled.FileUpload
 import androidx.compose.material.icons.filled.FormatSize
 import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.School
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -80,6 +81,7 @@ import java.util.Locale
 fun SettingsScreen(
     viewModel: SettingsViewModel,
     onNavigateBack: () -> Unit,
+    onOpenOnboarding: () -> Unit = {},
     modifier: Modifier = Modifier
 ) {
     val context = LocalContext.current
@@ -371,6 +373,33 @@ fun SettingsScreen(
                 }
             }
 
+            // Onboarding & Help Section
+            item {
+                SettingsSectionCard(
+                    title = "Einführung & Hilfe",
+                    subtitle = "Lerne die wichtigsten Funktionen und das Leitner-System kennen",
+                    icon = Icons.Default.School
+                ) {
+                    OutlinedButton(
+                        onClick = onOpenOnboarding,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .semantics {
+                                contentDescription = "Einführungs-Dialog erneut ansehen"
+                            },
+                        shape = RoundedCornerShape(10.dp)
+                    ) {
+                        Icon(
+                            imageVector = Icons.Default.School,
+                            contentDescription = null,
+                            modifier = Modifier.size(18.dp)
+                        )
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Text("Einführung erneut ansehen")
+                    }
+                }
+            }
+
             // App Version Info
             item {
                 Surface(
@@ -389,7 +418,7 @@ fun SettingsScreen(
                             color = MaterialTheme.colorScheme.onSurface
                         )
                         Text(
-                            text = "Version 1.6.0 (MVP 6) • Datenportabilität & Wasm-Ready • 830 BNetzA-Prüfungsfragen",
+                            text = "Version 1.6.0 (MVP 6) • Datenportabilität & Wasm-Ready • 839 BNetzA-Prüfungsfragen",
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )

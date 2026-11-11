@@ -96,6 +96,7 @@ fun HomeScreen(
     onOpenPhoneticQuiz: () -> Unit,
     onOpenCalculator: () -> Unit,
     onOpenSettings: () -> Unit,
+    onOpenOnboarding: () -> Unit = {},
     modifier: Modifier = Modifier
 ) {
     val state by viewModel.uiState.collectAsState()
@@ -146,6 +147,19 @@ fun HomeScreen(
                                 color = Color(0xFFD97706)
                             )
                         }
+                    }
+
+                    IconButton(
+                        onClick = onOpenOnboarding,
+                        modifier = Modifier
+                            .size(48.dp)
+                            .semantics { contentDescription = "Einführung & Hilfe anzeigen" }
+                    ) {
+                        Icon(
+                            imageVector = Icons.Default.Info,
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
                     }
 
                     IconButton(
