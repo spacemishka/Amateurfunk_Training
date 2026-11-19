@@ -50,6 +50,7 @@ import com.spacemishka.app.amateurfunktraining.core.data.TopicRepository
 import com.spacemishka.app.amateurfunktraining.core.model.Topic
 import com.spacemishka.app.amateurfunktraining.feature.topic.components.TopicContentView
 import com.spacemishka.app.amateurfunktraining.ui.theme.RadioBlue
+import com.spacemishka.app.amateurfunktraining.ui.theme.radioBlueButtonColors
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -177,7 +178,7 @@ fun TopicDetailScreen(
                                 .fillMaxWidth()
                                 .height(48.dp),
                             shape = RoundedCornerShape(12.dp),
-                            colors = ButtonDefaults.buttonColors(containerColor = RadioBlue)
+                            colors = radioBlueButtonColors()
                         ) {
                             Row(
                                 verticalAlignment = Alignment.CenterVertically,

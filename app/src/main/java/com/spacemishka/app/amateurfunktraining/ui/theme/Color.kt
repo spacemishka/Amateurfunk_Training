@@ -1,5 +1,8 @@
 package com.spacemishka.app.amateurfunktraining.ui.theme
 
+import androidx.compose.material3.ButtonColors
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
 val Purple80 = Color(0xFFD0BCFF)
@@ -33,3 +36,16 @@ val CategoryTechnik = Color(0xFFE65100)
 val CategoryBetrieb = Color(0xFF0277BD)
 val CategoryVorschriften = Color(0xFF558B2F)
 val CategoryAll = Color(0xFF5E35B1)
+
+@Composable
+fun radioBlueButtonColors(
+    containerColor: Color = RadioBlue,
+    contentColor: Color = Color.White,
+    disabledContainerColor: Color = RadioBlue.copy(alpha = 0.4f),
+    disabledContentColor: Color = Color.White.copy(alpha = 0.5f)
+): ButtonColors = ButtonDefaults.buttonColors(
+    containerColor = containerColor,
+    contentColor = contentColor,
+    disabledContainerColor = disabledContainerColor,
+    disabledContentColor = disabledContentColor
+)

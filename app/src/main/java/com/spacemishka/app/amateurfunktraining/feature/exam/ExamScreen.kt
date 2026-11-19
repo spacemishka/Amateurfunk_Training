@@ -73,6 +73,7 @@ import com.spacemishka.app.amateurfunktraining.ui.theme.CategoryTechnik
 import com.spacemishka.app.amateurfunktraining.ui.theme.CategoryVorschriften
 import com.spacemishka.app.amateurfunktraining.ui.theme.NeutralOptionBorder
 import com.spacemishka.app.amateurfunktraining.ui.theme.RadioBlue
+import com.spacemishka.app.amateurfunktraining.ui.theme.radioBlueButtonColors
 import com.spacemishka.app.amateurfunktraining.ui.theme.RadioNavy
 import com.spacemishka.app.amateurfunktraining.ui.theme.SelectedOptionBorder
 import com.spacemishka.app.amateurfunktraining.ui.theme.SelectedOptionContainer
@@ -142,7 +143,7 @@ fun ExamScreen(
                 actions = {
                     Button(
                         onClick = { viewModel.setShowSubmitDialog(true) },
-                        colors = ButtonDefaults.buttonColors(containerColor = RadioBlue),
+                        colors = radioBlueButtonColors(),
                         shape = RoundedCornerShape(10.dp),
                         modifier = Modifier
                             .padding(end = 8.dp)
@@ -552,7 +553,7 @@ fun ExamScreen(
                                     viewModel.setShowSubmitDialog(true)
                                 }
                             },
-                            colors = ButtonDefaults.buttonColors(containerColor = RadioBlue),
+                            colors = radioBlueButtonColors(),
                             shape = RoundedCornerShape(10.dp),
                             modifier = Modifier.semantics {
                                 contentDescription = if (state.currentIndex < state.totalCount - 1) "Nächste Frage" else "Zur Abgabe"
@@ -594,7 +595,7 @@ fun ExamScreen(
             confirmButton = {
                 Button(
                     onClick = { viewModel.submitExam() },
-                    colors = ButtonDefaults.buttonColors(containerColor = RadioBlue)
+                    colors = radioBlueButtonColors()
                 ) {
                     Text("Jetzt abgeben")
                 }

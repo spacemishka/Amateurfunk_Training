@@ -76,6 +76,7 @@ import com.spacemishka.app.amateurfunktraining.ui.theme.CategoryBetrieb
 import com.spacemishka.app.amateurfunktraining.ui.theme.CategoryTechnik
 import com.spacemishka.app.amateurfunktraining.ui.theme.CategoryVorschriften
 import com.spacemishka.app.amateurfunktraining.ui.theme.RadioBlue
+import com.spacemishka.app.amateurfunktraining.ui.theme.radioBlueButtonColors
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -339,7 +340,7 @@ fun TopicLexiconScreen(
                                             .fillMaxWidth()
                                             .height(48.dp),
                                         shape = RoundedCornerShape(12.dp),
-                                        colors = ButtonDefaults.buttonColors(containerColor = RadioBlue)
+                                        colors = radioBlueButtonColors()
                                     ) {
                                         Row(
                                             verticalAlignment = Alignment.CenterVertically,
@@ -710,7 +711,7 @@ private fun EmptyTopicsView(
             Button(
                 onClick = onReset,
                 shape = RoundedCornerShape(12.dp),
-                colors = ButtonDefaults.buttonColors(containerColor = RadioBlue)
+                colors = radioBlueButtonColors()
             ) {
                 Text("Filter zurücksetzen", fontWeight = FontWeight.Bold)
             }

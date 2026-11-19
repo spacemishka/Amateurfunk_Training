@@ -72,6 +72,7 @@ import com.spacemishka.app.amateurfunktraining.core.data.ThemeMode
 import com.spacemishka.app.amateurfunktraining.core.model.BackupSummary
 import com.spacemishka.app.amateurfunktraining.core.model.ImportMode
 import com.spacemishka.app.amateurfunktraining.ui.theme.RadioBlue
+import com.spacemishka.app.amateurfunktraining.ui.theme.radioBlueButtonColors
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -287,7 +288,7 @@ fun SettingsScreen(
                                     exportLauncher.launch(filename)
                                 },
                                 enabled = !isProcessing,
-                                colors = ButtonDefaults.buttonColors(containerColor = RadioBlue),
+                                colors = radioBlueButtonColors(),
                                 modifier = Modifier
                                     .weight(1f)
                                     .height(48.dp)
@@ -538,7 +539,7 @@ private fun ImportConfirmationDialog(
         confirmButton = {
             Button(
                 onClick = { onConfirm(selectedMode) },
-                colors = ButtonDefaults.buttonColors(containerColor = RadioBlue)
+                colors = radioBlueButtonColors()
             ) {
                 Text("Import ausführen")
             }

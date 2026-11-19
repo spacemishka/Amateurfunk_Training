@@ -76,6 +76,7 @@ import com.spacemishka.app.amateurfunktraining.feature.topic.components.TopicBot
 import com.spacemishka.app.amateurfunktraining.ui.theme.CorrectGreen
 import com.spacemishka.app.amateurfunktraining.ui.theme.RadioBlue
 import com.spacemishka.app.amateurfunktraining.ui.theme.WrongRed
+import com.spacemishka.app.amateurfunktraining.ui.theme.radioBlueButtonColors
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -179,9 +180,7 @@ fun PracticeScreen(
                                     contentDescription = if (state.currentIndex + 1 >= state.totalCount) "Übung abschließen" else "Nächste Frage"
                                 },
                             shape = RoundedCornerShape(12.dp),
-                            colors = ButtonDefaults.buttonColors(
-                                containerColor = RadioBlue
-                            )
+                            colors = radioBlueButtonColors()
                         ) {
                             Row(
                                 verticalAlignment = Alignment.CenterVertically,
@@ -369,9 +368,7 @@ fun PracticeScreen(
                                                     contentDescription = if (state.currentIndex + 1 >= state.totalCount) "Übung abschließen" else "Nächste Frage"
                                                 },
                                             shape = RoundedCornerShape(12.dp),
-                                            colors = ButtonDefaults.buttonColors(
-                                                containerColor = RadioBlue
-                                            )
+                                            colors = radioBlueButtonColors()
                                         ) {
                                             Row(
                                                 verticalAlignment = Alignment.CenterVertically,
@@ -540,7 +537,7 @@ private fun EmptyPracticeView(
             Button(
                 onClick = onFinish,
                 shape = RoundedCornerShape(12.dp),
-                colors = ButtonDefaults.buttonColors(containerColor = RadioBlue)
+                colors = radioBlueButtonColors()
             ) {
                 Text("Zurück zur Übersicht", fontWeight = FontWeight.Bold)
             }

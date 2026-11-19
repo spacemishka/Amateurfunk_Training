@@ -14,16 +14,19 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.Density
+import androidx.compose.ui.graphics.Color
 import com.spacemishka.app.amateurfunktraining.core.data.ThemeMode
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
+    primary = RadioBlue,
+    onPrimary = Color.White,
     secondary = PurpleGrey80,
     tertiary = Pink80
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
+    primary = RadioBlue,
+    onPrimary = Color.White,
     secondary = PurpleGrey40,
     tertiary = Pink40
 )

@@ -84,6 +84,7 @@ import com.spacemishka.app.amateurfunktraining.ui.theme.CorrectGreenContainer
 import com.spacemishka.app.amateurfunktraining.ui.theme.RadioBlue
 import com.spacemishka.app.amateurfunktraining.ui.theme.RadioNavy
 import com.spacemishka.app.amateurfunktraining.ui.theme.WrongRed
+import com.spacemishka.app.amateurfunktraining.ui.theme.radioBlueButtonColors
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -540,7 +541,7 @@ private fun DueLeitnerCard(
                 Button(
                     onClick = onStartDue,
                     shape = RoundedCornerShape(10.dp),
-                    colors = ButtonDefaults.buttonColors(containerColor = RadioBlue),
+                    colors = radioBlueButtonColors(),
                     contentPadding = PaddingValues(horizontal = 12.dp, vertical = 8.dp)
                 ) {
                     Text("Starten", fontWeight = FontWeight.Bold)
@@ -937,7 +938,7 @@ private fun ExamSimulationCard(
             ) {
                 Button(
                     onClick = onStartExam,
-                    colors = ButtonDefaults.buttonColors(containerColor = RadioBlue),
+                    colors = radioBlueButtonColors(),
                     shape = RoundedCornerShape(12.dp),
                     modifier = Modifier
                         .weight(1f)

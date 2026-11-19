@@ -76,6 +76,7 @@ import com.spacemishka.app.amateurfunktraining.ui.theme.CategoryVorschriften
 import com.spacemishka.app.amateurfunktraining.ui.theme.CorrectGreen
 import com.spacemishka.app.amateurfunktraining.ui.theme.RadioBlue
 import com.spacemishka.app.amateurfunktraining.ui.theme.RadioNavy
+import com.spacemishka.app.amateurfunktraining.ui.theme.radioBlueButtonColors
 import kotlinx.coroutines.launch
 
 private const val PAGE_COUNT = 3
@@ -255,7 +256,7 @@ fun OnboardingDialog(
                         },
                         modifier = Modifier.weight(if (pagerState.currentPage > 0) 1.5f else 1f),
                         shape = RoundedCornerShape(14.dp),
-                        colors = ButtonDefaults.buttonColors(containerColor = RadioBlue)
+                        colors = radioBlueButtonColors()
                     ) {
                         if (pagerState.currentPage < PAGE_COUNT - 1) {
                             Text("Weiter")

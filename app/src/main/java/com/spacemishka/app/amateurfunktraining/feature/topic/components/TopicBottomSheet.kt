@@ -29,6 +29,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.spacemishka.app.amateurfunktraining.core.model.Topic
 import com.spacemishka.app.amateurfunktraining.ui.theme.RadioBlue
+import com.spacemishka.app.amateurfunktraining.ui.theme.radioBlueButtonColors
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -81,7 +82,7 @@ fun TopicBottomSheet(
                 onClick = onDismissRequest,
                 modifier = Modifier.fillMaxWidth(),
                 shape = RoundedCornerShape(12.dp),
-                colors = ButtonDefaults.buttonColors(containerColor = RadioBlue)
+                colors = radioBlueButtonColors()
             ) {
                 Text(
                     text = "Verstanden & Weiter",

@@ -60,6 +60,7 @@ import androidx.compose.ui.unit.sp
 import com.spacemishka.app.amateurfunktraining.ui.theme.CorrectGreen
 import com.spacemishka.app.amateurfunktraining.ui.theme.RadioBlue
 import com.spacemishka.app.amateurfunktraining.ui.theme.WrongRed
+import com.spacemishka.app.amateurfunktraining.ui.theme.radioBlueButtonColors
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -325,7 +326,7 @@ fun PhoneticQuizScreen(
                                 Button(
                                     onClick = { viewModel.submitAnswer() },
                                     enabled = state.selectedOptionIndex != null,
-                                    colors = ButtonDefaults.buttonColors(containerColor = RadioBlue),
+                                    colors = radioBlueButtonColors(),
                                     shape = RoundedCornerShape(12.dp),
                                     modifier = Modifier
                                         .fillMaxWidth()
@@ -337,7 +338,7 @@ fun PhoneticQuizScreen(
                             } else {
                                 Button(
                                     onClick = { viewModel.nextQuestion() },
-                                    colors = ButtonDefaults.buttonColors(containerColor = RadioBlue),
+                                    colors = radioBlueButtonColors(),
                                     shape = RoundedCornerShape(12.dp),
                                     modifier = Modifier
                                         .fillMaxWidth()
@@ -412,7 +413,7 @@ private fun QuizResultCard(
 
             Button(
                 onClick = onRestart,
-                colors = ButtonDefaults.buttonColors(containerColor = RadioBlue),
+                colors = radioBlueButtonColors(),
                 shape = RoundedCornerShape(12.dp),
                 modifier = Modifier
                     .fillMaxWidth()
