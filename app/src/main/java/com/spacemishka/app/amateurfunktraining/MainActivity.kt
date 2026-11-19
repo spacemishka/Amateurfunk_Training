@@ -41,6 +41,8 @@ import com.spacemishka.app.amateurfunktraining.feature.practice.PracticeViewMode
 import com.spacemishka.app.amateurfunktraining.feature.reference.ReferenceHubScreen
 import com.spacemishka.app.amateurfunktraining.feature.reference.ReferenceHubViewModel
 import com.spacemishka.app.amateurfunktraining.feature.reference.ReferenceTab
+import com.spacemishka.app.amateurfunktraining.feature.search.QuestionSearchScreen
+import com.spacemishka.app.amateurfunktraining.feature.search.QuestionSearchViewModel
 import com.spacemishka.app.amateurfunktraining.feature.settings.SettingsScreen
 import com.spacemishka.app.amateurfunktraining.feature.settings.SettingsViewModel
 import com.spacemishka.app.amateurfunktraining.feature.topic.TopicDetailScreen
@@ -53,6 +55,7 @@ sealed interface Screen {
     data class Practice(val mode: PracticeMode) : Screen
     data object Exam : Screen
     data class Result(val examResult: ExamResult) : Screen
+    data class QuestionSearch(val initialQuery: String = "") : Screen
     data object TopicLexicon : Screen
     data class TopicDetail(val topicId: String) : Screen
     data class ReferenceHub(val initialTab: ReferenceTab = ReferenceTab.FORMULAS) : Screen
@@ -186,6 +189,13 @@ fun AmateurfunkApp(
         )
     }
 
+    val questionSearchViewModel = viewModel {
+        QuestionSearchViewModel(
+            questionRepository = questionRepository,
+            progressRepository = progressRepository
+        )
+    }
+
     when (val screen = currentScreen) {
         is Screen.Home -> {
             HomeScreen(
@@ -218,6 +228,9 @@ fun AmateurfunkApp(
                 },
                 onOpenOnboarding = {
                     showOnboardingDialog = true
+                },
+                onOpenSearch = {
+                    currentScreen = Screen.QuestionSearch()
                 }
             )
         }
@@ -384,6 +397,30 @@ fun AmateurfunkApp(
                 },
                 onOpenOnboarding = {
                     showOnboardingDialog = true
+                }
+            )
+        }
+
+        is Screen.QuestionSearch -> {
+            BackHandler {
+                currentScreen = Screen.Home
+                homeViewModel.loadData()
+            }
+
+            QuestionSearchScreen(
+                viewModel = questionSearchViewModel,
+                onNavigateBack = {
+                    currentScreen = Screen.Home
+                    homeViewModel.loadData()
+                },
+                onPracticeQuestions = { questionIds, initialQuestionId ->
+                    val mode = PracticeMode.SearchResults(
+                        questionIds = questionIds,
+                        query = questionSearchViewModel.uiState.value.query,
+                        initialQuestionId = initialQuestionId
+                    )
+                    practiceViewModel.startPractice(mode)
+                    currentScreen = Screen.Practice(mode)
                 }
             )
         }

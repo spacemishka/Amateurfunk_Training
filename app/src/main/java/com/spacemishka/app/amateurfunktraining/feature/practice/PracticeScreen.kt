@@ -500,6 +500,7 @@ private fun EmptyPracticeView(
         is PracticeMode.CategoryMode -> Pair("Keine Fragen gefunden", "Für dieses Fach sind aktuell keine Fragen verfügbar.")
         is PracticeMode.ExamMistakes -> Pair("Keine Fehlfragen vorhanden", "In der letzten Prüfungssimulation gab es keine Fehlfragen oder alle wurden gemeistert.")
         is PracticeMode.TopicQuestions -> Pair("Keine Fragen gefunden", "Für dieses Thema wurden aktuell keine Prüfungsfragen gefunden.")
+        is PracticeMode.SearchResults -> Pair("Keine Suchergebnisse gefunden", "Für diese Suche wurden keine passenden Fragen gefunden.")
     }
 
     Card(

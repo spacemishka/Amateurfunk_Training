@@ -31,4 +31,11 @@ sealed interface PracticeMode {
         val topicTitle: String,
         override val title: String = "Thema: $topicTitle"
     ) : PracticeMode
+
+    data class SearchResults(
+        val questionIds: List<String>,
+        val query: String = "",
+        val initialQuestionId: String? = null,
+        override val title: String = if (query.isNotBlank()) "Suche: $query" else "Suchergebnisse"
+    ) : PracticeMode
 }

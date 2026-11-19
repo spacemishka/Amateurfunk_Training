@@ -55,9 +55,21 @@ class PracticeViewModel(
                     is PracticeMode.TopicQuestions -> {
                         questionRepository.getQuestionsByTopic(mode.topicId)
                     }
+                    is PracticeMode.SearchResults -> {
+                        val questionsMap = allQuestions.associateBy { it.id }
+                        val ordered = mode.questionIds.mapNotNull { questionsMap[it] }
+                        if (mode.initialQuestionId != null) {
+                            val target = ordered.find { it.id == mode.initialQuestionId }
+                            if (target != null) {
+                                listOf(target) + (ordered - target)
+                            } else ordered
+                        } else {
+                            ordered
+                        }
+                    }
                 }
 
-                val preparedQuestions = if (shuffle && mode !is PracticeMode.ProblemQuestions) {
+                val preparedQuestions = if (shuffle && mode !is PracticeMode.ProblemQuestions && mode !is PracticeMode.SearchResults) {
                     loadedQuestions.shuffled()
                 } else {
                     loadedQuestions

@@ -31,6 +31,7 @@ import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Phone
 import androidx.compose.material.icons.filled.Refresh
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material.icons.filled.Calculate
 import androidx.compose.material.icons.filled.Functions
@@ -98,6 +99,7 @@ fun HomeScreen(
     onOpenCalculator: () -> Unit,
     onOpenSettings: () -> Unit,
     onOpenOnboarding: () -> Unit = {},
+    onOpenSearch: () -> Unit = {},
     modifier: Modifier = Modifier
 ) {
     val state by viewModel.uiState.collectAsState()
@@ -148,6 +150,19 @@ fun HomeScreen(
                                 color = Color(0xFFD97706)
                             )
                         }
+                    }
+
+                    IconButton(
+                        onClick = onOpenSearch,
+                        modifier = Modifier
+                            .size(48.dp)
+                            .semantics { contentDescription = "Fragen suchen" }
+                    ) {
+                        Icon(
+                            imageVector = Icons.Default.Search,
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
                     }
 
                     IconButton(
@@ -217,6 +232,10 @@ fun HomeScreen(
                         ) {
                             item {
                                 HeaderBanner(streakDays = state.streakDays)
+                            }
+
+                            item {
+                                QuestionQuickSearchCard(onOpenSearch = onOpenSearch)
                             }
 
                             // Offizielle BNetzA Prüfungssimulation
@@ -323,6 +342,10 @@ fun HomeScreen(
                 ) {
                     item {
                         HeaderBanner(streakDays = state.streakDays)
+                    }
+
+                    item {
+                        QuestionQuickSearchCard(onOpenSearch = onOpenSearch)
                     }
 
                     // Offizielle BNetzA Prüfungssimulation
@@ -1270,4 +1293,66 @@ private fun ToolsRow(
         }
     }
 }
+
+@Composable
+private fun QuestionQuickSearchCard(
+    onOpenSearch: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    Card(
+        modifier = modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(16.dp))
+            .clickable(onClick = onOpenSearch),
+        shape = RoundedCornerShape(16.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f)
+        ),
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.4f))
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp, vertical = 12.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
+            Surface(
+                shape = CircleShape,
+                color = RadioBlue.copy(alpha = 0.12f),
+                modifier = Modifier.size(36.dp)
+            ) {
+                Box(contentAlignment = Alignment.Center) {
+                    Icon(
+                        imageVector = Icons.Default.Search,
+                        contentDescription = null,
+                        tint = RadioBlue,
+                        modifier = Modifier.size(18.dp)
+                    )
+                }
+            }
+
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    text = "Fragen direkt suchen",
+                    style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.Bold),
+                    color = MaterialTheme.colorScheme.onSurface
+                )
+                Text(
+                    text = "Nach Frage-ID (z. B. EI502) oder Stichwort suchen...",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+
+            Icon(
+                imageVector = Icons.AutoMirrored.Filled.ArrowForward,
+                contentDescription = null,
+                tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.size(16.dp)
+            )
+        }
+    }
+}
+
 
